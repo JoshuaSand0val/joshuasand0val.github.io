@@ -1,6 +1,10 @@
 ---
 layout: base
 ---
-{% include "header.njk" %}
-{{ content | safe }}
-{% include "footer.njk" %}
+<div id="page">
+    {% include "header.njk" %}
+    <div id="content">
+        {{ content | safe }}
+    </div>
+    {% include "footer.njk" %}
+</div>
