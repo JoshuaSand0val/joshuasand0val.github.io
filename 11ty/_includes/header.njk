@@ -1,1 +1,27 @@
-<header id="header"></header>
+{% macro links() %}
+<a href="{{ '/' | url }}">Home</a>
+<a href="{{ '/about/' | url }}">About</a>
+<a href="{{ '/projects/' | url }}">Projects</a>
+<a href="{{ site.github }}">
+    <i class="bi bi-github"></i>
+</a>
+{% endmacro %}
+<header id="header">
+    <div id="header-wrapper">
+        <div id="header-title">
+            <h2>{{ site.name }}</h2>
+            <h3>{{ site.slogan }}</h3>
+        </div>
+        <div id="header-menu">
+            <button id="header-menu-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+            <nav id="header-menu-nav">
+                {{ links() }}
+            </nav>
+        </div>
+        <nav id="header-nav">
+            {{ links() }}
+        </nav>
+    </div>
+</header>
