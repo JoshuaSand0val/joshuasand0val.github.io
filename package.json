@@ -1,5 +1,9 @@
 {
 	"author": "Joshua Elijah Sandoval",
 	"license": "UNLICENSED",
-	"private": true
+	"private": true,
+	"dependencies": {
+		"@11ty/eleventy": "^1.0.0",
+		"css-neo": "^2.0.0"
+	}
 }
