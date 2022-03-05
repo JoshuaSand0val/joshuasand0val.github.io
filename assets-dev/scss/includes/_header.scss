@@ -3,5 +3,144 @@
 @use "../neo" as *;
 
 #header {
-    // ...
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    min-height: px(320);
+    color: text-color($white, $black);
+    text-shadow: 0 0 8px $black;
+    padding: $safe-top $safe-right 0 $safe-left;
+    margin-bottom: px(70);
+    overflow: visible;
+}
+
+#header-art {
+    position: absolute;
+    background-color: rgba($black, 0.5);
+    overflow: hidden;
+    @include inset(0);
+}
+
+#header-art img {
+    position: relative;
+    z-index: -1;
+    background-color: $black;
+    @include declare(width height, 100%);
+}
+
+#header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    flex: 1 0 100%;
+    width: 100%;
+    max-width: $lg;
+    padding: size(1) size(1) 0;
+    margin: 0 auto;
+    @include max-vw($md) {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}
+
+#header-pfp {
+    display: block;
+    flex: 0 1 auto;
+    border: 3px solid $white;
+    border-radius: 9999px;
+    transform: translateY(px(54));
+    margin-top: px(-38);
+    margin-right: size(1);
+    overflow: hidden;
+    @include max-vw($md) {
+        align-self: flex-end;
+        order: 2;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+#header-pfp img {
+    display: block;
+    width: auto;
+    max-height: px(160);
+}
+
+#header-break {
+    display: none;
+    @include max-vw($md) {
+        display: block;
+        height: 0;
+        flex-basis: 100%;
+        order: 1;
+    }
+}
+
+#header-title {
+    display: block;
+    flex: 0 1 auto;
+    margin: size(-1) 0;
+    margin-right: size(1);
+    @include max-vw($md) {
+        order: 0;
+    }
+    h2, h3 {
+        display: block;
+        margin: 0;
+    }
+    h2 {
+        @include breakpoints(font-size,
+            font-size(5),
+            font-size(7),
+            font-size(8),
+            font-size(10)
+        );
+    }
+    h3 {
+        @include breakpoints(font-size,
+            font-size(2),
+            font-size(3)
+        );
+    }
+}
+
+#header-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    flex: 1 1 font-size(6) + px(16);
+    font-size: font-size(6);
+    margin: size(-1) 0;
+    margin-left: auto;
+    a {
+        margin: px(4) px(8);
+        color: inherit;
+        &::after {
+            content: "";
+            display: block;
+            width: 80%;
+            transition: width 75ms ease-out;
+            background-color: $white;
+            border: 1px solid $white;
+            border-radius: 1px;
+            box-shadow: 0 0 8px $black;
+            margin: auto;
+        }
+        &:hover::after, &:focus::after {
+            width: 100%;
+        }
+        &:active:after {
+            width: 90%;
+        }
+        &[aria-current="page"]::after {
+            background-color: $yellow;
+            border-color: $yellow;
+        }
+    }
+    @include min-vw($md) {
+        flex: 0 0 auto;
+    }
 }
