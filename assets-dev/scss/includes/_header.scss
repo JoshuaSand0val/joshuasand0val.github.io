@@ -11,15 +11,18 @@
     color: text-color($white, $black);
     text-shadow: 0 0 8px $black;
     padding: $safe-top $safe-right 0 $safe-left;
-    margin-bottom: px(70);
+    margin-bottom: px(54);
     overflow: visible;
 }
 
 #header-art {
     position: absolute;
-    background-color: rgba($black, 0.5);
+    background-color: rgba($black, 0.25);
     overflow: hidden;
     @include inset(0);
+    @include dark {
+        background-color: rgba($black, 0.5);
+    }
 }
 
 #header-art img {
