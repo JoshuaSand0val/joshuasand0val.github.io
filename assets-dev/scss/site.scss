@@ -1,8 +1,14 @@
 // Site: All the CSS bundled used to style the website.
 
 // Neo CSS...
-@forward "neo";
+@forward "neo" with (
+    $font: #{'Varela Round', sans-serif},
+    $font-heading: #{'Kulim Park', sans-serif}
+);
 
 // Website CSS...
 @forward "includes/";
 @forward "layouts/";
+
+// Fonts...
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Kulim+Park:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap');
