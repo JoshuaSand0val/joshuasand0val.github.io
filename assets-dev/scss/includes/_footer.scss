@@ -1,0 +1,77 @@
+// Footer: Styles for the website footer.
+
+@use "../neo" as *;
+
+#footer {
+    display: block;
+    background-color: shade($black, 2%);
+    color: text-color($white, $black);
+    padding: 0 $safe-right $safe-bottom $safe-left;
+}
+
+#footer-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: $lg;
+    padding: size(1);
+    margin: auto;
+    @include breakpoints(padding-bottom, px(48), px(64), px(80), px(96));
+}
+
+#footer-info {
+    display: block;
+    margin-right: size(0);
+    & > * {
+        display: block;
+    }
+}
+
+#footer-nav {
+    display: block;
+    a {
+        font-size: font-size(5);
+        text-decoration: none;
+        &:not(:last-child) {
+            margin-right: px(4);
+        }
+        &[aria-current="page"] {
+            color: text-color($yellow, $black);
+        }
+    }
+}
+
+#footer a {
+    color: text-color($gray, $black);
+    &:hover, &:focus {
+        color: text-color($white, $black);
+    }
+    &:active {
+        color: text-color($yellow, $black);
+    }
+}
+
+#footer-toTop {
+    position: fixed;
+    z-index: $z-fixed;
+    display: block;
+    font-size: px(32);
+    line-height: 0;
+    border-radius: 9999px;
+    background-color: inherit;
+    margin: 0 $safe-right $safe-bottom 0;
+    transition: transform 75ms linear, 150ms visibility, 150ms opacity;
+    @include declare(right bottom, size(1));
+    &:hover, &:focus {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+#footer-toTop.hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+}
