@@ -1,27 +1,22 @@
-{% macro links() %}
-<a href="{{ '/' | url }}">Home</a>
-<a href="{{ '/about/' | url }}">About</a>
-<a href="{{ '/projects/' | url }}">Projects</a>
-<a href="{{ site.github }}">
-    <i class="bi bi-github"></i>
-</a>
-{% endmacro %}
 <header id="header">
-    <div id="header-wrapper">
+    <picture id="header-art">
+        <img src="{{ '/assets/images/' + hero | url }}" loading="lazy" alt="Hero art" />
+    </picture>
+    <div id="header-content">
+        <picture id="header-pfp">
+            <img src="{{ '/assets/images/misc/pfp.jpg' | url }}" loading="lazy" alt="Profile Picture" />
+        </picture>
+        <div id="header-break"></div>
         <div id="header-title">
             <h2>{{ site.name }}</h2>
             <h3>{{ site.slogan }}</h3>
         </div>
-        <div id="header-menu">
-            <button id="header-menu-toggle">
-                <i class="bi bi-list"></i>
-            </button>
-            <nav id="header-menu-nav">
-                {{ links() }}
-            </nav>
-        </div>
         <nav id="header-nav">
-            {{ links() }}
+            {% for title, props in nav.header %}
+            <a href="{{ props.url | url }}" {% if props.url in page.url %}aria-current="page"{% endif %}>
+                <i class="bi bi-{{ props.icon }}" aria-label="{{ title }}"></i>
+            </a>
+            {% endfor %}
         </nav>
     </div>
 </header>
