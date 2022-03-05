@@ -1,0 +1,30 @@
+// Page: Styles for the website page layout.
+
+@use "../neo" as *;
+
+#page {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    @include inset(0);
+}
+
+#page #header {
+    flex: 0 0 auto;
+}
+
+#page #content {
+    display: block;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: $xxl;
+    padding: 0 $safe-right 0 $safe-left;
+    margin: 0 auto;
+}
+
+#page #footer {
+    flex: 0 0 auto;
+}
