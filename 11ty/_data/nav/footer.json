@@ -1,0 +1,14 @@
+{
+    "Home": {
+        "url": "/",
+        "icon": "house-door"
+    },
+    "My Github": {
+        "url": "https://github.com/JoshuaSand0val/",
+        "icon": "github"
+    },
+    "Contact Me": {
+        "url": "/contact/",
+        "icon": "chat"
+    }
+}
