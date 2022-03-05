@@ -1,0 +1,18 @@
+{
+    "Home": {
+        "url": "/",
+        "icon": "house-door"
+    },
+    "About Me": {
+        "url": "/about/",
+        "icon": "person-circle"
+    },
+    "Code Projects": {
+        "url": "/projects/",
+        "icon": "journal-code"
+    },
+    "My Github": {
+        "url": "https://github.com/JoshuaSand0val/",
+        "icon": "github"
+    }
+}
