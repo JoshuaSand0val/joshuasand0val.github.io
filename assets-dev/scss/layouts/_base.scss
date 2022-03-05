@@ -1,0 +1,25 @@
+// Base: Styles for the website base layout.
+
+@use "../neo" as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+@include dark {
+    html {
+        background-color: $black;
+        color: text-color($white, $black);
+    }
+
+    a {
+        $color: text-color($blue, $black);
+        color: $color;
+        &:hover, &:focus {
+            color: tint($color, 5%);
+        }
+        &:active {
+            color: tint($color, 10%);
+        }
+    }
+}
