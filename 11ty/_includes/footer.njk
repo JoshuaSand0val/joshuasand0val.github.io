@@ -1,1 +1,28 @@
-<footer id="footer"></footer>
+<footer id="footer">
+    <div id="footer-content">
+        <div id="footer-info">
+            <span>&copy; {% year %} {{ site.author }}.</span>
+            <span>Site built with <a href="https://www.11ty.dev/">11ty</a>.</span>
+        </div>
+        <nav id="footer-nav">
+            {% for title, props in nav.footer %}
+            <a href="{{ props.url | url }}" {% if props.url == page.url %}aria-current="page"{% endif %}>
+                <i class="bi bi-{{ props.icon }}" aria-label="{{ title }}"></i>
+            </a>
+            {% endfor %}
+        </nav>
+    </div>
+    <a href="#" id="footer-toTop">
+        <i class="bi bi-arrow-up-circle"></i>
+    </a>
+</footer>
+<script>
+    var footerToTop = document.getElementById("footer-toTop");
+    var headroom  = new Headroom(footerToTop, {
+        classes: {
+            initial: "hidden",
+            pinned: "hidden"
+        },
+    });
+    headroom.init();
+</script>
