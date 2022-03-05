@@ -52,7 +52,7 @@
     border: 3px solid $white;
     border-radius: 9999px;
     transform: translateY(px(54));
-    margin-top: px(-38);
+    margin-top: px(10);
     margin-right: size(1);
     overflow: hidden;
     @include max-vw($md) {
@@ -111,7 +111,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    flex: 1 1 font-size(6) + px(16);
+    flex: 1 1 (font-size(6) + px(16)) * 2;
     font-size: font-size(6);
     margin: size(-1) 0;
     margin-left: auto;
