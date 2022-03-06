@@ -1,0 +1,64 @@
+// Contact: Styles for the website contact page.
+
+@use "../neo" as *;
+
+#contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: $lg;
+    min-height: 50vh;
+    overflow: visible;
+    margin: auto;
+    @include breakpoints(padding, 
+        size(3) size(1),
+        size(4) size(2),
+        size(6) size(3),
+        size(7) size(4),
+    );
+    @include breakpoints(padding-bottom,
+        size(5), size(7), size(8)
+    );
+}
+
+#contact #title {
+    display: block;
+    @include breakpoints(font-size,
+        font-size(2),
+        font-size(3),
+        font-size(4),
+        font-size(5)
+    );
+}
+
+#contact #address {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: url(#address-gradient);
+    stroke: black;
+    stroke-width: 2;
+    animation:
+        contact-address 500ms cubic-bezier(0.45, 0.15, 0, 1),
+        contact-address-pulse 2s 500ms linear infinite;
+    transition: fill 1s linear;
+    &:hover {
+        fill: currentColor;
+        stroke-width: 0;
+    }
+    @include reduced-motion {
+        animation: none;
+    }
+}
+
+@keyframes contact-address {
+    from {
+        transform: scale(5);
+    }
+}
+
+@keyframes contact-address-pulse {
+    50% {
+        transform: scale(1.01);
+    }
+}
