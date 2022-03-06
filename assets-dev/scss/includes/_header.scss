@@ -7,12 +7,14 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
-    min-height: px(320);
     color: text-color($white, $black);
     text-shadow: 0 0 8px $black;
     padding: $safe-top $safe-right 0 $safe-left;
     margin-bottom: px(54);
     overflow: visible;
+    @include min-vw($md) {
+        min-height: px(280);
+    }
 }
 
 #header-art {
@@ -55,7 +57,7 @@
     border: 3px solid $white;
     border-radius: 9999px;
     transform: translateY(px(54));
-    margin-top: px(10);
+    margin-top: px(-38);
     margin-right: size(1);
     overflow: hidden;
     @include max-vw($md) {
@@ -88,6 +90,7 @@
     margin: size(-1) 0;
     margin-right: size(1);
     @include max-vw($md) {
+        margin-bottom: 0;
         order: 0;
     }
     h2, h3 {
