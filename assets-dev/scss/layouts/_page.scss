@@ -20,9 +20,9 @@
     display: block;
     flex: 1 0 auto;
     width: 100%;
-    max-width: $xxl;
     padding: 0 $safe-right 0 $safe-left;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 #page #footer {
