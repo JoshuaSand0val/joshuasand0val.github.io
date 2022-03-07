@@ -52,13 +52,13 @@
 .header-pfp {
     display: block;
     flex: 0 1 auto;
-    height: px(150);
     border: 3px solid $white;
     border-radius: 9999px;
     transform: translateY(px(50));
     margin-top: px(-50) + size(0);
     margin-right: size(1);
     overflow: hidden;
+    @include declare(width height, px(150));
     @include max-vw($md) {
         align-self: flex-end;
         order: 2;
