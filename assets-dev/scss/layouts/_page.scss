@@ -2,7 +2,7 @@
 
 @use "../neo" as *;
 
-#page {
+.page {
     position: absolute;
     display: flex;
     flex-flow: column nowrap;
@@ -12,11 +12,11 @@
     @include inset(0);
 }
 
-#page #header {
+.page .header {
     flex: 0 0 auto;
 }
 
-#page #content {
+.page-content {
     display: block;
     flex: 1 0 auto;
     width: 100%;
@@ -25,6 +25,6 @@
     overflow: hidden;
 }
 
-#page #footer {
+.page .footer {
     flex: 0 0 auto;
 }
