@@ -2,7 +2,7 @@
 
 @use "../neo" as *;
 
-#homepage {
+.home {
     display: block;
     max-width: $lg;
     margin: auto;
@@ -14,15 +14,7 @@
     );
 }
 
-#homepage #about-site {
-    @include breakpoints(font-size,
-        font-size(1),
-        font-size(2),
-        font-size(3)
-    );
-}
-
-#homepage #title {
+.home-title {
     display: block;
     font-family: $font-heading;
     line-height: $line-height-heading;
@@ -47,4 +39,12 @@
             font-size(5)
         );
     }
+}
+
+.home-content {
+    @include breakpoints(font-size,
+        font-size(1),
+        font-size(2),
+        font-size(3)
+    );
 }
