@@ -2,14 +2,24 @@
 
 @use "../neo" as *;
 
-#footer {
+.footer {
     display: block;
     background-color: shade($black, 2%);
     color: text-color($white, $black);
     padding: 0 $safe-right $safe-bottom $safe-left;
 }
 
-#footer-content {
+.footer a {
+    color: text-color($gray, $black);
+    &:hover, &:focus {
+        color: text-color($white, $black);
+    }
+    &:active {
+        color: text-color($yellow, $black);
+    }
+}
+
+.footer-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -19,7 +29,7 @@
     @include breakpoints(padding-bottom, px(48), px(64), px(80), px(96));
 }
 
-#footer-info {
+.footer-info {
     display: block;
     margin-right: size(0);
     & > * {
@@ -27,9 +37,9 @@
     }
 }
 
-#footer-nav {
+.footer-nav {
     display: block;
-    a {
+    &-link {
         font-size: font-size(5);
         text-decoration: none;
         &:not(:last-child) {
@@ -38,16 +48,6 @@
         &[aria-current="page"] {
             color: text-color($yellow, $black);
         }
-    }
-}
-
-#footer a {
-    color: text-color($gray, $black);
-    &:hover, &:focus {
-        color: text-color($white, $black);
-    }
-    &:active {
-        color: text-color($yellow, $black);
     }
 }
 
