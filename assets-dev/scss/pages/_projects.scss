@@ -1,0 +1,113 @@
+// Projects: Styles for the website projects page.
+
+@use "../neo" as *;
+
+.projects-main {
+    display: block;
+    max-width: $lg;
+    margin: auto;
+    @include breakpoints(padding,
+        size(0), size(1)
+    );
+}
+
+.projects-title {
+    display: block;
+    margin: 0 0 size(1);
+    @include breakpoints(font-size,
+        font-size(6),
+        font-size(7),
+        font-size(8),
+        font-size(9)
+    );
+}
+
+.projects-list {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: none;
+    animation: projects-list 1s;
+    margin: px(-24);
+    &, &-item {
+        padding: px(12);
+    }
+    @include reduced-motion {
+        animation: none;
+    }
+}
+
+@keyframes projects-list {
+    from {
+        transform: translateY(px(16));
+        opacity: 0;
+    }
+}
+
+.projects-list-item {
+    width: 100%;
+    @include min-vw($md) {
+        width: 50%;
+    }
+}
+
+.projects-card-image {
+    position: relative;
+    display: block;
+    height: 0;
+    border: 2px solid $black;
+    border-radius: $radius-sm;
+    box-shadow: 0 2px 16px -6px $blue;
+    padding-top: MATH-div(9, 16) * 100%;
+    overflow: hidden;
+    transition: transform 150ms ease-out;
+    animation: projects-card-image 4s linear infinite;
+    &:hover, &:active {
+        animation: none;
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+    @include reduced-motion {
+        animation: none;
+    }
+}
+
+.projects-card-image img {
+    position: absolute;
+    @include declare(width height, 100%);
+    @include inset(0);
+}
+
+.projects-card-image h2 {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: $white;
+    border-top-right-radius: $radius-xs;
+    background-color: $black;
+    white-space: nowrap;
+    color: $white;
+    font-size: font-size(3);
+    margin: 0;
+    @include breakpoints(padding,
+        size(-3) size(-1),
+        size(-2) size(0),
+    );
+    @include breakpoints(font-size,
+        font-size(1),
+        font-size(3),
+    );
+}
+
+@keyframes projects-card-image {
+    50% {
+        transform: scale(1.01);
+    }
+}
+
+.projects-card-description {
+    display: block;
+    font-size: font-size(1);
+}
