@@ -6,11 +6,10 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-end;
     color: text-color($white, $black);
     text-shadow: 0 0 8px $black;
     padding: $safe-top $safe-right 0 $safe-left;
-    margin-bottom: px(54);
+    margin-bottom: px(50);
     overflow: visible;
     @include min-vw($md) {
         min-height: px(280);
@@ -40,9 +39,8 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
-    flex: 1 0 100%;
-    width: 100%;
-    max-width: $lg;
+    width: $lg;
+    min-height: 100%;
     padding: size(1) size(1) 0;
     margin: 0 auto;
     @include max-vw($md) {
@@ -54,10 +52,11 @@
 .header-pfp {
     display: block;
     flex: 0 1 auto;
+    height: px(150);
     border: 3px solid $white;
     border-radius: 9999px;
-    transform: translateY(px(54));
-    margin-top: px(-38);
+    transform: translateY(px(50));
+    margin-top: px(-50) + size(0);
     margin-right: size(1);
     overflow: hidden;
     @include max-vw($md) {
@@ -69,9 +68,7 @@
 }
 
 .header-pfp-image {
-    display: block;
-    width: auto;
-    max-height: px(160);
+    @include declare(width height, 100%);
 }
 
 .header-break {
@@ -126,10 +123,10 @@
     }
 }
 
-a.header-nav-link {
+.header-nav-link {
     display: block;
+    color: inherit !important;
     margin: px(4) px(8);
-    color: inherit;
     &::after {
         content: "";
         display: block;
