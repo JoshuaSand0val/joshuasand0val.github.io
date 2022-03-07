@@ -1,0 +1,34 @@
+// Title: Large viewport headings to add emphasis to a document.
+
+@use "../neo" as *;
+
+.title1, .title2 {
+    display: block;
+    font-family: $font-heading;
+    line-height: $line-height-heading;
+    margin: size(1) 0;
+}
+
+.title1 {
+    font-weight: $weight-bold;
+    @include breakpoints(font-size,
+        font-size(6),
+        font-size(7),
+        font-size(8),
+        font-size(9)
+    );
+}
+
+.title2 {
+    font-weight: $weight;
+    @include breakpoints(font-size,
+        font-size(2),
+        font-size(3),
+        font-size(4),
+        font-size(5)
+    );
+}
+
+.title1 + .title2 {
+    margin-top: -#{size(1)};
+}

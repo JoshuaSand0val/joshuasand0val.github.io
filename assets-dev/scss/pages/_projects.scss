@@ -13,13 +13,9 @@
 
 .projects-title {
     display: block;
-    margin: 0 0 size(1);
-    @include breakpoints(font-size,
-        font-size(6),
-        font-size(7),
-        font-size(8),
-        font-size(9)
-    );
+    .title1 {
+        margin-top: 0;
+    }
 }
 
 .projects-list {
