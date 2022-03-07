@@ -1,0 +1,58 @@
+// Not Found: Styles for the website "not found" (HTTP 404 Error) page.
+
+@use "../neo" as *;
+
+.notfound body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: $safe;
+}
+
+.notfound-main {
+    display: block;
+    width: 100%;
+    max-width: $lg;
+    text-align: center;
+    padding: size(1);
+    margin: auto;
+}
+
+.notfound-title {
+    display: block;
+    font-weight: $weight-heavy;
+    margin: 0;
+    @include breakpoints(font-size,
+        font-size(5),
+        font-size(9),
+        font-size(12),
+        font-size(14)
+    );
+}
+
+.notfound-description {
+    display: block;
+    font-size: font-size(1);
+    margin: 0 0 size(0);
+}
+
+.notfound-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: px(32);
+}
+
+.notfound-nav-link {
+    display: block;
+    margin: px(4) px(8);
+    transition: 100ms transform;
+    &:hover, &:focus {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}

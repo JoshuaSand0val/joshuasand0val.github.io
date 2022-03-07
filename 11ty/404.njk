@@ -1,0 +1,19 @@
+---
+title: Page Not Found
+permalink: /404.html
+layout: base
+layoutClass: notfound
+---
+
+<main class="notfound-main">
+    <h1 class="notfound-title">Page Not Found</h1>
+    <p class="notfound-description">The page you have requested could not be located.</p>
+    <nav class="notfound-nav">
+        <a class="notfound-nav-link" href="{{ '/' | url }}">
+            <i class="bi bi-house-door" aria-label="Home"></i>
+        </a>
+        <a class="notfound-nav-link" href="{{ '/contact/' | url }}">
+            <i class="bi bi-chat" aria-label="Contact Me"></i>
+        </a>
+    </nav>
+</main>
