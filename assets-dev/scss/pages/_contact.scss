@@ -2,26 +2,28 @@
 
 @use "../neo" as *;
 
-#contact {
+.contact .header {
+    margin-bottom: 0;
+}
+
+.contact-main {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
     max-width: $lg;
-    min-height: 50vh;
+    height: px(300);
+    min-height: 66vh;
+    justify-content: center;
+    margin: 0 auto;
     overflow: visible;
-    margin: auto;
     @include breakpoints(padding, 
-        size(3) size(1),
-        size(4) size(2),
-        size(6) size(3),
-        size(7) size(4),
-    );
-    @include breakpoints(padding-bottom,
-        size(5), size(7), size(8)
+        0 size(1),
+        0 size(2),
+        0 size(3),
+        0 size(4)
     );
 }
 
-#contact #title {
+.contact-title {
     display: block;
     @include breakpoints(font-size,
         font-size(2),
@@ -31,7 +33,7 @@
     );
 }
 
-#contact #address {
+.contact #address {
     display: block;
     width: 100%;
     height: auto;
