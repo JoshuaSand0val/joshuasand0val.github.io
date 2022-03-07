@@ -14,13 +14,8 @@
     );
 }
 
-.home-title {
-    display: block;
-    font-family: $font-heading;
-    line-height: $line-height-heading;
-    .title1 {
-        margin-top: 0;
-    }
+.home-title .title1 {
+    margin-top: 0;
 }
 
 .home-content {

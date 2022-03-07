@@ -1,0 +1,15 @@
+// About: Styles for the website about page.
+
+@forward "home";
+
+.about-main {
+    @extend .home;
+}
+
+.about-title {
+    @extend .home-title;
+}
+
+.about-content {
+    @extend .home-content;
+}
