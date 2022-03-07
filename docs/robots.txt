@@ -1,0 +1,7 @@
+Sitemap: https://joshuasandoval.me/sitemap.xml
+
+User-agent: *
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow: /
