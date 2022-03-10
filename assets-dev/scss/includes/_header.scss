@@ -51,7 +51,7 @@
 
 .header-pfp {
     display: block;
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     border: 3px solid $white;
     border-radius: 9999px;
     transform: translateY(px(50));
@@ -83,7 +83,7 @@
 
 .header-brand {
     display: block;
-    flex: 0 1 auto;
+    flex: 1 1 $xs;
     margin: size(-1) 0;
     margin-right: size(1);
     @include max-vw($md) {
@@ -96,7 +96,7 @@
     }
     &-name {
         @include breakpoints(font-size,
-            font-size(5),
+            font-size(6),
             font-size(7),
             font-size(8),
             font-size(10)
@@ -114,19 +114,20 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
-    flex: 1 1 (font-size(6) + px(16)) * 2;
-    font-size: font-size(6);
+    flex: 1 1 px(64 + 32);
+    font-size: px(32);
     margin: size(-1) 0;
     margin-left: auto;
-    @include min-vw($md) {
-        flex: 0 0 auto;
+    @include min-vw($lg) {
+        font-size: px(36);
+        flex-basis: px(72 + 32);
     }
 }
 
 .header-nav-link {
     display: block;
     color: inherit !important;
-    margin: px(4) px(8);
+    padding: px(4) px(8);
     &::after {
         content: "";
         display: block;
