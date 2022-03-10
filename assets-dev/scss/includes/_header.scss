@@ -118,6 +118,9 @@
     font-size: px(32);
     margin: size(-1) 0;
     margin-left: auto;
+    @include min-vw($md) {
+        flex-wrap: wrap-reverse;
+    }
     @include min-vw($lg) {
         font-size: px(36);
         flex-basis: px(72 + 32);

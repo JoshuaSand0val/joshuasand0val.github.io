@@ -775,10 +775,12 @@ b, strong {
   display: block;
   font-size: 2rem;
   line-height: 0;
+  background-color: #18181C;
+  border: 1px solid #18181C;
   border-radius: 9999px;
-  background-color: inherit;
   margin: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) 0;
-  transition: transform 75ms linear, 150ms visibility, 150ms opacity;
+  transition-property: transform, visibility, opacity;
+  transition-duration: 150ms;
   right: 1.33rem;
   bottom: 1.33rem;
 }
@@ -790,6 +792,7 @@ b, strong {
 }
 
 #footer-toTop.hidden {
+  transform: scale(0.75);
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
@@ -945,6 +948,11 @@ b, strong {
   font-size: 2rem;
   margin: 0.7518796992rem 0;
   margin-left: auto;
+}
+@media (min-width: 640.5px) {
+  .header-nav {
+    flex-wrap: wrap-reverse;
+  }
 }
 @media (min-width: 980.5px) {
   .header-nav {
@@ -1143,8 +1151,7 @@ html {
   fill: url(#address-gradient);
   stroke: black;
   stroke-width: 2;
-  animation: contact-address 500ms cubic-bezier(0.45, 0.15, 0, 1), contact-address-pulse 2s 500ms linear infinite;
-  transition: fill 1s linear;
+  animation: contact-address 500ms 250ms cubic-bezier(0.45, 0.15, 0, 1), contact-address-pulse 2s 750ms linear infinite;
 }
 .contact #address:hover {
   fill: currentColor;

@@ -42,9 +42,8 @@
     stroke: black;
     stroke-width: 2;
     animation:
-        contact-address 500ms cubic-bezier(0.45, 0.15, 0, 1),
-        contact-address-pulse 2s 500ms linear infinite;
-    transition: fill 1s linear;
+        contact-address 500ms 250ms cubic-bezier(0.45, 0.15, 0, 1),
+        contact-address-pulse 2s 750ms linear infinite;
     &:hover {
         fill: currentColor;
         stroke-width: 0;

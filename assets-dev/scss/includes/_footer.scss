@@ -57,10 +57,12 @@
     display: block;
     font-size: px(32);
     line-height: 0;
+    background-color: $black;
+    border: 1px solid $black;
     border-radius: 9999px;
-    background-color: inherit;
     margin: 0 $safe-right $safe-bottom 0;
-    transition: transform 75ms linear, 150ms visibility, 150ms opacity;
+    transition-property: transform, visibility, opacity;
+    transition-duration: 150ms;
     @include declare(right bottom, size(1));
     &:hover, &:focus {
         transform: scale(1.05);
@@ -71,6 +73,7 @@
 }
 
 #footer-toTop.hidden {
+    transform: scale(0.75);
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
