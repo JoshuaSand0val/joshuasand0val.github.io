@@ -6,11 +6,15 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    background-color: rgba($black, 0.25);
     color: text-color($white, $black);
     text-shadow: 0 0 8px $black;
     padding: $safe-top $safe-right 0 $safe-left;
     margin-bottom: px(50);
     overflow: visible;
+    @include dark {
+        background-color: rgba($black, 0.5);
+    }
     @include min-vw($md) {
         min-height: px(280);
     }
@@ -18,19 +22,19 @@
 
 .header-art {
     position: absolute;
-    background-color: rgba($black, 0.25);
+    z-index: -1;
+    background-color: $black;
+    clip-path: inset(0);
     overflow: hidden;
     @include inset(0);
-    @include dark {
-        background-color: rgba($black, 0.5);
-    }
 }
 
 .header-art-image {
-    position: relative;
-    z-index: -1;
-    background-color: $black;
     @include declare(width height, 100%);
+    @supports (clip-path: inset(0)) {
+        position: fixed;
+        @include inset(0);
+    }
 }
 
 .header-content {
