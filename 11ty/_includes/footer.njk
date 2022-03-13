@@ -20,9 +20,9 @@
     </a>
 </footer>
 <script>
-    window.addEventListener("DOMContentLoaded", function(event) {
-        var footerToTop = document.getElementById("footer-toTop");
-        var headroom  = new Headroom(footerToTop, {
+    window.addEventListener("DOMContentLoaded", function() {
+        let footerToTop = document.getElementById("footer-toTop");
+        let headroom  = new Headroom(footerToTop, {
             classes: {
                 initial: "hidden",
                 pinned: "hidden"

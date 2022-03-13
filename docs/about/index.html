@@ -90,6 +90,17 @@
         <div class="header-break"></div>
     </div>
 </header>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const HeaderResizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+                let image = entry.target.querySelector(".header-art-image");
+                image.style.height = entry.contentRect.height + "px";
+            }
+        });
+        HeaderResizeObserver.observe(document.querySelector(".header"));
+    });
+</script>
     <div class="page-content">
         
 <main class="about-main">
@@ -166,9 +177,9 @@
     </a>
 </footer>
 <script>
-    window.addEventListener("DOMContentLoaded", function(event) {
-        var footerToTop = document.getElementById("footer-toTop");
-        var headroom  = new Headroom(footerToTop, {
+    window.addEventListener("DOMContentLoaded", function() {
+        let footerToTop = document.getElementById("footer-toTop");
+        let headroom  = new Headroom(footerToTop, {
             classes: {
                 initial: "hidden",
                 pinned: "hidden"
