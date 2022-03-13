@@ -1,19 +1,24 @@
 ---
 title: Page Not Found
 permalink: /404.html
+noIndex: true
 layout: base
 layoutClass: notfound
 ---
 
 <main class="notfound-main">
-    <h1 class="notfound-title">Page Not Found</h1>
-    <p class="notfound-description">The page you have requested could not be located.</p>
+    <header>
+        <h1 class="notfound-title">Page Not Found</h1>
+        <p class="notfound-description">The page you have requested could not be located.</p>
+    </header>
     <nav class="notfound-nav">
-        <a class="notfound-nav-link" href="{{ '/' | url }}">
-            <i class="bi bi-house-door" aria-label="Home"></i>
+        <a class="notfound-nav-link" href="{{ '/' | url }}"
+            title="Home" aria-label="Home">
+            <i class="bi bi-house-door"></i>
         </a>
-        <a class="notfound-nav-link" href="{{ '/contact/' | url }}">
-            <i class="bi bi-chat" aria-label="Contact Me"></i>
+        <a class="notfound-nav-link" href="{{ '/contact/' | url }}"
+            title="Contact Me" aria-label="Contact Me">
+            <i class="bi bi-chat"></i>
         </a>
     </nav>
 </main>

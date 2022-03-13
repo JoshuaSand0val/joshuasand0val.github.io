@@ -2,7 +2,7 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
-Sitemap: {{ [site.url, '/sitemap.xml'] | join | replace(r/([^:]\/)\/+/g, "$1") | url }}
+Sitemap: {{ [site.url, '/sitemap.xml'] | join | trimURLslashes | url }}
 
 User-agent: *
 Disallow:

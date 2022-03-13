@@ -6,14 +6,14 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    background-color: rgba($black, 0.25);
+    background-color: rgba($black, 0.66);
     color: text-color($white, $black);
     text-shadow: 0 0 8px $black;
     padding: $safe-top $safe-right 0 $safe-left;
     margin-bottom: px(50);
     overflow: visible;
     @include dark {
-        background-color: rgba($black, 0.5);
+        background-color: rgba($black, 0.8);
     }
     @include min-vw($md) {
         min-height: px(280);

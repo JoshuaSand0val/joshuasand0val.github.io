@@ -1,5 +1,6 @@
 ---
 title: My Projects
+description: A curated selection of work by Joshua Elijah Sandoval.
 layout: page
 layoutClass: projects
 ---
@@ -14,7 +15,7 @@ layoutClass: projects
         <article class="projects-list-item">
             <div class="projects-card">
                 <a class="projects-card-image" href="{{ props.url | url }}" target="_blank">
-                    <img src="{{ props.image | url }}" alt="" loading="lazy" />
+                    <img src="{{ props.image | url }}" alt="{{ title }}" loading="lazy" />
                     <h2>{{ title }}</h2>
                 </a>
                 <p class="projects-card-description">

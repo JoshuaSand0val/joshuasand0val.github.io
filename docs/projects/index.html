@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html class="projects">
+<html lang="en-US" class="projects">
     <head>
         <!-- Title and character set: -->
         <title>My Projects | Joshua Sandoval</title>
         <meta charset="UTF-8" />
         <!-- Metadata: -->
-        <meta name="description" content="Joshua Elijah Sandoval is a front-end web developer." />
+        <meta name="description" content="A curated selection of work by Joshua Elijah Sandoval." />
         <meta name="author" content="Joshua Elijah Sandoval" />
         <!-- Viewport: -->
         <meta name="disabled-adaptations" content="watch" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        
+        <!-- Canonical URL: -->
+        <link rel="canonical" href="https://joshuasandoval.me/projects/"/>
+        
+        
         <!-- Shortcut icons: -->
         <link rel="icon" href="/assets/images/logo/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/images/logo/appicon.png" />
         <!-- Bootstrap Icons: -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="preload" as="style"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        </noscript>
         <!-- Stylesheet: -->
         <link rel="stylesheet" href="/assets/css/site.css" />
         <!-- Headroom.js: -->
-        <script src="/assets/js/headroom/headroom.min.js"></script>
+        <script defer src="/assets/js/headroom/headroom.min.js"></script>
     </head>
     <body ontouchstart="">
         <div class="page">
@@ -47,43 +57,33 @@
         <nav class="header-nav">
     
     <a class="header-nav-link"
-        
-        href="/">
-        <i class="bi bi-house-door"
-            aria-label="Home">
-        </i>
+        href="/" title="Home" aria-label="Home"
+        >
+        <i class="bi bi-house-door"></i>
     </a>
     
     <a class="header-nav-link"
-        
-        href="/about/">
-        <i class="bi bi-person-circle"
-            aria-label="About Me">
-        </i>
+        href="/about/" title="About Me" aria-label="About Me"
+        >
+        <i class="bi bi-person-circle"></i>
     </a>
     
     <a class="header-nav-link"
-        aria-current="page"
-        href="/projects/">
-        <i class="bi bi-journal-code"
-            aria-label="Code Projects">
-        </i>
+        href="/projects/" title="Code Projects" aria-label="Code Projects"
+        aria-current="page">
+        <i class="bi bi-journal-code"></i>
     </a>
     
     <a class="header-nav-link"
-        
-        href="https://github.com/JoshuaSand0val/">
-        <i class="bi bi-github"
-            aria-label="My Github">
-        </i>
+        href="https://github.com/JoshuaSand0val/" title="My Github" aria-label="My Github"
+        >
+        <i class="bi bi-github"></i>
     </a>
     
     <a class="header-nav-link"
-        
-        href="/contact/">
-        <i class="bi bi-chat"
-            aria-label="Contact Me">
-        </i>
+        href="/contact/" title="Contact Me" aria-label="Contact Me"
+        >
+        <i class="bi bi-chat"></i>
     </a>
     
 </nav>
@@ -102,7 +102,7 @@
         <article class="projects-list-item">
             <div class="projects-card">
                 <a class="projects-card-image" href="https://neo.joshuasandoval.me/" target="_blank">
-                    <img src="/assets/images/projects/neo-css.png" alt="" loading="lazy" />
+                    <img src="/assets/images/projects/neo-css.png" alt="Neo CSS" loading="lazy" />
                     <h2>Neo CSS</h2>
                 </a>
                 <p class="projects-card-description">
@@ -123,33 +123,41 @@
         </div>
         <nav class="footer-nav">
             
-            <a class="footer-nav-link" href="/" >
-                <i class="bi bi-house-door" aria-label="Home"></i>
+            <a class="footer-nav-link"
+                href="/" title="Home" aria-label="Home"
+                >
+                <i class="bi bi-house-door"></i>
             </a>
             
-            <a class="footer-nav-link" href="https://github.com/JoshuaSand0val/" >
-                <i class="bi bi-github" aria-label="My Github"></i>
+            <a class="footer-nav-link"
+                href="https://github.com/JoshuaSand0val/" title="My Github" aria-label="My Github"
+                >
+                <i class="bi bi-github"></i>
             </a>
             
-            <a class="footer-nav-link" href="/contact/" >
-                <i class="bi bi-chat" aria-label="Contact Me"></i>
+            <a class="footer-nav-link"
+                href="/contact/" title="Contact Me" aria-label="Contact Me"
+                >
+                <i class="bi bi-chat"></i>
             </a>
             
         </nav>
     </div>
-    <a href="#" id="footer-toTop">
+    <a href="#" id="footer-toTop" title="Back to top" aria-label="Back to top">
         <i class="bi bi-arrow-up-circle"></i>
     </a>
 </footer>
 <script>
-    var footerToTop = document.getElementById("footer-toTop");
-    var headroom  = new Headroom(footerToTop, {
-        classes: {
-            initial: "hidden",
-            pinned: "hidden"
-        },
+    window.addEventListener("DOMContentLoaded", function(event) {
+        var footerToTop = document.getElementById("footer-toTop");
+        var headroom  = new Headroom(footerToTop, {
+            classes: {
+                initial: "hidden",
+                pinned: "hidden"
+            },
+        });
+        headroom.init();
     });
-    headroom.init();
 </script>
 </div>
     </body>

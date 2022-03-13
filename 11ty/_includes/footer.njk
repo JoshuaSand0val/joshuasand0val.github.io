@@ -7,23 +7,27 @@
         </div>
         <nav class="footer-nav">
             {% for title, props in nav.footer %}
-            <a class="footer-nav-link" href="{{ props.url | url }}" {% if props.url == page.url %}aria-current="page"{% endif %}>
-                <i class="bi bi-{{ props.icon }}" aria-label="{{ title }}"></i>
+            <a class="footer-nav-link"
+                href="{{ props.url | url }}" title="{{ title }}" aria-label="{{ title }}"
+                {% if props.url == page.url %}aria-current="page"{% endif %}>
+                <i class="bi bi-{{ props.icon }}"></i>
             </a>
             {% endfor %}
         </nav>
     </div>
-    <a href="#" id="footer-toTop">
+    <a href="#" id="footer-toTop" title="Back to top" aria-label="Back to top">
         <i class="bi bi-arrow-up-circle"></i>
     </a>
 </footer>
 <script>
-    var footerToTop = document.getElementById("footer-toTop");
-    var headroom  = new Headroom(footerToTop, {
-        classes: {
-            initial: "hidden",
-            pinned: "hidden"
-        },
+    window.addEventListener("DOMContentLoaded", function(event) {
+        var footerToTop = document.getElementById("footer-toTop");
+        var headroom  = new Headroom(footerToTop, {
+            classes: {
+                initial: "hidden",
+                pinned: "hidden"
+            },
+        });
+        headroom.init();
     });
-    headroom.init();
 </script>

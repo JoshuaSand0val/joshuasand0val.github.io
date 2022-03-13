@@ -1,6 +1,6 @@
 <picture class="header-art">
     <img class="header-art-image"
-        src="{{ '/assets/images/' + hero | url }}"
+        src="{{ heroImage | trimURLslashes | url }}"
         loading="lazy"
         alt="Hero art" />
 </picture>

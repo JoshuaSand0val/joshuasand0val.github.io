@@ -802,7 +802,7 @@ b, strong {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  background-color: rgba(24, 24, 28, 0.25);
+  background-color: rgba(24, 24, 28, 0.66);
   color: #EBEBEF;
   text-shadow: 0 0 8px #18181C;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
@@ -811,7 +811,7 @@ b, strong {
 }
 @media (prefers-color-scheme: dark) {
   .header {
-    background-color: rgba(24, 24, 28, 0.5);
+    background-color: rgba(24, 24, 28, 0.8);
   }
 }
 @media (min-width: 640.5px) {

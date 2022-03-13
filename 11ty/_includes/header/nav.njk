@@ -1,11 +1,9 @@
 <nav class="header-nav">
     {% for title, props in nav.header %}
     <a class="header-nav-link"
-        {% if props.url == page.url %}aria-current="page"{% endif %}
-        href="{{ props.url | url }}">
-        <i class="bi bi-{{ props.icon }}"
-            aria-label="{{ title }}">
-        </i>
+        href="{{ props.url | url }}" title="{{ title }}" aria-label="{{ title }}"
+        {% if props.url == page.url %}aria-current="page"{% endif %}>
+        <i class="bi bi-{{ props.icon }}"></i>
     </a>
     {% endfor %}
 </nav>
