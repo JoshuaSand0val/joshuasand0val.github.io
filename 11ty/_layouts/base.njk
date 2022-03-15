@@ -7,12 +7,18 @@
         <!-- Metadata: -->
         <meta name="description" content="{{ description or site.description }}" />
         <meta name="author" content="{{ author or site.author }}" />
+        <!-- Open Graph: -->
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:site_name" content="{{ site.name }}" />
+        <meta property="og:type" content="{{ 'website' or openGraphType }}" />
+        <meta property="og:image" content="{{ '/assets/images/logo/opengraph.png' | url }}" />
+        <meta property="og:url" content="{{ [site.url, page.url] | join | trimURLslashes | url }}" />
         <!-- Viewport: -->
         <meta name="disabled-adaptations" content="watch" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {% if (noIndex != true) %}
         <!-- Canonical URL: -->
-        <link rel="canonical" href="{{ [site.url, page.url] | join | trimURLslashes | url }}"/>
+        <link rel="canonical" href="{{ [site.url, page.url] | join | trimURLslashes | url }}" />
         {% endif %}
         {% if (noIndex == true) %}
         <!-- Do not index this page: -->
