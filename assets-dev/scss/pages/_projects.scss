@@ -4,7 +4,7 @@
 
 .projects-main {
     display: block;
-    max-width: $lg;
+    max-width: $xl;
     margin: auto;
     @include breakpoints(padding,
         size(0), size(1)
@@ -78,10 +78,8 @@
     position: absolute;
     bottom: 0;
     display: block;
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    border-color: $white;
     border-top-right-radius: $radius-xs;
+    box-shadow: 0 2px 16px -6px $blue;
     background-color: $black;
     white-space: nowrap;
     color: $white;

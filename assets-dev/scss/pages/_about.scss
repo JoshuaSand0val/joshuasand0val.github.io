@@ -1,8 +1,10 @@
 // About: Styles for the website about page.
 
 @forward "home";
+@use "../neo" as *;
 
 .about-main {
+    max-width: $xl;
     @extend .home;
 }
 
