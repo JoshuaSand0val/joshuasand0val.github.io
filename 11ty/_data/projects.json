@@ -2,6 +2,7 @@
 	"Neo CSS": {
 		"url": "https://neo.joshuasandoval.me/",
 		"image": "/assets/images/projects/neo-css.png",
+		"imageDarkMode": "/assets/images/projects/neo-css-dark.png",
 		"description": "A modern, modular and extensible CSS boilerplate built with SASS/SCSS."
 	}
 }

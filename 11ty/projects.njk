@@ -15,7 +15,12 @@ layoutClass: projects
         <article class="projects-list-item">
             <div class="projects-card">
                 <a class="projects-card-image" href="{{ props.url | url }}" target="_blank">
-                    <img src="{{ props.image | url }}" alt="{{ title }}" loading="lazy" />
+                    <picture>
+                        {% if props.imageDarkMode %}
+                        <source srcset="{{ props.imageDarkMode | url }}" media="(prefers-color-scheme: dark)">
+                        {% endif %}
+                        <img src="{{ props.image | url }}" alt="{{ title }}" loading="lazy" />
+                    </picture>
                     <h2>{{ title }}</h2>
                 </a>
                 <p class="projects-card-description">
