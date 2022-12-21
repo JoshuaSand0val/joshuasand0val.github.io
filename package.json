@@ -11,7 +11,7 @@
     "sass": "^1.57.1"
   },
   "scripts": {
-    "prestylesheet": "sass --no-source-map assets/scss/site.scss assets/css/site.css",
+    "prestylesheet": "sass --no-source-map assets-dev/scss/site.scss assets/css/site.css",
     "stylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
     "poststylesheet": "cleancss --output assets/css/site.min.css assets/css/site.css",
     "site-test": "npx @11ty/eleventy --serve --output=_site_test",
