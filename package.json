@@ -11,8 +11,8 @@
     "sass": "^1.57.1"
   },
   "scripts": {
-    "prestylesheet": "sass --no-source-map _site/assets/scss/site.scss _site/assets/css/site.css",
-    "stylesheet": "postcss _site/assets/css/site.css --no-map --use autoprefixer --dir _site/assets/css/",
-    "poststylesheet": "cleancss --output _site/assets/css/site.min.css _site/assets/css/site.css"
+    "prestylesheet": "sass --no-source-map assets/scss/site.scss assets/css/site.css",
+    "stylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
+    "poststylesheet": "cleancss --output assets/css/site.min.css assets/css/site.css"
   }
 }
