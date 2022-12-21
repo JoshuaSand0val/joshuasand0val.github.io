@@ -13,6 +13,8 @@
   "scripts": {
     "prestylesheet": "sass --no-source-map assets/scss/site.scss assets/css/site.css",
     "stylesheet": "postcss assets/css/site.css --no-map --use autoprefixer --dir assets/css/",
-    "poststylesheet": "cleancss --output assets/css/site.min.css assets/css/site.css"
+    "poststylesheet": "cleancss --output assets/css/site.min.css assets/css/site.css",
+    "site-test": "npx @11ty/eleventy --serve --output=_site_test",
+    "site": "npx @11ty/eleventy"
   }
 }
