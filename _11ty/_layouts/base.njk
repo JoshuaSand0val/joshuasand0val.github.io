@@ -15,12 +15,12 @@
         <!-- Viewport: -->
         <meta name="disabled-adaptations" content="watch" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <!-- Canonical URL: -->
         {% if (eleventyExcludeFromCollections != true) %}
+        <!-- Canonical URL: -->
         <link rel="canonical" href="{{ page.url | canonicalURL }}" />
         {% endif %}
-        <!-- Do not index this page: -->
         {% if (eleventyExcludeFromCollections == true) %}
+        <!-- Do not index this page: -->
         <meta name="robots" content="noindex">
         {% endif %}
         <!-- Shortcut icons: -->
