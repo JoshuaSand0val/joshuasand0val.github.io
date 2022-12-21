@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US" data-layout="{{ layout }}">
+    <head>
+        <!-- Title and character set: -->
+        <title>{{ title }}{% if page.url != '/' %} | {{ site.title }}{% endif %}</title>
+        <meta charset="UTF-8" />
+        <!-- Metadata: -->
+        <meta name="description" content="{{ description }}" />
+        <!-- Open Graph: -->
+        <meta property="og:site_name" content="{{ site.title }}" />
+        <meta property="og:title" content="{{ title }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="{{ site.ogImage | canonicalURL }}" />
+        <meta property="og:url" content="{{ page.url | canonicalURL }}" />
+        <!-- Viewport: -->
+        <meta name="disabled-adaptations" content="watch" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <!-- Canonical URL: -->
+        {% if (eleventyExcludeFromCollections != true) %}
+        <link rel="canonical" href="{{ page.url | canonicalURL }}" />
+        {% endif %}
+        <!-- Do not index this page: -->
+        {% if (eleventyExcludeFromCollections == true) %}
+        <meta name="robots" content="noindex">
+        {% endif %}
+        <!-- Shortcut icons: -->
+        <link rel="icon" href="{{ site.icon }}" />
+        <link rel="apple-touch-icon" href="{{ site.appicon }}" />
+        <!-- Stylesheet: -->
+        <link rel="stylesheet" href="{{ site.stylesheet }}" />
+    </head>
+    <body ontouchstart="">
+        {{ content | safe }}
+    </body>
+</html>

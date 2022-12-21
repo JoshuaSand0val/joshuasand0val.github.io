@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addFilter("canonicalURL", (value) => {
 		return [site.url, value].join("/").replace(/([^:]\/)\/+/g, "$1");
 	});
-	// Customize input and layout directories.
+	// Customize input and layout directories:
 	return {
         dir: {
             input: "_11ty",
