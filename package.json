@@ -1,4 +1,6 @@
 {
+  "author": "Joshua Elijah Sandoval",
+  "license": "MIT",
   "devDependencies": {
     "css-neo": "^2.0.0"
   }
