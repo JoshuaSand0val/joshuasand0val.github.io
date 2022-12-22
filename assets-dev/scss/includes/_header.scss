@@ -45,6 +45,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scroll-padding: 50%;
+    margin-top: px(-120);
     transform: translateY(px(120));
     gap: size(0);
     @include breakpoints(padding, size(1), size(2));
