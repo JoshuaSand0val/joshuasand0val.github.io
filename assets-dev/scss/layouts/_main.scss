@@ -1,8 +1,8 @@
-// Header: CSS for the website global header.
+// Main: CSS for the website main page layout.
 
 @use "../api" as *;
 
-#header {
+#main {
     position: relative;
     display: block;
     max-height: 50vh;
@@ -15,7 +15,7 @@
     }
 }
 
-#header-banner {
+#main-banner {
     position: absolute;
     z-index: -1;
     background-color: $black;
@@ -28,7 +28,7 @@
     }
 }
 
-#header-title {
+#main-title {
     display: block;
     font-family: "Cookie", cursive;
     font-size: font-size(4);
@@ -39,7 +39,7 @@
     margin: $safe-x;
 }
 
-#header-cards {
+#main-cards {
     display: block;
     margin-top: px(-120);
     transform: translateY(px(120));

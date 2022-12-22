@@ -1,11 +1,14 @@
-<header id="header">
-    <picture id="header-banner">
+---
+layout: base
+---
+<main id="main">
+    <picture id="main-banner">
         <img src="{{ hero }}" alt="{{ title }}" loading="lazy" />
     </picture>
-    <h2 id="header-title">{{ site.title }}</h2>
-    <nav id="header-cards">
+    <h1 id="main-title">{{ site.title }}</h1>
+    <nav id="main-cards">
         <div>
-            {% for card in collections.header %}
+            {% for card in collections.main %}
             <figure>
                 <a href="{{ card.data.linkTo or card.url | url }}"
                     {% if page.url == card.url %}aria-current="page"{% endif %}>
@@ -18,12 +21,12 @@
             {%- endfor -%}
         </div>
     </nav>
-</header>
+</main>
 <script>
-    document.querySelectorAll("#header-cards a").forEach((link) => {
+    document.querySelectorAll("#main-cards a").forEach((link) => {
         link.addEventListener("focus", (e) => {
             let image = e.currentTarget.querySelector("img").src;
-            document.querySelector("#header-banner img").src = image;
+            document.querySelector("#main-banner img").src = image;
         });
         link.addEventListener("pointerover", (e) => {
             link.focus();
