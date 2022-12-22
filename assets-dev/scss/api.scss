@@ -1,2 +1,17 @@
 // Forward API:
-@forward "../../node_modules/css-neo/scss/neo";
+@forward "../../node_modules/css-neo/scss/neo" with (
+    $white: #f6f6f8 !default,
+    $font-size: 1em !default,
+    $font-size-ratio: 1.200 !default,
+    $font: #{'Varela Round', sans-serif} !default,
+    $font-heading: #{'Kulim Park', sans-serif} !default,
+    $radius-xs: 4px !default,
+    $radius-sm: 8px !default,
+    $radius-md: 12px !default,
+    $radius-lg: 18px !default,
+    $radius-xl: 24px !default,
+    $radius-xxl: 32px !default
+);
+
+// Import fonts:
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Kulim+Park:ital,wght@0,400;0,700;1,400;1,700&family=Varela+Round&display=swap');

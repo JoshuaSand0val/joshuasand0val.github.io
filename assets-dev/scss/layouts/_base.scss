@@ -1,0 +1,10 @@
+// Base: CSS for the website base layout.
+
+@use "../api" as *;
+
+@include dark {
+    html {
+        background-color: $black;
+        color: $white
+    }
+}

@@ -1,0 +1,30 @@
+<header id="header">
+    <picture id="header-banner">
+        <img src="{{ hero }}" alt="{{ title }}" loading="lazy" />
+    </picture>
+    <h2 id="header-title">{{ site.title }}</h2>
+    <nav id="header-cards">
+        {% for card in collections.header %}
+        <figure>
+            <a href="{{ card.data.linkTo or card.url | url }}"
+                {% if page.url == card.url %}aria-current="page"{% endif %}>
+                <picture>
+                    <img src="{{ card.data.hero }}" alt="{{ card.data.title }}" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>{{ card.data.title }}</figcaption>
+        </figure>
+        {%- endfor -%}
+    </nav>
+</header>
+<script>
+    document.querySelectorAll("#header-cards a").forEach((link) => {
+        link.addEventListener("focus", (e) => {
+            let image = e.currentTarget.querySelector("img").src;
+            document.querySelector("#header-banner img").src = image;
+        });
+        link.addEventListener("pointerover", (e) => {
+            link.focus();
+        });
+    });
+</script>
