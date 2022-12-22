@@ -5,8 +5,9 @@
 #header {
     position: relative;
     display: block;
+    max-height: 100vh;
     background-image: linear-gradient(rgba($black, 0.66), $white);
-    padding: $safe-top $safe-right 0 $safe-left;
+    padding-top: $safe-top;
     margin-bottom: px(120);
     overflow: visible;
     @include dark {
@@ -21,6 +22,7 @@
     overflow: hidden;
     @include inset(0);
     img {
+        filter: blur(3px);
         object-position: center;
         @include declare(width height, 100%);
     }
@@ -29,35 +31,40 @@
 #header-title {
     display: block;
     font-family: "Cookie", cursive;
-    font-size: font-size(5);
-    padding: size(1) size(2);
+    font-size: font-size(4);
+    text-align: center;
+    padding: size(2);
     color: text-color($white, $black);
     text-shadow: 0 0 1px $black;
-    margin: 0;
+    margin: $safe-x;
 }
 
 #header-cards {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 50%;
+    display: block;
     margin-top: px(-120);
     transform: translateY(px(120));
-    gap: size(0);
-    @include breakpoints(padding, size(1), size(2));
+    padding: $safe-x;
+    overflow: hidden;
+    div {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        max-width: $xl;
+        gap: size(0);
+        padding: size(2);
+        margin: auto;
+    }
     figure {
         display: block;
-        width: px(427);
-        max-width: 100%;
-        flex: 0 0 auto;
-        scroll-snap-align: center;
+        flex: 1 0 $sm;
         outline: none;
         margin: 0;
         transition: transform 300ms linear;
+        @include min-vw($lg) {
+            &:only-child {
+                max-width: 50%;
+            }
+        }
     }
     figure:is(:focus-within, :hover) {
         transform: scale(1.02);
@@ -65,7 +72,7 @@
     img {
         display: block;
         width: 100%;
-        height: px(267);
+        height: px(300);
         object-fit: cover;
         background-color: $white;
         border-radius: $radius-md;

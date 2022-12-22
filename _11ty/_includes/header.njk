@@ -4,17 +4,19 @@
     </picture>
     <h2 id="header-title">{{ site.title }}</h2>
     <nav id="header-cards">
-        {% for card in collections.header %}
-        <figure>
-            <a href="{{ card.data.linkTo or card.url | url }}"
-                {% if page.url == card.url %}aria-current="page"{% endif %}>
-                <picture>
-                    <img src="{{ card.data.hero }}" alt="{{ card.data.title }}" loading="lazy">
-                </picture>
-            </a>
-            <figcaption>{{ card.data.title }}</figcaption>
-        </figure>
-        {%- endfor -%}
+        <div>
+            {% for card in collections.header %}
+            <figure>
+                <a href="{{ card.data.linkTo or card.url | url }}"
+                    {% if page.url == card.url %}aria-current="page"{% endif %}>
+                    <picture>
+                        <img src="{{ card.data.hero }}" alt="{{ card.data.title }}" loading="lazy">
+                    </picture>
+                </a>
+                <figcaption>{{ card.data.title }}</figcaption>
+            </figure>
+            {%- endfor -%}
+        </div>
     </nav>
 </header>
 <script>
