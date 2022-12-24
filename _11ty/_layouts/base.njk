@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" data-layout="{{ layout }}" data-name="{{ name }}">
+<html lang="en-US" data-layout="{{ [layout, name] | join(" ") }}">
     <head>
         <!-- Title and character set: -->
         <title>{{ title }}{% if page.url != '/' %} | {{ site.title }}{% endif %}</title>
