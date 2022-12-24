@@ -1,8 +1,8 @@
-// Require 11ty site metadata.
+// Require 11ty site metadata:
 const site = require("./_11ty/_data/site.js");
 
 module.exports = function (eleventyConfig) {
-	// Add passthrough copy of website asset files.
+	// Add passthrough copy of website asset files:
 	eleventyConfig.addPassthroughCopy("assets/");
     // Add filter that converts URLs into a canonical version:
 	eleventyConfig.addFilter("canonicalURL", (value) => {
