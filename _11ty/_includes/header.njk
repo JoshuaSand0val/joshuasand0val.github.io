@@ -1,0 +1,25 @@
+<header id="header">
+    <div>
+        <picture>
+            <img src="{{ hero }}" alt="{{ title }}" loading="lazy" />
+        </picture>
+        <nav>
+            {% for name, path in header %}
+            <a href="{{ path }}" {% if page.url == path %}aria-current="page"{% endif %}>
+                {{ name }}
+            </a>
+            {% endfor %}
+        </nav>
+        <figure>
+            <picture>
+                <img src="/assets/images/jes/pfp.jpg" alt="Jes" />
+            </picture>
+            <figcaption>
+                <hgroup>
+                    <h2>{{ site.title }}</h2>
+                    <p>{{ site.slogan }}</p>
+                </hgroup>
+            </figcaption>
+        </figure>
+    </div>
+</header>

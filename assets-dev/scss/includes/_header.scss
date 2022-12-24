@@ -1,0 +1,88 @@
+// Header: CSS for the global website header.
+
+@use "../api" as *;
+
+#header {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid step-color($black, 1);
+    padding: $safe-top $safe-right 0 $safe-left;
+    margin-bottom: px(40) - size(0);
+    background-image: linear-gradient(rgba($black, 0.5), $black);
+    color: text-color($white, $black);
+    overflow: visible;
+    div {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        align-items: flex-end;
+        justify-content: center;
+        max-width: $lg;
+        padding: size(2);
+        padding-bottom: size(0);
+        gap: 0 size(2);
+        margin: 0 auto;
+    }
+    div > picture {
+        position: absolute;
+        z-index: -1;
+        overflow: hidden;
+        @include inset(0);
+        img {
+            object-fit: cover;
+            filter: blur(3px) saturate(1.5);
+            @include declare(width height, 100%);
+        }
+    }
+    div > nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        flex-grow: 1;
+        gap: size(0);
+        a {
+            font-size: font-size(1);
+            color: currentColor;
+            &[aria-current] {
+                color: text-color($yellow, $black);
+            }
+        }
+    }
+    div > figure {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        text-align: center;
+        justify-content: center;
+        gap: size(2);
+        margin: 0;
+        @include breakpoints(margin-top, px(25), px(75), px(150), px(200));
+        picture {
+            display: block;
+            flex-shrink: 0;
+            max-width: none;
+            border: px(3) solid currentColor;
+            border-radius: px(60);
+            transform: translateY(px(40));
+            margin-top: px(-40);
+            overflow: hidden;
+            @include declare(width height, px(120));
+            @include max-vw($md) {
+                order: 1;
+            }
+        }
+        figcaption {
+            h2, p {
+                font-family: $font-heading;
+                font-weight: $weight-bold;
+                line-height: $line-height-heading;
+                margin: 0;
+            }
+            h2 {
+                font-size: font-size(5);
+            }
+            p {
+                font-size: font-size(2);
+            }
+        }
+    }
+}

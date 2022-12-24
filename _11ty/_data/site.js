@@ -1,5 +1,6 @@
 module.exports = {
     "title": "Hey, Jes!",
+    "slogan": "Front-end Web Developer",
     "url": "https://heyjes.dev/",
     "github": "https://github.com/JoshuaSand0val/",
     "ogImage": "/assets/images/logo/opengraph.png",
