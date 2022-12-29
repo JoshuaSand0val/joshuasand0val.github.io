@@ -22,7 +22,6 @@
         margin: 0;
     }
     h1 {
-        font-family: $font;
         @include breakpoints(font-size,
             font-size(1),
             font-size(2),
