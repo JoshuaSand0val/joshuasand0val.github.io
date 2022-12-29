@@ -31,6 +31,10 @@ a[href] {
     }
 }
 
+b, strong {
+    font-weight: $weight-bold;
+}
+
 img {
     max-width: 100%;
     height: auto;
