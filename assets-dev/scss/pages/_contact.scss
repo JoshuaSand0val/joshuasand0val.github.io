@@ -1,0 +1,77 @@
+// Contact: CSS for the contact page.
+
+@use "../api" as *;
+
+#page.contact body > div {
+    // Fixes Safari transform scrolling bug:
+    overflow: hidden;
+}
+
+#page.contact #header {
+    margin-bottom: 0;
+}
+
+#page.contact main {
+    display: block;
+    text-align: center;
+    max-width: $xl;
+    padding: size(5) size(2);
+    margin: 0 auto;
+    h1, p, #address {
+        line-height: 1.15;
+        margin: 0;
+    }
+    h1 {
+        font-family: $font;
+        @include breakpoints(font-size,
+            font-size(1),
+            font-size(2),
+            font-size(3)
+        );
+    }    
+}
+
+#page.contact #address {
+    display: inline-block;
+    font-size: clamp($font-size, 18vw, 300px);
+    font-family: "Cookie", cursive;
+    animation:
+        contact-address 500ms 250ms cubic-bezier(0.45, 0.15, 0, 1),
+        contact-address-pulse 2s 750ms linear infinite;
+    &::before {
+        content: "@heyjes.dev";
+    }
+    @include reduced-motion {
+        animation: none;
+    }
+    @include background-color using ($bg) {
+        color: text-color($green, $bg);
+    }
+    @supports (background-clip: text) {
+        @include background-color using ($bg) {
+            background-image: linear-gradient(to right,
+                text-color($red, $bg),
+                text-color($orange, $bg),
+                text-color($yellow, $bg),
+                text-color($green, $bg),
+                text-color($blue, $bg),
+                text-color($indigo, $bg),
+                text-color($purple, $bg)
+            );
+        }
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes contact-address {
+    from {
+        transform: scale(5);
+    }
+}
+
+@keyframes contact-address-pulse {
+    50% {
+        transform: scale(1.01);
+    }
+}
