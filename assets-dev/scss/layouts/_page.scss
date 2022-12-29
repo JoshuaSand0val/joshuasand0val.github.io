@@ -1,0 +1,19 @@
+// Page: CSS for the website page layout.
+
+@use "../api" as *;
+
+#page body {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include inset(0);
+    & > * {
+        flex: 0 0 auto;
+    }
+    & > div {
+        padding: $safe-x;
+        margin: auto 0;
+    }
+}
