@@ -2,9 +2,29 @@
 
 @use "../api" as *;
 
-@include dark {
-    html {
-        background-color: $black;
-        color: $white
+html {
+    color-scheme: $color-scheme;
+    font: $weight #{$font-size}/#{$line-height} $font;
+    @include background-color using ($bg) {
+        background-color: $bg;
+        color: text-color($color2: $bg);
     }
+}
+
+body {
+    margin: 0;
+}
+
+a[href] {
+    @include background-color using ($bg) {
+        color: text-color($yellow, $bg);
+    }
+    &:not(:hover, :focus) {
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
