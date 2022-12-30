@@ -1,0 +1,7 @@
+Sitemap: https://heyjes.dev/sitemap.xml
+
+User-agent: *
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow: /
