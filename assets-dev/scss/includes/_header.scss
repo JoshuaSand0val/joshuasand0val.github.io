@@ -45,7 +45,7 @@
             font-size: font-size(1);
             color: currentColor;
             &[aria-current] {
-                color: text-color($yellow, $black);
+                color: text-color($accent, $black);
             }
         }
     }

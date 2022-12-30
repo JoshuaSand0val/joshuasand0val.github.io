@@ -4,5 +4,10 @@
     $font-heading: #{'Nunito', sans-serif} !default
 );
 
+// Add extra supplementary variables:
+@use "../../node_modules/api.css/scss/" as *;
+
+$accent: $yellow !default;
+
 // Import fonts:
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');

@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a[href] {
     @include background-color using ($bg) {
-        color: text-color($yellow, $bg);
+        color: text-color($accent, $bg);
     }
     &:not(:hover, :focus) {
         text-decoration: none;
