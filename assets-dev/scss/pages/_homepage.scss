@@ -5,8 +5,11 @@
 #page.homepage main {
     display: block;
     max-width: $lg;
-    padding: size(2);
+    padding: size(1);
     margin: auto;
+    @include min-vw($md) {
+        padding: size(2);
+    }
     h1, h2 {
         margin: 0;
     }
