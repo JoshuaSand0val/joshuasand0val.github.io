@@ -24,9 +24,9 @@
     }
     div > picture {
         position: absolute;
+        inset: 0;
         z-index: -1;
         overflow: hidden;
-        @include inset(0);
         img {
             object-fit: cover;
             filter: blur(3px) saturate(1.5);

@@ -4,11 +4,11 @@
 
 #page body {
     position: absolute;
+    inset: 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    @include inset(0);
     & > * {
         flex: 0 0 auto;
     }
