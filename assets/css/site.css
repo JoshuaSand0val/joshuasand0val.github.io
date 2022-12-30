@@ -63,8 +63,8 @@
 .cards figcaption {
   display: block;
   max-width: 100%;
-  font-size: 1.44em;
-  margin: 0.7072135785rem 0;
+  font-size: 1.2em;
+  margin: 0.7072135785rem 0 0;
 }
 
 @keyframes cards {
@@ -359,7 +359,7 @@ img {
 
 #page.contact #address {
   display: inline-block;
-  font-size: clamp(1.728em, 15vw, 192.075px);
+  font-size: clamp(1.728em, 18vw, 230.49px);
   animation: 500ms 1 contact-address cubic-bezier(0.45, 0.15, 0, 1), 2s alternate 600ms infinite contact-address-pulse linear;
   color: #3a7e45;
 }
