@@ -28,7 +28,7 @@
         z-index: -1;
         overflow: hidden;
         img {
-            animation: header-hero 750ms ease-out;
+            animation: header-hero 750ms ease-out 1ms;
             object-fit: cover;
             filter: blur(3px) saturate(1.5);
             color: transparent;
