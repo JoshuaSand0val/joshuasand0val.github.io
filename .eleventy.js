@@ -6,16 +6,16 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	// Add passthrough copy of website asset files:
 	eleventyConfig.addPassthroughCopy("assets/");
-    // Add filter that converts URLs into a canonical version:
+	// Add filter that converts URLs into a canonical version:
 	eleventyConfig.addFilter("canonicalURL", (value) => {
-		return [site.url, value].join("/").replace(/([^:]\/)\/+/g, "$1");
+	return [site.url, value].join("/").replace(/([^:]\/)\/+/g, "$1");
 	});
 	// Customize input and layout directories:
 	return {
-        dir: {
+		dir: {
 			input: "_11ty",
 			layouts: "_layouts",
 			output: "docs"
-        }
-    };
+		}
+	};
 };
