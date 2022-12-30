@@ -33,7 +33,7 @@
 
 #page.contact #address {
     display: inline-block;
-    font-size: clamp(font-size(3), 15vw, $xl * 0.15);
+    font-size: clamp(font-size(3), 18vw, $xl * 0.18);
     animation:
         500ms 1 contact-address cubic-bezier(0.45, 0.15, 0, 1),
         2s alternate 600ms infinite contact-address-pulse linear;
