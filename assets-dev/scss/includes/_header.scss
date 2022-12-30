@@ -73,15 +73,16 @@
         figcaption {
             h2, p {
                 font-family: $font-heading;
-                font-weight: $weight-bold;
                 line-height: $line-height-heading;
                 margin: 0;
             }
             h2 {
                 font-size: font-size(5);
+                font-weight: $weight-heavy;
             }
             p {
                 font-size: font-size(2);
+                font-weight: $weight-bold;
             }
         }
     }
