@@ -8,6 +8,9 @@
     max-width: $lg;
     padding: size(1);
     margin: auto;
+    @include reduced-motion {
+        animation: none;
+    }
     @include min-vw($md) {
         padding: size(2);
     }
