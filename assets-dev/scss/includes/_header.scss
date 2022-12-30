@@ -17,9 +17,9 @@
         align-items: flex-end;
         justify-content: center;
         max-width: $lg;
-        padding: size(2);
+        padding: size(1);
         padding-bottom: size(0);
-        gap: 0 size(2);
+        gap: 0 size(1);
         margin: 0 auto;
     }
     div > picture {
@@ -51,7 +51,6 @@
         display: flex;
         flex-flow: row wrap;
         align-items: flex-end;
-        text-align: center;
         justify-content: center;
         gap: size(2);
         margin: 0;
