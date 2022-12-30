@@ -36,7 +36,7 @@
     font-family: "Cookie", cursive;
     animation:
         500ms 1 contact-address cubic-bezier(0.45, 0.15, 0, 1),
-        2s alternate 500ms infinite contact-address-pulse linear;
+        2s alternate 600ms infinite contact-address-pulse linear;
     @include reduced-motion {
         animation: none;
     }
