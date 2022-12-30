@@ -3,7 +3,7 @@ title: About Me
 description: Learn about myself, Joshua Elijah Sandoval; my hobbies and my work.
 layout: page
 class: homepage
-hero: /assets/images/hero/home.jpg
+hero: /assets/images/hero/about.jpg
 ---
 
 # About Myself
