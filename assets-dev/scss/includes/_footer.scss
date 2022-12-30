@@ -25,6 +25,7 @@
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-end;
+        animation: footer 500ms ease-out;
         max-width: $lg;
         padding: size(0) size(1) size(3);
         gap: size(0);
@@ -34,5 +35,11 @@
         display: flex;
         flex-flow: row wrap;
         gap: size(-3) size(-1);
+    }
+}
+
+@keyframes footer {
+    from {
+        transform: translateY(px(6));
     }
 }
