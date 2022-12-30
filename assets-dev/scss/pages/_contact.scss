@@ -35,8 +35,8 @@
     font-size: clamp($font-size, 15vw, $xl * 0.15);
     font-family: "Cookie", cursive;
     animation:
-        contact-address 500ms 250ms cubic-bezier(0.45, 0.15, 0, 1),
-        contact-address-pulse 2s 750ms linear infinite alternate;
+        500ms 1 contact-address cubic-bezier(0.45, 0.15, 0, 1),
+        2s alternate 500ms infinite contact-address-pulse linear;
     @include reduced-motion {
         animation: none;
     }
