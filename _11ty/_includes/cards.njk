@@ -1,7 +1,7 @@
 <nav class="cards">
     {% for name, data in cards %}
     <figure>
-        <a href="{{ data.url | url }}"
+        <a href="{{ data.url | url }}" target="_blank"
             {% if page.url == data.url %}aria-current="page"{% endif %}>
             <picture>
                 {% if data["hero-dark"] %}
