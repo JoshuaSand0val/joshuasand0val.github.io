@@ -6,6 +6,7 @@ html {
     color-scheme: $color-scheme;
     font: $weight #{$font-size}/#{$line-height} $font;
     word-break: break-word;
+    scroll-behavior: smooth;
     @include background-color using ($bg) {
         background-color: $bg;
         color: text-color($color2: $bg);
