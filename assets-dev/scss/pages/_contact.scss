@@ -18,22 +18,22 @@
     padding: size(5) size(2);
     margin: 0 auto;
     h1, p, #address {
+        font-family: "Cookie", cursive;
         line-height: 1.15;
         margin: 0;
     }
     h1 {
         @include breakpoints(font-size,
-            font-size(1),
-            font-size(2),
-            font-size(3)
+            font-size(4),
+            font-size(5),
+            font-size(6)
         );
     }    
 }
 
 #page.contact #address {
     display: inline-block;
-    font-size: clamp($font-size, 15vw, $xl * 0.15);
-    font-family: "Cookie", cursive;
+    font-size: clamp(font-size(3), 15vw, $xl * 0.15);
     animation:
         500ms 1 contact-address cubic-bezier(0.45, 0.15, 0, 1),
         2s alternate 600ms infinite contact-address-pulse linear;
