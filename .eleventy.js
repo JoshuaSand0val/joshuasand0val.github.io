@@ -2,6 +2,8 @@
 const site = require("./_11ty/_data/site.js");
 
 module.exports = function (eleventyConfig) {
+	// Add year shortcode, used for copyright.
+	eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 	// Add passthrough copy of website asset files:
 	eleventyConfig.addPassthroughCopy("assets/");
     // Add filter that converts URLs into a canonical version:
