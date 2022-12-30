@@ -30,6 +30,9 @@
         padding: size(0) size(1) size(3);
         gap: size(0);
         margin: 0 auto;
+        @include reduced-motion {
+            animation: none;
+        }
     }
     nav {
         display: flex;

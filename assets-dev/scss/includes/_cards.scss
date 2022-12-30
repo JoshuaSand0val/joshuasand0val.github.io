@@ -10,6 +10,9 @@
     max-width: $xl;
     gap: size(0);
     margin: size(1) auto;
+    @include reduced-motion {
+        animation: none;
+    }
 }
 
 .cards figure {

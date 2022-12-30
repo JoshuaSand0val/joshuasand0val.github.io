@@ -33,6 +33,9 @@
             filter: blur(3px) saturate(1.5);
             color: transparent;
             @include declare(width height, 100%);
+            @include reduced-motion {
+                animation: none;
+            }
         }
     }
     div > nav {
