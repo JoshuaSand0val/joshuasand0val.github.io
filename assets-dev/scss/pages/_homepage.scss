@@ -12,6 +12,7 @@
     }
     h1 {
         font-family: "Cookie", cursive;
+        line-height: 1.15;
         @include breakpoints(font-size,
             font-size(4),
             font-size(5),
