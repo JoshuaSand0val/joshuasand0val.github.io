@@ -1,0 +1,17 @@
+<footer id="footer">
+    <div>
+        <span>
+            &copy; {% year %} Joshua Elijah Sandoval.<br>
+            Distributed under the <a href="https://choosealicense.com/licenses/mit/" target="_blank">MIT</a> License.<br>
+            Site built with <a href="https://www.11ty.dev/" target="_blank">11ty</a>.
+        </span>
+        <nav>
+            {% for name, path in footer %}
+            <a href="{{ path }}" {% if page.url == path %}aria-current="page"{% endif %}>
+                {{ name }}
+            </a>
+            {% endfor %}
+            <a href="#" aria-label="Back to top.">&#9662;</a>
+        </nav>
+    </div>
+</footer>

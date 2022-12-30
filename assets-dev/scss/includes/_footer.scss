@@ -1,0 +1,40 @@
+// Footer: CSS for the global website footer.
+
+@use "../api" as *;
+
+#footer {
+    display: block;
+    padding: 0 $safe-right $safe-bottom $safe-left;
+    @include background-color using ($bg) {
+        border-top: 1px solid step-color($bg, 1);
+        background-color: shade($bg, 2%);
+        color: text-color($color2: shade($bg, 2%));
+        a {
+            font-weight: $weight-bold;
+            color: inherit;
+            &[aria-current] {
+                color: text-color($accent, shade($bg, 2%));
+            }
+            &[aria-label] {
+                font-size: font-size(2);
+                line-height: 1;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: $lg;
+        padding: size(0) size(1) size(3);
+        gap: size(0);
+        margin: 0 auto;
+    }
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        gap: size(-3) size(-1);
+    }
+}
