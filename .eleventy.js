@@ -13,8 +13,9 @@ module.exports = function (eleventyConfig) {
 	// Customize input and layout directories:
 	return {
         dir: {
-            input: "_11ty",
-            layouts: "_layouts"
+			input: "_11ty",
+			layouts: "_layouts",
+			output: "docs"
         }
     };
 };
