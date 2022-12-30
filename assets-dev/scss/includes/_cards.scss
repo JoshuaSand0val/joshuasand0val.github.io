@@ -1,0 +1,74 @@
+// Cards: CSS for information cards.
+
+@use "../api" as *;
+
+.cards {
+    display: flex;
+    animation: cards 1s;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    max-width: $xl;
+    gap: size(0);
+    margin: size(1) auto;
+}
+
+.cards figure {
+    flex: 1 0 $sm;
+    margin: 0;
+    @include min-vw($md) {
+        &:last-child {
+            max-width: 50%;
+        }
+    }
+}
+
+.cards a {
+    display: block;
+    aspect-ratio: 3 / 2;
+    box-shadow: 0 0 8px -2px $blue;
+    border: px(3) solid $black;
+    border-radius: $radius-sm;
+    transition: transform 300ms linear;
+    animation: cards-pulse 1.5s linear infinite alternate;
+    outline: none;
+    overflow: hidden;
+    @include dark {
+        border-color: $white;
+    }
+    &:focus {
+        border-color: $blue;
+    }
+    &:focus, &:hover, &:active {
+        animation: none;
+    }
+    &:active {
+        transform: scale(0.99);
+    }
+    @include reduced-motion {
+        animation: none;
+    }
+}
+
+.cards img {
+    object-fit: cover;
+}
+
+.cards figcaption {
+    display: block;
+    max-width: 100%;
+    font-size: font-size(2);
+    margin: size(-1) 0;
+}
+
+@keyframes cards {
+    from {
+        transform: translateY(px(16));
+        opacity: 0;
+    }
+}
+
+@keyframes cards-pulse {
+    to {
+        transform: scale(1.01);
+    }
+}

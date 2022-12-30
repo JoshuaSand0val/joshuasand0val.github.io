@@ -1,0 +1,16 @@
+<nav class="cards">
+    {% for name, data in cards %}
+    <figure>
+        <a href="{{ data.url | url }}"
+            {% if page.url == data.url %}aria-current="page"{% endif %}>
+            <picture>
+                {% if data["hero-dark"] %}
+                <source srcset="{{ data["hero-dark"] | url }}" media="(prefers-color-scheme: dark)">
+                {% endif %}
+                <img src="{{ data.hero | url }}" alt="{{ name }}" loading="lazy">
+            </picture>
+        </a>
+        <figcaption><strong>{{ name }}:</strong> {{ data.description }}</figcaption>
+    </figure>
+    {%- endfor -%}
+</nav>
