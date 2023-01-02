@@ -317,11 +317,81 @@ img {
   flex: 0 0 auto;
 }
 #page body > div {
+  animation: page 500ms ease-out;
   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
   margin: auto 0;
 }
+@media (prefers-reduced-motion: reduce) {
+  #page body > div {
+    animation: none;
+  }
+}
+#page body main h1, #page body main h2 {
+  margin: 0;
+}
+#page body main h1 {
+  font-family: "Cookie", cursive;
+  line-height: 1.15;
+}
+@media (min-width: 0px) {
+  #page body main h1 {
+    font-size: 2.0736em;
+  }
+}
+@media (min-width: 300.5px) {
+  #page body main h1 {
+    font-size: 2.48832em;
+  }
+}
+@media (min-width: 640.5px) {
+  #page body main h1 {
+    font-size: 2.985984em;
+  }
+}
+#page body main h2 {
+  font-weight: 400;
+}
+@media (min-width: 0px) {
+  #page body main h2 {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 300.5px) {
+  #page body main h2 {
+    font-size: 1.44em;
+  }
+}
+@media (min-width: 640.5px) {
+  #page body main h2 {
+    font-size: 1.728em;
+  }
+}
+@media (min-width: 0px) {
+  #page body main p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 300.5px) {
+  #page body main p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 640.5px) {
+  #page body main p {
+    font-size: 1.44em;
+  }
+}
 
+@keyframes page {
+  from, 25% {
+    transform: scale(1.02);
+    opacity: 0;
+  }
+}
 #page.contact body > div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -330,31 +400,17 @@ img {
 }
 
 #page.contact main {
-  display: block;
-  text-align: center;
+  display: inline-block;
   max-width: 1280.5px;
   padding: 5.6525842918rem 1.999396rem;
-  margin: 0 auto;
 }
 #page.contact main h1, #page.contact main p, #page.contact main #address {
   font-family: "Cookie", cursive;
   line-height: 1.15;
   margin: 0;
 }
-@media (min-width: 0px) {
-  #page.contact main h1 {
-    font-size: 2.0736em;
-  }
-}
-@media (min-width: 300.5px) {
-  #page.contact main h1 {
-    font-size: 2.48832em;
-  }
-}
-@media (min-width: 640.5px) {
-  #page.contact main h1 {
-    font-size: 2.985984em;
-  }
+#page.contact main h1 {
+  margin-bottom: -0.3em;
 }
 
 #page.contact #address {
@@ -399,80 +455,12 @@ img {
 }
 #page.homepage main {
   display: block;
-  animation: homepage 300ms ease-out;
   max-width: 980.5px;
   padding: 1.414rem;
   margin: auto;
 }
-@media (prefers-reduced-motion: reduce) {
-  #page.homepage main {
-    animation: none;
-  }
-}
 @media (min-width: 640.5px) {
   #page.homepage main {
     padding: 1.999396rem;
-  }
-}
-#page.homepage main h1, #page.homepage main h2 {
-  margin: 0;
-}
-#page.homepage main h1 {
-  font-family: "Cookie", cursive;
-  line-height: 1.15;
-}
-@media (min-width: 0px) {
-  #page.homepage main h1 {
-    font-size: 2.0736em;
-  }
-}
-@media (min-width: 300.5px) {
-  #page.homepage main h1 {
-    font-size: 2.48832em;
-  }
-}
-@media (min-width: 640.5px) {
-  #page.homepage main h1 {
-    font-size: 2.985984em;
-  }
-}
-#page.homepage main h2 {
-  font-weight: 400;
-}
-@media (min-width: 0px) {
-  #page.homepage main h2 {
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 300.5px) {
-  #page.homepage main h2 {
-    font-size: 1.44em;
-  }
-}
-@media (min-width: 640.5px) {
-  #page.homepage main h2 {
-    font-size: 1.728em;
-  }
-}
-@media (min-width: 0px) {
-  #page.homepage main p {
-    font-size: 1em;
-  }
-}
-@media (min-width: 300.5px) {
-  #page.homepage main p {
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 640.5px) {
-  #page.homepage main p {
-    font-size: 1.44em;
-  }
-}
-
-@keyframes homepage {
-  from {
-    transform: scale(1.02);
-    opacity: 0;
   }
 }
