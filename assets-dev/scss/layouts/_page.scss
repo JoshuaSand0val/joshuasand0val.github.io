@@ -13,7 +13,18 @@
         flex: 0 0 auto;
     }
     & > div {
+        animation: page 500ms ease-out;
         padding: $safe-x;
         margin: auto 0;
+        @include reduced-motion {
+            animation: none;
+        }
+    }
+}
+
+@keyframes page {
+    from, 25% {
+        transform: scale(1.02);
+        opacity: 0;
     }
 }
