@@ -3,8 +3,10 @@
 @use "../api" as *;
 
 #page.contact body > div {
-    // Fixes Safari transform scrolling bug:
-    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow: hidden; // iOS transform scrolling bug.
 }
 
 #page.contact #header {
@@ -12,17 +14,16 @@
 }
 
 #page.contact main {
-    display: block;
-    text-align: center;
+    display: inline-block;
     max-width: $xl;
     padding: size(5) size(2);
-    margin: 0 auto;
     h1, p, #address {
         font-family: "Cookie", cursive;
         line-height: 1.15;
         margin: 0;
     }
     h1 {
+        margin-bottom: -0.3em;
         @include breakpoints(font-size,
             font-size(4),
             font-size(5),
