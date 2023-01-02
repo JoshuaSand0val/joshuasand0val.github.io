@@ -20,6 +20,35 @@
             animation: none;
         }
     }
+    main {
+        h1, h2 {
+            margin: 0;
+        }
+        h1 {
+            font-family: "Cookie", cursive;
+            line-height: 1.15;
+            @include breakpoints(font-size,
+                font-size(4),
+                font-size(5),
+                font-size(6)
+            );
+        }
+        h2 {
+            font-weight: $weight;
+            @include breakpoints(font-size,
+                font-size(1),
+                font-size(2),
+                font-size(3)
+            );
+        }
+        p {
+            @include breakpoints(font-size,
+                font-size(0),
+                font-size(1),
+                font-size(2)
+            );
+        }
+    }
 }
 
 @keyframes page {
