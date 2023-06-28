@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://heyjes.dev/</loc>
-            <lastmod>2022-12-23T04:44:10.652Z</lastmod>
+            <loc>https://heyjes.dev/about/</loc>
+            <lastmod>2023-03-05T08:33:08.864Z</lastmod>
         </url>
     
         <url>
             <loc>https://heyjes.dev/contact/</loc>
-            <lastmod>2022-12-29T15:33:40.602Z</lastmod>
+            <lastmod>2023-03-05T08:33:08.864Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>https://heyjes.dev/</loc>
+            <lastmod>2023-03-05T08:33:08.864Z</lastmod>
         </url>
     
         <url>
             <loc>https://heyjes.dev/projects/</loc>
-            <lastmod>2022-12-30T02:09:36.196Z</lastmod>
-        </url>
-    
-        <url>
-            <loc>https://heyjes.dev/about/</loc>
-            <lastmod>2022-12-30T05:20:51.681Z</lastmod>
+            <lastmod>2023-03-05T08:33:08.864Z</lastmod>
         </url>
     
 </urlset>
