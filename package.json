@@ -1,5 +1,7 @@
 {
 	"name": "heyjes.dev",
+	"author": "Joshua Elijah Sandoval",
+	"license": "MIT",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
