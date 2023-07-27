@@ -7,9 +7,9 @@ export default function WritersBlock({ initial, replace }) {
 		<TypeAnimation
 			sequence={[
 				initial,
-				1000,
+				5000,
 				replace,
-				10000
+				5000
 			]}
 			preRenderFirstString={true}
 			speed={60}
