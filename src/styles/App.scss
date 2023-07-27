@@ -1,0 +1,57 @@
+// App: CSS for entire website.
+
+@use "members" as *;
+
+*, ::before, ::after {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+:root {
+	font-family: $font;
+	font-size: $medium;
+	line-height: 1.5;
+	word-wrap: break-word;
+	@include color-schemes using ($color) {
+		background-color: $color;
+		color: high-contrast($light $dark, $color);
+	}
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-display;
+	line-height: 1.25;
+	margin: $small 0;
+}
+
+h1 {
+	font-size: $xxx-large;
+}
+
+h2 {
+	font-size: $xx-large;
+}
+
+h3 {
+	font-size: $x-large;
+}
+
+h4 {
+	font-size: $large;
+}
+
+h5 {
+	font-size: $small;
+}
+
+h6 {
+	font-size: $x-small;
+}
+
+small, sup, sub {
+	font-size: $smaller;
+}

@@ -1,0 +1,38 @@
+// Members: Forwards and configures package modules alongside more defaults.
+
+// Forward/Use & Configure Packages:
+@forward "precolor" with (
+	$primary: #6a1a99 !default
+);
+
+@use "sass-breakpoint-range" as *;
+@use "sass:math" as math;
+
+// Import & Declare Font Families:
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');
+
+$font: 'Nunito', sans-serif;
+$font-display: 'Hind Madurai', sans-serif;
+$font-brand: 'Cookie', cursive;
+
+// Declare Font Sizes:
+@function size($size, $baseline: 1rem) {
+	@return range(
+		$baseline * math.pow(1.067, $size),
+		$baseline * math.pow(1.618, $size)
+	);
+}
+
+// Absolute Font Sizes:
+$xx-small: size(-3);
+$x-small: size(-2);
+$small: size(-1);
+$medium: size(0);
+$large: size(1);
+$x-large: size(2);
+$xx-large: size(3);
+$xxx-large: size(4);
+
+// Relative Font Sizes:
+$smaller: size(-1, 1em);
+$larger: size(1, 1em);
