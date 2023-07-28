@@ -5,7 +5,8 @@
 *, ::before, ::after {
 	transition:
 		font-size 300ms ease-out,
-		padding 150ms linear;
+		padding 150ms linear,
+		margin 150ms linear;
 	box-sizing: border-box;
 	max-width: 100%;
 }
