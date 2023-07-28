@@ -1,0 +1,18 @@
+// Navigation List: Styles for the NavList component.
+
+@use "members" as *;
+
+.NavList {
+	display: flex;
+	flex-flow: row wrap;
+	font-size: $large;
+	gap: $larger $smaller;
+	.active {
+		font-weight: bold;
+		@include color-schemes using ($color) {
+			@include contrast using ($ratio) {
+				color: contrast-color($primary, $color, $ratio);
+			}
+		}
+	}
+}
