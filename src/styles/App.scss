@@ -3,6 +3,9 @@
 @use "members" as *;
 
 *, ::before, ::after {
+	transition:
+		font-size 300ms ease-out,
+		padding 150ms linear;
 	box-sizing: border-box;
 	max-width: 100%;
 }
@@ -19,7 +22,15 @@
 }
 
 body {
+	animation: body 500ms ease-in-out;
 	margin: 0;
+}
+
+@keyframes body {
+	from {
+		transform: translateY(calc(#{$small} * -1));
+		opacity: 0;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,4 +65,15 @@ h6 {
 
 small, sup, sub {
 	font-size: $smaller;
+}
+
+a[href] {
+	&:not(:hover, :focus) {
+		text-decoration-line: none;
+	}
+	@include color-schemes using ($color) {
+		@include contrast using ($ratio) {
+			color: contrast-color($secondary, $color, $ratio);
+		}
+	}
 }
