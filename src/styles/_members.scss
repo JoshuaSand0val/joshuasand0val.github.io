@@ -1,9 +1,7 @@
 // Members: Forwards and configures package modules alongside more defaults.
 
 // Forward/Use & Configure Packages:
-@forward "precolor" with (
-	$primary: #6a1a99 !default
-);
+@forward "precolor";
 
 @use "sass-breakpoint-range" as *;
 @use "sass:math" as math;
