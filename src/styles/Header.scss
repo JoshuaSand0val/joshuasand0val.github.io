@@ -18,7 +18,11 @@
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
+	&-title {
+		font-size: $xxx-large;
+	}
 	&-subtitle {
+		font-size: $xx-large;
 		font-family: $font-brand;
 		font-weight: 400;
 		margin: 0;

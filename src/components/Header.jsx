@@ -9,13 +9,13 @@ export default function Header({ title, subtitle, navigation }) {
 		<header className="Header">
 			<div className="Header-wrapper">
 				<NavList links={navigation} />
-				<h1 className="Header-title">
+				<h2 className="Header-title">
 					{title}
-				</h1>
-				<br />
-				<h2 className="Header-subtitle">
-					{subtitle}
 				</h2>
+				<br />
+				<h3 className="Header-subtitle">
+					{subtitle}
+				</h3>
 			</div>
 		</header>
 	);
