@@ -2,7 +2,7 @@
 
 import { Route, Routes } from "react-router-dom";
 
-import Layout from "./layouts/Layout"
+import Layout from "./layouts/Layout";
 
 import Home from "./pages/Home.mdx";
 import About from "./pages/About.mdx";
