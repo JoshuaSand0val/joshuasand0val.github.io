@@ -8,7 +8,7 @@ export default function NavList({ links }) {
 	return (
 		<nav className="NavList">
 			{Object.keys(links).map(title => {
-				return <NavLink to={links[title]}>{title}</NavLink>;
+				return <NavLink to={links[title]} key={title}>{title}</NavLink>;
 			})}
 		</nav>
 	);
