@@ -4,10 +4,10 @@
 
 .Header {
 	display: block;
-	padding:
+	margin:
 		calc(#{$xx-large} + env(safe-area-inset-top))
 		calc(#{$xx-large} + env(safe-area-inset-right))
-		$xx-large
+		$x-large
 		calc(#{$xx-large} + env(safe-area-inset-left));
 	&-wrapper {
 		display: block;
