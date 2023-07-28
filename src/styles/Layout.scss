@@ -1,0 +1,14 @@
+// Layout: Styles for the Layout component.
+
+@use "members" as *;
+
+.Layout {
+	main {
+		display: block;
+		margin:
+			$x-large
+			calc(#{$xx-large} + env(safe-area-inset-right))
+			$x-large
+			calc(#{$xx-large} + env(safe-area-inset-left));
+	}
+}
