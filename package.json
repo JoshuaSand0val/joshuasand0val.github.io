@@ -12,6 +12,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@mdx-js/rollup": "^2.3.0",
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.27",
 		"precolor": "^1.0.0",
