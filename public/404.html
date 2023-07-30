@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<!-- Title and character set: -->
+		<title>Not Found</title>
+		<meta charset="UTF-8" />
+		<!-- Do not index this page: -->
+        <meta name="robots" content="noindex" />
+	</head>
+	<body>
+		<script>
+			// Store current location in session:
+			sessionStorage.redirect = location.href;
+			// Redirect to index, replacing history:
+			window.location.replace("./");
+		</script>
+		<noscript>
+			This application requires JavaScript to function.
+		</noscript>
+	</body>
+</html>
