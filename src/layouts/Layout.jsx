@@ -3,6 +3,7 @@
 import { Outlet } from "react-router-dom";
 
 import Header from "../components/Header";
+import WritersBlock from "../components/WritersBlock";
 
 import "../styles/Layout.scss";
 
@@ -10,7 +11,12 @@ export default function Layout() {
 	return (
 		<div className="layout">
 			<Header
-				title="Hey! I'm Joshua Elijah Sandoval."
+				title={(
+					<WritersBlock
+						initial="Hey, Jes!"
+						replace="Hey, Joshua Elijah Sandoval!"
+					/>
+				)}
 				subtitle="Full-Stack Web Developer based in Utah."
 				navigation={{
 					Home: "/",
