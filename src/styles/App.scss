@@ -66,12 +66,19 @@ small, sup, sub {
 }
 
 a[href] {
+	display: inline-block;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 	&:not(:hover, :focus) {
 		text-decoration-line: none;
 	}
 	@include color-schemes using ($color) {
 		@include contrast using ($ratio) {
 			color: contrast-color($primary, $color, $ratio);
+			background-image: linear-gradient(to bottom,
+				currentColor,
+				contrast-color($cyan, $color, $ratio)
+			);
 		}
 	}
 }
