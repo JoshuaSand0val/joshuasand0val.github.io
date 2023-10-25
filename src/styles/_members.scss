@@ -1,7 +1,9 @@
 // Members: Forwards and configures package modules alongside more defaults.
 
 // Forward & Configure Packages:
-@forward "precolor";
+@forward "precolor" with (
+	$primary: #d3808c !default
+);
 @forward "presized";
 
 // Import Font Families:
