@@ -2,13 +2,16 @@
 
 @use "members" as *;
 
-.Layout {
-	main {
+.layout {
+	@include container(layout);
+	&-main {
 		display: block;
-		margin:
-			$x-large
-			calc(#{$xx-large} + env(safe-area-inset-right))
-			$x-large
-			calc(#{$xx-large} + env(safe-area-inset-left));
+		@include modular-scale(3) using ($size) {
+			margin:
+				$size
+				calc($size + $safe-right)
+				$size
+				calc($size + $safe-left);
+		}
 	}
 }

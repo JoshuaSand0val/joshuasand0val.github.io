@@ -2,16 +2,20 @@
 
 @use "members" as *;
 
-.Header {
+.header {
 	display: block;
-	margin:
-		calc(#{$xx-large} + env(safe-area-inset-top))
-		calc(#{$xx-large} + env(safe-area-inset-right))
-		$x-large
-		calc(#{$xx-large} + env(safe-area-inset-left));
+	@include modular-scale(3) using ($size) {
+		margin:
+			calc($size + $safe-top)
+			calc($size + $safe-right)
+			$size
+			calc($size + $safe-left);
+	}
 	&-wrapper {
 		display: block;
+		max-width: $xxl;
 		margin: 0 auto;
+		@include container(header);
 	}
 	&-title, &-subtitle {
 		display: inline-block;
@@ -19,35 +23,35 @@
 		-webkit-text-fill-color: transparent;
 	}
 	&-title {
-		font-size: $xxx-large;
+		@include font-size(4);
 	}
 	&-subtitle {
-		font-size: $xx-large;
 		font-family: $font-brand;
 		font-weight: 400;
 		margin: 0;
+		@include font-size(3);
 	}
 }
 
 @include color-schemes using ($color) {
 	@include contrast(aa large, aaa large) using ($ratio) {
-		.Header-title {
+		.header-title {
 			color: contrast-color($primary, $color, $ratio);
 			background-image: linear-gradient(100deg,
-				contrast-color($red, $color, $ratio),
-				contrast-color($orange, $color, $ratio),
-				contrast-color($yellow, $color, $ratio),
-				contrast-color($green, $color, $ratio),
-				contrast-color($blue, $color, $ratio),
-				contrast-color($indigo, $color, $ratio),
-				contrast-color($purple, $color, $ratio)
+				contrast-color(#d260a5, $color, $ratio),
+				contrast-color(#e5adcd, $color, $ratio),
+				contrast-color(#fefefe, $color, $ratio),
+				contrast-color(#57cef5, $color, $ratio),
+				contrast-color(#fefefe, $color, $ratio),
+				contrast-color(#e5adcd, $color, $ratio),
+				contrast-color(#d260a5, $color, $ratio)
 			);
 		}
-		.Header-subtitle {
+		.header-subtitle {
 			color: contrast-color($secondary, $color, $ratio);
 			background-image: linear-gradient(128deg,
-				contrast-color($secondary, $color, $ratio),
-				high-contrast($light $dark, $color)
+				high-contrast($light $dark, $color),
+				contrast-color($secondary, $color, $ratio)
 			);
 		}
 	}

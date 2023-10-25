@@ -2,17 +2,15 @@
 
 @use "members" as *;
 
-.NavList {
+.navlist {
 	display: flex;
 	flex-flow: row wrap;
-	font-size: $large;
-	gap: $larger $smaller;
+	gap: size(1) size(-1);
+	@include font-size(1);
 	.active {
 		font-weight: bold;
 		@include color-schemes using ($color) {
-			@include contrast using ($ratio) {
-				color: contrast-color($primary, $color, $ratio);
-			}
+			color: high-contrast($white $black, $color);
 		}
 	}
 }
