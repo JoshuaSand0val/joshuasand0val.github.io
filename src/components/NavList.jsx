@@ -6,7 +6,7 @@ import "../styles/NavList.scss";
 
 export default function NavList({ links }) {
 	return (
-		<nav className="NavList">
+		<nav className="navlist">
 			{Object.keys(links).map(title => {
 				return <NavLink to={links[title]} key={title}>{title}</NavLink>;
 			})}

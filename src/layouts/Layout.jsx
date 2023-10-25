@@ -8,7 +8,7 @@ import "../styles/Layout.scss";
 
 export default function Layout() {
 	return (
-		<div className="Layout">
+		<div className="layout">
 			<Header
 				title="Hey! I'm Joshua Elijah Sandoval."
 				subtitle="Full-Stack Web Developer based in Utah."
@@ -20,7 +20,7 @@ export default function Layout() {
 					Contact: "/contact/"
 				}}
 			/>
-			<main>
+			<main className="layout-main">
 				<Outlet />
 			</main>
 		</div>
