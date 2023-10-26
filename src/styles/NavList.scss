@@ -5,7 +5,7 @@
 .navlist {
 	display: flex;
 	flex-flow: row wrap;
-	gap: size(1) size(-1);
+	gap: size(-3) size(-1);
 	@include font-size(1);
 	.active {
 		font-weight: bold;
