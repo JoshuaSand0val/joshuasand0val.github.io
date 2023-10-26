@@ -2,18 +2,18 @@
 
 import { TypeAnimation } from "react-type-animation";
 
-export default function WritersBlock({ initial, replace }) {
+export default function WritersBlock({ initial, replace, repeat = Infinity }) {
 	return (
 		<TypeAnimation
 			sequence={[
 				initial,
-				5000,
+				3000,
 				replace,
-				5000
+				3000
 			]}
 			preRenderFirstString={true}
 			speed={60}
-			repeat={Infinity}
+			repeat={repeat}
 			cursor={false}
 		/>
 	);

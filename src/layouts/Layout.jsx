@@ -15,6 +15,7 @@ export default function Layout() {
 					<WritersBlock
 						initial="Hey, Jes!"
 						replace="Hey, Joshua Elijah Sandoval!"
+						repeat={0}
 					/>
 				)}
 				subtitle="Full-Stack Web Developer based in Utah."
