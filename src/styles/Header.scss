@@ -3,13 +3,46 @@
 @use "members" as *;
 
 .header {
+	position: relative;
 	display: block;
+	overflow: hidden;
+	@include color-schemes using ($color) {
+		background-color: rgba($color, 0.8);
+		background-image: linear-gradient(to bottom, transparent 80%, $color);
+	}
 	@include modular-scale(3) using ($size) {
-		margin:
+		padding:
 			calc($size + $safe-top)
 			calc($size + $safe-right)
 			$size
 			calc($size + $safe-left);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		@include color-schemes using ($color) {
+			background-image:
+				linear-gradient(-175deg, $color 10%, transparent 25%),
+				linear-gradient($color 5%, transparent 25%),
+				linear-gradient(177deg, $color 10%, transparent 25%),
+				linear-gradient(8deg, $color 10%, transparent 25%),
+				linear-gradient(356deg, $color 10%, transparent 25%),
+				linear-gradient(358deg, $color 10%, transparent 25%);
+			}
+		animation: header-image 5s ease 1;
+	}
+	&-image {
+		position: absolute;
+		z-index: -2;
+		inset: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 25%;
+		transform: scale(1.01);
 	}
 	&-wrapper {
 		display: block;
@@ -33,11 +66,24 @@
 	}
 }
 
+@keyframes header-image {
+	0%, 10% {
+		background-size: 200% 150%;
+		background-position: center;
+	}
+	50% {
+		background-position: top;
+	}
+	100% {
+		background-size: 100% 100%;
+	}
+}
+
 @include color-schemes using ($color) {
 	@include contrast(aa large, aaa large) using ($ratio) {
 		.header-title {
 			color: contrast-color($primary, $color, $ratio);
-			background-image: linear-gradient(100deg,
+			background-image: linear-gradient(33deg,
 				contrast-color(#d260a5, $color, $ratio),
 				contrast-color(#e5adcd, $color, $ratio),
 				contrast-color(#fefefe, $color, $ratio),
