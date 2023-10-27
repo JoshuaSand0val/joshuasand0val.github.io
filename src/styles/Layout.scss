@@ -7,10 +7,10 @@
 	&-main {
 		display: block;
 		@include modular-scale(3) using ($size) {
-			margin:
-				$size
+			padding:
+				0rem
 				calc($size + $safe-right)
-				$size
+				size(0)
 				calc($size + $safe-left);
 		}
 	}

@@ -8,29 +8,14 @@
 	overflow: hidden;
 	@include color-schemes using ($color) {
 		background-color: rgba($color, 0.8);
-		background-image: linear-gradient(to bottom, transparent 70%, $color);
+		background-image: linear-gradient(to bottom, transparent, $color);
 	}
 	@include modular-scale(3) using ($size) {
 		padding:
 			calc($size + $safe-top)
 			calc($size + $safe-right)
-			$size
+			size(0)
 			calc($size + $safe-left);
-	}
-	&::after {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		background-image:
-			linear-gradient(-175deg, $blue 10%, transparent 25%),
-			linear-gradient($green 5%, transparent 25%),
-			linear-gradient(177deg, $red 10%, transparent 25%),
-			linear-gradient(8deg, $red 10%, transparent 25%),
-			linear-gradient(356deg, $green 10%, transparent 25%),
-			linear-gradient(358deg, $blue 10%, transparent 25%);
-		animation: header-image 5s ease 1;
-		opacity: 0.5;
 	}
 	&-image {
 		position: absolute;
@@ -42,6 +27,7 @@
 		object-fit: cover;
 		object-position: center 25%;
 		transform: scale(1.01);
+		filter: blur(3px) saturate(150%);
 	}
 	&-wrapper {
 		display: block;
@@ -62,19 +48,6 @@
 		font-weight: 400;
 		margin: 0;
 		@include font-size(3);
-	}
-}
-
-@keyframes header-image {
-	0%, 10% {
-		background-size: 200% 150%;
-		background-position: center;
-	}
-	50% {
-		background-position: top;
-	}
-	100% {
-		background-size: 100% 100%;
 	}
 }
 
