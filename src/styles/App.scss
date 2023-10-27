@@ -66,7 +66,7 @@ small, sup, sub {
 }
 
 a[href] {
-	display: inline-block;
+	display: inline;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	&:not(:hover, :focus) {
