@@ -21,10 +21,10 @@ export default function Layout() {
 				subtitle="Full-Stack Web Developer based in Utah."
 				navigation={{
 					Home: "/",
-					About: "/about/",
-					Projects: "/projects/",
+					About: "/about",
+					Projects: "/projects",
 					Github: "https://github.com/JoshuaSand0val/",
-					Contact: "/contact/"
+					Contact: "/contact"
 				}}
 			/>
 			<main className="layout-main">
