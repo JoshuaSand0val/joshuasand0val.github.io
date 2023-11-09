@@ -8,26 +8,35 @@
 }
 
 :root {
+	position: relative;
+	display: block;
+	min-height: 100%;
 	font-family: $font;
 	line-height: $line-height;
 	word-wrap: break-word;
+	#{--custom-wallpaper}: linear-gradient(123deg, $blue, $cyan, $red, $pink);
+    background-image: var(--custom-wallpaper, none);
+	background-size: cover;
+	background-position: center center;
 	@include color-schemes using ($color) {
-		background-color: $color;
 		color: high-contrast($white $black, $color);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		backdrop-filter: blur(4px);
+		@include color-schemes using ($color) {
+			background-color: rgba($color, 0.8);
+		}
 	}
 }
 
 body {
-	animation: body 500ms ease-in-out;
 	margin: 0;
 }
 
-@keyframes body {
-	from {
-		transform: translateY(-1rem);
-		opacity: 0;
-	}
-}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-display;
@@ -76,8 +85,8 @@ a[href] {
 		@include contrast using ($ratio) {
 			color: contrast-color($primary, $color, $ratio);
 			background-image: linear-gradient(to bottom,
-				currentColor,
-				contrast-color($cyan, $color, $ratio)
+				contrast-color($black, $color, $ratio),
+				currentColor
 			);
 		}
 	}

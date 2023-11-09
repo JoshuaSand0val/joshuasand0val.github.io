@@ -7,14 +7,13 @@
 	display: block;
 	overflow: hidden;
 	@include color-schemes using ($color) {
-		background-color: rgba($color, 0.8);
-		background-image: linear-gradient(to bottom, transparent, $color);
+		background-image: linear-gradient(to bottom, rgba($color, 0.9), transparent);
 	}
 	@include modular-scale(3) using ($size) {
 		padding:
 			calc($size + $safe-top)
 			calc($size + $safe-right)
-			size(0)
+			$size
 			calc($size + $safe-left);
 	}
 	&-image {
@@ -28,49 +27,36 @@
 		object-position: center 25%;
 		transform: scale(1.01);
 		filter: blur(3px) saturate(150%);
+		mask-image: linear-gradient(to bottom, black, transparent);
 	}
 	&-wrapper {
 		display: block;
 		max-width: $xxl;
 		margin: 0 auto;
+		animation: header 1s ease;
 		@include container(header);
 	}
 	&-title, &-subtitle {
 		display: inline-block;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 	}
 	&-title {
 		@include font-size(4);
 	}
 	&-subtitle {
-		font-family: $font-brand;
 		font-weight: 400;
+		font-family: $font-brand;
 		margin: 0;
 		@include font-size(3);
+		@include color-schemes using ($color) {
+			@include contrast(aa large, aaa large) using ($ratio) {
+				color: contrast-color($secondary, $color, $ratio);
+			}
+		}
 	}
 }
 
-@include color-schemes using ($color) {
-	@include contrast(aa large, aaa large) using ($ratio) {
-		.header-title {
-			color: contrast-color($primary, $color, $ratio);
-			background-image: linear-gradient(33deg,
-				contrast-color(#d260a5, $color, $ratio),
-				contrast-color(#e5adcd, $color, $ratio),
-				contrast-color(#fefefe, $color, $ratio),
-				contrast-color(#57cef5, $color, $ratio),
-				contrast-color(#fefefe, $color, $ratio),
-				contrast-color(#e5adcd, $color, $ratio),
-				contrast-color(#d260a5, $color, $ratio)
-			);
-		}
-		.header-subtitle {
-			color: contrast-color($secondary, $color, $ratio);
-			background-image: linear-gradient(128deg,
-				high-contrast($white $black, $color),
-				contrast-color($secondary, $color, $ratio)
-			);
-		}
+@keyframes header {
+	from {
+		transform: translateY(-0.5rem);
 	}
 }
