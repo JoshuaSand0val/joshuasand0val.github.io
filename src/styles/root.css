@@ -38,6 +38,15 @@
 	--color: var(--oc-gray-1);
 	--color-accent: var(--oc-cyan-3);
 
+	/* Light Palette: */
+	@media (prefers-color-scheme: light) {
+		--bg-color-1: var(--oc-gray-0);
+		--bg-color-2: var(--oc-gray-1);
+		--bg-color-3: var(--oc-gray-2);
+		--color: var(--oc-gray-8);
+		--color-accent: var(--oc-cyan-9);
+	}
+
 	/* Custom Wallpaper Image: */
 	--custom-wallpaper: linear-gradient(157deg,
 		var(--bg-color-2) 10%,
@@ -93,15 +102,4 @@
   
 	/* Custom pairs */
 	--space-s-2xl: clamp(1rem, -0.5909rem + 7.9545vi, 4.5rem);
-}
-
-/* Light Palette: */
-@media (prefers-color-scheme: light) {
-	.light {
-		--bg-color-1: var(--oc-gray-0);
-		--bg-color-2: var(--oc-gray-1);
-		--bg-color-3: var(--oc-gray-2);
-		--color: var(--oc-gray-8);
-		--color-accent: var(--oc-cyan-9);
-	}
 }
