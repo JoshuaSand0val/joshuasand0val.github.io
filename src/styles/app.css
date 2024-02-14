@@ -1,0 +1,78 @@
+/* App: Application global CSS. */
+
+@import "root.css";
+
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+:root {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	font-family: var(--font);
+	font-size: var(--font-m);
+	line-height: var(--line-height);
+	word-wrap: break-word;
+	background-color: var(--bg-color-1);
+	background-image: var(--custom-wallpaper, none);
+	background-size: cover;
+	background-position: center center;
+	color: var(--color);
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-color: inherit;
+		opacity: 0.8;
+	}
+}
+
+body, #root {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-display);
+	line-height: var(--line-height-display);
+	margin: var(--font-s) 0;
+}
+
+h1 {
+	font-size: var(--font-2xl);
+}
+
+h2 {
+	font-size: var(--font-xl);
+}
+
+h3 {
+	font-size: var(--font-l);
+}
+
+h4 {
+	font-size: var(--font-m);
+}
+
+h5 {
+	font-size: var(--font-s);
+}
+
+h6 {
+	font-size: var(--font-xs);
+}
+
+small, sup, sub {
+	font-size: smaller;
+}
+
+a[href] {
+	display: inline;
+	color: var(--color-accent);
+	&:not(:hover, :focus) {
+		text-decoration-line: none;
+	}
+}
