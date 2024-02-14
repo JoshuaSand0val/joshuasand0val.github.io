@@ -2,6 +2,10 @@
 	import "../styles/app.css";
 </script>
 
+<svelte:head>
+    <title>Hey, Jes!</title> 
+</svelte:head>
+
 <main>
 	<slot></slot>
 </main>
