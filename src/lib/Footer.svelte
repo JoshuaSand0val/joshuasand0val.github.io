@@ -49,5 +49,11 @@
 		bottom: var(--space-m-l);
 		font-size: var(--font-xl);
 		line-height: 1;
+		&:not(:active) {
+			transition: transform 150ms ease-out;
+		}
+		&:active {
+			transform: scale(0.9);
+		}
 	}
 </style>
