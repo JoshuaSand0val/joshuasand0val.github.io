@@ -12,7 +12,7 @@
 		display: inline;
 		width: 100%;
 		container-type: inline-size;
-		margin: var(--space-xl-2xl) auto auto;
+		margin: var(--space-m-l) auto auto;
 	}
 
 	img {
@@ -23,7 +23,7 @@
 		border: var(--space-3xs-2xs) solid currentColor;
 		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
 		object-fit: cover;
-		margin: 0 0  var(--space-s-m) var(--space-m-l);
+		margin: 0 0 var(--space-s-m) var(--space-m-l);
 		float: right;
 	}
 
