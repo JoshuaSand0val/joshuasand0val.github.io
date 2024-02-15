@@ -17,6 +17,7 @@
 	word-wrap: break-word;
 	background-color: var(--bg-color-1);
 	color: var(--color);
+	scroll-behavior: smooth;
 	&::before, &::after {
 		content: "";
 		position: fixed;
