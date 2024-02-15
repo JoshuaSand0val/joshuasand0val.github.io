@@ -35,8 +35,11 @@
 		z-index: var(--z-overlay);
 		display: flex;
 		flex-flow: row nowrap;
-		backdrop-filter: blur(24px);
 		overflow: auto;
+		filter:
+			drop-shadow(0 0 8px var(--bg-color-3))
+			drop-shadow(0 0 16px var(--bg-color-2))
+			drop-shadow(0 0 24px var(--bg-color-1));
 	}
 
 	.wrapper {
