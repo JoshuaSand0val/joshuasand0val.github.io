@@ -11,7 +11,6 @@
 	div {
 		display: inline;
 		width: 100%;
-		max-width: var(--width-xl);
 		container-type: inline-size;
 		margin: var(--space-xl-2xl) auto auto;
 	}
