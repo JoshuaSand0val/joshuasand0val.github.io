@@ -7,6 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');
 
 :root {
+	/* Z-Index Position: */
+	--z-underlay: -1000;
+	--z-overlay: 1000;
+	--z-dropdown: 2000;
+	--z-sticky: 3000;
+	--z-fixed: 4000;
+	--z-backdrop: 5000;
+	--z-modal: 6000;
+	--z-popup: 7000;
+	--z-tooltip: 8000;
+
 	/* Breakpoint Widths: */
 	--width-2xs: 180px;
 	--width-xs: 240px;
@@ -36,7 +47,7 @@
 	--bg-color-2: var(--oc-gray-8);
 	--bg-color-3: var(--oc-gray-7);
 	--color: var(--oc-gray-1);
-	--color-accent: var(--oc-cyan-3);
+	--color-accent: var(--oc-green-4);
 
 	/* Light Palette: */
 	@media (prefers-color-scheme: light) {
@@ -44,7 +55,7 @@
 		--bg-color-2: var(--oc-gray-1);
 		--bg-color-3: var(--oc-gray-2);
 		--color: var(--oc-gray-8);
-		--color-accent: var(--oc-cyan-9);
+		--color-accent: var(--oc-pink-8);
 	}
 
 	/* Custom Wallpaper Image: */
