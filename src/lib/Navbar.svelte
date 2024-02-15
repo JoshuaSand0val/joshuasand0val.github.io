@@ -35,7 +35,7 @@
 		z-index: var(--z-overlay);
 		display: flex;
 		flex-flow: row nowrap;
-		overflow: auto;
+		overflow: visible;
 		filter:
 			drop-shadow(0 0 8px var(--bg-color-3))
 			drop-shadow(0 0 10px var(--bg-color-2))
@@ -56,6 +56,7 @@
 		border-color: transparent;
 		padding: 0 var(--space-s-2xl);
 		margin: 0 auto;
+		overflow: auto;
 	}
 
 	.brand {
