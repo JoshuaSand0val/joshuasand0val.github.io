@@ -1,4 +1,4 @@
-<div class="container">
+<div>
 	<img src="pfp.jpg" alt="Joshua Elijah Sandoval" />
 	<div>
 		<h1>Hey, I'm Joshua Elijah Sandoval.</h1>
@@ -8,33 +8,24 @@
 </div>
 
 <style>
-	.container {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		align-content: center;
-		align-items: flex-start;
+	div {
+		display: inline;
 		width: 100%;
 		max-width: var(--width-xl);
 		container-type: inline-size;
-		margin: auto;
-		gap: var(--space-l-xl);
+		margin: var(--space-xl-2xl) auto auto;
 	}
 
 	img {
 		display: block;
 		aspect-ratio: 1 / 1;
-		width: var(--width-2xs);
+		width: 40%;
+		max-width: var(--width-s);
 		border: var(--space-3xs-2xs) solid currentColor;
 		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
 		object-fit: cover;
-		flex: 0 1 33%;
-	}
-
-	div {
-		max-width: 100%;
-		container-type: inline-size;
-		flex: 1 0 var(--width-m);
+		margin: 0 0  var(--space-s-m) var(--space-m-l);
+		float: right;
 	}
 
 	h1 {
@@ -46,7 +37,6 @@
 	h2 {
 		font-size: var(--font-xl);
 		font-weight: 300;
-		margin-bottom: var(--space-s-2xl);
 	}
 
 	p {
