@@ -44,6 +44,7 @@
 
 	.top {
 		position: absolute;
+		z-index: var(--z-overlay);
 		right: var(--space-s-2xl);
 		bottom: var(--space-m-l);
 		font-size: var(--font-xl);
