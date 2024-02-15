@@ -63,20 +63,25 @@
 	}
 
 	.top {
-		position: absolute;
-		z-index: var(--z-overlay);
+		position: fixed;
+		z-index: var(--z-fixed);
 		right: var(--space-s-2xl);
 		bottom: var(--space-m-l);
 		font-size: var(--font-xl);
 		line-height: 1;
-		&[data-show="false"] {
-			display: none;
-		}
+		filter: drop-shadow(0 0 8px var(--bg-color-1));
 		&:not(:active) {
-			transition: transform 150ms ease-out;
+			transition:
+				transform 150ms ease-out,
+				opacity 150ms ease-in;
 		}
-		&:active {
+		&:active,
+		&[data-show="false"] {
 			transform: scale(0.9);
+		}
+		&[data-show="false"] {
+			pointer-events: none;
+			opacity: 0;
 		}
 	}
 </style>
