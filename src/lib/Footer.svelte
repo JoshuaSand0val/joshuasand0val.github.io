@@ -10,13 +10,14 @@
 
 		/** Listener for if scrollbar is visible. */
 		const scrollbarListener = () => {
-			scrollbarVisible = root.scrollHeight > root.offsetHeight;
+			scrollbarVisible = root.scrollHeight > root.offsetHeight && window.scrollY !== 0;
 		};
 
 		// Initially run scrollbar listener:
 		scrollbarListener();
 
-		// Watch for scrollbar visibility when resizing window:
+		// Watch for scrollbar visibility when scrolling or resizing document window:
+		document.addEventListener("scroll", scrollbarListener);
 		window.addEventListener("resize", scrollbarListener);
 	});
 </script>
