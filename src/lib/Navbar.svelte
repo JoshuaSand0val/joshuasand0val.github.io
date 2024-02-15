@@ -38,8 +38,10 @@
 		overflow: auto;
 		filter:
 			drop-shadow(0 0 8px var(--bg-color-3))
-			drop-shadow(0 0 16px var(--bg-color-2))
-			drop-shadow(0 0 24px var(--bg-color-1));
+			drop-shadow(0 0 10px var(--bg-color-2))
+			drop-shadow(0 0 12px var(--bg-color-1))
+			drop-shadow(0 0 14px var(--bg-color-1))
+			drop-shadow(0 0 16px var(--bg-color-1));
 	}
 
 	.wrapper {
