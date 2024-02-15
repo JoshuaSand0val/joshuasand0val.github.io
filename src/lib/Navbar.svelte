@@ -33,18 +33,22 @@
 		position: sticky;
 		top: 0;
 		z-index: var(--z-overlay);
-		display: block;
+		display: flex;
+		flex-flow: row nowrap;
 		backdrop-filter: blur(24px);
-		padding: var(--safe-header);
 		overflow: auto;
 	}
 
 	.wrapper {
-		display: flex;
+		display: inline-flex;
 		flex-flow: row nowrap;
 		align-items: center;
 		max-width: var(--width-3xl);
 		gap: var(--space-s);
+		flex: 1 1 auto;
+		border-width: var(--safe-header);
+		border-style: solid;
+		border-color: transparent;
 		padding: 0 var(--space-s-2xl);
 		margin: 0 auto;
 	}
