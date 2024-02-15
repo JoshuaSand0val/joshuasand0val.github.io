@@ -1,6 +1,7 @@
 <script>
 	import "../styles/app.css";
 	import Navbar from "$lib/Navbar.svelte";
+    import Footer from "$lib/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -11,6 +12,7 @@
 <main>
 	<slot></slot>
 </main>
+<Footer />
 
 <style>
 	main {
