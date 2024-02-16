@@ -1,5 +1,4 @@
 <script>
-	import "../styles/root.css";
     import { onMount } from "svelte";
 
 	/** @type {boolean} Boolean for if there is a visible vertical scrollbar. */

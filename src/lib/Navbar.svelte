@@ -1,5 +1,4 @@
 <script>
-	import "../styles/root.css";
 	import { page } from "$app/stores";
 
 	/** @type {string} Current page path. */ 
