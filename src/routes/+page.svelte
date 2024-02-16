@@ -12,7 +12,7 @@
 		display: inline;
 		width: 100%;
 		container-type: inline-size;
-		margin: var(--space-m-l) auto auto;
+		margin: 0 auto auto;
 	}
 
 	img {
