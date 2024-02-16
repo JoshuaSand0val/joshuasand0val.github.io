@@ -5,7 +5,7 @@
 <div class="container">
 	<span class="status" role="presentation">{$page.status}</span>
 	<h1 class="message">{$page.error?.message ?? "Uhh Oh!"}</h1>
-	<a href="/">Back to Home &rarr;</a>
+	<a href="/">&larr; Back to Home</a>
 </div>
 
 <style>
