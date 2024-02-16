@@ -22,7 +22,7 @@
 		top: 50%;
 		left: 50%;
 		z-index: var(--z-underlay);
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -48%);
 		display: block;
 		font-family: var(--font-display);
 		font-size: clamp(var(--font-4xl), 60cqi, 60cqb);
