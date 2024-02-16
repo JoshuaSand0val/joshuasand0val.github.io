@@ -25,7 +25,7 @@
 		transform: translate(-50%, -50%);
 		display: block;
 		font-family: var(--font-display);
-		font-size: clamp(var(--font-4xl), 50cqi, 80cqb);
+		font-size: clamp(var(--font-4xl), 60cqi, 60cqb);
 		user-select: none;
 		opacity: 0.05;
 	}
