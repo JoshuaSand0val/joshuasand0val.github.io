@@ -13,8 +13,7 @@
 		<nav id="nav">
 			<a href="/" class:active={path === "/"}>Home</a>
 			<a href="/about" class:active={path === "/about"}>About</a>
-			<a href="/projects" class:active={path === "/projects"}>Projects</a>
-			<a href="https://github.com/JoshuaSand0val" target="_blank">Github</a>
+			<a href="https://github.com/joshuasand0val" target="_blank">Github</a>
 			<a href="/contact" class:active={path === "/contact"}>Contact</a>
 		</nav>
 	</div>

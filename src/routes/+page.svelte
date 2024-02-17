@@ -3,7 +3,7 @@
 	<div>
 		<h1>Hey, I'm Joshua Elijah Sandoval.</h1>
 		<h2>A full-stack web developer based in Utah.</h2>
-		<p>Welcome to my website! Here you can explore and learn more <a href="/about/">about myself</a> and my hobbies, <a href="/projects/">my projects</a>, and even <a href="/contact/">contact me</a>; if perhaps you're interested.</p>
+		<p>Welcome to my website! Here you can explore and learn more <a href="/about/">about myself</a>, visit <a href="https://github.com/joshuasand0val">my Github</a>, and even <a href="/contact/">contact me</a>; if perhaps you're interested.</p>
 	</div>
 </div>
 
