@@ -25,7 +25,7 @@
 		border-width: var(--safe-main);
 		border-style: solid;
 		border-color: transparent;
-		padding: var(--space-s-2xl);
+		padding: var(--space-s-m) var(--space-s-2xl);
 		flex: 1 0 auto;
 		margin: 0 auto;
 	}
