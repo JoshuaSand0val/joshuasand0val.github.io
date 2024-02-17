@@ -35,10 +35,14 @@
 		display: flex;
 		flex-flow: row nowrap;
 		overflow: visible;
-		filter:
-			drop-shadow(0 0 6px var(--bg-color-3))
-			drop-shadow(0 0 12px var(--bg-color-2))
-			drop-shadow(0 0 24px var(--bg-color-1));
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: var(--z-underlay);
+			backdrop-filter: blur(3px);
+			mask-image: linear-gradient(to bottom, red, transparent);
+		}
 	}
 
 	.wrapper {
@@ -54,6 +58,10 @@
 		padding: 0 var(--space-s-2xl);
 		margin: 0 auto;
 		overflow: auto;
+		filter:
+			drop-shadow(0 0 6px var(--bg-color-3))
+			drop-shadow(0 0 12px var(--bg-color-2))
+			drop-shadow(0 0 24px var(--bg-color-1));
 	}
 
 	.brand {
