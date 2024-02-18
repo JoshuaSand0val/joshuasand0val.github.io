@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-<div class="container">
+<article class="container">
 	<img class="profile" src="pfp.jpg" alt="Joshua Elijah Sandoval" />
 	<div class="content">
 		<h1>Hey, I'm Joshua Elijah Sandoval.</h1>
@@ -20,7 +20,7 @@
 			<i class="devicon-postgresql-plain"></i>
 		</span>
 	</div>
-</div>
+</article>
 
 <style>
 	.container, .content {
