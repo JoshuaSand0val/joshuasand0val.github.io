@@ -14,7 +14,7 @@
 			<a href="/" class:active={path === "/"}>Home</a>
 			<a href="/about" class:active={path === "/about"}>About</a>
 			<a href="https://github.com/joshuasand0val" target="_blank">Github</a>
-			<a href="/contact" class:active={path === "/contact"}>Contact</a>
+			<a href="https://linkedin.com/in/joshuasand0val/" target="_blank">Linkedin</a>
 		</nav>
 	</div>
 </header>
