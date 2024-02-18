@@ -125,6 +125,8 @@
 		border: none;
 		background-color: transparent;
 		color: inherit;
+		padding: 0;
+		margin: 0;
 		transform: rotate(180deg);
 		transition: transform 150ms ease-out;
 		:global(:root[data-theme="light"]) & {
