@@ -50,7 +50,7 @@
 	--color-accent: var(--oc-green-4);
 
 	/* Light Palette: */
-	@media (prefers-color-scheme: light) {
+	&:where([data-theme="light"]) {
 		--bg-color-1: var(--oc-gray-0);
 		--bg-color-2: var(--oc-gray-1);
 		--bg-color-3: var(--oc-gray-2);

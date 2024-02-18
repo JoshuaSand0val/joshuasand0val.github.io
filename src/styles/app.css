@@ -18,6 +18,9 @@
 	background-color: var(--bg-color-1);
 	color: var(--color);
 	scroll-behavior: smooth;
+	transition-property: color, background-color, filter;
+	transition-duration: 500ms;
+	transition-timing-function: ease-out;
 	&::before, &::after {
 		content: "";
 		position: fixed;
