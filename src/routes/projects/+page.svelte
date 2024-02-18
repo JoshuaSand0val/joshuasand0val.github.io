@@ -22,9 +22,8 @@
 <style>
 	h1 {
 		display: block;
-		text-align: center;
 		font-size: var(--font-3xl);
-		margin: 0 0 var(--space-m-l);
+		margin: 0;
 	}
 	
 	.grid {
@@ -34,7 +33,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(clamp(calc(var(--max) - var(--gap)), var(--min), 100%), 1fr));
 		gap: var(--gap);
-		margin: var(--space-l-xl) 0;
+		margin: var(--space-m-l) 0;
 	}
 
 	.project {
