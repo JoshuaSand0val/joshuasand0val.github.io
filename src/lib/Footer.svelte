@@ -125,14 +125,15 @@
 		border: none;
 		background-color: transparent;
 		color: inherit;
+		transform: rotate(180deg);
 		transition: transform 150ms ease-out;
-		:global(:root[data-theme="dark"]) & {
-			transform: rotate(-180deg);
+		:global(:root[data-theme="light"]) & {
+			transform: none;
 		}
 	}
 
 	.top {
-		margin-right: var(--space-2xs-xs);
+		margin-right: var(--space-xs-s);
 		transform: translateX(-100%);
 		&:not(:active) {
 			transition:
