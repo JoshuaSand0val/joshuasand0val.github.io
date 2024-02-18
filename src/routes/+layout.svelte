@@ -19,13 +19,13 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
-		container: main / inline-size;
+		container-type: inline-size;
 		width: 100%;
 		max-width: var(--width-3xl);
 		border-width: var(--safe-main);
 		border-style: solid;
 		border-color: transparent;
-		padding: var(--space-s-m) var(--space-s-2xl);
+		padding: 0 var(--space-s-2xl);
 		flex: 1 0 auto;
 		margin: 0 auto;
 	}

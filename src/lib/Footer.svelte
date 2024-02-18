@@ -41,7 +41,7 @@
 		width: 100%;
 		max-width: var(--width-3xl);
 		padding: var(--safe-footer);
-		margin: auto auto 0;
+		margin: var(--space-2xs-xs) auto 0;
 	}
 
 	.wrapper {
@@ -49,7 +49,6 @@
 		display: flex;
 		flex-flow: row wrap;
 		padding: 0 var(--space-s-2xl) var(--space-m-l);
-		margin-top: var(--space-s-2xl);
 	}
 
 	.info {

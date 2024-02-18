@@ -34,6 +34,7 @@
 		display: flex;
 		flex-flow: row nowrap;
 		overflow: visible;
+		margin: 0 0 var(--space-2xs-xs);
 		&::before {
 			content: "";
 			position: absolute;
