@@ -41,7 +41,7 @@
 		width: 100%;
 		max-width: var(--width-3xl);
 		padding: var(--safe-footer);
-		margin: var(--space-2xs-xs) auto 0;
+		margin: 0 auto;
 	}
 
 	.wrapper {
