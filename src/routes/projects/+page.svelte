@@ -28,7 +28,7 @@
 	}
 	
 	.grid {
-		--gap: var(--space-l-xl);
+		--gap: var(--space-m-l);
 		--min: var(--width-xs);
 		--max: calc(100% / 3);
 		display: grid;
