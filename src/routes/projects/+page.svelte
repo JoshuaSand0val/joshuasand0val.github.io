@@ -1,19 +1,17 @@
+<script>
+	import projects from "./projects.json";
+</script>
+
 <div class="container">
 	<h1>My Projects</h1>
 	<div class="grid">
-		{#each Array(5) as _}
+		{#each projects as { title, image, description, url }}
 		<article class="project">
-			<h2 class="title">Awesome Project</h2>
-			<picture>
-				<source
-					srcset="https://placehold.co/600x400/222/FFF/?text=Website+Screenshot"
-					media="(prefers-color-scheme: dark)">
-				<img
-					class="portal"
-					src="https://placehold.co/600x400/EEE/000/?text=Website+Screenshot"
-					alt="">
-			</picture>
-			<p class="description">An upcoming project utilizing awesome web technologies.</p>
+			<h2 class="title">{title}</h2>
+			<a class="portal" href={url}>
+				<img src={image} alt="" />
+			</a>
+			<p class="description">{description}</p>
 		</article>
 		{/each}
 	</div>
@@ -48,7 +46,7 @@
 		}
 		.title {
 			display: block;
-			font-size: var(--font-xl);
+			font-size: var(--font-2xl);
 		}
 		.portal {
 			position: relative;
@@ -62,6 +60,16 @@
 			overflow: hidden;
 			margin-right: 0;
 			margin-left: 0;
+			transition: transform 150ms ease-out;
+			&:hover, &:focus {
+				transform: scale(1.01);
+			}
+			&, &:active {
+				transform: none;
+			}
+			img {
+				width: 100%;
+			}
 		}
 		.description {
 			display: block;
