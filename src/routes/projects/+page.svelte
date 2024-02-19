@@ -2,6 +2,8 @@
 	import projects from "./projects.json";
 </script>
 
+<!-- Project images must be of a viewport of 1200/800 CSS pixels. -->
+
 <div class="container">
 	<h1>My Projects</h1>
 	<div class="grid">
