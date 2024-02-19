@@ -34,7 +34,7 @@
 	.grid {
 		--gap: var(--space-m-l);
 		--min: var(--width-xs);
-		--max: calc(100% / 3);
+		--max: calc(100% / 4);
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(clamp(calc(var(--max) - var(--gap)), var(--min), 100%), 1fr));
 		gap: var(--gap);
@@ -70,7 +70,7 @@
 			background-image: linear-gradient(123deg, var(--bg-color-2), var(--bg-color-1));
 			color: var(--color);
 			&:hover, &:focus {
-				transform: scale(1.01);
+				transform: scale(1.02);
 			}
 			&, &:active {
 				transform: none;
