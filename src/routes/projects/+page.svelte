@@ -39,7 +39,7 @@
 		container-type: inline-size;
 		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 		.title, .portal, .description {
-			margin: var(--space-xs-s) var(--space-3xs-2xs) 0;
+			margin: var(--space-xs-s) 0 0;
 			&:first-child {
 				margin-top: 0;
 			}
@@ -55,8 +55,7 @@
 			aspect-ratio: 3 / 2;
 			object-fit: cover;
 			object-position: top center;
-			border-radius: 8px;
-			border: 3px solid var(--bg-color-2);
+			border-radius: 3px;
 			overflow: hidden;
 			margin-right: 0;
 			margin-left: 0;
