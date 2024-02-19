@@ -8,7 +8,7 @@
 		{#each projects as { title, image, description, url }}
 		<article class="project">
 			<h2 class="title">{title}</h2>
-			<a class="portal" href={url}>
+			<a class="portal" href={url} target="_blank">
 				<img src={image} alt="" />
 			</a>
 			<p class="description">{description}</p>
@@ -53,8 +53,6 @@
 			display: block;
 			width: 100%;
 			aspect-ratio: 3 / 2;
-			object-fit: cover;
-			object-position: top center;
 			border-radius: 3px;
 			overflow: hidden;
 			margin-right: 0;
@@ -67,7 +65,11 @@
 				transform: none;
 			}
 			img {
+				display: block;
 				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: top center;
 			}
 		}
 		.description {
