@@ -34,7 +34,7 @@
 		z-index: var(--z-overlay);
 		display: flex;
 		flex-flow: row nowrap;
-		overflow: visible;
+		overflow: auto;
 		&::before {
 			content: "";
 			position: absolute;
@@ -57,7 +57,6 @@
 		border-color: transparent;
 		padding: 0 var(--space-s-2xl);
 		margin: 0 auto;
-		overflow: auto;
 		filter:
 			drop-shadow(0 0 6px var(--bg-color-3))
 			drop-shadow(0 0 12px var(--bg-color-2))
