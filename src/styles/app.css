@@ -21,6 +21,7 @@
 	transition-property: background-color, border-color, color, filter;
 	transition-duration: 500ms;
 	transition-timing-function: ease-out;
+	-webkit-tap-highlight-color: transparent;
 	&::before, &::after {
 		content: "";
 		position: fixed;
