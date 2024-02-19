@@ -69,18 +69,18 @@
 			<span>&copy; {new Date().getFullYear()} Joshua Elijah Sandoval.</span>
 			<span>Site built with <a target="_blank" href="https://svelte.dev">Svelte</a>.</span>
 		</div>
-		<!-- Theme toggle: -->
-		<button class="toggle" bind:this={themeToggleButton}>
-			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-				<path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
-			</svg>
-		</button>
 		<!-- Back to top of page link: -->
 		<a href="#top" aria-label="To top of page" class="top" data-show={scrollbarVisible}>
 			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
 				<path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
 			</svg>
 		</a>
+		<!-- Theme toggle: -->
+		<button class="toggle" bind:this={themeToggleButton}>
+			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+				<path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+			</svg>
+		</button>
 	</div>
 </footer>
 
@@ -139,15 +139,15 @@
 		transform: translateX(-100%);
 		&:not(:active) {
 			transition:
+				visibility 150ms ease-out,
 				transform 150ms ease-out,
 				opacity 150ms ease-in;
 		}
 		&:active,
 		&[data-show="false"] {
-			transform: translateX(-100%) scale(0.9);
-		}
-		&[data-show="false"] {
 			pointer-events: none;
+			visibility: hidden;
+			transform: translateX(-100%) scale(0.9);
 			opacity: 0;
 		}
 	}
