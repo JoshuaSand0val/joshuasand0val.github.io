@@ -4,5 +4,20 @@
 		"image": "/projects/joshuasand0val.github.io.png",
 		"description": "A personal website showcasing everything about myself, and my work.",
 		"url": "/"
+	},
+	{
+		"title": "Precolor",
+		"description": "A collection of color manipulation tools written in Sass (SCSS).",
+		"url": "https://github.com/JoshuaSand0val/Precolor"
+	},
+	{
+		"title": "Presized",
+		"description": "A collection of resizing tools written in Sass (SCSS).",
+		"url": "https://github.com/JoshuaSand0val/Presized"
+	},
+	{
+		"title": "Simply Notes!",
+		"description": "Simple note taking application with account control.",
+		"url": "https://github.com/JesDevBootcamp/simply-notes"
 	}
 ]
