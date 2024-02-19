@@ -143,12 +143,14 @@
 				transform 150ms ease-out,
 				opacity 150ms ease-in;
 		}
-		&:active,
 		&[data-show="false"] {
 			pointer-events: none;
 			visibility: hidden;
-			transform: translateX(-100%) scale(0.9);
 			opacity: 0;
+		}
+		&:active,
+		&[data-show="false"] {
+			transform: translateX(-100%) scale(0.9);
 		}
 	}
 </style>
