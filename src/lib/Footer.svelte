@@ -128,7 +128,7 @@
 		padding: 0;
 		margin: 0;
 		transform: rotate(180deg);
-		transition: transform 150ms ease-out;
+		transition: transform 250ms ease-out;
 		:global(:root[data-theme="light"]) & {
 			transform: none;
 		}
