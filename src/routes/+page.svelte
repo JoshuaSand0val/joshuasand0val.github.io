@@ -5,7 +5,13 @@
 	<div class="content">
 		<h1>Hey, I'm Joshua Elijah Sandoval.</h1>
 		<h2>A full-stack web developer based in Utah.</h2>
-		<p>Welcome to my website! Here you can explore and learn more <a href="/about/">about myself</a>, and visit <a href="https://github.com/joshuasand0val" target="_blank">my Github</a> or <a href="https://linkedin.com/in/joshuasand0val/" target="_blank">Linkedin</a>; if perhaps you're interested.</p>
+		<p>
+			Welcome to my website! Here you can explore and learn more
+			<a href="/about">about myself</a> or <a href="/projects">my projects</a>, and visit
+			<a href="https://github.com/joshuasand0val" target="_blank">my Github</a> or
+			<a href="https://linkedin.com/in/joshuasand0val/" target="_blank">my Linkedin</a>;
+			if perhaps you're interested.
+		</p>
 		<span class="skills">
 			<i class="devicon-html5-plain"></i>
 			<i class="devicon-markdown-plain"></i>
