@@ -9,7 +9,14 @@
 		<article class="project">
 			<h2 class="title">{title}</h2>
 			<a class="portal" href={url} target="_blank">
+				{#if typeof image === "string"}
 				<img src={image} alt="" />
+				#{:else}
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="-16 -16 48 48">
+					<path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+					<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>				  
+				</svg>
+				{/if}
 			</a>
 			<p class="description">{description}</p>
 		</article>
@@ -58,6 +65,10 @@
 			margin-right: 0;
 			margin-left: 0;
 			transition: transform 150ms ease-out;
+			border: 2px solid var(--bg-color-2);
+			background-color: var(--bg-color-1);
+			background-image: linear-gradient(123deg, var(--bg-color-2), var(--bg-color-1));
+			color: var(--color);
 			&:hover, &:focus {
 				transform: scale(1.01);
 			}
