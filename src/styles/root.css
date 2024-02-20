@@ -76,6 +76,10 @@
 	--line-height: 1.5;
 	--line-height-display: 1.25;
 
+	/* Viewport Font Size (14px → 16px): */
+	/* https://utopia.fyi/type/calculator?c=320,14,1,480,16,1,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--font-viewport: clamp(0.875rem, 0.625rem + 1.25vb, 1rem);
+
 	/* Font Sizing: */
 	/* https://utopia.fyi/type/calculator?c=180,16,1.125,1600,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 

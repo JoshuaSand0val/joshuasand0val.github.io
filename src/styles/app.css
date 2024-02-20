@@ -12,7 +12,7 @@
 	display: block;
 	min-height: 100%;
 	font-family: var(--font);
-	font-size: var(--font-m);
+	font-size: var(--font-viewport);
 	line-height: var(--line-height);
 	word-wrap: break-word;
 	background-color: var(--bg-color-1);
