@@ -1,3 +1,9 @@
+<script>
+	import Meta from "$lib/Meta.svelte";
+</script>
+
+<Meta title="Home" description="Joshua Elijah Sandoval is a full-stack web developer." />
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
 <article class="container">

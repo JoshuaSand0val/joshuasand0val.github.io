@@ -1,6 +1,9 @@
 <script>
 	import projects from "./projects.json";
+	import Meta from "$lib/Meta.svelte";
 </script>
+
+<Meta title="Projects" description="The various projects undertaken by Joshua Elijah Sandoval." />
 
 <!-- Project images must be of a viewport of 1200/800 CSS pixels. -->
 

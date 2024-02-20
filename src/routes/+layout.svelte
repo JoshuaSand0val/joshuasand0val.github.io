@@ -4,10 +4,6 @@
     import Footer from "$lib/Footer.svelte";
 </script>
 
-<svelte:head>
-    <title>Hey, Jes!</title> 
-</svelte:head>
-
 <Navbar />
 <main>
 	<slot></slot>

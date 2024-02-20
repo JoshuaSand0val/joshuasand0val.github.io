@@ -1,6 +1,9 @@
 <script>
 	import { page } from "$app/stores";
+	import Meta from "$lib/Meta.svelte";
 </script>
+
+<Meta title="Error" description="Something went wrong... an error occurred." />
 
 <div class="container">
 	<span class="status" role="presentation">{$page.status}</span>
