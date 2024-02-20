@@ -13,6 +13,7 @@
 	min-height: 100%;
 	font-family: var(--font);
 	font-size: var(--font-viewport);
+	text-size-adjust: none;
 	line-height: var(--line-height);
 	word-wrap: break-word;
 	background-color: var(--bg-color-1);
@@ -43,6 +44,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
+	font-size: var(--font-m);
 	min-height: 100%;
 	margin: 0;
 }
