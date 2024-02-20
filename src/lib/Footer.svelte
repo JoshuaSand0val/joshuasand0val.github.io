@@ -114,7 +114,7 @@
 		z-index: var(--z-fixed);
 		right: calc(var(--space-s-2xl) + var(--safe-right));
 		bottom: calc(var(--space-m-l) + var(--safe-bottom));
-		font-size: var(--font-xl);
+		font-size: var(--space-l);
 		line-height: 0;
 		filter: drop-shadow(0 0 8px var(--bg-color-1));
 		cursor: pointer;
@@ -135,7 +135,7 @@
 	}
 
 	.top {
-		margin-right: var(--space-xs-s);
+		margin-right: var(--space-2xs-xs);
 		transform: translateX(-100%);
 		&:not(:active) {
 			transition:
