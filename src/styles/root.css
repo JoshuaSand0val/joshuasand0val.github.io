@@ -6,6 +6,11 @@
 /* Import Font Families: */
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');
 
+/* Custom Theming Selectors: */
+@custom-selector :--system :where([data-theme="system"]);
+@custom-selector :--light :where([data-theme="light"]);
+@custom-selector :--dark :where([data-theme="dark"]);
+
 :root {
 	/* Z-Index Position: */
 	--z-underlay: -1000;
@@ -42,34 +47,31 @@
 	--safe-main: var(--safe-x);
 	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 
-	/* Default Palette: */
-	--bg-color-1: var(--oc-gray-9);
-	--bg-color-2: var(--oc-gray-8);
-	--bg-color-3: var(--oc-gray-7);
-	--color: var(--oc-gray-1);
-	--color-accent: var(--oc-green-4);
+	/* System (Dynamic) Color Palette: */
+	&:--system {
+		--bg-color-1: light-dark(var(--oc-gray-0), var(--oc-gray-9));
+		--bg-color-2: light-dark(var(--oc-gray-1), var(--oc-gray-8));
+		--bg-color-3: light-dark(var(--oc-gray-2), var(--oc-gray-7));
+		--color: light-dark(var(--oc-gray-8), var(--oc-gray-1));
+		--color-accent: light-dark(var(--oc-pink-8), var(--oc-green-4));
+	}
 
-	/* Default Palette (RGB): */
-	--bg-color-1-rgb: var(--oc-gray-9-rgb);
-	--bg-color-2-rgb: var(--oc-gray-8-rgb);
-	--bg-color-3-rgb: var(--oc-gray-7-rgb);
-	--color-rgb: var(--oc-gray-1-rgb);
-	--color-accent-rgb: var(--oc-green-4-rgb);
-
-	&:where([data-theme="light"]) {
-		/* Light Palette: */
+	/* Light Color Palette: */
+	&:--light {
 		--bg-color-1: var(--oc-gray-0);
 		--bg-color-2: var(--oc-gray-1);
 		--bg-color-3: var(--oc-gray-2);
 		--color: var(--oc-gray-8);
 		--color-accent: var(--oc-pink-8);
+	}
 
-		/* Light Palette (RGB): */
-		--bg-color-1-rgb: var(--oc-gray-0-rgb);
-		--bg-color-2-rgb: var(--oc-gray-1-rgb);
-		--bg-color-3-rgb: var(--oc-gray-2-rgb);
-		--color-rgb: var(--oc-gray-8-rgb);
-		--color-accent-rgb: var(--oc-pink-8-rgb);
+	/* Dark Color Palette: */
+	&:--dark {
+		--bg-color-1: var(--oc-gray-9);
+		--bg-color-2: var(--oc-gray-8);
+		--bg-color-3: var(--oc-gray-7);
+		--color: var(--oc-gray-1);
+		--color-accent: var(--oc-green-4);
 	}
 
 	/* Custom Wallpaper Image: */

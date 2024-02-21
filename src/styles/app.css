@@ -6,6 +6,22 @@
 	box-sizing: border-box;
 }
 
+:where(.system, .light, .dark) {
+	transition-property: visibility, opacity;
+	transition-duration: 500ms;
+	transition-timing-function: ease-out;
+}
+
+:where(:root:--system :is(.light, .dark)),
+:where(:root:--light :is(.system, .dark)),
+:where(:root:--dark :is(.system, .light)) {
+	position: fixed;
+	left: -9999vi;
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+}
+
 :root {
 	position: absolute;
 	inset: 0;
