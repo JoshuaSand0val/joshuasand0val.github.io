@@ -18,10 +18,10 @@
 		container-type: inline-size;
 		width: 100%;
 		max-width: var(--width-3xl);
-		border-width: var(--safe-main);
-		border-style: solid;
-		border-color: transparent;
-		padding: var(--space-2xs-xs) var(--space-s-2xl);
+		padding-top: var(--space-2xs-xs);
+		padding-right: max(var(--space-s-2xl), var(--safe-right));
+		padding-bottom: var(--space-2xs-xs);
+		padding-left: max(var(--space-s-2xl), var(--safe-left));
 		flex: 1 0 auto;
 		margin: 0 auto;
 	}

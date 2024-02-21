@@ -52,10 +52,9 @@
 		max-width: var(--width-3xl);
 		gap: var(--space-s);
 		flex: 1 1 auto;
-		border-width: var(--safe-header);
-		border-style: solid;
-		border-color: transparent;
-		padding: 0 var(--space-s-2xl);
+		padding-top: var(--safe-top);
+		padding-right: max(var(--space-s-2xl), var(--safe-right));
+		padding-left: max(var(--space-s-2xl), var(--safe-left));
 		margin: 0 auto;
 		filter:
 			drop-shadow(0 0 6px var(--bg-color-3))
