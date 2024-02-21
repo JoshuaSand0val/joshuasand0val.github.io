@@ -49,13 +49,27 @@
 	--color: var(--oc-gray-1);
 	--color-accent: var(--oc-green-4);
 
-	/* Light Palette: */
+	/* Default Palette (RGB): */
+	--bg-color-1-rgb: var(--oc-gray-9-rgb);
+	--bg-color-2-rgb: var(--oc-gray-8-rgb);
+	--bg-color-3-rgb: var(--oc-gray-7-rgb);
+	--color-rgb: var(--oc-gray-1-rgb);
+	--color-accent-rgb: var(--oc-green-4-rgb);
+
 	&:where([data-theme="light"]) {
+		/* Light Palette: */
 		--bg-color-1: var(--oc-gray-0);
 		--bg-color-2: var(--oc-gray-1);
 		--bg-color-3: var(--oc-gray-2);
 		--color: var(--oc-gray-8);
 		--color-accent: var(--oc-pink-8);
+
+		/* Light Palette (RGB): */
+		--bg-color-1-rgb: var(--oc-gray-0-rgb);
+		--bg-color-2-rgb: var(--oc-gray-1-rgb);
+		--bg-color-3-rgb: var(--oc-gray-2-rgb);
+		--color-rgb: var(--oc-gray-8-rgb);
+		--color-accent-rgb: var(--oc-pink-8-rgb);
 	}
 
 	/* Custom Wallpaper Image: */
