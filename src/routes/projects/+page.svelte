@@ -10,13 +10,16 @@
 <div class="container">
 	<h1>My Projects</h1>
 	<div class="grid">
-		{#each projects as { title, image, description, url }}
+		{#each projects as { title, image, imageDark, description, url }}
 		<article class="project">
 			<h2 class="title">{title}</h2>
 			<a class="portal" href={url} target="_blank">
-				{#if typeof image === "string"}
-				<img src={image} alt="" />
-				#{:else}
+				{#if [image, imageDark].every(i => typeof i === "string")}
+				<img src={image} loading="lazy" class="system light" alt="" />
+				<img src={imageDark} loading="lazy" class="system dark" alt="" />
+				{:else if typeof image === "string"}
+				<img src={image} loading="lazy" alt="" />
+				{:else}
 				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" viewBox="-16 -16 48 48">
 					<path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
 					<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>				  

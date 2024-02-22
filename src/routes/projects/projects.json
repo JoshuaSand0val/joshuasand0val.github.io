@@ -2,6 +2,7 @@
 	{
 		"title": "Hey, Jes!",
 		"image": "/projects/joshuasand0val.github.io.png",
+		"imageDark": "/projects/joshuasand0val.github.io-dark.png",
 		"description": "A personal website showcasing everything about myself, and my work.",
 		"url": "/"
 	},
