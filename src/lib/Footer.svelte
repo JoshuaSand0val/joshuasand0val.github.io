@@ -30,6 +30,9 @@
 		/** Renders currently stored theme to document root. */
 		const renderTheme = () => root.setAttribute("data-theme", storedTheme());
 
+		// Initially render theme:
+		renderTheme();
+
 		// Render theme across tabs on storage update:
 		window.addEventListener("storage", renderTheme);
 
