@@ -6,11 +6,6 @@
 /* Import Font Families: */
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');
 
-/* Custom Theming Selectors: */
-@custom-selector :--system :where([data-theme="system"]);
-@custom-selector :--light :where([data-theme="light"]);
-@custom-selector :--dark :where([data-theme="dark"]);
-
 :root {
 	/* Z-Index Position: */
 	--z-underlay: -1000;
@@ -47,17 +42,26 @@
 	--safe-main: var(--safe-x);
 	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 
-	/* System (Dynamic) Color Palette: */
-	&:--system {
-		--bg-color-1: light-dark(var(--oc-gray-0), var(--oc-gray-9));
-		--bg-color-2: light-dark(var(--oc-gray-1), var(--oc-gray-8));
-		--bg-color-3: light-dark(var(--oc-gray-2), var(--oc-gray-7));
-		--color: light-dark(var(--oc-gray-8), var(--oc-gray-1));
-		--color-accent: light-dark(var(--oc-pink-8), var(--oc-green-4));
+	/* System Color Palette: */
+	&[data-theme="system"] {
+		@media (prefers-color-scheme: light) {
+			--bg-color-1: var(--oc-gray-0);
+			--bg-color-2: var(--oc-gray-1);
+			--bg-color-3: var(--oc-gray-2);
+			--color: var(--oc-gray-8);
+			--color-accent: var(--oc-pink-8);
+		}
+		@media (prefers-color-scheme: dark) {
+			--bg-color-1: var(--oc-gray-9);
+			--bg-color-2: var(--oc-gray-8);
+			--bg-color-3: var(--oc-gray-7);
+			--color: var(--oc-gray-1);
+			--color-accent: var(--oc-green-4);
+		}
 	}
 
 	/* Light Color Palette: */
-	&:--light {
+	&[data-theme="light"] {
 		--bg-color-1: var(--oc-gray-0);
 		--bg-color-2: var(--oc-gray-1);
 		--bg-color-3: var(--oc-gray-2);
@@ -66,7 +70,7 @@
 	}
 
 	/* Dark Color Palette: */
-	&:--dark {
+	&[data-theme="dark"]  {
 		--bg-color-1: var(--oc-gray-9);
 		--bg-color-2: var(--oc-gray-8);
 		--bg-color-3: var(--oc-gray-7);

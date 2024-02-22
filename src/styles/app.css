@@ -6,20 +6,25 @@
 	box-sizing: border-box;
 }
 
-:where(.system, .light, .dark) {
-	transition-property: visibility, opacity;
-	transition-duration: 500ms;
-	transition-timing-function: ease-out;
+:root[data-theme="system"] :is(.light, .dark):not(.system),
+:root[data-theme="light"] :is(.system, .dark):not(.light),
+:root[data-theme="dark"] :is(.system, .light):not(.dark) {
+	:where(&) {
+		display: none !important;
+	}
 }
 
-:where(:root:--system :is(.light, .dark)),
-:where(:root:--light :is(.system, .dark)),
-:where(:root:--dark :is(.system, .light)) {
-	position: fixed;
-	left: -9999vi;
-	pointer-events: none;
-	visibility: hidden;
-	opacity: 0;
+:root[data-theme="system"] {
+	@media (prefers-color-scheme: light) {
+		:where(& .system.dark) {
+			display: none !important;
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		:where(& .system.light) {
+			display: none !important;
+		}
+	}
 }
 
 :root {
