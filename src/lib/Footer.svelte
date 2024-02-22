@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte";
+	import { onMount } from "svelte";
 
 	/** @type {boolean} Boolean for if there is a visible vertical scrollbar. */
 	let scrollbarVisible = false;

@@ -70,7 +70,7 @@
 	}
 
 	/* Dark Color Palette: */
-	&[data-theme="dark"]  {
+	&[data-theme="dark"] {
 		--bg-color-1: var(--oc-gray-9);
 		--bg-color-2: var(--oc-gray-8);
 		--bg-color-3: var(--oc-gray-7);
@@ -111,7 +111,7 @@
 	--font-2xl: clamp(1.4238rem, 1.229rem + 1.7317cqi, 2.9607rem);
 	--font-3xl: clamp(1.6018rem, 1.3046rem + 2.6421cqi, 3.9467rem);
 	--font-4xl: clamp(1.802rem, 1.3636rem + 3.8973cqi, 5.2609rem);
-  
+
 	/* Box Sizing: */
 	/* https://utopia.fyi/space/calculator?c=180,16,1.125,1600,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-2xl&g=s,l,xl,12 */
 
@@ -124,7 +124,7 @@
 	--space-xl: clamp(3rem, 2.9049rem + 0.8451cqi, 3.75rem);
 	--space-2xl: clamp(4rem, 3.8732rem + 1.1268cqi, 5rem);
 	--space-3xl: clamp(6rem, 5.8099rem + 1.6901cqi, 7.5rem);
-  
+
 	/* One-up pairs */
 	--space-3xs-2xs: clamp(0.25rem, 0.2025rem + 0.4225cqi, 0.625rem);
 	--space-2xs-xs: clamp(0.5rem, 0.4445rem + 0.493cqi, 0.9375rem);
@@ -134,7 +134,7 @@
 	--space-l-xl: clamp(2rem, 1.7782rem + 1.9718cqi, 3.75rem);
 	--space-xl-2xl: clamp(3rem, 2.7465rem + 2.2535cqi, 5rem);
 	--space-2xl-3xl: clamp(4rem, 3.5563rem + 3.9437cqi, 7.5rem);
-  
+
 	/* Custom pairs */
 	--space-s-2xl: clamp(1rem, 0.493rem + 4.507cqi, 5rem);
 }
