@@ -53,8 +53,8 @@
 		gap: var(--space-s);
 		flex: 1 1 auto;
 		padding-top: var(--safe-top);
-		padding-right: max(var(--space-s-2xl), var(--safe-right));
-		padding-left: max(var(--space-s-2xl), var(--safe-left));
+		padding-right: max(var(--space-s-2xl), var(--safe-right) + var(--space-xs-s));
+		padding-left: max(var(--space-s-2xl), var(--safe-left) + var(--space-xs-s));
 		margin: 0 auto;
 		filter:
 			drop-shadow(0 0 6px var(--bg-color-3))

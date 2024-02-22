@@ -106,9 +106,9 @@
 		display: block;
 		width: 100%;
 		max-width: var(--width-3xl);
-		padding-right: max(var(--space-s-2xl), var(--safe-right));
+		padding-right: max(var(--space-s-2xl), var(--safe-right) + var(--space-xs-s));
 		padding-bottom: max(var(--space-m-l), var(--safe-bottom));
-		padding-left: max(var(--space-s-2xl), var(--safe-left));
+		padding-left: max(var(--space-s-2xl), var(--safe-left) + var(--space-xs-s));
 		margin: 0 auto;
 	}
 
@@ -130,7 +130,7 @@
 	.toggle, .top {
 		position: fixed;
 		z-index: var(--z-fixed);
-		right: max(var(--space-s-2xl), var(--safe-right));
+		right: max(var(--space-s-2xl), var(--safe-right) + var(--space-xs-s));
 		bottom: max(var(--space-m-l), var(--safe-bottom));
 		font-size: var(--space-l);
 		line-height: 0;

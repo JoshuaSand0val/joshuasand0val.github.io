@@ -19,9 +19,9 @@
 		width: 100%;
 		max-width: var(--width-3xl);
 		padding-top: var(--space-2xs-xs);
-		padding-right: max(var(--space-s-2xl), var(--safe-right));
+		padding-right: max(var(--space-s-2xl), var(--safe-right) + var(--space-xs-s));
 		padding-bottom: var(--space-2xs-xs);
-		padding-left: max(var(--space-s-2xl), var(--safe-left));
+		padding-left: max(var(--space-s-2xl), var(--safe-left) + var(--space-xs-s));
 		flex: 1 0 auto;
 		margin: 0 auto;
 	}
