@@ -1,8 +1,5 @@
 /* Root: Application global CSS variables (custom properties). */
 
-/* Import Open Color NPM package: */
-@import url('open-color/open-color.css');
-
 /* Import Font Families: */
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');
 
@@ -45,45 +42,45 @@
 	/* System Color Palette: */
 	&[data-theme="system"] {
 		@media (prefers-color-scheme: light) {
-			--bg-color-1: var(--oc-gray-0);
-			--bg-color-2: var(--oc-gray-1);
-			--bg-color-3: var(--oc-gray-2);
-			--color: var(--oc-gray-8);
-			--color-accent: var(--oc-pink-8);
+			--bg-color-1: oklch(100% 0 0);
+			--bg-color-2: oklch(95% 0 0);
+			--bg-color-3: oklch(90% 0 0);
+			--color: oklch(30% 0 0);
+			--color-accent: oklch(50% 0.2 7);
 		}
 		@media (prefers-color-scheme: dark) {
-			--bg-color-1: var(--oc-gray-9);
-			--bg-color-2: var(--oc-gray-8);
-			--bg-color-3: var(--oc-gray-7);
-			--color: var(--oc-gray-1);
-			--color-accent: var(--oc-green-4);
+			--bg-color-1: oklch(25% 0.01 248);
+			--bg-color-2: oklch(30% 0.01 248);
+			--bg-color-3: oklch(35% 0.01 248);
+			--color: oklch(95% 0.01 248);
+			--color-accent: oklch(75% 0.15 148);
 		}
 	}
 
 	/* Light Color Palette: */
 	&[data-theme="light"] {
-		--bg-color-1: var(--oc-gray-0);
-		--bg-color-2: var(--oc-gray-1);
-		--bg-color-3: var(--oc-gray-2);
-		--color: var(--oc-gray-8);
-		--color-accent: var(--oc-pink-8);
+		--bg-color-1: oklch(100% 0 0);
+		--bg-color-2: oklch(95% 0 0);
+		--bg-color-3: oklch(90% 0 0);
+		--color: oklch(30% 0 0);
+		--color-accent: oklch(50% 0.2 7);
 	}
 
 	/* Dark Color Palette: */
 	&[data-theme="dark"] {
-		--bg-color-1: var(--oc-gray-9);
-		--bg-color-2: var(--oc-gray-8);
-		--bg-color-3: var(--oc-gray-7);
-		--color: var(--oc-gray-1);
-		--color-accent: var(--oc-green-4);
+		--bg-color-1: oklch(25% 0.01 248);
+		--bg-color-2: oklch(30% 0.01 248);
+		--bg-color-3: oklch(35% 0.01 248);
+		--color: oklch(95% 0.01 248);
+		--color-accent: oklch(75% 0.15 148);
 	}
 
 	/* Custom Wallpaper Image: */
 	--custom-wallpaper: linear-gradient(157deg,
 		var(--bg-color-2) 10%,
-		var(--oc-blue-9) 30%,
-		var(--oc-cyan-9) 50%,
-		var(--oc-teal-9) 70%,
+		oklch(50% 0.1 252) 30%,
+		oklch(50% 0.1 215) 50%,
+		oklch(50% 0.1 165) 70%,
 		var(--bg-color-1) 90%
 	);
 
