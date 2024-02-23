@@ -13,6 +13,7 @@
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"bootstrap-icons": "^1.11.3",
 		"devicon": "^2.16.0",
 		"open-color": "^1.9.1",
 		"postcss-preset-env": "^9.4.0",
