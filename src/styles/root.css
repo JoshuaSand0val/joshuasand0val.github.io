@@ -1,7 +1,7 @@
 /* Root: Application global CSS variables (custom properties). */
 
 /* Import Font Families: */
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Hind+Madurai:wght@400;600&family=Nunito:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
 
 :root {
 	/* Z-Index Position: */
@@ -39,51 +39,24 @@
 	--safe-main: var(--safe-x);
 	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 
-	/* System Color Palette: */
-	&[data-theme="system"] {
-		@media (prefers-color-scheme: light) {
-			--bg-color-1: oklch(100% 0 0);
-			--bg-color-2: oklch(95% 0 0);
-			--bg-color-3: oklch(90% 0 0);
-			--color: oklch(30% 0 0);
-			--color-accent: oklch(50% 0.2 7);
-			@media (prefers-contrast: more) {
-				--color-accent: oklch(40% 0.2 7);
-			}
-		}
-		@media (prefers-color-scheme: dark) {
-			--bg-color-1: oklch(25% 0.01 248);
-			--bg-color-2: oklch(30% 0.01 248);
-			--bg-color-3: oklch(35% 0.01 248);
-			--color: oklch(95% 0.01 248);
-			--color-accent: oklch(75% 0.15 148);
-			@media (prefers-contrast: more) {
-				--color-accent: oklch(85% 0.15 148);
-			}
-		}
+	/* Color Palette: */
+	--bg-color-1: oklch(95% 0.05 18);
+	--bg-color-2: oklch(90% 0.05 18);
+	--bg-color-3: oklch(85% 0.05 18);
+	--color: oklch(25% 0 0);
+	--color-accent: oklch(45% 0.15 235);
+	@media (prefers-contrast: more) {
+		--color-accent: oklch(35% 0.15 235);
 	}
 
-	/* Light Color Palette: */
-	&[data-theme="light"] {
-		--bg-color-1: oklch(100% 0 0);
-		--bg-color-2: oklch(95% 0 0);
-		--bg-color-3: oklch(90% 0 0);
-		--color: oklch(30% 0 0);
-		--color-accent: oklch(50% 0.2 7);
-		@media (prefers-contrast: more) {
-			--color-accent: oklch(40% 0.2 7);
-		}
-	}
-
-	/* Dark Color Palette: */
-	&[data-theme="dark"] {
+	@media (prefers-color-scheme: dark) {
 		--bg-color-1: oklch(25% 0.01 248);
 		--bg-color-2: oklch(30% 0.01 248);
 		--bg-color-3: oklch(35% 0.01 248);
 		--color: oklch(95% 0.01 248);
-		--color-accent: oklch(75% 0.15 148);
+		--color-accent: oklch(75% 0.15 235);
 		@media (prefers-contrast: more) {
-			--color-accent: oklch(85% 0.15 148);
+			--color-accent: oklch(85% 0.15 235);
 		}
 	}
 
@@ -97,17 +70,13 @@
 	);
 
 	/* Font Families: */
-	--font: 'Nunito', sans-serif;
-	--font-display: 'Hind Madurai', sans-serif;
-	--font-brand: 'Cookie', cursive;
+	--font: "Montserrat", sans-serif;
+	--font-display: "Halant", serif;
+	--font-brand: "Satisfy", cursive;
 
 	/* Line-Height: */
-	--line-height: 1.5;
-	--line-height-display: 1.25;
-
-	/* Viewport Font Size (14px → 16px): */
-	/* https://utopia.fyi/type/calculator?c=320,14,1,480,16,1,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-	--font-viewport: clamp(0.875rem, 0.625rem + 1.25vb, 1rem);
+	--line-height: 1.6;
+	--line-height-display: 1.2;
 
 	/* Font Sizing: */
 	/* https://utopia.fyi/type/calculator?c=180,16,1.125,1600,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */

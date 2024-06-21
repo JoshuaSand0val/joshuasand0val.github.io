@@ -18,7 +18,7 @@
 		container-type: inline-size;
 		width: 100%;
 		max-width: var(--width-3xl);
-		padding-top: var(--space-2xs-xs);
+		padding-top: var(--space-m-l);
 		padding-right: max(var(--space-s-2xl), var(--safe-right) + var(--space-xs-s));
 		padding-bottom: var(--space-2xs-xs);
 		padding-left: max(var(--space-s-2xl), var(--safe-left) + var(--space-xs-s));

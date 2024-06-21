@@ -5,7 +5,7 @@
 <Meta title="About" description="Learn about myself: Joshua Elijah Sandoval, and my work." />
 
 <article>
-	<h1>My name is Joshua Elijah Sandoval.</h1>
+	<h1>My name is Jes.</h1>
 	<h2>I am a full-stack web developer.</h2>
 	<div class="container">
 		<p>
