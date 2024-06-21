@@ -6,10 +6,10 @@
 <Meta title="Home" description="Joshua Elijah Sandoval is a full-stack web developer." />
 
 <article class="container">
-	<img class="profile" src="pfp.jpg" alt="Joshua Elijah Sandoval" />
+	<img class="profile" src="pfp.png" alt="Joshua Elijah Sandoval" />
 	<div class="content">
-		<h1>Hey, I'm Joshua Elijah Sandoval.</h1>
-		<h2>A full-stack web developer based in Utah.</h2>
+		<h1>Hey, I'm Jes.&nbsp;💖</h1>
+		<h2>Full-stack web developer.&nbsp;👩🏻‍💻</h2>
 		<p>
 			Welcome to my website! Here you can explore and learn more
 			<a href="/about">about myself</a> or <a href="/projects">my projects</a>, and visit
@@ -43,11 +43,11 @@
 
 	.profile {
 		display: block;
-		aspect-ratio: 1 / 1;
 		width: 40%;
-		max-width: var(--width-s);
-		border: var(--space-3xs-2xs) solid currentColor;
-		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
+		max-width: var(--width-m);
+		border: 2px dashed var(--bg-color-3);
+		border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+		background-color: var(--bg-color-1);
 		object-fit: cover;
 		margin: 0 0 var(--space-s-m) var(--space-m-l);
 		float: right;
@@ -60,7 +60,7 @@
 	}
 
 	h2 {
-		font-size: var(--font-xl);
+		font-size: var(--font-2xl);
 		font-weight: 300;
 	}
 

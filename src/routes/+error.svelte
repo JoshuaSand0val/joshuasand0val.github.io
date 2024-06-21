@@ -8,14 +8,13 @@
 <div class="container">
 	<span class="status" role="presentation">{$page.status}</span>
 	<h1 class="message">{$page.error?.message ?? "Uhh Oh!"}</h1>
-	<a href="/">&larr; Back to Home</a>
+	<a href="/">Forward to Home <i class="bi bi-chevron-right"></i></a>
 </div>
 
 <style>
 	.container {
 		position: relative;
 		display: block;
-		font-weight: 900;
 		text-align: center;
 		margin: auto;
 	}
@@ -29,6 +28,7 @@
 		display: block;
 		font-family: var(--font-display);
 		font-size: clamp(var(--font-4xl), 60cqi, 60cqb);
+		font-weight: 900;
 		user-select: none;
 		opacity: 0.05;
 	}

@@ -34,15 +34,9 @@
 		z-index: var(--z-overlay);
 		display: flex;
 		flex-flow: row nowrap;
+		border-bottom: 2px dashed var(--bg-color-3);
+		backdrop-filter: blur(3px);
 		overflow: auto;
-		&::before {
-			content: "";
-			position: absolute;
-			inset: 0;
-			z-index: var(--z-underlay);
-			backdrop-filter: blur(3px);
-			mask-image: linear-gradient(to bottom, red, transparent);
-		}
 	}
 
 	.wrapper {
@@ -64,12 +58,13 @@
 
 	.brand {
 		display: inline;
-		font-size: var(--font-xl);
+		font-size: var(--font-l);
 		font-family: var(--font-brand);
 		white-space: nowrap;
 		background: linear-gradient(123deg, var(--color), var(--color-accent));
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
+		margin: var(--space-xs-s) 0;
 		a {
 			text-decoration: none;
 		}

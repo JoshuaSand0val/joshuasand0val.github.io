@@ -16,8 +16,10 @@
 			<h2 class="title">{title}</h2>
 			<a class="portal" href={url} target="_blank">
 				{#if [image, imageDark].every(i => typeof i === "string")}
-				<img src={image} loading="lazy" class="system light" alt="" />
-				<img src={imageDark} loading="lazy" class="system dark" alt="" />
+				<picture>
+					<source srcset={imageDark} media="(prefers-color-scheme: dark)">
+					<img src={image} loading="lazy" alt="" />
+				</picture>
 				{:else if typeof image === "string"}
 				<img src={image} loading="lazy" alt="" />
 				{:else}
@@ -46,7 +48,7 @@
 	}
 
 	.grid {
-		--gap: var(--space-m-l);
+		--gap: var(--space-xs-s);
 		--min: var(--width-xs);
 		--max: calc(100% / 3);
 		display: grid;
@@ -61,9 +63,9 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		container-type: inline-size;
-		border-radius: 3px;
+		border: 2px dashed var(--bg-color-3);
+		border-radius: var(--space-3xs-2xs);
 		background-color: var(--bg-color-1);
-		box-shadow: 0 4px 16px -12px black;
 		padding: var(--space-s) 0;
 		gap: var(--space-xs-s) 0;
 		.title, .portal, .description, .learn-more {
@@ -81,8 +83,8 @@
 			width: 100%;
 			margin: 0;
 			transition: transform 100ms ease-out;
-			background-color: var(--bg-color-2);
-			background-image: radial-gradient(transparent, var(--bg-color-1));
+			border: 1px dashed var(--bg-color-3);
+			background-color: inherit;
 			color: var(--color);
 			overflow: hidden;
 			&:hover, &:focus {
