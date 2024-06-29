@@ -2,7 +2,7 @@
 	import Meta from "$lib/Meta.svelte";
 </script>
 
-<Meta title="About" description="Learn about myself: Joshua Elijah Sandoval, and my work." />
+<Meta title="About" description="Learn about myself: Jes, and my work." />
 
 <article>
 	<h1>My name is Jes.</h1>
