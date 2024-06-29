@@ -3,10 +3,10 @@
 	import Meta from "$lib/Meta.svelte";
 </script>
 
-<Meta title="Home" description="Joshua Elijah Sandoval is a full-stack web developer." />
+<Meta title="Home" description="Jes is a full-stack web developer." />
 
 <article class="container">
-	<img class="profile" src="pfp.png" alt="Joshua Elijah Sandoval" />
+	<img class="profile" loading="lazy" src="pfp.png" alt="Jes" />
 	<div class="content">
 		<h1>Hey, I'm Jes.&nbsp;💖</h1>
 		<h2>Full-stack web developer.&nbsp;👩🏻‍💻</h2>
