@@ -1,4 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
+import containerQueries from "@tailwindcss/container-queries";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +15,7 @@ export default {
 			"2xl": "1440px",
 			"3xl": "1600px"
 		},
+		containers: ({theme}) => theme("screens"),
 		zIndex: {
 			"underlay": "-1000",
 			"overlay": "1000",
@@ -89,5 +91,7 @@ export default {
 			}
 		},
 	},
-	plugins: []
+	plugins: [
+		containerQueries
+	]
 }
