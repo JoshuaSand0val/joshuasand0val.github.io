@@ -23,19 +23,19 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		z-index: var(--z-underlay);
+		z-index: var(--bottom-layer);
 		transform: translate(-50%, -48%);
 		display: block;
-		font-family: var(--font-display);
-		font-size: clamp(var(--font-4xl), 60cqi, 60cqb);
-		font-weight: 900;
+		font-family: var(--display-font);
+		font-size: clamp(var(--4xl-font), 60cqi, 60cqb);
+		font-weight: var(--heavy-font);
 		user-select: none;
 		opacity: 0.05;
 	}
 
 	.message {
 		display: block;
-		font-size: var(--font-4xl);
+		font-size: var(--4xl-font);
 		margin: 0;
 	}
 </style>
