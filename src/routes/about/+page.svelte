@@ -43,17 +43,16 @@
 
 <style>
 	h1 {
-		font-size: var(--font-3xl);
 		margin: 0;
 	}
 
 	h2 {
-		font-size: var(--font-l);
-		margin-top: var(--space-2xs-xs);
+		font-size: var(--lg-font);
+		margin-top: var(--xs-size);
 	}
 
 	.container {
 		display: block;
-		max-width: var(--width-l);
+		max-width: var(--lg-breakpoint);
 	}
 </style>

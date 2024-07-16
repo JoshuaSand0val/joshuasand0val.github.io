@@ -37,48 +37,48 @@
 	.container, .content {
 		display: inline;
 		width: 100%;
-		container-type: inline-size;
 		margin: 0 auto auto;
 	}
 
 	.profile {
 		display: block;
 		width: 40%;
-		max-width: var(--width-m);
-		border: 2px dashed var(--bg-color-3);
+		max-width: var(--md-breakpoint);
+		border: 2px dashed var(--3rd-bg-color);
 		border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
-		background-color: var(--bg-color-1);
+		background-color: var(--1st-bg-color);
+		background-image: linear-gradient(123deg, var(--1st-bg-color), var(--2nd-bg-color));
 		object-fit: cover;
-		margin: 0 0 var(--space-s-m) var(--space-m-l);
+		margin: 0 0 var(--md-size) var(--lg-size);
 		float: right;
 	}
 
 	h1 {
-		font-size: var(--font-4xl);
-		font-weight: 800;
+		font-size: var(--4xl-font);
+		font-weight: var(--heavy-font);
 		margin-top: 0;
 	}
 
 	h2 {
-		font-size: var(--font-2xl);
-		font-weight: 300;
+		font-size: var(--2xl-font);
+		font-weight: var(--thin-font);
 	}
 
 	p {
-		font-size: var(--font-l);
+		font-size: var(--lg-font);
 	}
 
 	.skills {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		font-size: var(--font-2xl);
-		gap: var(--space-xs-s);
-		margin: var(--space-s-m) 0;
+		font-size: var(--2xl-font);
+		gap: var(--sm-size);
+		margin: var(--md-size) 0;
 	}
 
 	a {
-		font-family: var(--font-brand);
-		font-size: var(--font-xl);
+		font-family: var(--brand-font);
+		font-size: var(--xl-font);
 	}
 </style>

@@ -5,7 +5,7 @@
 	$: path = $page.url.pathname;
 </script>
 
-<header class="container">
+<header class="container --semantic">
 	<div class="wrapper">
 		<h2 class="brand">
 			<a href="/">Hey, Jes!</a>
@@ -22,20 +22,22 @@
 
 <style>
 	a {
-		color: var(--color);
+		color: var(--text-color);
 		&.active {
-			color: var(--color-accent);
+			color: var(--1st-color);
 		}
 	}
 
 	.container {
+		--bg-color: var(--theme-color) / 0.5;
 		position: sticky;
 		top: 0;
-		z-index: var(--z-overlay);
+		z-index: var(--sticky-layer);
 		display: flex;
 		flex-flow: row nowrap;
-		border-bottom: 2px dashed var(--bg-color-3);
-		backdrop-filter: blur(3px);
+		border-bottom: 2px dashed var(--3rd-bg-color);
+		background-color: var(--1st-bg-color);
+		backdrop-filter: blur(8px);
 		overflow: auto;
 	}
 
@@ -43,28 +45,22 @@
 		display: inline-flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		max-width: var(--width-3xl);
-		gap: var(--space-s);
+		max-width: var(--3xl-breakpoint);
+		gap: var(--md-size);
 		flex: 1 1 auto;
+		transition: padding var(--fast-timing) ease-out;
 		padding-top: var(--safe-top);
-		padding-right: max(var(--space-s-2xl), var(--safe-right) + var(--space-xs-s));
-		padding-left: max(var(--space-s-2xl), var(--safe-left) + var(--space-xs-s));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--sm-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--sm-size));
 		margin: 0 auto;
-		filter:
-			drop-shadow(0 0 6px var(--bg-color-3))
-			drop-shadow(0 0 12px var(--bg-color-2))
-			drop-shadow(0 0 24px var(--bg-color-1));
 	}
 
 	.brand {
 		display: inline;
-		font-size: var(--font-l);
-		font-family: var(--font-brand);
+		font-size: var(--lg-font);
+		font-family: var(--brand-font);
 		white-space: nowrap;
-		background: linear-gradient(123deg, var(--color), var(--color-accent));
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
-		margin: var(--space-xs-s) 0;
+		margin: var(--sm-size) 0;
 		a {
 			text-decoration: none;
 		}
@@ -74,8 +70,8 @@
 		display: flex;
 		flex-flow: row nowrap;
 		gap: inherit;
-		font-size: var(--font-s);
-		font-weight: 600;
+		font-weight: var(--bold-font);
+		font-size: var(--sm-font);
 		margin-left: auto;
 	}
 </style>
