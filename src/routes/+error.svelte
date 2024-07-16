@@ -27,7 +27,7 @@
 		transform: translate(-50%, -48%);
 		display: block;
 		font-family: var(--display-font);
-		font-size: clamp(var(--4xl-font), 60cqi, 60cqb);
+		font-size: clamp(var(--4xl-font), 60vi, 60vb);
 		font-weight: var(--heavy-font);
 		user-select: none;
 		opacity: 0.05;
