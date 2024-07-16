@@ -7,6 +7,11 @@
 		"url": "/"
 	},
 	{
+		"title": "Semantic Props",
+		"description": "A collection of semantic CSS custom properties.",
+		"url": "https://github.com/JoshuaSand0val/semantic-props"
+	},
+	{
 		"title": "Precolor",
 		"description": "A collection of color manipulation tools written in Sass (SCSS).",
 		"url": "https://github.com/JoshuaSand0val/Precolor"
