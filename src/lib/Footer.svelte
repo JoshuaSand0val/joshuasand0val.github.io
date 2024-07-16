@@ -1,23 +1,6 @@
 <script>
 	import "bootstrap-icons/font/bootstrap-icons.min.css";
-	import { onMount } from "svelte";
-
-	/** @type {boolean} Boolean for if there is a visible vertical scrollbar. */
-	let scrollbarVisible = false;
-
-	onMount(() => {
-		/** @type {HTMLElement} Root HTML element. */
-		const root = document.documentElement;
-
-		/** Listener for if scrollbar is visible. */
-		const scrollbarListener = () => {
-			scrollbarVisible = root.scrollHeight > root.offsetHeight && window.scrollY !== 0;
-		};
-
-		// Watch for scrollbar visibility when scrolling or resizing document window:
-		document.addEventListener("scroll", scrollbarListener);
-		window.addEventListener("resize", scrollbarListener);
-	});
+	import { scrollbarVisible } from "./ScrollbarVisible.svelte";
 </script>
 
 <footer class="container">
@@ -28,7 +11,7 @@
 			<span>Site built with <a target="_blank" href="https://svelte.dev">Svelte</a>.</span>
 		</div>
 		<!-- Back to top of page link: -->
-		<a href="#top" class="top" class:hidden={!scrollbarVisible} aria-label="To top of page">
+		<a href="#top" class="top" class:hidden={!$scrollbarVisible} aria-label="To top of page">
 			<i class="bi bi-arrow-up-circle-fill"></i>
 		</a>
 	</div>
@@ -50,6 +33,7 @@
 		position: relative;
 		display: flex;
 		flex-flow: row wrap;
+		justify-content: flex-end;
 	}
 
 	.info {
@@ -64,28 +48,25 @@
 	.top {
 		position: fixed;
 		z-index: var(--fixed-layer);
-		right: max(var(--responsive-size), var(--safe-right) + var(--sm-size));
-		bottom: max(var(--lg-size), var(--safe-bottom));
+		bottom: max(var(--md-size), var(--safe-bottom));
 		font-size: var(--lg-size);
 		line-height: 0;
 		transition-property: visibility, transform, opacity;
 		transition-timing-function: ease-out;
-		transition-duration: 200ms;
+		transition-duration: var(--fast-timing);
 		filter: drop-shadow(0 0 8px var(--1st-theme-bg-color));
 		cursor: pointer;
-		&:active {
-			transition-duration: 0ms;
+		&.hidden {
+			pointer-events: none;
+			visibility: hidden;
+			opacity: 0;
 		}
-	}
-
-	.top.hidden {
-		pointer-events: none;
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	.top:active,
-	.top.hidden {
-		transform: scale(0.9);
+		&:active {
+			transition-duration: var(--swift-timing);
+		}
+		&:active,
+		&.hidden {
+			transform: scale(0.9);
+		}
 	}
 </style>
