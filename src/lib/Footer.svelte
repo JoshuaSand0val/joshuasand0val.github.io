@@ -54,7 +54,7 @@
 		transition-property: visibility, transform, opacity;
 		transition-timing-function: ease-out;
 		transition-duration: var(--fast-timing);
-		filter: drop-shadow(0 0 8px var(--1st-theme-bg-color));
+		filter: drop-shadow(0 0 8px var(--1st-bg-color));
 		cursor: pointer;
 		&.hidden {
 			pointer-events: none;

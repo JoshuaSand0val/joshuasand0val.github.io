@@ -5,7 +5,7 @@
 	$: path = $page.url.pathname;
 </script>
 
-<header class="container">
+<header class="container --semantic">
 	<div class="wrapper">
 		<h2 class="brand">
 			<a href="/">Hey, Jes!</a>
@@ -22,20 +22,21 @@
 
 <style>
 	a {
-		color: var(--1st-theme-ui-color);
+		color: var(--text-color);
 		&.active {
-			color: var(--1st-primary-ui-color);
+			color: var(--1st-color);
 		}
 	}
 
 	.container {
+		--bg-color: var(--theme-color) / 0.5;
 		position: sticky;
 		top: 0;
 		z-index: var(--sticky-layer);
 		display: flex;
 		flex-flow: row nowrap;
-		border-bottom: 2px dashed var(--3rd-theme-bg-color);
-		background-color: color(from var(--1st-theme-bg-color) display-p3 r g b / 0.5);
+		border-bottom: 2px dashed var(--3rd-bg-color);
+		background-color: var(--1st-bg-color);
 		backdrop-filter: blur(8px);
 		overflow: auto;
 	}
@@ -59,9 +60,6 @@
 		font-size: var(--lg-font);
 		font-family: var(--brand-font);
 		white-space: nowrap;
-		background: linear-gradient(123deg, var(--1st-theme-ui-color), var(--1st-primary-ui-color));
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 		margin: var(--sm-size) 0;
 		a {
 			text-decoration: none;

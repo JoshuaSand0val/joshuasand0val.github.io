@@ -67,10 +67,10 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		border-radius: var(--2xs-size);
-		border: 1px dashed var(--3rd-theme-bg-color);
-		background-color: var(--1st-theme-bg-color);
-		background-image: linear-gradient(123deg, var(--1st-theme-bg-color) -35%, var(--2nd-theme-bg-color) 135%);
-		box-shadow: 0 4px 16px -8px var(--3rd-theme-bg-color);
+		border: 1px dashed var(--3rd-bg-color);
+		background-color: var(--1st-bg-color);
+		background-image: linear-gradient(123deg, var(--1st-bg-color) -35%, var(--2nd-bg-color) 135%);
+		box-shadow: 0 4px 16px -8px var(--3rd-bg-color);
 		padding: var(--sm-size) 0;
 		gap: var(--sm-size) 0;
 	}
@@ -101,7 +101,7 @@
 			border-radius: inherit;
 			box-shadow: inherit;
 			transform: scale(1.05);
-			color: var(--1st-primary-ui-color);
+			color: var(--1st-color);
 		}
 		&, &:active,
 		.project:has(a[href]:active) & {

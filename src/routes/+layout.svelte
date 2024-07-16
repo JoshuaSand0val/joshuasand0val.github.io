@@ -24,7 +24,8 @@
 		--brand-font: "Satisfy", cursive;
 		/* Color Palette: */
 		@media (--prefers-light-color) {
-			--theme-color: oklch(90% 0.05 20);
+			--theme-color: 20;
+			--bg-color-chroma: 0.05;
 		}
 	}
 
@@ -35,14 +36,14 @@
 		min-height: 100%;
 		font-family: var(--font);
 		line-height: var(--font-leading);
-		background-color: var(--1st-theme-bg-color);
+		background-color: var(--1st-bg-color);
 		background-image: linear-gradient(0deg,
-			var(--1st-theme-bg-color) 50%,
-			var(--2nd-theme-bg-color) 50%
+			var(--1st-bg-color) 50%,
+			var(--2nd-bg-color) 50%
 		);
 		background-size: 100% var(--2xs-size);
 		background-repeat: repeat-y;
-		color: var(--1st-theme-ui-color);
+		color: var(--text-color);
 		scroll-behavior: smooth;
 		transition-property: background-color, color;
 		transition-duration: var(--fast-timing);
@@ -113,7 +114,7 @@
 
 	a[href] {
 		display: inline;
-		color: var(--1st-primary-ui-color);
+		color: var(--1st-color);
 		&:not(:hover, :focus) {
 			text-decoration-line: none;
 		}

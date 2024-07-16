@@ -44,10 +44,10 @@
 		display: block;
 		width: 40%;
 		max-width: var(--md-breakpoint);
-		border: 2px dashed var(--3rd-theme-bg-color);
+		border: 2px dashed var(--3rd-bg-color);
 		border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
-		background-color: var(--1st-theme-bg-color);
-		background-image: linear-gradient(123deg, var(--1st-theme-bg-color), var(--2nd-theme-bg-color));
+		background-color: var(--1st-bg-color);
+		background-image: linear-gradient(123deg, var(--1st-bg-color), var(--2nd-bg-color));
 		object-fit: cover;
 		margin: 0 0 var(--md-size) var(--lg-size);
 		float: right;
