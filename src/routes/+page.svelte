@@ -42,15 +42,19 @@
 
 	.profile {
 		display: block;
-		width: 40%;
+		width: 33%;
 		max-width: var(--md-breakpoint);
-		border: 2px dashed var(--3rd-bg-color);
+		border: 2px dashed var(--3rd-theme-bg-color);
 		border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
-		background-color: var(--1st-bg-color);
-		background-image: linear-gradient(123deg, var(--1st-bg-color), var(--2nd-bg-color));
+		background-color: var(--1st-theme-bg-color);
+		background-image: linear-gradient(123deg, var(--1st-theme-bg-color), var(--2nd-theme-bg-color));
 		object-fit: cover;
-		margin: 0 0 var(--md-size) var(--lg-size);
+		margin: 0 0 var(--xs-size) var(--sm-size);
 		float: right;
+		:global(.--sm-breakpoint) & {
+			width: 40%;
+			margin: 0 0 var(--sm-size) var(--md-size);
+		}
 	}
 
 	h1 {
