@@ -18,10 +18,8 @@
 				{#if typeof image === "string"}
 				<a class="project-portal" href={url} target="_blank">
 					{#if [image, imageDark].every(i => typeof i === "string")}
-					<picture>
-						<source srcset={imageDark} media="(prefers-color-scheme: dark)">
-						<img src={image} loading="lazy" alt="" />
-					</picture>
+					<img class="--semantic light" src={image} loading="lazy" alt="" />
+					<img class="--semantic dark" src={imageDark} loading="lazy" alt="" />
 					{:else}
 					<img src={image} loading="lazy" alt="" />
 					{/if}
@@ -67,12 +65,15 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		border-radius: var(--2xs-size);
-		border: 1px dashed var(--3rd-bg-color);
-		background-color: var(--1st-bg-color);
-		background-image: linear-gradient(123deg, var(--1st-bg-color) -35%, var(--2nd-bg-color) 135%);
-		box-shadow: 0 4px 16px -8px var(--3rd-bg-color);
+		border: 1px dashed var(--3rd-theme-bg-color);
+		background-color: var(--1st-theme-bg-color);
+		background-image: linear-gradient(123deg, var(--1st-theme-bg-color) -35%, var(--2nd-theme-bg-color) 135%);
+		box-shadow: 0 4px 16px -8px var(--theme-color-300);
 		padding: var(--sm-size) 0;
 		gap: var(--sm-size) 0;
+		:global(.--dark-color) & {
+			box-shadow: 0 4px 16px -8px var(--theme-color-950);
+		}
 	}
 
 	.project-title,
@@ -101,7 +102,6 @@
 			border-radius: inherit;
 			box-shadow: inherit;
 			transform: scale(1.05);
-			color: var(--1st-color);
 		}
 		&, &:active,
 		.project:has(a[href]:active) & {
@@ -109,7 +109,7 @@
 			box-shadow: none;
 			transform: none;
 		}
-		img, svg {
+		img {
 			display: block;
 			width: 100%;
 			height: 100%;

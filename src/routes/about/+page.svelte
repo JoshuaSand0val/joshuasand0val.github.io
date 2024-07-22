@@ -7,7 +7,7 @@
 <article>
 	<h1>My name is Jes.</h1>
 	<h2>I am a full-stack web developer.</h2>
-	<div class="container">
+	<div class="container --semantic">
 		<p>
 			I started my web development journey <strong>back in 2011</strong> after being inspired by
 			the creations of popular YouTube video channels at the time, alongside my father's notice.

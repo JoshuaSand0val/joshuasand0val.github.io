@@ -1,6 +1,12 @@
 <script>
+	import { onMount } from "svelte";
+	import semantic from "semantic-props";
+
 	import Navbar from "$lib/Navbar.svelte";
 	import Footer from "$lib/Footer.svelte";
+
+	// Initialize Semantic Props on component mount:
+	onMount(semantic);
 </script>
 
 <Navbar />
@@ -23,9 +29,12 @@
 		--display-font: "Halant", serif;
 		--brand-font: "Satisfy", cursive;
 		/* Color Palette: */
-		@media (--prefers-light-color) {
-			--theme-color: 20;
-			--bg-color-chroma: 0.05;
+		&.--light-color {
+			--theme-color: oklch(90% 0.05 20);
+		}
+		&.--light-color.dark,
+		&.--dark-color.light {
+			display: none !important;
 		}
 	}
 
@@ -36,10 +45,10 @@
 		min-height: 100%;
 		font-family: var(--font);
 		line-height: var(--font-leading);
-		background-color: var(--1st-bg-color);
+		background-color: var(--1st-theme-bg-color);
 		background-image: linear-gradient(0deg,
-			var(--1st-bg-color) 50%,
-			var(--2nd-bg-color) 50%
+			var(--1st-theme-bg-color) 50%,
+			var(--2nd-theme-bg-color) 50%
 		);
 		background-size: 100% var(--2xs-size);
 		background-repeat: repeat-y;
@@ -72,7 +81,7 @@
 		padding-left: max(var(--responsive-size), var(--safe-left) + var(--sm-size));
 		flex: 1 0 auto;
 		margin: 0 auto;
-		@media (--xl-breakpoint) {
+		.--xl-breakpoint & {
 			padding-top: var(--lg-size);
 		}
 	}
@@ -114,9 +123,15 @@
 
 	a[href] {
 		display: inline;
-		color: var(--1st-color);
+		color: var(--1st-primary-color);
 		&:not(:hover, :focus) {
 			text-decoration-line: none;
+		}
+		&:hover, &:focus {
+			color: var(--2nd-primary-color);
+		}
+		&:active {
+			color: var(--3rd-primary-color);
 		}
 	}
 </style>
