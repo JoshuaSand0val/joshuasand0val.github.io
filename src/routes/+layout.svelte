@@ -86,8 +86,11 @@
 		}
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	:not(:has(*)) {
 		transition: font-size var(--fast-timing) ease-out;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
 		font-family: var(--display-font);
 		line-height: var(--display-font-leading);
 		margin: var(--sm-size) 0;
