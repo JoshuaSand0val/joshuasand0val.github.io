@@ -1,7 +1,17 @@
-export default function App() {
-	return (
-		<h1 className="text-3xl font-bold underline">
-			Hello world!
-		</h1>
-	);
-}
+// Component representing the entire application.
+
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home.tsx";
+import "./index.css";
+
+createRoot(document.getElementById("root")!).render(
+	<StrictMode>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home/>} />
+			</Routes>
+		</BrowserRouter>
+	</StrictMode>
+);
