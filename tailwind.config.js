@@ -1,11 +1,18 @@
+import fluid, { extract, screens } from "fluid-tailwind";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: [
-		"./index.html",
-		"./src/**/*.{js,ts,jsx,tsx}",
-	],
-	theme: {
-		extend: {},
+	content: {
+		files: [
+			"./index.html",
+			"./src/**/*.{js,ts,jsx,tsx}",
+		],
+		extract
 	},
-	plugins: [],
+	theme: {
+		screens
+	},
+	plugins: [
+		fluid
+	],
 }

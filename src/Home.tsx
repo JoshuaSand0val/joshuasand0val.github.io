@@ -1,14 +1,13 @@
 // The homepage for the website application.
 
-import Meta from "./components/Meta.js";
+import Page from "./components/Page.js";
 
 export default function Home() {
 	return (
-		<>
-			<Meta title="Home" description="Jes is a full-stack web developer." />
+		<Page title="Home" description="Jes is a full-stack web developer.">
 			<h1 className="text-3xl font-bold underline">
 				Hello world!
 			</h1>
-		</>
+		</Page>
 	);
 }
