@@ -12,8 +12,9 @@ interface props {
 export default function Layout({ children }: props) {
 	return <>
 		<article className="
-				absolute inset-0
+				absolute
 				flex flex-col
+				min-h-full
 				bg-[length:100%_6px] dark:bg-cover
 				bg-repeat dark:bg-no-repeat
 				bg-gradient-to-b from-pink-100 from-50% to-red-100 to-50%
