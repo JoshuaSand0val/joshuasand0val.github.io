@@ -1,4 +1,4 @@
-import fluid, { extract, screens, fontSize } from "fluid-tailwind";
+import fluid, { extract } from "fluid-tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,12 +10,31 @@ export default {
 		extract
 	},
 	theme: {
-		screens,
-		fontSize,
+		screens: {
+			"2xs": "11.25rem",
+			"xs": "15rem",
+			"sm": "22.5rem",
+			"md": "30rem",
+			"lg": "48rem",
+			"xl": "64rem",
+			"2xl": "90rem",
+			"3xl": "100rem"
+		},
+		fontSize: {
+			"5xl": "5.61rem",
+			"4xl": "4.209rem",
+			"3xl": "3.157rem",
+			"2xl": "2.369rem",
+			"xl": "1.777rem",
+			"lg": "1.333rem",
+			"md": "1rem",
+			"sm": "0.75rem",
+			"xs": "0.563rem"
+		},
 		fontFamily: {
-			"display": ["Satisfy", "cursive"],
-			"body": ["Halant", "serif"],
-			"accent": ["Montserrat", "sans-serif"]
+			"display": ["Halant", "serif"],
+			"body": ["Montserrat", "sans-serif"],
+			"accent": ["Satisfy", "cursive"]
 		}
 	},
 	plugins: [
