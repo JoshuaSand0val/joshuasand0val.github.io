@@ -1,4 +1,4 @@
-import fluid, { extract, screens } from "fluid-tailwind";
+import fluid, { extract, screens, fontSize } from "fluid-tailwind";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,6 +11,7 @@ export default {
 	},
 	theme: {
 		screens,
+		fontSize,
 		fontFamily: {
 			"display": ["Satisfy", "cursive"],
 			"body": ["Halant", "serif"],
