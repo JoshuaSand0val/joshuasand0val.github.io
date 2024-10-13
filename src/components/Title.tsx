@@ -9,6 +9,7 @@ export default function Title({ content }: props) {
 		<h1 className="
 			font-display
 			font-bold
+			leading-tight
 			~2xs/xl:~text-xl/4xl
 			text-slate-900 dark:text-slate-200">
 			{content}
