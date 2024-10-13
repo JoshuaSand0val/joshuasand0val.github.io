@@ -1,13 +1,13 @@
 // Represents the content of a page.
 
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 import Meta from "./Meta.js";
 
 interface props {
 	title: string,
 	description: string,
-	children: ReactElement
+	children: ReactNode
 }
 
 export default function Page({ title, description, children }: props) {

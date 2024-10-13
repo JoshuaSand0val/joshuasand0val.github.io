@@ -10,7 +10,12 @@ export default {
 		extract
 	},
 	theme: {
-		screens
+		screens,
+		fontFamily: {
+			"display": ["Satisfy", "cursive"],
+			"body": ["Halant", "serif"],
+			"accent": ["Montserrat", "sans-serif"]
+		}
 	},
 	plugins: [
 		fluid

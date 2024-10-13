@@ -1,12 +1,12 @@
 // Layout for the website application.
 
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 import Footer from "./Footer.js";
 import Navbar from "./Navbar.js";
 
 interface props {
-	children: ReactElement
+	children: ReactNode
 }
 
 export default function Layout({ children }: props) {
