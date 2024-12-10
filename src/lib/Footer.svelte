@@ -21,11 +21,10 @@
 	.container {
 		display: block;
 		width: 100%;
-		max-width: var(--3xl-breakpoint);
-		transition: padding var(--fast-timing) ease-out;
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--sm-size));
+		max-width: var(--3xl-container);
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
 		padding-bottom: max(var(--lg-size), var(--safe-bottom));
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--sm-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
 		margin: 0 auto;
 	}
 
@@ -47,14 +46,13 @@
 
 	.top {
 		position: fixed;
-		z-index: var(--fixed-layer);
+		z-index: var(--fixed-index);
 		bottom: max(var(--md-size), var(--safe-bottom));
-		font-size: var(--lg-size);
+		font-size: var(--xl-size);
 		line-height: 0;
 		transition-property: visibility, transform, opacity;
 		transition-timing-function: ease-out;
-		transition-duration: var(--fast-timing);
-		filter: drop-shadow(0 0 8px var(--1st-theme-bg-color));
+		transition-duration: var(--fast-time);
 		cursor: pointer;
 		&.hidden {
 			pointer-events: none;
@@ -62,11 +60,11 @@
 			opacity: 0;
 		}
 		&:active {
-			transition-duration: var(--swift-timing);
+			transition-duration: var(--swift-time);
 		}
 		&:active,
 		&.hidden {
-			transform: scale(0.9);
+			transform: scale(0.95);
 		}
 	}
 </style>

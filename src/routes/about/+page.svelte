@@ -5,9 +5,9 @@
 <Meta title="About" description="Learn about myself: Jes, and my work." />
 
 <article>
-	<h1>My name is Jes.</h1>
+	<h1>My name is Jess.</h1>
 	<h2>I am a full-stack web developer.</h2>
-	<div class="container --semantic">
+	<div class="container">
 		<p>
 			I started my web development journey <strong>back in 2011</strong> after being inspired by
 			the creations of popular YouTube video channels at the time, alongside my father's notice.
@@ -42,17 +42,12 @@
 </article>
 
 <style>
-	h1 {
-		margin: 0;
-	}
-
-	h2 {
-		font-size: var(--lg-font);
-		margin-top: var(--xs-size);
-	}
-
 	.container {
 		display: block;
-		max-width: var(--lg-breakpoint);
+		max-width: var(--lg-container);
+	}
+
+	h1 {
+		margin-top: 0;
 	}
 </style>

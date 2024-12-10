@@ -1,5 +1,9 @@
 export default {
 	plugins: {
-		"postcss-preset-env": {}
+		"postcss-preset-env": {
+			"features": {
+				"light-dark-function": false
+			}
+		}
 	}
 }

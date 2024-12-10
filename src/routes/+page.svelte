@@ -8,7 +8,7 @@
 <article class="container">
 	<img class="profile" loading="lazy" src="pfp.png" alt="Jes" />
 	<div class="content">
-		<h1>Hey, I'm Jes.&nbsp;💖</h1>
+		<h1>Hey, I'm Jess.&nbsp;💖</h1>
 		<h2>Full-stack web developer.&nbsp;👩🏻‍💻</h2>
 		<p>
 			Welcome to my website! Here you can explore and learn more
@@ -42,29 +42,27 @@
 
 	.profile {
 		display: block;
-		width: 33%;
-		max-width: var(--md-breakpoint);
-		border: 2px dashed var(--3rd-theme-bg-color);
-		border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
-		background-color: var(--1st-theme-bg-color);
-		background-image: linear-gradient(123deg, var(--1st-theme-bg-color), var(--2nd-theme-bg-color));
+		width: 40%;
+		max-width: var(--sm-container);
+		border-radius: 15px 255px 15px 225px/225px 15px 255px;
+		border: 1px dashed var(--neutral-200-700);
+		background-image: linear-gradient(123deg, var(--neutral-200-700) -300%, transparent);
 		object-fit: cover;
-		margin: 0 0 var(--xs-size) var(--sm-size);
+		margin: 0 0 var(--md-size) var(--lg-size);
 		float: right;
-		:global(.--sm-breakpoint) & {
-			width: 40%;
-			margin: 0 0 var(--sm-size) var(--md-size);
+		@media (max-width: 180px) {
+			width: 100%;
 		}
 	}
 
 	h1 {
-		font-size: var(--4xl-font);
+		font-size: var(--7xl-font);
 		font-weight: var(--heavy-font);
 		margin-top: 0;
 	}
 
 	h2 {
-		font-size: var(--2xl-font);
+		font-size: var(--3xl-font);
 		font-weight: var(--thin-font);
 	}
 
@@ -76,13 +74,13 @@
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		font-size: var(--2xl-font);
+		font-size: var(--3xl-font);
 		gap: var(--sm-size);
 		margin: var(--md-size) 0;
 	}
 
 	a {
-		font-family: var(--brand-font);
+		font-family: var(--accent-font);
 		font-size: var(--xl-font);
 	}
 </style>
