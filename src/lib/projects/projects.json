@@ -1,29 +1,26 @@
 [
 	{
-		"title": "Hey, Jes!",
-		"image": "/projects/heyjes.png",
-		"imageDark": "/projects/heyjes-dark.png",
-		"description": "A personal website showcasing everything about myself, and my work.",
-		"url": "/"
-	},
-	{
 		"title": "Semantic Props",
 		"description": "A collection of semantic CSS custom properties and classes.",
-		"url": "https://github.com/JoshuaSand0val/semantic-props"
+		"url": "https://github.com/JoshuaSand0val/semantic-props",
+		"image": false
 	},
 	{
 		"title": "Precolor",
 		"description": "A collection of color manipulation tools written in Sass (SCSS).",
-		"url": "https://github.com/JoshuaSand0val/Precolor"
+		"url": "https://github.com/JoshuaSand0val/Precolor",
+		"image": false
 	},
 	{
 		"title": "Presized",
 		"description": "A collection of resizing tools written in Sass (SCSS).",
-		"url": "https://github.com/JoshuaSand0val/Presized"
+		"url": "https://github.com/JoshuaSand0val/Presized",
+		"image": false
 	},
 	{
 		"title": "Simply Notes!",
 		"description": "Simple note taking application with account control.",
-		"url": "https://github.com/JesDevBootcamp/simply-notes"
+		"url": "https://github.com/JesDevBootcamp/simply-notes",
+		"image": false
 	}
 ]

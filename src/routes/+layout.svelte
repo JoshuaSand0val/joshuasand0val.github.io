@@ -1,12 +1,6 @@
 <script>
-	import { onMount } from "svelte";
-	import semantic from "semantic-props";
-
 	import Navbar from "$lib/Navbar.svelte";
 	import Footer from "$lib/Footer.svelte";
-
-	// Initialize Semantic Props on component mount:
-	onMount(semantic);
 </script>
 
 <Navbar />
@@ -21,20 +15,33 @@
 	@import "semantic-props";
 
 	/* Import Font Families: */
-	@import url('https://fonts.googleapis.com/css2?family=Halant:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 	.--semantic {
 		/* Font Families: */
-		--font: "Montserrat", sans-serif;
-		--display-font: "Halant", serif;
-		--brand-font: "Satisfy", cursive;
-		/* Color Palette: */
-		&.--light-color {
-			--theme-color: oklch(90% 0.05 20);
-		}
-		&.--light-color.dark,
-		&.--dark-color.light {
-			display: none !important;
+		--font: "Inter", sans-serif;
+		--monospace-font: "Ubuntu Mono", monospace;
+		--display-font: "Ubuntu", sans-serif;
+		--accent-font: "Satisfy", cursive;
+		/* Line Heights: */
+		--line-height: 1.75;
+		--display-line-height: 1.25;
+		/* Color Weights: */
+		--neutral-50: oklch(0.95 0.02 20);
+		--neutral-100: oklch(0.9 0.02 20);
+		--neutral-200: oklch(0.8 0.02 20);
+		--neutral-300: oklch(0.7 0.02 20);
+		--neutral-400: oklch(0.6 0.02 20);
+		--neutral-500: oklch(0.5 0.02 20);
+		/** Light-Dark Support: */
+		@supports (color: light-dark(white, black)) {
+			color-scheme: light dark;
+			--neutral-50: light-dark(oklch(0.95 0.02 20), oklch(0.95 0 0));
+			--neutral-100: light-dark(oklch(0.9 0.02 20), oklch(0.9 0 0));
+			--neutral-200: light-dark(oklch(0.8 0.02 20), oklch(0.8 0 0));
+			--neutral-300: light-dark(oklch(0.7 0.02 20), oklch(0.7 0 0));
+			--neutral-400: light-dark(oklch(0.6 0.02 20), oklch(0.6 0 0));
+			--neutral-500: light-dark(oklch(0.5 0.02 20), oklch(0.5 0 0));
 		}
 	}
 
@@ -44,18 +51,18 @@
 		display: block;
 		min-height: 100%;
 		font-family: var(--font);
-		line-height: var(--font-leading);
-		background-color: var(--1st-theme-bg-color);
-		background-image: linear-gradient(0deg,
-			var(--1st-theme-bg-color) 50%,
-			var(--2nd-theme-bg-color) 50%
-		);
-		background-size: 100% var(--2xs-size);
-		background-repeat: repeat-y;
-		color: var(--text-color);
+		line-height: var(--line-height);
+		background-color: var(--neutral-50-800);
+		background-image:
+			linear-gradient(0deg, oklch(0.5 0 0 / 0.05) 50%, transparent 50%),
+			linear-gradient(145deg, var(--neutral-50-800), var(--neutral-100-900));
+		background-size: 100% var(--3xs-size), 100% 100%;
+		background-repeat: repeat-y, no-repeat;
+		background-attachment: fixed;
+		color: var(--neutral-900-50);
 		scroll-behavior: smooth;
 		transition-property: background-color, color;
-		transition-duration: var(--fast-timing);
+		transition-duration: var(--fast-time);
 		transition-timing-function: ease-out;
 	}
 
@@ -73,51 +80,43 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		width: 100%;
-		max-width: var(--3xl-breakpoint);
-		transition: padding var(--fast-timing) ease-out;
-		padding-top: var(--md-size);
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--sm-size));
+		max-width: var(--3xl-container);
+		padding-top: clamp(var(--sm-size), var(--responsive-size), var(--md-size));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
 		padding-bottom: var(--xs-size);
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--sm-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
 		flex: 1 0 auto;
 		margin: 0 auto;
-		.--xl-breakpoint & {
-			padding-top: var(--lg-size);
-		}
-	}
-
-	:not(:has(*)) {
-		transition: font-size var(--fast-timing) ease-out;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: var(--display-font);
-		line-height: var(--display-font-leading);
-		margin: var(--sm-size) 0;
+		line-height: var(--display-line-height);
+		margin: var(--2xs-size) 0;
 	}
 
 	h1 {
-		font-size: var(--3xl-font);
+		font-size: var(--6xl-font);
 	}
 
 	h2 {
-		font-size: var(--2xl-font);
-	}
-
-	h3 {
 		font-size: var(--xl-font);
 	}
 
-	h4 {
+	h3 {
 		font-size: var(--lg-font);
 	}
 
-	h5 {
+	h4 {
 		font-size: var(--md-font);
 	}
 
-	h6 {
+	h5 {
 		font-size: var(--sm-font);
+	}
+
+	h6 {
+		font-size: var(--xs-font);
 	}
 
 	small, sup, sub {
@@ -126,15 +125,12 @@
 
 	a[href] {
 		display: inline;
-		color: var(--1st-primary-color);
+		color: var(--primary-500-300);
 		&:not(:hover, :focus) {
 			text-decoration-line: none;
 		}
-		&:hover, &:focus {
-			color: var(--2nd-primary-color);
-		}
 		&:active {
-			color: var(--3rd-primary-color);
+			text-decoration-color: var(--primary-400);
 		}
 	}
 </style>

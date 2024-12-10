@@ -11,9 +11,7 @@
 			<a href="/">Hey, Jes!</a>
 		</h2>
 		<nav id="nav">
-			<a href="/" class:active={path === "/"}>Home</a>
-			<a href="/about" class:active={path === "/about"}>About</a>
-			<a href="/projects" class:active={path === "/projects"}>Projects</a>
+			<a href="#projects">Projects</a>
 			<a href="https://github.com/joshuasand0val" target="_blank">Github</a>
 			<a href="https://linkedin.com/in/joshuasand0val/" target="_blank">Linkedin</a>
 		</nav>
@@ -21,19 +19,18 @@
 </header>
 
 <style>
-	a:not(.active) {
-		color: var(--text-color);
+	a:not(:active, .active) {
+		color: inherit;
 	}
 
 	.container {
 		position: sticky;
 		top: 0;
-		z-index: var(--sticky-layer);
+		z-index: var(--sticky-index);
 		display: flex;
 		flex-flow: row nowrap;
-		border-bottom: 1px dashed var(--3rd-theme-bg-color);
-		background-color: oklch(from var(--1st-theme-bg-color) l c h / 0.5);
-		backdrop-filter: blur(8px);
+		background-color: var(--neutral-50-800);
+		border-bottom: 1px dashed var(--neutral-200-700);
 		overflow: auto;
 	}
 
@@ -41,25 +38,24 @@
 		display: inline-flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		max-width: var(--3xl-breakpoint);
+		max-width: var(--3xl-container);
 		gap: var(--md-size);
 		flex: 1 1 auto;
-		transition: padding var(--fast-timing) ease-out;
 		padding-top: var(--safe-top);
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--sm-size));
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--sm-size));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
 		margin: 0 auto;
 	}
 
 	.brand {
 		display: inline;
-		font-size: var(--lg-font);
-		font-family: var(--brand-font);
+		font-size: var(--xl-font);
+		font-family: var(--accent-font);
 		white-space: nowrap;
-		background: linear-gradient(123deg, var(--1st-theme-color), var(--1st-primary-color));
+		background: linear-gradient(123deg, var(--primary-500-300), var(--neutral-600-400));
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		margin: var(--sm-size) 0;
+		margin: var(--sm-size) 0 var(--xs-size);
 		a {
 			text-decoration: none;
 		}
@@ -69,7 +65,6 @@
 		display: flex;
 		flex-flow: row nowrap;
 		gap: inherit;
-		font-weight: var(--bold-font);
 		font-size: var(--sm-font);
 		margin-left: auto;
 	}

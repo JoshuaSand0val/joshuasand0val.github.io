@@ -23,11 +23,11 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		z-index: var(--bottom-layer);
-		transform: translate(-50%, -48%);
+		z-index: var(--bottom-index);
+		transform: translate(-50%, -50%);
 		display: block;
 		font-family: var(--display-font);
-		font-size: clamp(var(--4xl-font), 60vi, 60vb);
+		font-size: clamp(var(--4xl-font), 50vi, 50vb);
 		font-weight: var(--heavy-font);
 		user-select: none;
 		opacity: 0.05;
