@@ -50,7 +50,7 @@
 			position: absolute;
 			z-index: var(--top-index);
 			inset: 0;
-			background-image: linear-gradient(145deg, oklch(0.5 0.15 240 / 0.1) -50%, transparent);
+			background-image: linear-gradient(145deg, oklch(0.5 0.15 260 / 0.2) -50%, transparent);
 			pointer-events: none;
 		}
 	}
