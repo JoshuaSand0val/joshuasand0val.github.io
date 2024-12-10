@@ -70,7 +70,7 @@
 		justify-content: flex-start;
 		width: 100%;
 		max-width: var(--3xl-container);
-		padding-top: clamp(var(--md-size), var(--responsive-size), var(--xl-size));
+		padding-top: clamp(var(--sm-size), var(--responsive-size), var(--md-size));
 		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
 		padding-bottom: var(--xs-size);
 		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
