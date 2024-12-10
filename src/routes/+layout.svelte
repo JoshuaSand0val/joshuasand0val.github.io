@@ -27,18 +27,21 @@
 		--line-height: 1.75;
 		--display-line-height: 1.25;
 		/* Color Weights: */
-		--neutral-100: oklch(0.9 0.03 310);
-		--neutral-200: oklch(0.8 0.03 310);
-		--neutral-300: oklch(0.7 0.03 310);
-		--neutral-400: oklch(0.6 0.03 310);
-		--neutral-500: oklch(0.5 0.03 310);
-		--neutral-600: oklch(0.4 0.03 310);
-		--neutral-700: oklch(0.3 0.03 310);
-		--neutral-800: oklch(0.2 0.03 310);
-		--neutral-900: oklch(0.1 0.03 310);
+		--neutral-50: oklch(0.95 0.02 20);
+		--neutral-100: oklch(0.9 0.02 20);
+		--neutral-200: oklch(0.8 0.02 20);
+		--neutral-300: oklch(0.7 0.02 20);
+		--neutral-400: oklch(0.6 0.02 20);
+		--neutral-500: oklch(0.5 0.02 20);
 		/** Light-Dark Support: */
 		@supports (color: light-dark(white, black)) {
 			color-scheme: light dark;
+			--neutral-50: light-dark(oklch(0.95 0.02 20), oklch(0.95 0 0));
+			--neutral-100: light-dark(oklch(0.9 0.02 20), oklch(0.9 0 0));
+			--neutral-200: light-dark(oklch(0.8 0.02 20), oklch(0.8 0 0));
+			--neutral-300: light-dark(oklch(0.7 0.02 20), oklch(0.7 0 0));
+			--neutral-400: light-dark(oklch(0.6 0.02 20), oklch(0.6 0 0));
+			--neutral-500: light-dark(oklch(0.5 0.02 20), oklch(0.5 0 0));
 		}
 	}
 
@@ -50,8 +53,11 @@
 		font-family: var(--font);
 		line-height: var(--line-height);
 		background-color: var(--neutral-50-800);
-		background-image: linear-gradient(145deg, var(--neutral-50-800), var(--neutral-100-900));
-		background-size: 100% 100%;
+		background-image:
+			linear-gradient(0deg, oklch(0.5 0 0 / 0.05) 50%, transparent 50%),
+			linear-gradient(145deg, var(--neutral-50-800), var(--neutral-100-900));
+		background-size: 100% var(--3xs-size), 100% 100%;
+		background-repeat: repeat-y, no-repeat;
 		background-attachment: fixed;
 		color: var(--neutral-900-50);
 		scroll-behavior: smooth;

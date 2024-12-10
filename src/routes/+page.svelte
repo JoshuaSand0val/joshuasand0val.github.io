@@ -1,6 +1,7 @@
 <script>
 	import "devicon";
 	import Meta from "$lib/Meta.svelte";
+	import Projects from "$lib/projects/cards.svelte";
 </script>
 
 <Meta title="Home" description="Jes is a full-stack web developer." />
@@ -10,13 +11,6 @@
 	<div class="content">
 		<h1>Hey, I'm Jess.&nbsp;💖</h1>
 		<h2>Full-stack web developer.&nbsp;👩🏻‍💻</h2>
-		<p>
-			Welcome to my website! Here you can explore and learn more
-			<a href="/about">about myself</a> or <a href="/projects">my projects</a>, and visit
-			<a href="https://github.com/joshuasand0val" target="_blank">my Github</a> or
-			<a href="https://linkedin.com/in/joshuasand0val/" target="_blank">my Linkedin</a>;
-			if perhaps you're interested.
-		</p>
 		<span class="skills">
 			<i class="devicon-html5-plain"></i>
 			<i class="devicon-markdown-plain"></i>
@@ -30,33 +24,48 @@
 			<i class="devicon-npm-original-wordmark"></i>
 			<i class="devicon-postgresql-plain"></i>
 		</span>
+		<p>
+			<strong>Nice to meet you!</strong> Welcome to my website!
+			I am a hectic CSS guru, epic gamer, and designer with an eye for detail.
+			Below you can explore <a href="#projects">my projects</a>, and feel free to visit
+			<a href="https://github.com/joshuasand0val" target="_blank">my Github</a> or
+			<a href="https://linkedin.com/in/heyjes/" target="_blank">my Linkedin</a>.
+		</p>
 	</div>
+</article>
+<article id="projects">
+	<Projects />
 </article>
 
 <style>
-	.container, .content {
-		display: inline;
-		width: 100%;
-		margin: 0 auto auto;
+	.container {
+		display: block;
+		margin: 0 auto;
 	}
 
 	.profile {
 		display: block;
-		width: 40%;
-		max-width: var(--sm-container);
+		height: min(40cqi, var(--sm-container));
 		border-radius: 15px 255px 15px 225px/225px 15px 255px;
 		border: 1px dashed var(--neutral-200-700);
 		background-image: linear-gradient(123deg, var(--neutral-200-700) -300%, transparent);
 		object-fit: cover;
-		margin: 0 var(--lg-size) var(--md-size) 0;
+		margin-right: clamp(var(--sm-size), var(--responsive-size), var(--xl-size));
+		margin-bottom: min(var(--responsive-size), var(--sm-size));
 		float: left;
-		@media (max-width: 180px) {
+		@media (max-width: 240px) {
 			width: 100%;
+			height: auto;
+			float: none;
 		}
 	}
 
+	.content {
+		overflow-wrap: normal;
+	}
+
 	h1 {
-		font-size: var(--7xl-font);
+		font-size: var(--8xl-font);
 		font-weight: var(--heavy-font);
 		margin-top: var(--3xs-size);
 	}
@@ -67,20 +76,21 @@
 	}
 
 	p {
-		font-size: var(--lg-font);
+		font-size: var(--xl-font);
+		margin: var(--sm-size) 0 var(--3xs-size);
 	}
 
 	.skills {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		font-size: var(--3xl-font);
+		font-size: var(--4xl-font);
 		gap: var(--sm-size);
-		margin: var(--md-size) 0;
+		margin: var(--md-size) 0 var(--sm-size);
 	}
 
 	a {
 		font-family: var(--accent-font);
-		font-size: var(--xl-font);
+		font-size: var(--2xl-font);
 	}
 </style>

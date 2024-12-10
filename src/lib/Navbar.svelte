@@ -11,9 +11,7 @@
 			<a href="/">Hey, Jes!</a>
 		</h2>
 		<nav id="nav">
-			<a href="/" class:active={path === "/"}>Home</a>
-			<a href="/about" class:active={path === "/about"}>About</a>
-			<a href="/projects" class:active={path === "/projects"}>Projects</a>
+			<a href="#projects">Projects</a>
 			<a href="https://github.com/joshuasand0val" target="_blank">Github</a>
 			<a href="https://linkedin.com/in/joshuasand0val/" target="_blank">Linkedin</a>
 		</nav>
@@ -34,10 +32,6 @@
 		background-color: var(--neutral-50-800);
 		border-bottom: 1px dashed var(--neutral-200-700);
 		overflow: auto;
-		@media not (prefers-reduced-transparency) {
-			background-color: oklch(from var(--neutral-50-800) l c h / var(--low-opacity));
-			backdrop-filter: var(--heavy-blur);
-		}
 	}
 
 	.wrapper {

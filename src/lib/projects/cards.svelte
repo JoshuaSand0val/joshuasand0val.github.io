@@ -1,42 +1,32 @@
 <script>
 	import "bootstrap-icons/font/bootstrap-icons.min.css";
 	import projects from "./projects.json";
-	import Meta from "$lib/Meta.svelte";
 </script>
-
-<Meta title="Projects" description="The various projects undertaken by Jes." />
 
 <!-- Project images must be of a viewport of 1200/800 CSS pixels. -->
 
-<div class="container">
-	<h1>My Projects</h1>
-	<div class="grid">
-		{#each projects as { title, image, description, url }}
-		<div class="grid-item">
-			<article class="project">
-				<h2 class="project-title">{title}</h2>
-				{#if typeof image === "string"}
-				<a class="project-portal" href={url} target="_blank">
-					<img src={image} loading="lazy" alt="" />
+<div class="grid">
+	{#each projects as { title, image, description, url }}
+	<div class="grid-item">
+		<article class="project">
+			<h2 class="project-title">{title}</h2>
+			{#if typeof image === "string"}
+			<a class="project-portal" href={url} target="_blank">
+				<img src={image} loading="lazy" alt="" />
+			</a>
+			{/if}
+			<p class="project-description">{description}</p>
+			<span class="project-link">
+				<a href={url} target="_blank">
+					Learn More <i class="bi bi-chevron-right"></i>
 				</a>
-				{/if}
-				<p class="project-description">{description}</p>
-				<span class="project-link">
-					<a href={url} target="_blank">
-						Learn More <i class="bi bi-chevron-right"></i>
-					</a>
-				</span>
-			</article>
-		</div>
-		{/each}
+			</span>
+		</article>
 	</div>
+	{/each}
 </div>
 
 <style>
-	h1 {
-		margin: 0;
-	}
-
 	.grid {
 		display: block;
 		column-count: 4;
@@ -60,12 +50,11 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		border-radius: var(--3xs-size);
-		border: 1px dashed var(--neutral-100-600);
+		border: 1px dashed var(--neutral-300-600);
 		background-color: var(--neutral-50-800);
 		box-shadow: 0 4px 16px -8px var(--theme-color-300);
 		padding: var(--sm-size) 0 var(--xs-size);
 		gap: var(--xs-size) 0;
-		filter: var(--light-shadow);
 	}
 
 	.project-title,
