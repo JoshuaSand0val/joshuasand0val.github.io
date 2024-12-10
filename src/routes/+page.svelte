@@ -46,16 +46,18 @@
 	.profile {
 		display: block;
 		height: min(40cqi, var(--sm-container));
-		border-radius: 15px 255px 15px 225px/225px 15px 255px;
+		border-radius: 225px 15px 255px/15px 255px 15px 225px;
 		border: 1px dashed var(--neutral-200-700);
 		background-image: linear-gradient(123deg, var(--neutral-200-700) -300%, transparent);
 		object-fit: cover;
-		margin-right: clamp(var(--sm-size), var(--responsive-size), var(--xl-size));
 		margin-bottom: min(var(--responsive-size), var(--sm-size));
-		float: left;
+		margin-left: clamp(var(--sm-size), var(--responsive-size), var(--xl-size));
+		float: right;
 		@media (max-width: 240px) {
+			border-radius: var(--3xs-size);
 			width: 100%;
 			height: auto;
+			margin-left: 0;
 			float: none;
 		}
 	}
@@ -65,18 +67,18 @@
 	}
 
 	h1 {
-		font-size: var(--8xl-font);
+		font-size: var(--7xl-font);
 		font-weight: var(--heavy-font);
 		margin-top: var(--3xs-size);
 	}
 
 	h2 {
-		font-size: var(--3xl-font);
+		font-size: var(--2xl-font);
 		font-weight: var(--thin-font);
 	}
 
 	p {
-		font-size: var(--xl-font);
+		font-size: var(--lg-font);
 		margin: var(--sm-size) 0 var(--3xs-size);
 	}
 
@@ -84,13 +86,13 @@
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		font-size: var(--4xl-font);
+		font-size: var(--3xl-font);
 		gap: var(--sm-size);
 		margin: var(--md-size) 0 var(--sm-size);
 	}
 
 	a {
 		font-family: var(--accent-font);
-		font-size: var(--2xl-font);
+		font-size: var(--xl-font);
 	}
 </style>

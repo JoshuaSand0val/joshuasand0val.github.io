@@ -11,7 +11,7 @@
 			<a href="/">Hey, Jes!</a>
 		</h2>
 		<nav id="nav">
-			<a href="#projects">Projects</a>
+			<a href="/#projects">Projects</a>
 			<a href="https://github.com/joshuasand0val" target="_blank">Github</a>
 			<a href="https://linkedin.com/in/heyjes/" target="_blank">Linkedin</a>
 		</nav>
