@@ -48,8 +48,8 @@
 		border: 1px dashed var(--neutral-200-700);
 		background-image: linear-gradient(123deg, var(--neutral-200-700) -300%, transparent);
 		object-fit: cover;
-		margin: 0 0 var(--md-size) var(--lg-size);
-		float: right;
+		margin: 0 var(--lg-size) var(--md-size) 0;
+		float: left;
 		@media (max-width: 180px) {
 			width: 100%;
 		}
@@ -58,7 +58,7 @@
 	h1 {
 		font-size: var(--7xl-font);
 		font-weight: var(--heavy-font);
-		margin-top: 0;
+		margin-top: var(--3xs-size);
 	}
 
 	h2 {
