@@ -45,14 +45,6 @@
 		transition-property: background-color, color;
 		transition-duration: var(--fast-time);
 		transition-timing-function: ease-out;
-		&::after {
-			content: "";
-			position: absolute;
-			z-index: var(--top-index);
-			inset: 0;
-			background-image: linear-gradient(145deg, oklch(0.5 0.15 260 / 0.2) -50%, transparent);
-			pointer-events: none;
-		}
 	}
 
 	body {
