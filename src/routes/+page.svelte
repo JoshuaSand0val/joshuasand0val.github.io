@@ -46,7 +46,7 @@
 	.profile {
 		display: block;
 		height: min(40cqi, var(--sm-container));
-		border-radius: 225px 15px 255px/15px 255px 15px 225px;
+		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
 		border: 1px dashed var(--neutral-200-700);
 		background-image: linear-gradient(123deg, var(--neutral-200-700) -300%, transparent);
 		object-fit: cover;
