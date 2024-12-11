@@ -53,9 +53,7 @@
 		font-family: var(--font);
 		line-height: var(--line-height);
 		background-color: var(--neutral-50-800);
-		background-image:
-			linear-gradient(0deg, oklch(0.5 0 0 / 0.05) 50%, transparent 50%),
-			linear-gradient(145deg, var(--neutral-50-800), var(--neutral-100-900));
+		background-image: linear-gradient(0deg, oklch(0.5 0 0 / 0.05) 50%, transparent 50%);
 		background-size: 100% var(--3xs-size), 100% 100%;
 		background-repeat: repeat-y, no-repeat;
 		background-attachment: fixed;

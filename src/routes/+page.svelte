@@ -48,13 +48,12 @@
 		height: min(40cqi, var(--sm-container));
 		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
 		border: 1px dashed var(--neutral-200-700);
-		background-image: linear-gradient(123deg, var(--neutral-200-700) -300%, transparent);
 		object-fit: cover;
 		margin-bottom: min(var(--responsive-size), var(--sm-size));
 		margin-left: clamp(var(--sm-size), var(--responsive-size), var(--xl-size));
+		padding: var(--sm-size);
 		float: right;
 		@media (max-width: 240px) {
-			border-radius: var(--3xs-size);
 			width: 100%;
 			height: auto;
 			margin-left: 0;
