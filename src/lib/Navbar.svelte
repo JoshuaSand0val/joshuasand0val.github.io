@@ -29,8 +29,8 @@
 		z-index: var(--sticky-index);
 		display: flex;
 		flex-flow: row nowrap;
-		background-color: var(--neutral-50-800);
-		border-bottom: 1px dashed var(--neutral-200-700);
+		background-color: var(--primary-50-800);
+		border-bottom: 1px dashed var(--primary-200-700);
 		overflow: auto;
 	}
 
@@ -38,24 +38,24 @@
 		display: inline-flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		max-width: var(--3xl-container);
-		gap: var(--md-size);
+		max-width: var(--3x-large-container);
+		gap: var(--medium-size);
 		flex: 1 1 auto;
 		padding-top: var(--safe-top);
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 		margin: 0 auto;
 	}
 
 	.brand {
 		display: inline;
-		font-size: var(--xl-font);
+		font-size: var(--x-large-font);
 		font-family: var(--accent-font);
 		white-space: nowrap;
-		background: linear-gradient(123deg, var(--primary-500-300), var(--neutral-600-400));
+		background: linear-gradient(123deg, var(--accent-500-300), var(--secondary-600-400));
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		margin: var(--sm-size) 0 var(--xs-size);
+		margin: var(--small-size) 0 var(--x-small-size);
 		a {
 			text-decoration: none;
 		}
@@ -65,7 +65,7 @@
 		display: flex;
 		flex-flow: row nowrap;
 		gap: inherit;
-		font-size: var(--sm-font);
+		font-size: var(--small-font);
 		margin-left: auto;
 	}
 </style>

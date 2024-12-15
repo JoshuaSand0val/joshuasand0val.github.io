@@ -21,10 +21,10 @@
 	.container {
 		display: block;
 		width: 100%;
-		max-width: var(--3xl-container);
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
-		padding-bottom: max(var(--lg-size), var(--safe-bottom));
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
+		max-width: var(--3x-large-container);
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+		padding-bottom: max(var(--large-size), var(--safe-bottom));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 		margin: 0 auto;
 	}
 
@@ -37,7 +37,7 @@
 
 	.info {
 		display: block;
-		font-size: var(--sm-font);
+		font-size: var(--small-font);
 		margin-right: auto;
 		span {
 			display: block;
@@ -47,8 +47,8 @@
 	.top {
 		position: fixed;
 		z-index: var(--fixed-index);
-		bottom: max(var(--md-size), var(--safe-bottom));
-		font-size: var(--xl-size);
+		bottom: max(var(--medium-size), var(--safe-bottom));
+		font-size: var(--x-large-size);
 		line-height: 0;
 		transition-property: visibility, transform, opacity;
 		transition-timing-function: ease-out;

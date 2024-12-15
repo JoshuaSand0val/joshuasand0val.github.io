@@ -27,21 +27,21 @@
 		--line-height: 1.75;
 		--display-line-height: 1.25;
 		/* Color Weights: */
-		--neutral-50: oklch(0.95 0.02 20);
-		--neutral-100: oklch(0.9 0.02 20);
-		--neutral-200: oklch(0.8 0.02 20);
-		--neutral-300: oklch(0.7 0.02 20);
-		--neutral-400: oklch(0.6 0.02 20);
-		--neutral-500: oklch(0.5 0.02 20);
+		--primary-50: oklch(0.95 0.02 20);
+		--primary-100: oklch(0.9 0.02 20);
+		--primary-200: oklch(0.8 0.02 20);
+		--primary-300: oklch(0.7 0.02 20);
+		--primary-400: oklch(0.6 0.02 20);
+		--primary-500: oklch(0.5 0.02 20);
 		/** Light-Dark Support: */
 		@supports (color: light-dark(white, black)) {
 			color-scheme: light dark;
-			--neutral-50: light-dark(oklch(0.95 0.02 20), oklch(0.95 0 0));
-			--neutral-100: light-dark(oklch(0.9 0.02 20), oklch(0.9 0 0));
-			--neutral-200: light-dark(oklch(0.8 0.02 20), oklch(0.8 0 0));
-			--neutral-300: light-dark(oklch(0.7 0.02 20), oklch(0.7 0 0));
-			--neutral-400: light-dark(oklch(0.6 0.02 20), oklch(0.6 0 0));
-			--neutral-500: light-dark(oklch(0.5 0.02 20), oklch(0.5 0 0));
+			--primary-50: light-dark(oklch(0.95 0.02 20), oklch(0.95 0 0));
+			--primary-100: light-dark(oklch(0.9 0.02 20), oklch(0.9 0 0));
+			--primary-200: light-dark(oklch(0.8 0.02 20), oklch(0.8 0 0));
+			--primary-300: light-dark(oklch(0.7 0.02 20), oklch(0.7 0 0));
+			--primary-400: light-dark(oklch(0.6 0.02 20), oklch(0.6 0 0));
+			--primary-500: light-dark(oklch(0.5 0.02 20), oklch(0.5 0 0));
 		}
 	}
 
@@ -52,12 +52,12 @@
 		min-height: 100%;
 		font-family: var(--font);
 		line-height: var(--line-height);
-		background-color: var(--neutral-50-800);
+		background-color: var(--primary-50-800);
 		background-image: linear-gradient(0deg, oklch(0.5 0 0 / 0.05) 50%, transparent 50%);
-		background-size: 100% var(--3xs-size), 100% 100%;
+		background-size: 100% var(--3x-small-size), 100% 100%;
 		background-repeat: repeat-y, no-repeat;
 		background-attachment: fixed;
-		color: var(--neutral-900-50);
+		color: var(--secondary-900-50);
 		scroll-behavior: smooth;
 		transition-property: background-color, color;
 		transition-duration: var(--fast-time);
@@ -68,7 +68,7 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
-		font-size: var(--md-font);
+		font-size: var(--medium-font);
 		min-height: 100%;
 		margin: 0;
 	}
@@ -78,11 +78,11 @@
 		flex-flow: column nowrap;
 		justify-content: flex-start;
 		width: 100%;
-		max-width: var(--3xl-container);
-		padding-top: clamp(var(--sm-size), var(--responsive-size), var(--md-size));
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--md-size));
-		padding-bottom: var(--xs-size);
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--md-size));
+		max-width: var(--3x-large-container);
+		padding-top: clamp(var(--small-size), var(--responsive-size), var(--medium-size));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+		padding-bottom: var(--x-small-size);
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 		flex: 1 0 auto;
 		margin: 0 auto;
 	}
@@ -90,31 +90,31 @@
 	h1, h2, h3, h4, h5, h6 {
 		font-family: var(--display-font);
 		line-height: var(--display-line-height);
-		margin: var(--2xs-size) 0;
+		margin: var(--2x-small-size) 0;
 	}
 
 	h1 {
-		font-size: var(--6xl-font);
+		font-size: var(--6x-large-font);
 	}
 
 	h2 {
-		font-size: var(--xl-font);
+		font-size: var(--x-large-font);
 	}
 
 	h3 {
-		font-size: var(--lg-font);
+		font-size: var(--large-font);
 	}
 
 	h4 {
-		font-size: var(--md-font);
+		font-size: var(--medium-font);
 	}
 
 	h5 {
-		font-size: var(--sm-font);
+		font-size: var(--small-font);
 	}
 
 	h6 {
-		font-size: var(--xs-font);
+		font-size: var(--x-small-font);
 	}
 
 	small, sup, sub {
@@ -123,12 +123,12 @@
 
 	a[href] {
 		display: inline;
-		color: var(--primary-500-300);
+		color: var(--accent-500-300);
 		&:not(:hover, :focus) {
 			text-decoration-line: none;
 		}
 		&:active {
-			text-decoration-color: var(--primary-400);
+			text-decoration-color: var(--accent-400);
 		}
 	}
 </style>

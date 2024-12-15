@@ -30,16 +30,16 @@
 	.grid {
 		display: block;
 		column-count: 4;
-		column-width: var(--2xs-container);
-		column-gap: var(--sm-size);
+		column-width: var(--2x-small-container);
+		column-gap: var(--small-size);
 		column-fill: balance;
-		margin: var(--md-size) 0;
+		margin: var(--medium-size) 0;
 	}
 
 	.grid-item {
 		display: block;
 		break-inside: avoid;
-		padding-bottom: var(--sm-size);
+		padding-bottom: var(--small-size);
 		&:last-child {
 			padding-bottom: 0;
 		}
@@ -49,12 +49,11 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: flex-start;
-		border-radius: var(--3xs-size);
-		border: 1px dashed var(--neutral-300-600);
-		background-color: var(--neutral-50-800);
-		box-shadow: 0 4px 16px -8px var(--theme-color-300);
-		padding: var(--sm-size) 0 var(--xs-size);
-		gap: var(--xs-size) 0;
+		border-radius: var(--3x-small-size);
+		border: 1px dashed var(--primary-300-600);
+		background-color: var(--primary-50-800);
+		padding: var(--small-size) 0 var(--x-small-size);
+		gap: var(--x-small-size) 0;
 	}
 
 	.project-title,
@@ -62,11 +61,11 @@
 	.project-description,
 	.project-link {
 		display: block;
-		margin: 0 var(--sm-size);
+		margin: 0 var(--small-size);
 	}
 
 	.project-title {
-		font-size: var(--xl-font);
+		font-size: var(--x-large-font);
 	}
 
 	.project-portal {

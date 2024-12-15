@@ -45,13 +45,13 @@
 
 	.profile {
 		display: block;
-		height: min(40cqi, var(--sm-container));
+		height: min(40cqi, var(--small-container));
 		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
-		border: 1px dashed var(--neutral-200-700);
+		border: 1px dashed var(--primary-200-700);
 		object-fit: cover;
-		margin-bottom: min(var(--responsive-size), var(--sm-size));
-		margin-left: clamp(var(--sm-size), var(--responsive-size), var(--xl-size));
-		padding: var(--sm-size);
+		margin-bottom: min(var(--responsive-size), var(--small-size));
+		margin-left: clamp(var(--small-size), var(--responsive-size), var(--x-large-size));
+		padding: var(--small-size);
 		float: right;
 		@media (max-width: 240px) {
 			width: 100%;
@@ -66,32 +66,32 @@
 	}
 
 	h1 {
-		font-size: var(--7xl-font);
+		font-size: var(--7x-large-font);
 		font-weight: var(--heavy-font);
-		margin-top: var(--3xs-size);
+		margin-top: var(--3x-small-size);
 	}
 
 	h2 {
-		font-size: var(--2xl-font);
+		font-size: var(--2x-large-font);
 		font-weight: var(--thin-font);
 	}
 
 	p {
-		font-size: var(--lg-font);
-		margin: var(--sm-size) 0 var(--3xs-size);
+		font-size: var(--large-font);
+		margin: var(--small-size) 0 var(--3x-small-size);
 	}
 
 	.skills {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		font-size: var(--3xl-font);
-		gap: var(--sm-size);
-		margin: var(--md-size) 0 var(--sm-size);
+		font-size: var(--3x-large-font);
+		gap: var(--small-size);
+		margin: var(--medium-size) 0 var(--small-size);
 	}
 
 	a {
 		font-family: var(--accent-font);
-		font-size: var(--xl-font);
+		font-size: var(--x-large-font);
 	}
 </style>

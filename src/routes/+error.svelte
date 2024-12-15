@@ -27,7 +27,7 @@
 		transform: translate(-50%, -50%);
 		display: block;
 		font-family: var(--display-font);
-		font-size: clamp(var(--4xl-font), 50vi, 50vb);
+		font-size: clamp(var(--4x-large-font), 50vi, 50vb);
 		font-weight: var(--heavy-font);
 		user-select: none;
 		opacity: 0.05;
@@ -35,7 +35,7 @@
 
 	.message {
 		display: block;
-		font-size: var(--4xl-font);
+		font-size: var(--4x-large-font);
 		margin: 0;
 	}
 </style>
