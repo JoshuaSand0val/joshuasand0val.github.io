@@ -32,6 +32,10 @@
 		background-color: var(--primary-50-800);
 		border-bottom: 1px dashed var(--primary-200-700);
 		overflow: auto;
+		@media not (prefers-reduced-transparency) {
+			background-color: oklch(from var(--primary-50-800) l c h / var(--high-opacity));
+			backdrop-filter: var(--medium-blur);
+		}
 	}
 
 	.wrapper {

@@ -26,22 +26,12 @@
 		/* Line Heights: */
 		--line-height: 1.75;
 		--display-line-height: 1.25;
-		/* Color Weights: */
-		--primary-50: oklch(0.95 0.02 20);
-		--primary-100: oklch(0.9 0.02 20);
-		--primary-200: oklch(0.8 0.02 20);
-		--primary-300: oklch(0.7 0.02 20);
-		--primary-400: oklch(0.6 0.02 20);
-		--primary-500: oklch(0.5 0.02 20);
+		/* Colors: */
+		--primary: oklch(0.95 0.02 20);
 		/** Light-Dark Support: */
 		@supports (color: light-dark(white, black)) {
 			color-scheme: light dark;
-			--primary-50: light-dark(oklch(0.95 0.02 20), oklch(0.95 0 0));
-			--primary-100: light-dark(oklch(0.9 0.02 20), oklch(0.9 0 0));
-			--primary-200: light-dark(oklch(0.8 0.02 20), oklch(0.8 0 0));
-			--primary-300: light-dark(oklch(0.7 0.02 20), oklch(0.7 0 0));
-			--primary-400: light-dark(oklch(0.6 0.02 20), oklch(0.6 0 0));
-			--primary-500: light-dark(oklch(0.5 0.02 20), oklch(0.5 0 0));
+			--primary: light-dark(oklch(0.95 0.02 20), var(--gray));
 		}
 	}
 
