@@ -49,9 +49,9 @@
 		border-radius: 49% 51% 48% 52% / 57% 44% 56% 43%;
 		border: 1px dashed var(--primary-200-700);
 		object-fit: cover;
-		margin-bottom: min(var(--responsive-size), var(--small-size));
+		margin-bottom: clamp(var(--x-small-size), var(--responsive-size), var(--small-size));
 		margin-left: clamp(var(--small-size), var(--responsive-size), var(--x-large-size));
-		padding: var(--small-size);
+		padding: clamp(var(--x-small-size), var(--responsive-size), var(--small-size));
 		float: right;
 		@media (max-width: 240px) {
 			width: 100%;
@@ -59,10 +59,6 @@
 			margin-left: 0;
 			float: none;
 		}
-	}
-
-	.content {
-		overflow-wrap: normal;
 	}
 
 	h1 {

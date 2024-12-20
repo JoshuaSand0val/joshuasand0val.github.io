@@ -22,9 +22,9 @@
 		display: block;
 		width: 100%;
 		max-width: var(--3x-large-container);
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--small-size));
 		padding-bottom: max(var(--large-size), var(--safe-bottom));
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--small-size));
 		margin: 0 auto;
 	}
 

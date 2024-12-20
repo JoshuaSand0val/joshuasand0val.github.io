@@ -46,8 +46,8 @@
 		gap: var(--medium-size);
 		flex: 1 1 auto;
 		padding-top: var(--safe-top);
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--small-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--small-size));
 		margin: 0 auto;
 	}
 

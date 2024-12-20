@@ -69,10 +69,10 @@
 		justify-content: flex-start;
 		width: 100%;
 		max-width: var(--3x-large-container);
-		padding-top: clamp(var(--small-size), var(--responsive-size), var(--medium-size));
-		padding-right: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+		padding-top: var(--small-size);
+		padding-right: max(var(--responsive-size), var(--safe-right) + var(--small-size));
 		padding-bottom: var(--x-small-size);
-		padding-left: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
+		padding-left: max(var(--responsive-size), var(--safe-left) + var(--small-size));
 		flex: 1 0 auto;
 		margin: 0 auto;
 	}
