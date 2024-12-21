@@ -1,4 +1,8 @@
 <script>
+	/* CSS prerequisite packages: */
+	import "sanitize.css";
+	import "semantic-props";
+
 	import Navbar from "$lib/Navbar.svelte";
 	import Footer from "$lib/Footer.svelte";
 </script>
@@ -10,10 +14,6 @@
 <Footer />
 
 <style lang="postcss" global>
-	/* Import Prerequisites: */
-	@import "sanitize.css";
-	@import "semantic-props";
-
 	/* Import Font Families: */
 	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
@@ -28,10 +28,12 @@
 		--display-line-height: 1.25;
 		/* Colors: */
 		--primary: oklch(0.95 0.02 20);
+		--accent: var(--blue);
 		/** Light-Dark Support: */
 		@supports (color: light-dark(white, black)) {
 			color-scheme: light dark;
 			--primary: light-dark(oklch(0.95 0.02 20), var(--gray));
+			--accent: light-dark(var(--blue), var(--indigo));
 		}
 	}
 
@@ -52,6 +54,11 @@
 		transition-property: background-color, color;
 		transition-duration: var(--fast-time);
 		transition-timing-function: ease-out;
+	}
+
+	::selection {
+		background-color: var(--accent-200-500);
+		color: var(--secondary-800-100);
 	}
 
 	body {

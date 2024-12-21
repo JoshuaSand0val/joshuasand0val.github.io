@@ -53,7 +53,7 @@
 		margin-left: clamp(var(--small-size), var(--responsive-size), var(--x-large-size));
 		padding: clamp(var(--x-small-size), var(--responsive-size), var(--small-size));
 		float: right;
-		@media (max-width: 240px) {
+		@container style(--3x-small-breakpoint: false) {
 			width: 100%;
 			height: auto;
 			margin-left: 0;
