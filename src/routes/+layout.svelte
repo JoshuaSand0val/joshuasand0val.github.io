@@ -17,7 +17,39 @@
 	/* Import Font Families: */
 	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+	@property --accent {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: white;
+	}
+
+	@keyframes accent {
+		0%, 100% {
+			--accent: var(--blue);
+		}
+		12% {
+			--accent: var(--indigo);
+		}
+		25% {
+			--accent: var(--violet);
+		}
+		36% {
+			--accent: var(--red);
+		}
+		50% {
+			--accent: var(--orange);
+		}
+		75% {
+			--accent: var(--yellow);
+		}
+		86% {
+			--accent: var(--green);
+		}
+	}
+
 	.semantic {
+		/* Accent Animation: */
+		animation: accent 12s infinite linear;
 		/* Font Families: */
 		--font: "Inter", sans-serif;
 		--monospace-font: "Ubuntu Mono", monospace;
@@ -58,6 +90,7 @@
 
 	::selection {
 		background-color: var(--accent-200-500);
+		background-color: oklch(from var(--accent-200-500) l c h / var(--x-low-opacity));
 		color: var(--secondary-800-100);
 	}
 
@@ -119,13 +152,15 @@
 	}
 
 	a[href] {
-		display: inline;
+		display: inline-block;
+		background-image: linear-gradient(var(--accent-500-300), var(--accent-600-400));
+		background-clip: text;
 		color: var(--accent-500-300);
-		&:not(:hover, :focus) {
-			text-decoration-line: none;
-		}
-		&:active {
-			text-decoration-color: var(--accent-400);
+		-webkit-text-fill-color: transparent;
+		text-decoration-line: none;
+		&:is(:hover, :focus):not(:active) {
+			background-image: linear-gradient(var(--accent-400-200), var(--accent-500-300));	
+			color: var(--accent-400-200);
 		}
 	}
 </style>

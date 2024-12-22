@@ -19,10 +19,6 @@
 </header>
 
 <style>
-	a:not(:active, .active) {
-		color: inherit;
-	}
-
 	.container {
 		position: sticky;
 		top: 0;
@@ -56,9 +52,6 @@
 		font-size: var(--x-large-font);
 		font-family: var(--accent-font);
 		white-space: nowrap;
-		background: linear-gradient(123deg, var(--accent-500-300), var(--secondary-600-400));
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
 		margin: var(--small-size) 0 var(--x-small-size);
 		a {
 			text-decoration: none;
@@ -71,5 +64,9 @@
 		gap: inherit;
 		font-size: var(--small-font);
 		margin-left: auto;
+		a:not(:hover, :active, .active) {
+			-webkit-text-fill-color: var(--secondary-800-200);
+			color: var(--secondary-800-200);
+		}
 	}
 </style>
