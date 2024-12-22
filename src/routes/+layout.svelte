@@ -48,8 +48,6 @@
 	}
 
 	.semantic {
-		/* Accent Animation: */
-		animation: accent 12s infinite linear;
 		/* Font Families: */
 		--font: "Inter", sans-serif;
 		--monospace-font: "Ubuntu Mono", monospace;
@@ -66,6 +64,10 @@
 			color-scheme: light dark;
 			--primary: light-dark(oklch(0.95 0.02 20), var(--gray));
 			--accent: light-dark(var(--blue), var(--indigo));
+		}
+		/* Accent Animation: */
+		@media not (prefers-reduced-motion) {
+			animation: accent 12s infinite linear;
 		}
 	}
 

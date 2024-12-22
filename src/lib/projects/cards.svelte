@@ -27,6 +27,13 @@
 </div>
 
 <style>
+	@keyframes projects {
+		from {
+			transform: translateY(var(--small-size));
+			opacity: var(--3x-low-opacity);
+		}
+	}
+
 	.grid {
 		display: block;
 		column-count: 4;
@@ -54,6 +61,11 @@
 		background-color: var(--primary-50-800);
 		padding: var(--small-size) 0 var(--x-small-size);
 		gap: var(--x-small-size) 0;
+		@media not (prefers-reduced-motion) {
+			animation: projects 1ms linear alternate;
+			animation-timeline: view();
+			animation-range: entry;
+		}
 	}
 
 	.project-title,
