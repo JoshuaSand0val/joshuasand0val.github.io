@@ -67,7 +67,7 @@
 		}
 		/* Accent Animation: */
 		@media not (prefers-reduced-motion) {
-			animation: accent 12s infinite linear;
+			animation: accent 30s infinite linear;
 		}
 	}
 
