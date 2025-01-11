@@ -1,7 +1,7 @@
 import "devicon";
 
 import styles from "./Homepage.module.css";
-import Link from "./Link";
+import Link from "../components/Link";
 
 /** Link component styled relative for the homepage. */
 const StyledLink: typeof Link = ({ to, content }) => (
