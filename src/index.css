@@ -1,0 +1,8 @@
+/** The website HTML index styles. */
+
+.semantic {
+	background-color: var(--primary-50-800);
+	@supports (color: light-dark(white, black)) {
+		color-scheme: light dark;
+	}
+}
