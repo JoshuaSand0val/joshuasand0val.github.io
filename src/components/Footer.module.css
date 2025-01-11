@@ -1,0 +1,14 @@
+/* The main website footer styles. */
+
+.container {
+	display: block;
+	width: 100%;
+	font-size: var(--small-font);
+	padding-block-start: var(--small-size);
+	padding-block-end: max(var(--medium-size), var(--safe-bottom));
+	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
+	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+	margin-inline: auto;
+	color: var(--secondary-500-400);
+	text-align: end;
+}
