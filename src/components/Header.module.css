@@ -1,0 +1,45 @@
+/** The website main navigation header styles. */
+
+.container {
+	position: sticky;
+	top: 0;
+	z-index: var(--z-sticky);
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: var(--primary-50-800);
+	border-bottom: 1px var(--border-style) var(--primary-200-700);
+	overflow: auto;
+	@media not (prefers-reduced-transparency) {
+		background-color: oklch(from var(--primary-50-800) l c h / var(--high-opacity));
+		backdrop-filter: var(--medium-blur);
+	}
+}
+
+.wrapper {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	max-width: var(--3x-large-container);
+	gap: var(--medium-size);
+	flex: 1 1 auto;
+	padding-block-start: max(var(--x-small-size), var(--safe-top));
+	padding-block-end: max(var(--x-small-size), var(--safe-bottom));
+	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
+	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+	margin-inline: auto;
+}
+
+.title {
+	display: inline;
+	font-size: var(--x-large-font);
+	font-family: var(--accent-font);
+	margin: 0;
+}
+
+.navigation {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: inherit;
+	font-size: var(--small-font);
+	margin-left: auto;
+}
