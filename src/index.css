@@ -1,8 +1,18 @@
 /** The website HTML index styles. */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 .semantic {
+	--primary-color: var(--gray);
+	--accent-color: var(--blue);
+	--body-font: "Inter", sans-serif;
+	--mono-font: "Ubuntu Mono", monospace;
+	--display-font: "Ubuntu", sans-serif;
+	--accent-font: "Satisfy", cursive;
 	background-color: var(--primary-50-800);
 	@supports (color: light-dark(white, black)) {
+		--primary-color: light-dark(var(--gray), #004970);
+		--accent-color: light-dark(var(--blue), var(--yellow));
 		color-scheme: light dark;
 	}
 }
