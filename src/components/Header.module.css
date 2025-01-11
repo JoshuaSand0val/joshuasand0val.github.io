@@ -23,7 +23,7 @@
 	gap: var(--medium-size);
 	flex: 1 1 auto;
 	padding-block-start: max(var(--x-small-size), var(--safe-top));
-	padding-block-end: max(var(--x-small-size), var(--safe-bottom));
+	padding-block-end: var(--x-small-size);
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
 	margin-inline: auto;
