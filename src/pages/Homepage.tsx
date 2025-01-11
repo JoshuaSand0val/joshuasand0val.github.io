@@ -54,7 +54,9 @@ export default function Homepage() {
 					Feel free to visit <MyLinks.Github /> or <MyLinks.Linkedin />.
 				</p>
 			</article>
-			<Projects />
+			<div id="projects">
+				<Projects />
+			</div>
 		</>
 	);
 }
