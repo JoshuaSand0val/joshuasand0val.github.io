@@ -1,0 +1,88 @@
+/* Styles for listings of all my projects. */
+
+.grid {
+	display: block;
+	column-count: 4;
+	column-width: var(--x-small-container);
+	column-gap: var(--small-size);
+	column-fill: balance;
+	clear: both;
+}
+
+.item {
+	display: block;
+	break-inside: avoid;
+	padding-block-end: var(--small-size);
+	&:last-child {
+		padding-block-end: 0;
+	}
+}
+
+.project {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: start;
+	background-color: var(--primary-50-800);
+	background-color: oklch(from var(--primary-50-800) l c h / var(--medium-opacity));
+	backdrop-filter: var(--x-light-blur);
+	border-radius: var(--2x-small-size);
+	border: 1px var(--border-style) var(--primary-200-700);
+	padding: var(--small-size);
+	gap: var(--small-size) 0;
+	@media (prefers-reduced-transparency) {
+		background-color: var(--primary-50-800);
+	}
+}
+
+.title, .portal, .description, .link {
+	display: block;
+	margin-block: 0;
+}
+
+.title {
+	font-size: var(--x-large-font);
+	font-weight: var(--bold-font);
+	line-height: var(--line-short);
+}
+
+.portal {
+	position: relative;
+	z-index: var(--z-relative);
+	border-radius: var(--3x-small-size);
+	aspect-ratio: 3 / 2;
+	margin-block: 0;
+	margin-inline: calc(var(--3x-small-size) * -1);
+	transition: all var(--fast-time) var(--ease-in-out);
+	overflow: hidden;
+	filter: var(--heavy-shadow);
+	&:hover, &:focus,
+	.project:has(a[href]:is(:hover, :focus)) & {
+		background-color: inherit;
+		scale: var(--scale-in);
+		rotate: 1deg;
+	}
+	&:active,
+	.project:has(a[href]:active) & {
+		transition-duration: var(--x-fast-time);
+		scale: 1;
+		rotate: 0deg;
+	}
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+	}
+}
+
+.description {
+	margin-block-start: auto;
+}
+
+.link {
+	text-align: right;
+	border-block-start: inherit;
+	padding-block-start: inherit;
+	padding-inline-end: var(--3x-small-size);
+}
