@@ -23,6 +23,7 @@
 		"vite": "^6.0.5"
 	},
 	"dependencies": {
+		"devicon": "^2.16.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"sanitize.css": "^13.0.0",
