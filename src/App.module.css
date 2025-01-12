@@ -8,7 +8,7 @@
 	min-height: min(100vb, 100dvb);
 	font-family: var(--body-font);
 	font-size: var(--medium-font);
-	font-weight: var(--regular-font);
+	font-weight: var(--light-font);
 	line-height: var(--line-normal);
 	letter-spacing: var(--letter-normal);
 	word-spacing: var(--word-normal);
@@ -28,7 +28,6 @@
 	width: min(100%, var(--3x-large-container));
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
-	margin-block: var(--large-size);
 	margin-inline: auto;
 	flex: 1 0 auto;
 }

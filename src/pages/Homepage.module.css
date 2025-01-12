@@ -2,12 +2,13 @@
 
 .container, .intro {
 	display: block;
+	margin-block: var(--large-size) var(--medium-size);
 }
 
 .profile {
 	display: block;
 	width: min(33cqi, var(--small-container));
-	backdrop-filter: var(--x-light-blur);
+	background-color: var(--primary-50-800);
 	border-radius: var(--x-small-size);
 	border: 1px var(--border-style) var(--primary-200-700);
 	padding: var(--2x-small-size);
@@ -18,6 +19,9 @@
 	overflow: hidden;
 	float: right;
 	transform: rotate(1deg);
+	@media not (prefers-reduced-transparency) {
+		background-color: oklch(from var(--primary-50-800) l c h / var(--x-high-opacity));
+	}
 }
 
 .title, .subtitle {

@@ -7,12 +7,11 @@
 	display: flex;
 	flex-flow: row nowrap;
 	background-color: var(--primary-50-800);
-	background-color: oklch(from var(--primary-50-800) l c h / var(--medium-opacity));
-	backdrop-filter: var(--heavy-blur);
 	border-bottom: 1px var(--border-style) var(--primary-200-700);
 	overflow: auto;
-	@media (prefers-reduced-transparency) {
-		background-color: var(--primary-50-800);
+	@media not (prefers-reduced-transparency) {
+		background-color: oklch(from var(--primary-50-800) l c h / var(--3x-high-opacity));
+		backdrop-filter: var(--heavy-blur) var(--low-saturation);
 	}
 }
 
@@ -41,5 +40,6 @@
 	display: flex;
 	flex-flow: row nowrap;
 	gap: inherit;
-	margin-left: auto;
+	font-family: var(--display-font);
+	margin-inline-start: auto;
 }
