@@ -13,11 +13,11 @@
 	border: 1px var(--border-style) var(--primary-200-700);
 	padding: var(--2x-small-size);
 	margin-block-start: var(--3x-small-size);
-	margin-block-end: var(--medium-size);
-	margin-inline-start: clamp(var(--small-size), var(--responsive-size), var(--x-large-size));
+	margin-block-end: clamp(var(--x-small-size), var(--responsive-size), var(--large-size));
+	margin-inline-end: clamp(var(--small-size), var(--responsive-size), var(--x-large-size));
 	object-fit: cover;
 	overflow: hidden;
-	float: right;
+	float: left;
 	transform: rotate(1deg);
 	@media not (prefers-reduced-transparency) {
 		background-color: oklch(from var(--primary-50-800) l c h / var(--x-high-opacity));

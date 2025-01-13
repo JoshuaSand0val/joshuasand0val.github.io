@@ -24,13 +24,14 @@
 	flex: 1 1 auto;
 	padding-block-start: max(var(--x-small-size), var(--safe-top));
 	padding-block-end: var(--x-small-size);
-	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
-	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--small-size));
+	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--small-size));
 	margin-inline: auto;
 }
 
 .title {
 	display: inline;
+	white-space: nowrap;
 	font-size: var(--x-large-font);
 	font-family: var(--accent-font);
 	margin: 0;

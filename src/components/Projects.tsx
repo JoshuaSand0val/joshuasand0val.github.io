@@ -14,8 +14,8 @@ interface projects {
 export default function Projects() {
 	return (
 		<div className={styles.grid}>
-			{projects.map(({ title, image, description, url }: projects) => (
-				<div className={styles.item}>
+			{projects.map(({ title, image, description, url }: projects, index) => (
+				<div className={styles.item} key={index}>
 					<article className={styles.project}>
 						<header className={styles.header}>
 							<h2 className={styles.title}>{title}</h2>

@@ -26,8 +26,8 @@
 .content {
 	display: block;
 	width: min(100%, var(--3x-large-container));
-	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
-	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--small-size));
+	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--small-size));
 	margin-inline: auto;
 	flex: 1 0 auto;
 }
