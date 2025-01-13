@@ -28,13 +28,13 @@
 	border-radius: var(--2x-small-size);
 	border: 1px var(--border-style) var(--primary-200-700);
 	background-color: var(--primary-50-800);
-	color: var(--secondary-800-100);
 	overflow: hidden;
 	&:has(.portal) {
-		color-scheme: dark;
 		aspect-ratio: 3 / 2;
+		border-color: var(--primary-700);
+		color: var(--secondary-100);
 	}
-	& > :not(.portal) {
+	& > :where(:not(.portal)) {
 		padding: var(--small-size);
 	}
 	@media not (prefers-reduced-transparency) {
@@ -64,10 +64,9 @@
 		position: absolute;
 		z-index: -1;
 		inset: 0;
-		background-color: var(--primary-50-800);
+		background-color: var(--primary-800);
 		opacity: var(--x-high-opacity);
 		filter: var(--heavy-blur);
-		scale: var(--scale-in);
 	}
 }
 
@@ -83,7 +82,14 @@
 }
 
 .link {
-	text-align: right;
+	text-align: end;
 	border-block-start: inherit;
+	padding-inline-end: var(--medium-size);
 	margin-block-start: auto;
+	.project:has(.portal) & :any-link {
+		color: var(--accent-300);
+		&:active {
+			text-decoration-color: var(--accent-500);
+		}
+	}
 }
