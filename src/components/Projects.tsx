@@ -22,7 +22,7 @@ export default function Projects() {
 							<p className={styles.description}>{description}</p>
 						</header>
 						{typeof image === "string" && (
-							<a className={styles.portal} href={url}>
+							<a className={styles.portal} href={url} tabIndex={-1}>
 								<img src={image} loading="lazy" alt="" />
 							</a>
 						)}
