@@ -64,6 +64,7 @@
 		position: absolute;
 		z-index: -1;
 		inset: 0;
+		outline: var(--small-size) solid var(--primary-800);
 		background-color: var(--primary-800);
 		opacity: var(--x-high-opacity);
 		filter: var(--heavy-blur);
