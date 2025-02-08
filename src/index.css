@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 .semantic {
-	--primary-color: var(--gray);
+	--primary-color: #f5e0e2;
 	--body-font: "Inter", sans-serif;
 	--mono-font: "Ubuntu Mono", monospace;
 	--display-font: "Ubuntu", sans-serif;
@@ -12,7 +12,7 @@
 	scroll-behavior: smooth;
 	background-color: var(--primary-50-800);
 	@supports (color: light-dark(white, black)) {
-		--primary-color: light-dark(var(--gray), #1c4154);
+		--primary-color: light-dark(#f5e0e2, #1c4154);
 		color-scheme: light dark;
 	}
 }

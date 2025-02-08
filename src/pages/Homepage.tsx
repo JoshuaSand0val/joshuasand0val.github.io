@@ -30,7 +30,7 @@ export default function Homepage() {
 		<>
 			<article className={styles.container}>
 				<header className={styles.intro}>
-					<img className={styles.profile} loading="lazy" src="/profile.png" alt="Profile picture of myself." />
+					<img className={styles.profile} loading="lazy" src="/profile.jpg" alt="Profile picture of myself." />
 					<h1 className={styles.title}>Hey, I'm Jess.&nbsp;💖</h1>
 					<h2 className={styles.subtitle}>Full-stack web developer.&nbsp;👩🏻‍💻</h2>
 				</header>

@@ -1,18 +1,9 @@
 /** The website main navigation header styles. */
 
 .container {
-	position: sticky;
-	top: 0;
-	z-index: var(--z-sticky);
 	display: flex;
 	flex-flow: row nowrap;
-	background-color: var(--primary-50-800);
-	border-bottom: 1px var(--border-style) var(--primary-200-700);
 	overflow: auto;
-	@media not (prefers-reduced-transparency) {
-		background-color: oklch(from var(--primary-50-800) l c h / var(--3x-high-opacity));
-		backdrop-filter: var(--heavy-blur) var(--low-saturation);
-	}
 }
 
 .wrapper {
