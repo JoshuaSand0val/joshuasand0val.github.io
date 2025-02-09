@@ -6,8 +6,8 @@
 	font-size: var(--small-font);
 	padding-block-start: var(--small-size);
 	padding-block-end: max(var(--medium-size), var(--safe-bottom));
-	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--small-size));
-	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--small-size));
+	padding-inline-start: max(var(--medium-size), var(--responsive-size), var(--safe-left));
+	padding-inline-end: max(var(--medium-size), var(--responsive-size), var(--safe-right));
 	margin-inline: auto;
 	color: var(--secondary-500-400);
 	text-align: end;

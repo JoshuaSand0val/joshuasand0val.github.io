@@ -36,19 +36,16 @@
 		background-position: top left;
 		transform: rotate(35deg) translateY(-25vb);
 		transform-origin: top left;
-		opacity: var(--2x-low-opacity);
-		filter: var(--3x-heavy-blur);
-		@media (prefers-color-scheme: dark) {
-			opacity: var(--3x-low-opacity);
-		}
+		opacity: var(--x-low-opacity);
+		filter: var(--2x-heavy-blur);
 	}
 }
 
 .content {
 	display: block;
 	width: min(100%, var(--3x-large-container));
-	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--small-size));
-	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--small-size));
+	padding-inline-start: max(var(--medium-size), var(--responsive-size), var(--safe-left));
+	padding-inline-end: max(var(--medium-size), var(--responsive-size), var(--safe-right));
 	margin-inline: auto;
 	flex: 1 0 auto;
 }

@@ -12,7 +12,7 @@
 	scroll-behavior: smooth;
 	background-color: var(--primary-50-800);
 	@supports (color: light-dark(white, black)) {
-		--primary-color: light-dark(#f5e0e2, #1c4154);
+		--primary-color: light-dark(#f5e0e2, #273e49);
 		color-scheme: light dark;
 	}
 }

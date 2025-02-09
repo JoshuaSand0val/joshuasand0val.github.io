@@ -3,7 +3,7 @@
 .grid {
 	display: block;
 	column-count: 4;
-	column-width: var(--x-small-container);
+	column-width: var(--2x-small-container);
 	column-gap: var(--small-size);
 	column-fill: balance;
 	clear: both;
@@ -31,7 +31,6 @@
 	background-color: oklch(from var(--primary-50-800) l c h / var(--high-opacity));
 	overflow: hidden;
 	&:has(.portal) {
-		aspect-ratio: 3 / 2;
 		border-color: var(--primary-700);
 		color: var(--secondary-100);
 	}
