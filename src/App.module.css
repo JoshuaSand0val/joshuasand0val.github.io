@@ -33,20 +33,18 @@
 	}
 	&::after {
 		background-image: linear-gradient(
-			var(--red) 0% 16%,
-			var(--orange) 16% 32%,
-			var(--yellow) 32% 48%,
-			var(--green) 48% 64%,
-			var(--blue) 64% 80%,
-			var(--indigo) 80% 100%,
-			var(--violet) 100%
+			#5BCEFA 0% 20%,
+			#F5A9B8 20% 40%,
+			white 40% 60%,
+			#F5A9B8 60% 80%,
+			#5BCEFA 80% 100%
 		);
 		background-size: 100vb 50vb;
 		background-position: top left;
 		transform: rotate(35deg) translateY(-25vb);
 		transform-origin: top left;
-		opacity: var(--x-low-opacity);
-		filter: var(--2x-heavy-blur);
+		opacity: var(--2x-low-opacity);
+		filter: var(--x-heavy-blur);
 	}
 }
 
