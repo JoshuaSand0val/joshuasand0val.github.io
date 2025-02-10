@@ -9,12 +9,10 @@
 	position: relative;
 	display: block;
 	width: min(35cqi, var(--x-small-container));
-	aspect-ratio: 1 / 1;
 	background-color: var(--primary-50-800);
 	background-color: oklch(from var(--primary-50-800) l c h / var(--2x-low-opacity));
-	border-radius: 15px 255px 15px 225px / 225px 15px 255px 15px;
+	border-radius: var(--x-small-size);
 	border: 1px var(--border-style) var(--primary-300-600);
-	padding: var(--3x-small-size);
 	margin-block-start: var(--3x-small-size);
 	margin-block-end: clamp(var(--x-small-size), var(--responsive-size), var(--large-size));
 	margin-inline-end: clamp(var(--medium-size), var(--responsive-size), var(--x-large-size));
@@ -25,23 +23,19 @@
 }
 
 .profileImage {
-	position: absolute;
-	inset: 0;
-	width: 100%;
+	inline-size: 100%;
 }
 
 .pronouns {
 	position: absolute;
 	z-index: var(--z-absolute);
-	right: var(--small-size);
+	right: 1ch;
 	bottom: 0;
 	border-radius: inherit;
-	background-color: var(--primary-300-600);
-	background-color: oklch(from var(--primary-300-600) l c h / var(--high-opacity));
-	color: var(--secondary-700-100);
-	padding-inline: var(--2x-small-size);
-	padding-block: var(--3x-small-size);
-	line-height: var(--line-short);
+	color: var(--secondary-50);
+	text-shadow: 0 1px 3px var(--secondary-900);
+	line-height: var(--line-tall);
+	font-size: var(--large-font);
 	font-weight: var(--regular-font);
 	font-style: italic;
 }
