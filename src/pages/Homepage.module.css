@@ -2,7 +2,7 @@
 
 .container, .intro {
 	display: block;
-	margin-block: var(--medium-size);
+	margin-block: var(--2x-small-size) var(--medium-size);
 }
 
 .profile {
