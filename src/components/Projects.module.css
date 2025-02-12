@@ -79,6 +79,10 @@
 	font-weight: var(--regular-font);
 }
 
+.project:has(.portal) .description {
+	margin-block-end: var(--x-large-size);
+}
+
 .link {
 	text-align: end;
 	border-block-start: inherit;

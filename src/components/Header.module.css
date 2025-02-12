@@ -6,20 +6,9 @@
 	z-index: var(--z-sticky);
 	display: flex;
 	flex-flow: row nowrap;
-	overflow: auto;
-	background-color: var(--primary-50-800);
-	background-color: oklch(from var(--primary-50-800) l c h / var(--medium-opacity));
-	backdrop-filter: var(--heavy-blur) var(--x-high-saturation);
-	filter: var(--3x-light-shadow);
-}
-
-.wrapper {
-	display: inline-flex;
-	flex-flow: row nowrap;
 	align-items: center;
-	max-width: var(--3x-large-container);
+	width: min(100%, var(--3x-large-container));
 	gap: var(--medium-size);
-	flex: 1 1 auto;
 	padding-block-start: max(var(--x-small-size), var(--safe-top));
 	padding-block-end: var(--x-small-size);
 	padding-inline-start: max(var(--medium-size), var(--responsive-size), var(--safe-left));
@@ -32,13 +21,75 @@
 	white-space: nowrap;
 	font-size: var(--x-large-font);
 	font-family: var(--accent-font);
+	text-shadow: 0 0 1px var(--primary-200-700);
+	margin-block: 0;
+	margin-inline-end: auto;
+}
+
+.customizeButton, .navigationButton {
+	display: inline-flex;
+	align-items: center;
+	appearance: none;
+	font-size: var(--medium-size);
+	font-weight: var(--regular-font);
+	border: none;
+	background: none;
+	color: inherit;
+	padding: 0;
 	margin: 0;
+	cursor: pointer;
+	transition: scale var(--fast-time) var(--ease-out);
+	filter: drop-shadow(0 0 1px var(--primary-100-600))
+	;
+	&:hover, &:focus {
+		scale: var(--scale-2x-in);
+	}
+	&:active {
+		scale: none;
+	}
 }
 
 .navigation {
-	display: flex;
-	flex-flow: row nowrap;
-	gap: inherit;
-	font-family: var(--display-font);
+	position: absolute;
+	z-index: var(--z-absolute);
+	top: 100%;
+	right: max(var(--medium-size), var(--safe-right));
+	left: var(--x-small-size);
+	display: block;
+	max-block-size: 80vb;
+	max-inline-size: min(100%, var(--2x-small-container));
+	border: 1px var(--border-style) var(--primary-200-600);
+	border-radius: var(--2x-small-size);
+	background-color: var(--primary-50-800);
+	background-color: oklch(from var(--primary-50-800) l c h / var(--3x-high-opacity));
+	backdrop-filter: var(--heavy-blur) var(--high-saturation);
+	transition: all var(--fast-time) var(--ease-out);
+	transition-property: transform, visibility, opacity;
+	overflow: auto;
+	filter: var(--medium-shadow);
 	margin-inline-start: auto;
+	&[data-open="false"] {
+		transform: translateY(calc(var(--2x-small-size) * -1));
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.optionLink {
+	display: block;
+	padding-block: var(--x-small-size);
+	padding-inline: var(--small-size);
+	outline: 1px var(--border-style) var(--primary-200-600);
+	line-height: var(--line-short);
+	text-decoration: none;
+	color: inherit;
+	transition: background-color var(--fast-time) var(--ease-out);
+	&:hover, &:focus {
+		transition-duration: 0ms;
+		background-color: var(--primary-100-700);
+	}
+	&:active {
+		background-color: var(--primary-200-600);
+	}
 }
