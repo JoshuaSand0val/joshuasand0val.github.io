@@ -68,6 +68,10 @@
 	}
 }
 
+.project:has(.portal) .header {
+	margin-block-end: var(--x-large-size);
+}
+
 .title, .description, .link {
 	display: block;
 	margin: 0;
@@ -77,10 +81,6 @@
 	font-family: var(--display-font);
 	font-size: var(--3x-large-font);
 	font-weight: var(--regular-font);
-}
-
-.project:has(.portal) .description {
-	margin-block-end: var(--x-large-size);
 }
 
 .link {

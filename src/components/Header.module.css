@@ -7,7 +7,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	width: min(100%, var(--3x-large-container));
+	inline-size: min(100%, var(--3x-large-container));
 	gap: var(--medium-size);
 	padding-block-start: max(var(--x-small-size), var(--safe-top));
 	padding-block-end: var(--x-small-size);
@@ -17,11 +17,18 @@
 }
 
 .title {
-	display: inline;
+	display: inline-block;
 	white-space: nowrap;
 	font-size: var(--x-large-font);
 	font-family: var(--accent-font);
-	text-shadow: 0 0 1px var(--primary-200-700);
+	line-height: var(--line-short);
+	border-radius: var(--2x-small-size);
+	background-color: var(--primary-50-700);
+	background-color: oklch(from var(--primary-50-700) l c h / var(--3x-high-opacity));
+	backdrop-filter: var(--heavy-blur) var(--high-saturation);
+	filter: var(--x-light-shadow);
+	padding-block: var(--2x-small-size);
+	padding-inline: var(--x-small-size);
 	margin-block: 0;
 	margin-inline-end: auto;
 }
@@ -33,19 +40,20 @@
 	font-size: var(--medium-size);
 	font-weight: var(--regular-font);
 	border: none;
-	background: none;
+	border-radius: var(--2x-small-size);
+	background-image: none;
+	background-color: var(--primary-50-700);
+	background-color: oklch(from var(--primary-50-700) l c h / var(--3x-high-opacity));
+	backdrop-filter: var(--heavy-blur) var(--high-saturation);
 	color: inherit;
-	padding: 0;
+	padding: var(--2x-small-size);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
-	filter: drop-shadow(0 0 1px var(--primary-100-600))
-	;
-	&:hover, &:focus {
-		scale: var(--scale-2x-in);
-	}
+	filter: var(--x-light-shadow);
 	&:active {
-		scale: none;
+		background-color: var(--primary-100-600);
+		background-color: oklch(from var(--primary-100-600) l c h / var(--3x-high-opacity));
 	}
 }
 
@@ -60,15 +68,15 @@
 	max-inline-size: min(100%, var(--2x-small-container));
 	border: 1px var(--border-style) var(--primary-200-600);
 	border-radius: var(--2x-small-size);
-	background-color: var(--primary-50-800);
-	background-color: oklch(from var(--primary-50-800) l c h / var(--3x-high-opacity));
+	background-color: var(--primary-50-700);
+	background-color: oklch(from var(--primary-50-700) l c h / var(--3x-high-opacity));
 	backdrop-filter: var(--heavy-blur) var(--high-saturation);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, visibility, opacity;
 	overflow: auto;
-	filter: var(--medium-shadow);
+	filter: var(--light-shadow);
 	margin-inline-start: auto;
-	&[data-open="false"] {
+	.container:not(:has(.navigationButton:focus, &:focus-within)) & {
 		transform: translateY(calc(var(--2x-small-size) * -1));
 		visibility: hidden;
 		opacity: 0;
@@ -87,9 +95,21 @@
 	transition: background-color var(--fast-time) var(--ease-out);
 	&:hover, &:focus {
 		transition-duration: 0ms;
-		background-color: var(--primary-100-700);
+		background-color: var(--primary-100-600);
 	}
 	&:active {
-		background-color: var(--primary-200-600);
+		background-color: var(--primary-200-500);
+	}
+}
+
+.backdrop {
+	position: fixed;
+	inset: 0;
+	background-color: var(--primary-500-900);
+	opacity: var(--3x-low-opacity);
+	transition: opacity var(--fast-time) var(--ease-out);
+	.container:not(:has(.navigationButton:focus, .navigation:focus-within)) & {
+		opacity: 0;
+		pointer-events: none;
 	}
 }

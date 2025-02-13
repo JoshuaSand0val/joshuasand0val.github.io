@@ -53,7 +53,7 @@ export default function Homepage() {
 				<p className={styles.about}>
 					<strong>Nice to meet you!</strong> Welcome to my website!
 					I am a hectic CSS guru, epic gamer, and designer with an eye for detail.
-					Below you can explore my <MyLinks.Projects />.
+					Below you can explore <MyLinks.Projects />.
 					Feel free to visit <MyLinks.Github /> or <MyLinks.Linkedin />.
 				</p>
 			</article>
