@@ -39,12 +39,12 @@
 			#F5A9B8 60% 80%,
 			#5BCEFA 80% 100%
 		);
-		background-size: 100vb 50vb;
+		background-size: 100vb 60vb;
 		background-position: top left;
-		transform: rotate(35deg) translateY(-25vb);
+		transform: rotate(35deg) translateY(-30vb);
 		transform-origin: top left;
 		opacity: var(--2x-low-opacity);
-		filter: var(--x-heavy-blur);
+		filter: var(--2x-heavy-blur);
 	}
 }
 
