@@ -19,16 +19,14 @@
 .title {
 	display: inline-block;
 	white-space: nowrap;
+	text-shadow:
+		-1px -1px 1px var(--primary-100-700),
+		1px -1px 1px var(--primary-100-700),
+		-1px 1px 1px var(--primary-100-700),
+		1px 1px 1px var(--primary-100-700);
 	font-size: var(--x-large-font);
 	font-family: var(--accent-font);
 	line-height: var(--line-short);
-	border-radius: var(--2x-small-size);
-	background-color: var(--primary-50-700);
-	background-color: oklch(from var(--primary-50-700) l c h / var(--3x-high-opacity));
-	backdrop-filter: var(--heavy-blur) var(--high-saturation);
-	filter: var(--x-light-shadow);
-	padding-block: var(--2x-small-size);
-	padding-inline: var(--x-small-size);
 	margin-block: 0;
 	margin-inline-end: auto;
 }
@@ -39,21 +37,17 @@
 	appearance: none;
 	font-size: var(--medium-size);
 	font-weight: var(--regular-font);
-	border: none;
+	border: 1px var(--border-style) var(--primary-200-600);
 	border-radius: var(--2x-small-size);
 	background-image: none;
 	background-color: var(--primary-50-700);
-	background-color: oklch(from var(--primary-50-700) l c h / var(--3x-high-opacity));
-	backdrop-filter: var(--heavy-blur) var(--high-saturation);
 	color: inherit;
 	padding: var(--2x-small-size);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
-	filter: var(--x-light-shadow);
 	&:active {
 		background-color: var(--primary-100-600);
-		background-color: oklch(from var(--primary-100-600) l c h / var(--3x-high-opacity));
 	}
 }
 
@@ -106,7 +100,7 @@
 	inset: 0;
 	background-color: oklch(0 0 0 / var(--2x-low-opacity));
 	background-color: oklch(from var(--primary-500-900) l c h / var(--2x-low-opacity));
-	backdrop-filter: var(--3x-light-blur);
+	backdrop-filter: var(--2x-light-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
 	.container:not(:has(.navigation:focus-within)) & {

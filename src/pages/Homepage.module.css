@@ -10,9 +10,9 @@
 	display: block;
 	width: min(35cqi, var(--x-small-container));
 	background-color: var(--primary-50-800);
-	background-color: oklch(from var(--primary-50-800) l c h / var(--2x-low-opacity));
-	border-radius: var(--x-small-size);
-	border: 1px var(--border-style) var(--primary-300-600);
+	background-color: oklch(from var(--primary-50-800) l c h / var(--low-opacity));
+	border-radius: var(--2x-small-size);
+	border: 1px var(--border-style) var(--primary-300-500);
 	margin-block-start: var(--3x-small-size);
 	margin-block-end: clamp(var(--x-small-size), var(--responsive-size), var(--large-size));
 	margin-inline-end: clamp(var(--medium-size), var(--responsive-size), var(--x-large-size));

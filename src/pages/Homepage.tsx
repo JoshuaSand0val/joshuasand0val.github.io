@@ -32,9 +32,9 @@ export default function Homepage() {
 				<header className={styles.intro}>
 					<div className={styles.profile}>
 						<img className={styles.profileImage} loading="lazy" src="/profile.png" alt="Profile picture of myself." />
-						<span className={styles.pronouns}>(She/Her)</span>
+						<span className={styles.pronouns}>(She/They)</span>
 					</div>
-					<h1 className={styles.title}>Hey, I'm Jessica.&nbsp;💖</h1>
+					<h1 className={styles.title}>Hey, I'm Jess.&nbsp;💖</h1>
 					<h2 className={styles.subtitle}>Full-stack web developer.&nbsp;👩🏻‍💻</h2>
 				</header>
 				<span className={styles.skills}>

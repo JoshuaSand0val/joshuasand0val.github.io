@@ -26,7 +26,7 @@
 	justify-content: end;
 	container-type: inline-size;
 	border-radius: var(--2x-small-size);
-	border: 1px var(--border-style) var(--primary-200-700);
+	border: 1px var(--border-style) var(--primary-200-600);
 	background-color: var(--primary-50-800);
 	background-color: oklch(from var(--primary-50-800) l c h / var(--high-opacity));
 	overflow: hidden;
