@@ -37,7 +37,7 @@
 	appearance: none;
 	font-size: var(--medium-size);
 	font-weight: var(--regular-font);
-	border: 1px var(--border-style) var(--primary-200-600);
+	border: 1px var(--border-style) var(--primary-300-500);
 	border-radius: var(--2x-small-size);
 	background-image: none;
 	background-color: var(--primary-50-700);
@@ -66,7 +66,7 @@
 	transition-property: transform, opacity;
 	overflow: auto;
 	margin-inline-start: auto;
-	filter: var(--3x-light-shadow);
+	filter: var(--2x-light-shadow);
 	&:not(:focus-within) {
 		pointer-events: none;
 		transform: translateY(calc(var(--2x-small-size) * -1));
@@ -78,7 +78,7 @@
 	display: block;
 	padding-block: var(--x-small-size);
 	padding-inline: var(--small-size);
-	border-block-end: 1px var(--border-style) var(--primary-200-600);
+	border-block-end: 1px var(--border-style) var(--primary-300-500);
 	line-height: var(--line-short);
 	text-decoration: none;
 	color: inherit;
@@ -88,18 +88,17 @@
 	}
 	&:hover, &:focus {
 		transition-duration: 0ms;
-		background-color: var(--primary-100-600);
 	}
-	&:active {
-		background-color: var(--primary-200-500);
+	&:hover, &:focus, &:active {
+		background-color: var(--primary-100-600);
 	}
 }
 
 .backdrop {
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--2x-low-opacity));
-	background-color: oklch(from var(--primary-500-900) l c h / var(--2x-low-opacity));
+	background-color: oklch(0 0 0 / var(--low-opacity));
+	background-color: oklch(from var(--primary-600-900) l c h / var(--low-opacity));
 	backdrop-filter: var(--2x-light-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;

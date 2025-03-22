@@ -3,8 +3,8 @@
 .grid {
 	display: block;
 	column-count: 4;
-	column-width: var(--2x-small-container);
-	column-gap: var(--small-size);
+	column-width: var(--x-small-container);
+	column-gap: var(--medium-size);
 	column-fill: balance;
 	clear: both;
 	margin-block: var(--medium-size);
@@ -22,76 +22,54 @@
 .project {
 	position: relative;
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: end;
-	container-type: inline-size;
+	flex-flow: row wrap;
+	align-items: end;
 	border-radius: var(--2x-small-size);
-	border: 1px var(--border-style) var(--primary-200-600);
+	border: 1px var(--border-style) var(--primary-300-500);
 	background-color: var(--primary-50-800);
 	background-color: oklch(from var(--primary-50-800) l c h / var(--high-opacity));
+	padding: var(--small-size);
+	gap: var(--medium-size);
 	overflow: hidden;
 	&:has(.portal) {
-		border-color: var(--primary-700);
+		background-color: var(--primary-800);
 		color: var(--secondary-100);
-	}
-	& > :where(:not(.portal)) {
-		padding: var(--small-size);
 	}
 }
 
 .portal {
-	position: absolute;
-	z-index: 0;
-	inset: 0;
+	display: block;
+	margin: calc(var(--small-size) * -1);
 	img {
 		display: block;
-		width: 100%;
-		height: 100%;
+		inline-size: 100%;
+		aspect-ratio: var(--wide-ratio);
 		object-fit: cover;
 		object-position: top center;
-		filter: var(--low-brightness);
+		mask-image: linear-gradient(black, transparent);
+		mask-type: alpha;
 	}
-}
-
-.project:has(.portal) :is(.header, .link) {
-	position: relative;
-	z-index: 1;
-	&::before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		outline: var(--small-size) solid var(--primary-800);
-		background-color: var(--primary-800);
-		opacity: var(--x-high-opacity);
-		filter: var(--heavy-blur);
-	}
-}
-
-.project:has(.portal) .header {
-	margin-block-end: var(--x-large-size);
 }
 
 .title, .description, .link {
-	display: block;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	flex: 1 1 0;
 	margin: 0;
 }
 
 .title {
 	font-family: var(--display-font);
-	font-size: var(--3x-large-font);
 	font-weight: var(--regular-font);
 }
 
 .link {
-	text-align: end;
-	border-block-start: inherit;
-	padding-inline-end: var(--medium-size);
-	margin-block-start: auto;
+	flex: 0 0 auto;
 	.project:has(.portal) & :any-link {
-		color: var(--accent-300);
+		color: var(--secondary-200);
 		&:active {
-			text-decoration-color: var(--accent-500);
+			text-decoration-color: var(--secondary-300);
 		}
 	}
 }

@@ -17,15 +17,15 @@ export default function Projects() {
 			{projects.map(({ title, image, description, url }: projects, index) => (
 				<div className={styles.item} key={index}>
 					<article className={styles.project}>
-						<header className={styles.header}>
-							<h2 className={styles.title}>{title}</h2>
-							<p className={styles.description}>{description}</p>
-						</header>
 						{typeof image === "string" && (
 							<a className={styles.portal} href={url} tabIndex={-1}>
 								<img src={image} loading="lazy" alt="" />
 							</a>
 						)}
+						<p className={styles.description}>
+							<span className={styles.title}>{title}:&nbsp;</span>
+							{description}
+						</p>
 						<span className={styles.link}>
 							<Link to={url} content="Learn More" />
 						</span>
