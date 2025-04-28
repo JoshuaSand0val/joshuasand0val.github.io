@@ -1,11 +1,11 @@
 /* A link to another webpage styles. */
 
 .container {
-	color: var(--accent-500-300);
+	color: var(--accent-5-light) var(--accent-3-dark);
 	&:not(:hover, :focus, :active) {
 		text-decoration: none;
 	}
 	&:active {
-		text-decoration-color: var(--accent-300-500);
+		text-decoration-color: var(--accent-3-light) var(--accent-5-dark);
 	}
 }

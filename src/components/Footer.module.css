@@ -6,9 +6,9 @@
 	font-size: var(--small-font);
 	padding-block-start: var(--small-size);
 	padding-block-end: max(var(--medium-size), var(--safe-bottom));
-	padding-inline-start: max(var(--medium-size), var(--responsive-size), var(--safe-left));
-	padding-inline-end: max(var(--medium-size), var(--responsive-size), var(--safe-right));
+	padding-inline-start: max(var(--margin-size), var(--safe-left));
+	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
-	color: var(--secondary-500-400);
+	color: var(--secondary-5-light) var(--secondary-4-dark);
 	text-align: end;
 }

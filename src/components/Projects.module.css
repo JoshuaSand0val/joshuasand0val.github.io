@@ -25,15 +25,15 @@
 	flex-flow: row wrap;
 	align-items: end;
 	border-radius: var(--2x-small-size);
-	border: 1px var(--border-style) var(--primary-300-500);
-	background-color: var(--primary-50-800);
-	background-color: oklch(from var(--primary-50-800) l c h / var(--high-opacity));
+	border: 1px var(--border-style) var(--border-color);
+	background-color: var(--body-color);
+	color: var(--text-color);
 	padding: var(--small-size);
 	gap: var(--medium-size);
 	overflow: hidden;
 	&:has(.portal) {
-		background-color: var(--primary-800);
-		color: var(--secondary-100);
+		--is-light: var(--is-false);
+		--is-dark: var(--is-true);
 	}
 }
 
@@ -66,10 +66,4 @@
 
 .link {
 	flex: 0 0 auto;
-	.project:has(.portal) & :any-link {
-		color: var(--accent-200);
-		&:active {
-			text-decoration-color: var(--accent-400);
-		}
-	}
 }

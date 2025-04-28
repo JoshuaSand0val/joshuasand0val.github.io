@@ -16,7 +16,7 @@ export default function Projects() {
 		<div className={styles.grid}>
 			{projects.map(({ title, image, description, url }: projects, index) => (
 				<div className={styles.item} key={index}>
-					<article className={styles.project}>
+					<article className={`semantic ${styles.project}`}>
 						{typeof image === "string" && (
 							<a className={styles.portal} href={url} tabIndex={-1}>
 								<img src={image} loading="lazy" alt="" />

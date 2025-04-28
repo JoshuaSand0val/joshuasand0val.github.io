@@ -27,6 +27,6 @@
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"sanitize.css": "^13.0.0",
-		"semantic-props": "^1.0.0"
+		"semantic-props": "github:joshuasand0val/semantic-props#v2.0.0"
 	}
 }

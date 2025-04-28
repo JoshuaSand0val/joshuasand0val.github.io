@@ -2,17 +2,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root.semantic {
+	scroll-behavior: smooth;
+	background-color: var(--body-color);
+	color: var(--text-color);
+}
+
 .semantic {
-	--primary-color: #f5e0e2;
+	--primary-0: oklch(0.98 0.02 10);
+	--primary-1: oklch(0.9 0.02 10);
+	--primary-2: oklch(0.8 0.02 10);
+	--primary-3: oklch(0.7 0.02 10);
+	--primary-4: oklch(0.6 0.02 10);
+	--primary-5: oklch(0.5 0.03 230);
+	--primary-6: oklch(0.4 0.03 230);
+	--primary-7: oklch(0.3 0.03 230);
+	--primary-8: oklch(0.2 0.03 230);
+	--primary-9: oklch(0.1 0.03 230);
 	--body-font: "Inter", sans-serif;
 	--mono-font: "Ubuntu Mono", monospace;
 	--display-font: "Ubuntu", sans-serif;
 	--accent-font: "Satisfy", cursive;
 	--border-style: dashed;
-	scroll-behavior: smooth;
-	background-color: var(--primary-50-800);
-	@supports (color: light-dark(white, black)) {
-		--primary-color: light-dark(#f5e0e2, #273e49);
-		color-scheme: light dark;
-	}
+
+	--body-color: var(--primary-0-light) var(--primary-8-dark);
+	--body-active-color: var(--primary-1-light) var(--primary-7-dark);
+	--border-color: var(--primary-3-light) var(--primary-5-dark);
+	--text-color: var(--secondary-8-light) var(--secondary-1-dark);
 }
