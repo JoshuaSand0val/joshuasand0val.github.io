@@ -17,7 +17,7 @@
 }
 
 .title {
-	--stroke-color: var(--primary-1-light) var(--primary-7-dark);
+	--stroke-color: var(--primary-2-light) var(--primary-8-dark);
 	display: inline-block;
 	white-space: nowrap;
 	text-shadow:
@@ -41,14 +41,14 @@
 	border: 1px var(--border-style) var(--border-color);
 	border-radius: var(--2x-small-size);
 	background-image: none;
-	background-color: var(--primary-0-light) var(--primary-7-dark);
+	background-color: var(--primary-1-light) var(--primary-8-dark);
 	color: inherit;
 	padding: var(--2x-small-size);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
 	&:active {
-		background-color: var(--primary-1-light) var(--primary-6-dark);
+		background-color: var(--primary-2-light) var(--primary-7-dark);
 	}
 }
 
@@ -63,7 +63,7 @@
 	max-inline-size: min(100%, var(--2x-small-container));
 	border-radius: var(--2x-small-size);
 	box-shadow: var(--2x-light-box-shadow);
-	background-color: var(--primary-0-light) var(--primary-7-dark);
+	background-color: var(--primary-1-light) var(--primary-8-dark);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
 	overflow: auto;
@@ -87,12 +87,12 @@
 		border-block-end: none;
 	}
 	&:active {
-		background-color: var(--primary-1-light) var(--primary-6-dark);
+		background-color: var(--primary-2-light) var(--primary-7-dark);
 	}
 }
 
 .backdrop {
-	--bg: var(--primary-6-light) var(--primary-9-dark);
+	--bg: var(--primary-7-light) var(--primary-9-dark);
 	position: fixed;
 	inset: 0;
 	background-color: oklch(0 0 0 / var(--low-opacity));

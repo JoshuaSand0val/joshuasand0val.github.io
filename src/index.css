@@ -9,24 +9,23 @@
 }
 
 .semantic {
-	--primary-0: oklch(0.98 0.02 10);
-	--primary-1: oklch(0.9 0.02 10);
-	--primary-2: oklch(0.8 0.02 10);
-	--primary-3: oklch(0.7 0.02 10);
-	--primary-4: oklch(0.6 0.02 10);
-	--primary-5: oklch(0.5 0.03 230);
-	--primary-6: oklch(0.4 0.03 230);
-	--primary-7: oklch(0.3 0.03 230);
-	--primary-8: oklch(0.2 0.03 230);
-	--primary-9: oklch(0.1 0.03 230);
+	--primary-1: oklch(0.98 0.02 10);
+	--primary-2: oklch(0.9 0.02 10);
+	--primary-3: oklch(0.8 0.02 10);
+	--primary-4: oklch(0.7 0.02 10);
+	--primary-5: oklch(0.6 0.02 10);
+	--primary-6: oklch(0.5 0.03 230);
+	--primary-7: oklch(0.4 0.03 230);
+	--primary-8: oklch(0.3 0.03 230);
+	--primary-9: oklch(0.2 0.03 230);
 	--body-font: "Inter", sans-serif;
 	--mono-font: "Ubuntu Mono", monospace;
 	--display-font: "Ubuntu", sans-serif;
 	--accent-font: "Satisfy", cursive;
 	--border-style: dashed;
 
-	--body-color: var(--primary-0-light) var(--primary-8-dark);
-	--body-active-color: var(--primary-1-light) var(--primary-7-dark);
-	--border-color: var(--primary-3-light) var(--primary-5-dark);
-	--text-color: var(--secondary-8-light) var(--secondary-1-dark);
+	--body-color: var(--primary-1-light) var(--primary-9-dark);
+	--body-active-color: var(--primary-2-light) var(--primary-8-dark);
+	--border-color: var(--primary-4-light) var(--primary-6-dark);
+	--text-color: var(--secondary-9-light) var(--secondary-2-dark);
 }
