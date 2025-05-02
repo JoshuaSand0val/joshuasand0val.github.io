@@ -8,7 +8,9 @@
 .profile {
 	position: relative;
 	display: block;
-	width: min(35cqi, var(--x-small-container));
+	width:
+		var(--is-3xs, 100%)
+		var(--is-2xs-3xl, min(35cqi, var(--x-small-container)));
 	background-color: var(--body-color);
 	background-color: oklch(from var(--body-color) l c h / var(--low-opacity));
 	border-radius: var(--small-size);
@@ -35,7 +37,9 @@
 	color: var(--secondary-1);
 	text-shadow: 0 1px 3px var(--secondary-9);
 	line-height: var(--line-tall);
-	font-size: var(--large-font);
+	font-size:
+		var(--is-3xs-2xs, var(--x-small-font))
+		var(--is-xs-3xl, var(--medium-font));
 	font-weight: var(--regular-font);
 	font-style: italic;
 }
