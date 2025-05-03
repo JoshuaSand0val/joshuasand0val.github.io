@@ -10,7 +10,7 @@
 	display: block;
 	width:
 		var(--is-watch, min(100%, var(--3x-small-container)))
-		var(--is-phone-desktop, min(35%, var(--x-small-container)));
+		var(--is-phone-to-desktop, min(35%, var(--x-small-container)));
 	background-color: var(--body-color);
 	background-color: oklch(from var(--body-color) l c h / var(--low-opacity));
 	border-radius: var(--small-size);
@@ -20,7 +20,7 @@
 	margin-inline-end: min(var(--margin-size), var(--x-large-size));
 	object-fit: cover;
 	overflow: hidden;
-	float: var(--is-watch, none) var(--is-phone-desktop, left);
+	float: var(--is-watch, none) var(--is-phone-to-desktop, left);
 	transform: rotate(1deg);
 }
 
