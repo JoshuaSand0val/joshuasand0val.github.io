@@ -9,8 +9,8 @@
 	position: relative;
 	display: block;
 	width:
-		var(--is-3xs, 100%)
-		var(--is-2xs-3xl, min(35cqi, var(--x-small-container)));
+		var(--is-watch, min(100%, var(--3x-small-container)))
+		var(--is-phone-desktop, min(35%, var(--x-small-container)));
 	background-color: var(--body-color);
 	background-color: oklch(from var(--body-color) l c h / var(--low-opacity));
 	border-radius: var(--small-size);
@@ -20,7 +20,7 @@
 	margin-inline-end: min(var(--margin-size), var(--x-large-size));
 	object-fit: cover;
 	overflow: hidden;
-	float: left;
+	float: var(--is-watch, none) var(--is-phone-desktop, left);
 	transform: rotate(1deg);
 }
 
@@ -37,9 +37,7 @@
 	color: var(--secondary-1);
 	text-shadow: 0 1px 3px var(--secondary-9);
 	line-height: var(--line-tall);
-	font-size:
-		var(--is-3xs-2xs, var(--x-small-font))
-		var(--is-xs-3xl, var(--medium-font));
+	font-size: var(--medium-font);
 	font-weight: var(--regular-font);
 	font-style: italic;
 }
