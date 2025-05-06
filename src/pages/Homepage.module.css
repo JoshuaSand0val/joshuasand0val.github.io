@@ -8,7 +8,7 @@
 .profile {
 	position: relative;
 	display: block;
-	width:
+	inline-size:
 		var(--is-watch, min(100%, var(--3x-small-container)))
 		var(--is-phone-to-desktop, min(35%, var(--x-small-container)));
 	background-color: var(--body-color);
