@@ -45,14 +45,22 @@
 .title, .subtitle {
 	display: block;
 	font-family: var(--display-font);
-	font-size: var(--7x-large-font);
+	font-size:
+		var(--is-watch, var(--4x-large-font))
+		var(--is-phone, var(--5x-large-font))
+		var(--is-tablet, var(--7x-large-font))
+		var(--is-laptop-to-desktop, var(--8x-large-font));
 	font-weight: var(--heavy-font);
 	line-height: var(--line-short);
 	margin-block: 0;
 }
 
 .subtitle {
-	font-size: var(--3x-large-font);
+	font-size:
+		var(--is-watch, var(--2x-large-font))
+		var(--is-phone, var(--3x-large-font))
+		var(--is-tablet, var(--4x-large-font))
+		var(--is-laptop-to-desktop, var(--5x-large-font));
 	font-weight: var(--thin-font);
 	margin-block-start: var(--3x-small-size);
 }
@@ -67,7 +75,9 @@
 
 .about {
 	display: block;
-	font-size: var(--large-font);
+	font-size:
+		var(--is-watch, var(--large-font))
+		var(--is-phone-to-desktop, var(--x-large-font));
 	margin-block: var(--medium-size);
 }
 
