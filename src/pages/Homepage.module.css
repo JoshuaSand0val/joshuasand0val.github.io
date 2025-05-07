@@ -56,7 +56,7 @@
 
 .subtitle {
 	font-size:
-		var(--is-watch-to-phone, var(--2x-large-font))
+		var(--is-watch-to-phone, var(--x-large-font))
 		var(--is-tablet, var(--3x-large-font))
 		var(--is-laptop-to-desktop, var(--4x-large-font));
 	font-weight: var(--thin-font);
