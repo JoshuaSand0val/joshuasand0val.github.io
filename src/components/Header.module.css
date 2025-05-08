@@ -61,8 +61,9 @@
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--2x-small-container));
 	border-radius: var(--2x-small-size);
-	box-shadow: var(--x-light-box-shadow);
+	border: 1px var(--border-style) var(--secondary-dominant);
 	background-color: var(--primary-dominant);
+	box-shadow: var(--x-light-box-shadow);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
 	overflow: auto;
@@ -91,12 +92,12 @@
 }
 
 .backdrop {
-	--bg: var(--secondary-neutral);
+	--bg: var(--darker-neutral);
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--medium-opacity));
-	background-color: oklch(from var(--bg) l c h / var(--medium-opacity));
-	backdrop-filter: var(--2x-light-blur);
+	background-color: oklch(0 0 0 / var(--x-low-opacity));
+	background-color: oklch(from var(--bg) l c h / var(--x-low-opacity));
+	backdrop-filter: var(--x-light-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
 	.container:not(:has(.navigation:focus-within)) & {
