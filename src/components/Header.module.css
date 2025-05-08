@@ -17,14 +17,13 @@
 }
 
 .title {
-	--stroke-color: var(--primary-2-light) var(--primary-8-dark);
 	display: inline-block;
 	white-space: nowrap;
 	text-shadow:
-		-1px -1px 1px var(--stroke-color),
-		1px -1px 1px var(--stroke-color),
-		-1px 1px 1px var(--stroke-color),
-		1px 1px 1px var(--stroke-color);
+		-1px -1px 1px var(--secondary-dominant),
+		1px -1px 1px var(--secondary-dominant),
+		-1px 1px 1px var(--secondary-dominant),
+		1px 1px 1px var(--secondary-dominant);
 	font-size: var(--x-large-font);
 	font-family: var(--accent-font);
 	line-height: var(--line-short);
@@ -38,17 +37,17 @@
 	appearance: none;
 	font-size: var(--medium-size);
 	font-weight: var(--regular-font);
-	border: 1px var(--border-style) var(--border-color);
+	border: 1px var(--border-style) var(--tertiary-dominant);
 	border-radius: var(--2x-small-size);
 	background-image: none;
-	background-color: var(--primary-1-light) var(--primary-8-dark);
+	background-color: var(--primary-dominant);
 	color: inherit;
 	padding: var(--2x-small-size);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
 	&:active {
-		background-color: var(--primary-2-light) var(--primary-7-dark);
+		background-color: var(--secondary-dominant);
 	}
 }
 
@@ -62,8 +61,8 @@
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--2x-small-container));
 	border-radius: var(--2x-small-size);
-	box-shadow: var(--2x-light-box-shadow);
-	background-color: var(--primary-1-light) var(--primary-8-dark);
+	box-shadow: var(--x-light-box-shadow);
+	background-color: var(--primary-dominant);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
 	overflow: auto;
@@ -79,7 +78,7 @@
 	display: block;
 	padding-block: var(--x-small-size);
 	padding-inline: var(--small-size);
-	border-block-end: 1px var(--border-style) var(--border-color);
+	border-block-end: 1px var(--border-style) var(--tertiary-dominant);
 	line-height: var(--line-short);
 	text-decoration: none;
 	color: inherit;
@@ -87,16 +86,16 @@
 		border-block-end: none;
 	}
 	&:active {
-		background-color: var(--primary-2-light) var(--primary-7-dark);
+		background-color: var(--secondary-dominant);
 	}
 }
 
 .backdrop {
-	--bg: var(--primary-7-light) var(--primary-9-dark);
+	--bg: var(--secondary-neutral);
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--low-opacity));
-	background-color: oklch(from var(--bg) l c h / var(--low-opacity));
+	background-color: oklch(0 0 0 / var(--medium-opacity));
+	background-color: oklch(from var(--bg) l c h / var(--medium-opacity));
 	backdrop-filter: var(--2x-light-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;

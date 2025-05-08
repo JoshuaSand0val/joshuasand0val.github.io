@@ -25,9 +25,9 @@
 	}
 	&::before {
 		background:
-			conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--body-active-color) 0),
-			conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--body-active-color) 0),
-			var(--body-color);
+			conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-dominant) 0),
+			conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-dominant) 0),
+			var(--primary-dominant);
 		background-size:  var(--medium-size) var(--medium-size);
 	}
 	&::after {
