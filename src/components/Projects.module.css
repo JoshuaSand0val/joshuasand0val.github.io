@@ -25,9 +25,9 @@
 	flex-flow: row wrap;
 	align-items: end;
 	border-radius: var(--2x-small-size);
-	border: 1px var(--border-style) var(--tertiary-dominant);
-	background-color: var(--primary-dominant);
-	color: var(--primary-complement);
+	border: 1px var(--border-style) var(--tertiary-background);
+	background-color: var(--primary-background);
+	color: var(--primary-neutral);
 	padding: var(--small-size);
 	gap: var(--medium-size);
 	overflow: hidden;

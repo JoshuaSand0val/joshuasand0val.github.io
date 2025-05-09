@@ -20,10 +20,10 @@
 	display: inline-block;
 	white-space: nowrap;
 	text-shadow:
-		-1px -1px 1px var(--secondary-dominant),
-		1px -1px 1px var(--secondary-dominant),
-		-1px 1px 1px var(--secondary-dominant),
-		1px 1px 1px var(--secondary-dominant);
+		-1px -1px 1px var(--secondary-background),
+		1px -1px 1px var(--secondary-background),
+		-1px 1px 1px var(--secondary-background),
+		1px 1px 1px var(--secondary-background);
 	font-size: var(--x-large-font);
 	font-family: var(--accent-font);
 	line-height: var(--line-short);
@@ -37,17 +37,17 @@
 	appearance: none;
 	font-size: var(--medium-size);
 	font-weight: var(--regular-font);
-	border: 1px var(--border-style) var(--tertiary-dominant);
+	border: 1px var(--border-style) var(--tertiary-background);
 	border-radius: var(--2x-small-size);
 	background-image: none;
-	background-color: var(--primary-dominant);
+	background-color: var(--primary-background);
 	color: inherit;
 	padding: var(--2x-small-size);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
 	&:active {
-		background-color: var(--secondary-dominant);
+		background-color: var(--secondary-background);
 	}
 }
 
@@ -61,8 +61,8 @@
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--2x-small-container));
 	border-radius: var(--2x-small-size);
-	border: 1px var(--border-style) var(--secondary-dominant);
-	background-color: var(--primary-dominant);
+	border: 1px var(--border-style) var(--secondary-background);
+	background-color: var(--primary-background);
 	box-shadow: var(--x-light-box-shadow);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
@@ -79,7 +79,7 @@
 	display: block;
 	padding-block: var(--x-small-size);
 	padding-inline: var(--small-size);
-	border-block-end: 1px var(--border-style) var(--tertiary-dominant);
+	border-block-end: 1px var(--border-style) var(--tertiary-background);
 	line-height: var(--line-short);
 	text-decoration: none;
 	color: inherit;
@@ -87,7 +87,7 @@
 		border-block-end: none;
 	}
 	&:active {
-		background-color: var(--secondary-dominant);
+		background-color: var(--secondary-background);
 	}
 }
 

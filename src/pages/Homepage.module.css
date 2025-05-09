@@ -11,10 +11,10 @@
 	inline-size:
 		var(--is-watch, min(100%, var(--3x-small-container)))
 		var(--is-phone-to-desktop, min(33%, var(--x-small-container)));
-	background-color: var(--primary-dominant);
-	background-color: oklch(from var(--primary-dominant) l c h / var(--low-opacity));
+	background-color: var(--primary-background);
+	background-color: oklch(from var(--primary-background) l c h / var(--low-opacity));
 	border-radius: var(--small-size);
-	border: 1px var(--border-style) var(--tertiary-dominant);
+	border: 1px var(--border-style) var(--tertiary-background);
 	margin-block-start: var(--3x-small-size);
 	margin-block-end: min(var(--margin-size), var(--large-size));
 	margin-inline-end: min(var(--margin-size), var(--x-large-size));

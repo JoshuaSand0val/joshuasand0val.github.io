@@ -4,17 +4,17 @@
 
 :root.semantic {
 	scroll-behavior: smooth;
-	background-color: var(--primary-dominant);
-	color: var(--primary-complement);
+	background-color: var(--primary-background);
+	color: var(--primary-neutral);
 }
 
 .semantic {
-	--lightest-dominant: oklch(0.98 0.02 10);
-	--lighter-dominant: oklch(0.9 0.02 10);
-	--light-dominant: oklch(0.8 0.02 10);
-	--darkest-dominant: oklch(0.2 0.03 230);
-	--darker-dominant: oklch(0.3 0.03 230);
-	--dark-dominant: oklch(0.4 0.03 230);
+	--lightest-background: oklch(0.98 0.02 10);
+	--lighter-background: oklch(0.9 0.02 10);
+	--light-background: oklch(0.8 0.02 10);
+	--darkest-background: oklch(0.2 0.03 230);
+	--darker-background: oklch(0.3 0.03 230);
+	--dark-background: oklch(0.4 0.03 230);
 	--body-font: "Inter", sans-serif;
 	--mono-font: "Ubuntu Mono", monospace;
 	--display-font: "Ubuntu", sans-serif;
