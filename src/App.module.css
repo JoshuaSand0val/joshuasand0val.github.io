@@ -6,7 +6,7 @@
 	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: stretch;
-	min-height: min(100vb, 100dvb);
+	min-block-size: min(100vb, 100dvb);
 	font-family: var(--body-family);
 	font-size: var(--medium);
 	font-weight: var(--light);
@@ -17,23 +17,14 @@
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
 	overflow: clip;
-	&::before, &::after {
+	&::after {
 		content: "";
 		position: absolute;
 		z-index: var(--z-bottom);
 		inset: 0;
-	}
-	&::before {
-		background:
-			conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-background) 0),
-			conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-background) 0),
-			var(--primary-background);
-		background-size: var(--large) var(--large);
-	}
-	&::after {
 		display: block;
-		width: min(100vi, var(--large-container));
-		height: var(--medium-container);
+		inline-size: min(100vi, var(--large-container));
+		block-size: var(--medium-container);
 		background-image: linear-gradient(
 			#5BCEFA 0% 20%,
 			#F5A9B8 20% 40%,
@@ -50,6 +41,13 @@
 		opacity:
 			var(--is-light, var(--low-opacity))
 			var(--is-dark, var(--lower-opacity));
+		@media not (prefers-reduced-motion) {
+			animation-name: fade-in-gradient;
+			animation-duration: var(--slow-time);
+			animation-timing-function: var(--ease-out);
+			animation-delay: var(--slower-time);
+			animation-fill-mode: both;
+		}
 	}
 }
 
@@ -60,4 +58,53 @@
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
 	flex: 1 0 auto;
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		z-index: var(--z-bottom);
+		inset: 0;
+		background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-background) 0);
+		animation-duration: var(--slow-time);
+		animation-timing-function: var(--ease-out);
+		animation-fill-mode: both;
+	}
+	&::before {
+		margin-inline: auto;
+		background-size: 100% var(--x-large);
+		@media not (prefers-reduced-motion) {
+			animation-name: blueprint-horizontal;
+			animation-delay: var(--normal-time);
+		}
+	}
+	&::after {
+		background-size: var(--x-large) 100%;
+		@media not (prefers-reduced-motion) {
+			animation-name: blueprint-vertical;
+			animation-delay: var(--normal-time);
+		}
+	}
+}
+
+@keyframes blueprint-horizontal {
+	from {
+		inline-size: 0%;
+	}
+	to {
+		inline-size: 100%;
+	}
+}
+
+@keyframes blueprint-vertical {
+	from {
+		block-size: 0%;
+	}
+	to {
+		block-size: 100%;
+	}
+}
+
+@keyframes fade-in-gradient {
+	from {
+		inline-size: 0;
+	}
 }
