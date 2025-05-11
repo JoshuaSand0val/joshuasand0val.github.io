@@ -7,7 +7,7 @@
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	inline-size: min(100%, var(--largest-container));
+	inline-size: min(100%, var(--larger-container));
 	gap: var(--medium);
 	padding-block-start: max(var(--medium), var(--safe-top));
 	padding-block-end: var(--3x-small);
