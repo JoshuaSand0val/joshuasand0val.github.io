@@ -15,9 +15,10 @@
 	--darkest-background: oklch(0.2 0.03 230);
 	--darker-background: oklch(0.3 0.03 230);
 	--dark-background: oklch(0.4 0.03 230);
-	--body-font: "Inter", sans-serif;
-	--mono-font: "Ubuntu Mono", monospace;
-	--display-font: "Ubuntu", sans-serif;
-	--accent-font: "Satisfy", cursive;
+
+	--body-family: "Inter", sans-serif;
+	--mono-family: "Ubuntu Mono", monospace;
+	--display-family: "Ubuntu", sans-serif;
+	--accent-family: "Satisfy", cursive;
 	--border-style: dashed;
 }

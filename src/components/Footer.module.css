@@ -2,10 +2,10 @@
 
 .container {
 	display: block;
-	width: min(100%, var(--3x-large-container));
-	font-size: var(--small-font);
-	padding-block-start: var(--small-size);
-	padding-block-end: max(var(--medium-size), var(--safe-bottom));
+	width: min(100%, var(--largest-container));
+	font-size: var(--small);
+	padding-block-start: var(--small);
+	padding-block-end: max(var(--medium), var(--safe-bottom));
 	padding-inline-start: max(var(--margin-size), var(--safe-left));
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;

@@ -7,10 +7,10 @@
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	inline-size: min(100%, var(--3x-large-container));
-	gap: var(--medium-size);
-	padding-block-start: max(var(--x-small-size), var(--safe-top));
-	padding-block-end: var(--x-small-size);
+	inline-size: min(100%, var(--largest-container));
+	gap: var(--medium);
+	padding-block-start: max(var(--medium), var(--safe-top));
+	padding-block-end: var(--3x-small);
 	padding-inline-start: max(var(--margin-size), var(--safe-left));
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
@@ -24,9 +24,9 @@
 		1px -1px 1px var(--secondary-background),
 		-1px 1px 1px var(--secondary-background),
 		1px 1px 1px var(--secondary-background);
-	font-size: var(--x-large-font);
-	font-family: var(--accent-font);
-	line-height: var(--line-short);
+	font-size: var(--2x-large);
+	font-family: var(--accent-family);
+	line-height: var(--short-line);
 	margin-block: 0;
 	margin-inline-end: auto;
 }
@@ -35,14 +35,14 @@
 	display: inline-flex;
 	align-items: center;
 	appearance: none;
-	font-size: var(--medium-size);
-	font-weight: var(--regular-font);
+	font-size: var(--x-large);
+	font-weight: var(--regular);
 	border: 1px var(--border-style) var(--tertiary-background);
-	border-radius: var(--2x-small-size);
+	border-radius: var(--smaller-radius);
 	background-image: none;
 	background-color: var(--primary-background);
 	color: inherit;
-	padding: var(--2x-small-size);
+	padding: var(--2x-small);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
@@ -56,31 +56,31 @@
 	z-index: var(--z-absolute);
 	top: 100%;
 	right: max(var(--margin-size), var(--safe-right));
-	left: var(--x-small-size);
+	left: var(--x-small);
 	display: block;
 	max-block-size: 80vb;
-	max-inline-size: min(100%, var(--2x-small-container));
-	border-radius: var(--2x-small-size);
+	max-inline-size: min(100%, var(--smaller-container));
+	border-radius: var(--smaller-radius);
 	border: 1px var(--border-style) var(--secondary-background);
 	background-color: var(--primary-background);
-	box-shadow: var(--x-light-box-shadow);
+	box-shadow: var(--lighter-box-shadow);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
 	overflow: auto;
 	margin-inline-start: auto;
 	&:not(:focus-within) {
 		pointer-events: none;
-		transform: translateY(calc(var(--2x-small-size) * -1));
+		transform: translateY(calc(var(--2x-small) * -1));
 		opacity: 0;
 	}
 }
 
 .optionLink {
 	display: block;
-	padding-block: var(--x-small-size);
-	padding-inline: var(--small-size);
+	padding-block: var(--x-small);
+	padding-inline: var(--small);
 	border-block-end: 1px var(--border-style) var(--tertiary-background);
-	line-height: var(--line-short);
+	line-height: var(--short-line);
 	text-decoration: none;
 	color: inherit;
 	&:last-child {
@@ -95,9 +95,9 @@
 	--bg: var(--darker-neutral);
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--x-low-opacity));
-	background-color: oklch(from var(--bg) l c h / var(--x-low-opacity));
-	backdrop-filter: var(--x-light-blur);
+	background-color: oklch(0 0 0 / var(--lower-opacity));
+	background-color: oklch(from var(--bg) l c h / var(--lower-opacity));
+	backdrop-filter: var(--lighter-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
 	.container:not(:has(.navigation:focus-within)) & {
