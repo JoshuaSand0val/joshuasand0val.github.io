@@ -1,7 +1,9 @@
 /** The website main navigation header styles. */
 
 .container {
-	position: sticky;
+	position:
+		var(--is-watch, relative)
+		var(--is-phone-to-desktop, sticky);
 	top: 0;
 	z-index: var(--z-sticky);
 	display: flex;
@@ -35,14 +37,14 @@
 	display: inline-flex;
 	align-items: center;
 	appearance: none;
-	font-size: var(--x-large);
+	font-size: var(--2x-large);
 	font-weight: var(--regular);
 	border: 1px var(--border-style) var(--tertiary-background);
-	border-radius: var(--smaller-radius);
+	border-radius: var(--small-radius);
 	background-image: none;
 	background-color: var(--primary-background);
 	color: inherit;
-	padding: var(--2x-small);
+	padding: var(--3x-small);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
@@ -60,7 +62,7 @@
 	display: block;
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--smaller-container));
-	border-radius: var(--smaller-radius);
+	border-radius: var(--small-radius);
 	border: 1px var(--border-style) var(--secondary-background);
 	background-color: var(--primary-background);
 	box-shadow: var(--lighter-box-shadow);

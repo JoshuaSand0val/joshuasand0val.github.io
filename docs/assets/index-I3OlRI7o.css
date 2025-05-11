@@ -507,8 +507,10 @@
 	text-align: end;
 }/** The website main navigation header styles. */
 
-._container_1q0bv_3 {
-	position: sticky;
+._container_1dju5_3 {
+	position:
+		var(--is-watch, relative)
+		var(--is-phone-to-desktop, sticky);
 	top: 0;
 	z-index: var(--z-sticky);
 	display: flex;
@@ -523,7 +525,7 @@
 	margin-inline: auto;
 }
 
-._title_1q0bv_19 {
+._title_1dju5_21 {
 	display: inline-block;
 	white-space: nowrap;
 	text-shadow:
@@ -538,18 +540,18 @@
 	margin-inline-end: auto;
 }
 
-._customizeButton_1q0bv_34, ._navigationButton_1q0bv_34 {
+._customizeButton_1dju5_36, ._navigationButton_1dju5_36 {
 	display: inline-flex;
 	align-items: center;
 	appearance: none;
-	font-size: var(--x-large);
+	font-size: var(--2x-large);
 	font-weight: var(--regular);
 	border: 1px var(--border-style) var(--tertiary-background);
-	border-radius: var(--smaller-radius);
+	border-radius: var(--small-radius);
 	background-image: none;
 	background-color: var(--primary-background);
 	color: inherit;
-	padding: var(--2x-small);
+	padding: var(--3x-small);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
@@ -558,7 +560,7 @@
 	}
 }
 
-._navigation_1q0bv_34 {
+._navigation_1dju5_36 {
 	position: absolute;
 	z-index: var(--z-absolute);
 	top: 100%;
@@ -567,7 +569,7 @@
 	display: block;
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--smaller-container));
-	border-radius: var(--smaller-radius);
+	border-radius: var(--small-radius);
 	border: 1px var(--border-style) var(--secondary-background);
 	background-color: var(--primary-background);
 	box-shadow: var(--lighter-box-shadow);
@@ -582,7 +584,7 @@
 	}
 }
 
-._optionLink_1q0bv_78 {
+._optionLink_1dju5_80 {
 	display: block;
 	padding-block: var(--x-small);
 	padding-inline: var(--small);
@@ -598,7 +600,7 @@
 	}
 }
 
-._backdrop_1q0bv_94 {
+._backdrop_1dju5_96 {
 	--bg: var(--darker-neutral);
 	position: fixed;
 	inset: 0;
@@ -607,7 +609,7 @@
 	backdrop-filter: var(--lighter-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
-	._container_1q0bv_3:not(:has(._navigation_1q0bv_34:focus-within)) & {
+	._container_1dju5_3:not(:has(._navigation_1dju5_36:focus-within)) & {
 		pointer-events: none;
 		opacity: 0;
 	}
