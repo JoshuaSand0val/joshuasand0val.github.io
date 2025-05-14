@@ -1,11 +1,8 @@
 /* A link to another webpage styles. */
 
 .container {
-	color: var(--primary-accent);
-	&:not(:hover, :focus, :active) {
+	color: var(--accent-color);
+	&:not(:hover, :focus), &:active {
 		text-decoration: none;
-	}
-	&:active {
-		color: var(--secondary-accent);
 	}
 }

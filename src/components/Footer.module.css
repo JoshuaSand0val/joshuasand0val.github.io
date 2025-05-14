@@ -9,6 +9,6 @@
 	padding-inline-start: max(var(--margin-size), var(--safe-left));
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
-	color: var(--tertiary-neutral);
+	color: var(--gray);
 	text-align: end;
 }

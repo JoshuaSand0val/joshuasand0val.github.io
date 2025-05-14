@@ -15,10 +15,10 @@
 	inline-size:
 		var(--is-watch, min(100%, var(--smallest-container)))
 		var(--is-phone-to-desktop, min(35%, var(--small-container)));
-	background-color: var(--primary-background);
-	background-color: oklch(from var(--primary-background) l c h / var(--medium-opacity));
+	background-color: var(--primary-color);
+	background-color: oklch(from var(--primary-color) l c h / var(--medium-opacity));
 	border-radius: var(--small-radius);
-	border: 1px var(--border-style) var(--tertiary-background);
+	border: 1px var(--border-style) var(--tertiary-color);
 	margin-block-start: var(--3x-small);
 	margin-block-end: var(--margin-size);
 	margin-inline-end: var(--margin-size);
@@ -38,8 +38,8 @@
 	right: 1ch;
 	bottom: 0;
 	border-radius: inherit;
-	color: var(--lightest-neutral);
-	text-shadow: 0 1px 3px var(--darkest-neutral);
+	color: var(--light-color);
+	text-shadow: 0 1px 3px var(--dark-color);
 	line-height: var(--tall-line);
 	font-size: var(--small);
 	font-weight: var(--regular);

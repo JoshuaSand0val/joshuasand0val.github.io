@@ -22,10 +22,10 @@
 	display: inline-block;
 	white-space: nowrap;
 	text-shadow:
-		-1px -1px 1px var(--secondary-background),
-		1px -1px 1px var(--secondary-background),
-		-1px 1px 1px var(--secondary-background),
-		1px 1px 1px var(--secondary-background);
+		-1px -1px 1px var(--secondary-color),
+		1px -1px 1px var(--secondary-color),
+		-1px 1px 1px var(--secondary-color),
+		1px 1px 1px var(--secondary-color);
 	font-size: var(--2x-large);
 	font-family: var(--accent-family);
 	line-height: var(--short-line);
@@ -39,17 +39,17 @@
 	appearance: none;
 	font-size: var(--2x-large);
 	font-weight: var(--regular);
-	border: 1px var(--border-style) var(--tertiary-background);
+	border: 1px var(--border-style) var(--tertiary-color);
 	border-radius: var(--small-radius);
 	background-image: none;
-	background-color: var(--primary-background);
+	background-color: var(--primary-color);
 	color: inherit;
 	padding: var(--3x-small);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
 	&:active {
-		background-color: var(--secondary-background);
+		background-color: var(--secondary-color);
 	}
 }
 
@@ -63,8 +63,8 @@
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--smaller-container));
 	border-radius: var(--small-radius);
-	border: 1px var(--border-style) var(--secondary-background);
-	background-color: var(--primary-background);
+	border: 1px var(--border-style) var(--secondary-color);
+	background-color: var(--primary-color);
 	box-shadow: var(--lighter-box-shadow);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
@@ -81,7 +81,7 @@
 	display: block;
 	padding-block: var(--x-small);
 	padding-inline: var(--small);
-	border-block-end: 1px var(--border-style) var(--tertiary-background);
+	border-block-end: 1px var(--border-style) var(--tertiary-color);
 	line-height: var(--short-line);
 	text-decoration: none;
 	color: inherit;
@@ -89,16 +89,16 @@
 		border-block-end: none;
 	}
 	&:active {
-		background-color: var(--secondary-background);
+		background-color: var(--secondary-color);
 	}
 }
 
 .backdrop {
-	--bg: var(--darker-neutral);
+	--bg: var(--dark-theme);
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--lower-opacity));
-	background-color: oklch(from var(--bg) l c h / var(--lower-opacity));
+	background-color: oklch(0 0 0 / var(--low-opacity));
+	background-color: oklch(from var(--bg) l c h / var(--low-opacity));
 	backdrop-filter: var(--lighter-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
