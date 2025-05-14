@@ -42,6 +42,7 @@
 	box-shadow: var(--lightest-box-shadow);
 	border: 1px var(--border-style) var(--tertiary-color);
 	border-radius: var(--small-radius);
+	backdrop-filter: var(--light-blur);
 	background-image: none;
 	background-color: var(--primary-color);
 	color: inherit;
