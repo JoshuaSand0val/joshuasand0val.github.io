@@ -2,7 +2,7 @@
 
 .container {
 	color: var(--accent-color);
-	&:not(:hover, :focus), &:active {
+	&:active {
 		text-decoration: none;
 	}
 }

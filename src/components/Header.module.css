@@ -94,11 +94,9 @@
 }
 
 .backdrop {
-	--bg: var(--dark-theme);
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--low-opacity));
-	background-color: oklch(from var(--bg) l c h / var(--low-opacity));
+	background-color: oklch(0 0 0 / var(--lower-opacity));
 	backdrop-filter: var(--lighter-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
