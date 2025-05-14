@@ -39,6 +39,7 @@
 	appearance: none;
 	font-size: var(--2x-large);
 	font-weight: var(--regular);
+	box-shadow: var(--lightest-box-shadow);
 	border: 1px var(--border-style) var(--tertiary-color);
 	border-radius: var(--small-radius);
 	background-image: none;
@@ -64,8 +65,8 @@
 	max-inline-size: min(100%, var(--smaller-container));
 	border-radius: var(--small-radius);
 	border: 1px var(--border-style) var(--secondary-color);
-	background-color: var(--primary-color);
 	box-shadow: var(--lighter-box-shadow);
+	backdrop-filter: var(--medium-blur);
 	transition: all var(--fast-time) var(--ease-out);
 	transition-property: transform, opacity;
 	overflow: auto;
@@ -81,6 +82,7 @@
 	display: block;
 	padding-block: var(--x-small);
 	padding-inline: var(--small);
+	background-color: var(--primary-color);
 	border-block-end: 1px var(--border-style) var(--tertiary-color);
 	line-height: var(--short-line);
 	text-decoration: none;
