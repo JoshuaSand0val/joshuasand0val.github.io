@@ -40,7 +40,7 @@
 		transform-origin: top left;
 		opacity:
 			var(--is-light, var(--low-opacity))
-			var(--is-dark, var(--lower-opacity));
+			var(--is-dark, var(--lowest-opacity));
 		@media not (prefers-reduced-motion) {
 			animation-name: fade-in-gradient;
 			animation-duration: var(--slow-time);

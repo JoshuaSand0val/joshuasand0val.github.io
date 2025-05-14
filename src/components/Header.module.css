@@ -91,16 +91,23 @@
 	&:last-child {
 		border-block-end: none;
 	}
-	&:active {
+	&:not(:hover, :active) {
+		transition: background-color var(--slow-time) var(--ease-out);
+	}
+	&:hover, &:active {
 		background-color: var(--secondary-color);
+		color: var(--high-contrast-color)
+	}
+	&:active {
+		background-color: var(--tertiary-color);
 	}
 }
 
 .backdrop {
 	position: fixed;
 	inset: 0;
-	background-color: oklch(0 0 0 / var(--lower-opacity));
-	backdrop-filter: var(--lighter-blur);
+	background-color: var(--backdrop-color);
+	backdrop-filter: var(--light-blur);
 	transition: opacity var(--fast-time) var(--ease-out);
 	cursor: pointer;
 	.container:not(:has(.navigation:focus-within)) & {
