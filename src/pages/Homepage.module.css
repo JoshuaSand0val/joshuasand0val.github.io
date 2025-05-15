@@ -16,9 +16,9 @@
 		var(--watch, min(100%, var(--smallest-container)))
 		var(--phone-to-desktop, min(35%, var(--small-container)));
 	box-shadow: var(--lightest-box-shadow);
-	background-color: var(--primary-body);
+	background-color: var(--primary-color);
 	border-radius: var(--smaller-radius);
-	border: 1px var(--border-style) var(--tertiary-body);
+	border: 1px var(--border-style) var(--tertiary-color);
 	margin-block-start: var(--3x-small);
 	margin-block-end: var(--margin-size);
 	margin-inline-end: var(--margin-size);
@@ -38,10 +38,10 @@
 	right: 1ch;
 	bottom: 0;
 	border-radius: inherit;
-	color: var(--primary-white);
-	text-shadow: 0 1px 3px var(--primary-black);
+	color: var(--lightest-neutral);
+	text-shadow: 0 1px 3px var(--darkest-neutral);
 	line-height: var(--tall-line);
-	font-size: var(--small);
+	font-size: var(--watch, var(--small)) var(--phone-to-desktop, var(--medium));
 	font-weight: var(--regular-weight);
 	font-style: italic;
 }
