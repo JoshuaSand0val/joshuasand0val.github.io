@@ -2,7 +2,7 @@
 
 .container {
 	text-shadow: 0 0 1px var(--contrast-color);
-	color: var(--lightest-accent);
+	color: var(--light-accent);
 	&:not(:hover, :focus) {
 		text-decoration: none;
 	}

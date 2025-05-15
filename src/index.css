@@ -13,14 +13,6 @@
 	--secondary-color: var(--light, oklch(0.90 0.02 11)) var(--dark, oklch(0.25 0.04 230));
 	--tertiary-color: var(--light, oklch(0.9 0.02 11)) var(--dark, oklch(0.3 0.04 230));
 
-	--lightest-accent: var(--lightest-pink);
-	--lighter-accent: var(--lighter-pink);
-	--light-accent: var(--light-pink);
-
-	--dark-accent: var(--dark-pink);
-	--darker-accent: var(--darker-pink);
-	--darkest-accent: var(--darkest-pink);
-
 	--body-family: "Inter", sans-serif;
 	--mono-family: "Ubuntu Mono", monospace;
 	--display-family: "Ubuntu", sans-serif;
