@@ -13,18 +13,18 @@
 	position: relative;
 	display: block;
 	inline-size:
-		var(--is-watch, min(100%, var(--smallest-container)))
-		var(--is-phone-to-desktop, min(35%, var(--small-container)));
+		var(--watch, min(100%, var(--smallest-container)))
+		var(--phone-to-desktop, min(35%, var(--small-container)));
 	box-shadow: var(--lightest-box-shadow);
-	background-color: var(--primary-color);
+	background-color: var(--primary-body);
 	border-radius: var(--smaller-radius);
-	border: 1px var(--border-style) var(--tertiary-color);
+	border: 1px var(--border-style) var(--tertiary-body);
 	margin-block-start: var(--3x-small);
 	margin-block-end: var(--margin-size);
 	margin-inline-end: var(--margin-size);
 	object-fit: cover;
 	overflow: hidden;
-	float: var(--is-watch, none) var(--is-phone-to-desktop, left);
+	float: var(--watch, none) var(--phone-to-desktop, left);
 	transform: rotate(1deg);
 }
 
@@ -38,11 +38,11 @@
 	right: 1ch;
 	bottom: 0;
 	border-radius: inherit;
-	color: var(--light-color);
-	text-shadow: 0 1px 3px var(--dark-color);
+	color: var(--primary-white);
+	text-shadow: 0 1px 3px var(--primary-black);
 	line-height: var(--tall-line);
 	font-size: var(--small);
-	font-weight: var(--regular);
+	font-weight: var(--regular-weight);
 	font-style: italic;
 }
 
@@ -50,14 +50,14 @@
 	display: block;
 	font-family: var(--display-family);
 	font-size: var(--7x-large);
-	font-weight: var(--heavy);
+	font-weight: var(--heavy-weight);
 	line-height: var(--short-line);
 	margin-block: 0;
 }
 
 .subtitle {
 	font-size: var(--3x-large);
-	font-weight: var(--thin);
+	font-weight: var(--thin-weight);
 	margin-block-end: var(--3x-small);
 }
 

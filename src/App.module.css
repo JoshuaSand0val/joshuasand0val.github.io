@@ -9,7 +9,7 @@
 	min-block-size: min(100vb, 100dvb);
 	font-family: var(--body-family);
 	font-size: var(--medium);
-	font-weight: var(--light);
+	font-weight: var(--light-weight);
 	line-height: var(--normal-line);
 	letter-spacing: var(--normal-letters);
 	word-spacing: var(--normal-words);
@@ -39,8 +39,8 @@
 		transform: rotate(35deg) translateY(-50%) translate(-16px);
 		transform-origin: top left;
 		opacity:
-			var(--is-light, var(--low-opacity))
-			var(--is-dark, var(--lowest-opacity));
+			var(--light, var(--low-opacity))
+			var(--dark, var(--lower-opacity));
 		@media not (prefers-reduced-motion) {
 			animation-name: fade-in-gradient;
 			animation-duration: var(--slow-time);
@@ -63,7 +63,7 @@
 		position: absolute;
 		z-index: var(--z-bottom);
 		inset: 0;
-		background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-color) 0);
+		background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--secondary-body) 0);
 		animation-duration: var(--slow-time);
 		animation-timing-function: var(--ease-out);
 		animation-fill-mode: both;

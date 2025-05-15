@@ -4,11 +4,15 @@
 
 :root.semantic {
 	scroll-behavior: smooth;
-	background-color: var(--background-color);
-	color: var(--high-contrast-color);
+	background-color: var(--primary-body);
+	color: var(--primary-text);
 }
 
 .semantic {
+	--primary-body: var(--light, oklch(0.95 0.02 11)) var(--dark, oklch(0.2 0.04 230));
+	--secondary-body: var(--light, oklch(0.90 0.02 11)) var(--dark, oklch(0.25 0.04 230));
+	--tertiary-body: var(--light, oklch(0.9 0.02 11)) var(--dark, oklch(0.3 0.04 230));
+
 	--body-family: "Inter", sans-serif;
 	--mono-family: "Ubuntu Mono", monospace;
 	--display-family: "Ubuntu", sans-serif;
