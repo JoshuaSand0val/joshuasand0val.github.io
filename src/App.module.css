@@ -23,7 +23,7 @@
 		z-index: var(--z-bottom);
 		inset: 0;
 		display: block;
-		inline-size: min(100vi, var(--large-container));
+		inline-size: min(100vi, var(--larger-container));
 		block-size: var(--medium-container);
 		background-image: linear-gradient(
 			#5BCEFA 0% 20%,
