@@ -45,18 +45,18 @@
 	font-size: var(--2x-large);
 	font-weight: var(--regular-weight);
 	box-shadow: var(--lightest-box-shadow);
-	border: 1px var(--border-style) var(--tertiary-color);
+	border: 1px var(--border-style) var(--dark-light-primary);
 	border-radius: var(--small-radius);
 	backdrop-filter: var(--light-blur);
 	background-image: none;
-	background-color: var(--primary-color);
+	background-color: var(--light-dark-primary);
 	color: inherit;
 	padding: var(--3x-small);
 	margin: 0;
 	cursor: pointer;
 	transition: scale var(--fast-time) var(--ease-out);
 	&:active {
-		background-color: var(--secondary-color);
+		background-color: var(--medium-primary);
 	}
 }
 
@@ -70,7 +70,7 @@
 	max-block-size: 80vb;
 	max-inline-size: min(100%, var(--smaller-container));
 	border-radius: var(--small-radius);
-	border: 1px var(--border-style) var(--secondary-color);
+	border: 1px var(--border-style) var(--medium-primary);
 	box-shadow: var(--lighter-box-shadow);
 	backdrop-filter: var(--medium-blur);
 	transition: all var(--fast-time) var(--ease-out);
@@ -88,8 +88,8 @@
 	display: block;
 	padding-block: var(--x-small);
 	padding-inline: var(--small);
-	background-color: var(--primary-color);
-	border-block-end: 1px var(--border-style) var(--tertiary-color);
+	background-color: var(--light-dark-primary);
+	border-block-end: 1px var(--border-style) var(--dark-light-primary);
 	line-height: var(--short-line);
 	text-decoration: none;
 	color: inherit;
@@ -100,10 +100,10 @@
 		transition: background-color var(--slow-time) var(--ease-out);
 	}
 	&:hover, &:active {
-		background-color: var(--secondary-color);
+		background-color: var(--medium-primary);
 	}
 	&:active {
-		background-color: var(--tertiary-color);
+		background-color: var(--dark-light-primary);
 	}
 }
 

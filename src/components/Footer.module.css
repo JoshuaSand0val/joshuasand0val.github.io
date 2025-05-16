@@ -9,7 +9,7 @@
 	padding-inline-start: max(var(--margin-size), var(--safe-left));
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
-	color: var(--light, var(--dark-gray)) var(--dark, var(--light-gray));
-	text-shadow: 0 0 1px var(--contrast-color);
+	color: var(--dark-light-gray);
+	text-shadow: 0 0 1px var(--dark-light-secondary);
 	text-align: end;
 }
