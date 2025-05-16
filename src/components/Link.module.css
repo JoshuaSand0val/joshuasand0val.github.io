@@ -1,12 +1,12 @@
 /* A link to another webpage styles. */
 
 .container {
-	text-shadow: 0 0 1px var(--dark-neutral);
-	color: var(--light-accent);
+	text-shadow: 0 0 1px var(--tertiary-text);
+	color: var(--primary-accent);
 	&:not(:hover, :focus) {
 		text-decoration: none;
 	}
 	&:active {
-		color: var(--medium-accent);
+		color: var(--secondary-accent);
 	}
 }

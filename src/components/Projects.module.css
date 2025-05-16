@@ -26,9 +26,9 @@
 	align-items: end;
 	box-shadow: var(--lightest-box-shadow);
 	border-radius: var(--smaller-radius);
-	border: 1px var(--border-style) var(--dark-light-primary);
-	background-color: var(--light-dark-primary);
-	color: var(--dark-light-secondary);
+	border: 1px var(--border-style) var(--tertiary-body);
+	background-color: var(--primary-body);
+	color: var(--primary-text);
 	padding: var(--small);
 	gap: var(--medium);
 	overflow: hidden;

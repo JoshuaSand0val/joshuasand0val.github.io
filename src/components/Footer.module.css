@@ -2,14 +2,14 @@
 
 .container {
 	display: block;
-	width: min(100%, var(--larger-container));
+	width: min(100%, var(--largest-container));
 	font-size: var(--small);
 	padding-block-start: var(--small);
 	padding-block-end: max(var(--medium), var(--safe-bottom));
 	padding-inline-start: max(var(--margin-size), var(--safe-left));
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
-	color: var(--dark-light-gray);
-	text-shadow: 0 0 1px var(--dark-light-neutral);
+	color: var(--primary-gray);
+	text-shadow: 0 0 1px var(--tertiary-text);
 	text-align: end;
 }
