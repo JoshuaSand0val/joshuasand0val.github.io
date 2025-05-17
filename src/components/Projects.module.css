@@ -26,7 +26,7 @@
 	align-items: end;
 	box-shadow: var(--lightest-box-shadow);
 	border-radius: var(--smaller-radius);
-	border: 1px var(--border-style) var(--tertiary-body);
+	border: 1px var(--border-style) var(--third-body);
 	background-color: var(--primary-body);
 	color: var(--primary-text);
 	padding: var(--small);

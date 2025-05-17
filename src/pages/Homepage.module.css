@@ -18,7 +18,7 @@
 	box-shadow: var(--lightest-box-shadow);
 	background-color: var(--primary-body);
 	border-radius: var(--smaller-radius);
-	border: 1px var(--border-style) var(--tertiary-body);
+	border: 1px var(--border-style) var(--third-body);
 	margin-block-start: var(--3x-small);
 	margin-block-end: var(--margin-size);
 	margin-inline-end: var(--margin-size);

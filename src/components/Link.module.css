@@ -1,7 +1,7 @@
 /* A link to another webpage styles. */
 
 .container {
-	text-shadow: 0 0 1px var(--tertiary-text);
+	text-shadow: var(--text-contrast-shadow);
 	color: var(--primary-accent);
 	&:not(:hover, :focus) {
 		text-decoration: none;
