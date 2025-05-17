@@ -10,6 +10,6 @@
 	padding-inline-end: max(var(--margin-size), var(--safe-right));
 	margin-inline: auto;
 	color: var(--primary-gray);
-	text-shadow: var(--text-contrast-shadow);
+	text-shadow: var(--text-stroke-shadow);
 	text-align: end;
 }

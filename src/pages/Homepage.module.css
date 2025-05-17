@@ -16,9 +16,9 @@
 		var(--watch, min(100%, var(--smallest-container)))
 		var(--phone-to-desktop, min(35%, var(--small-container)));
 	box-shadow: var(--lightest-box-shadow);
-	background-color: var(--primary-body);
+	background-color: var(--primary-body-color);
 	border-radius: var(--smaller-radius);
-	border: 1px var(--border-style) var(--third-body);
+	border: 1px var(--border-style) var(--third-body-color);
 	margin-block-start: var(--3x-small);
 	margin-block-end: var(--margin-size);
 	margin-inline-end: var(--margin-size);

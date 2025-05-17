@@ -4,16 +4,16 @@
 
 :root.semantic {
 	scroll-behavior: smooth;
-	background-color: var(--primary-body);
-	color: var(--primary-text);
+	background-color: var(--primary-body-color);
+	color: var(--primary-text-color);
 }
 
 .semantic {
-	--primary-body: var(--light, oklch(0.95 0.02 11)) var(--dark, oklch(0.2 0.04 230));
-	--secondary-body: var(--light, oklch(0.9 0.02 11)) var(--dark, oklch(0.25 0.04 230));
-	--third-body: var(--light, oklch(0.85 0.02 11)) var(--dark, oklch(0.3 0.04 230));
-	--fourth-body: var(--light, oklch(0.8 0.02 11)) var(--dark, oklch(0.35 0.04 230));
-	--fifth-body: var(--light, oklch(0.75 0.02 11)) var(--dark, oklch(0.4 0.04 230));
+	--primary-body-color: var(--light, oklch(0.95 0.02 11)) var(--dark, oklch(0.2 0.04 230));
+	--secondary-body-color: var(--light, oklch(0.9 0.02 11)) var(--dark, oklch(0.25 0.04 230));
+	--third-body-color: var(--light, oklch(0.85 0.02 11)) var(--dark, oklch(0.3 0.04 230));
+	--fourth-body-color: var(--light, oklch(0.8 0.02 11)) var(--dark, oklch(0.35 0.04 230));
+	--fifth-body-color: var(--light, oklch(0.75 0.02 11)) var(--dark, oklch(0.4 0.04 230));
 
 	--body-family: "Inter", sans-serif;
 	--mono-family: "Ubuntu Mono", monospace;
