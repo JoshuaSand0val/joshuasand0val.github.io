@@ -36,7 +36,7 @@
 		mask-mode: alpha;
 		mask-image: radial-gradient(black, transparent 75%);
 		mask-size: 100% 100%;
-		transform: rotate(35deg) translateY(-50%) translate(-16px);
+		transform: rotate(27deg) translateY(-50%) translate(-16px);
 		transform-origin: top left;
 		opacity:
 			var(--light, var(--low-opacity))

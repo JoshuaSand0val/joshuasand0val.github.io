@@ -6,16 +6,7 @@
 		var(--phone-to-desktop, sticky);
 	top: 0;
 	z-index: var(--z-sticky);
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	inline-size: min(100%, var(--largest-container));
-	gap: var(--medium);
-	padding-block-start: max(var(--medium), var(--safe-top));
-	padding-block-end: var(--3x-small);
-	padding-inline-start: max(var(--margin-size), var(--safe-left));
-	padding-inline-end: max(var(--margin-size), var(--safe-right));
-	margin-inline: auto;
+	display: block;
 	&::before {
 		position: absolute;
 		inset: 0;
@@ -26,6 +17,20 @@
 		mask-size: 100% 100%;
 		backdrop-filter: var(--light-blur);
 	}
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	inline-size: min(100%, var(--largest-container));
+	gap: var(--medium);
+	padding-block-start: max(var(--medium), var(--safe-top));
+	padding-block-end: var(--3x-small);
+	padding-inline-start: max(var(--margin-size), var(--safe-left));
+	padding-inline-end: max(var(--margin-size), var(--safe-right));
+	margin-inline: auto;
 }
 
 .title {
