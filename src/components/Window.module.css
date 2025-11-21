@@ -6,7 +6,7 @@
 	position: relative;
 	z-index: 0;
 	border-radius: var(--large-radius);
-	backdrop-filter: var(--lightest-blur);
+	backdrop-filter: var(--lighter-blur);
 	box-shadow: var(--lightest-box-shadow);
 	pointer-events: none;
 	overflow: visible;
