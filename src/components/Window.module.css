@@ -1,5 +1,8 @@
 .container, .wrapper, .content {
 	display: inline-block;
+	transition-property: backdrop-filter, background, color;
+	transition-duration: var(--normal-time);
+	transition-timing-function: var(--ease-out);
 }
 
 .container {
