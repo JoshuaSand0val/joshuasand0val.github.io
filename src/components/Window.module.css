@@ -1,0 +1,51 @@
+.container {
+	position: relative;
+	display: block;
+	border-radius: var(--large-radius);
+	backdrop-filter: var(--lightest-blur);
+	box-shadow: var(--lighter-box-shadow);
+	overflow: hidden;
+	@supports (color: oklch(from green l c h)) {
+		--hue: 200;
+		--background-color: oklch(from var(--accent-100) l c var(--hue) / var(--high-opacity));
+		--middleground-color: oklch(from var(--accent-200) l c var(--hue) / var(--high-opacity));
+		--foreground-color: oklch(from var(--accent-300) l c var(--hue) / var(--high-opacity));
+		--high-contrast-color: oklch(from var(--accent-800) l c var(--hue));
+		--medium-contast-color: oklch(from var(--accent-700) l c var(--hue));
+		--low-contast-color: oklch(from var(--accent-600) l c var(--hue));
+		@media (prefers-color-scheme: dark) {
+			--background-color: oklch(from var(--accent-900) l c var(--hue) / var(--high-opacity));
+			--middleground-color: oklch(from var(--accent-800) l c var(--hue) / var(--high-opacity));
+			--foreground-color: oklch(from var(--accent-700) l c var(--hue) / var(--high-opacity));
+			--high-contrast-color: oklch(from var(--accent-100) l c var(--hue));
+			--medium-contast-color: oklch(from var(--accent-200) l c var(--hue));
+			--low-contast-color: oklch(from var(--accent-300) l c var(--hue));
+		}
+	}
+}
+
+.wrapper {
+	display: block;
+	background-color: var(--background-color);
+	background-clip: border-box;
+	color: var(--high-contrast-color);
+	border: var(--4x-small) solid transparent;
+	border-radius: inherit;
+	padding: var(--margin-size);
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border: inherit;
+		border-radius: inherit;
+		background: border-box linear-gradient(45deg,
+			transparent,
+			var(--foreground-color),
+			transparent
+		);
+		mask:
+			linear-gradient(#000 0 0) padding-box,
+			linear-gradient(#000 0 0) border-box;
+		mask-composite: exclude;
+	}
+}
