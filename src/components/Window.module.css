@@ -4,6 +4,7 @@
 	border-radius: var(--large-radius);
 	backdrop-filter: var(--lightest-blur);
 	box-shadow: var(--lighter-box-shadow);
+	pointer-events: none;
 	overflow: hidden;
 	@supports (color: oklch(from green l c h)) {
 		--hue: 200;
@@ -48,4 +49,9 @@
 			linear-gradient(#000 0 0) border-box;
 		mask-composite: exclude;
 	}
+}
+
+.content {
+	display: block;
+	pointer-events: auto;
 }

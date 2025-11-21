@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import styles from "./Window.module.css";
 
 type props = {
@@ -6,13 +7,15 @@ type props = {
 
 /** Translucent, bordered container for content. */
 export default function Window({ children }: props) {
-	/** Randomly selected window hue. */
-	const windowHue: number = Math.floor(Math.random() * 360);
+	/** Degrees value of randomly selected window hue. */
+	const windowHue: number = useMemo(() => Math.floor(Math.random() * 360), []);
 
 	return (
 		<div className={styles.container} style={{"--hue": windowHue} as React.CSSProperties}>
 			<div className={styles.wrapper}>
-				{children}
+				<div className={styles.content}>
+					{children}
+				</div>
 			</div>
 		</div>
 	);
