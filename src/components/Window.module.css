@@ -17,7 +17,7 @@
 	--high-contrast-color: oklch(0.25 0.1 var(--hue));
 	--medium-contrast-color: oklch(0.3 0.1 var(--hue));
 	--low-contrast-color: oklch(0.35 0.1 var(--hue));
-	@media (prefers-color-scheme: dark) {
+	&.dark {
 		backdrop-filter: var(--lighter-blur) var(--low-brightness);
 		--background-color: oklch(0.3 0.1 var(--hue) / var(--medium-opacity));
 		--middleground-color: oklch(0.4 0.1 var(--hue) / var(--medium-opacity));
