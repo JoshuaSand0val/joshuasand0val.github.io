@@ -5,7 +5,7 @@
 .container {
 	position: relative;
 	border-radius: var(--large-radius);
-	backdrop-filter: var(--lightest-blur);
+	backdrop-filter: var(--lighter-blur);
 	box-shadow: var(--lighter-box-shadow);
 	pointer-events: none;
 	overflow: visible;
