@@ -5,22 +5,22 @@
 .container {
 	position: relative;
 	border-radius: var(--large-radius);
-	backdrop-filter: var(--lighter-blur);
-	box-shadow: var(--lighter-box-shadow);
+	backdrop-filter: var(--light-blur);
+	box-shadow: var(--lightest-box-shadow);
 	pointer-events: none;
 	overflow: visible;
 	@supports (color: oklch(from green l c h)) {
 		--hue: 200;
-		--background-color: oklch(from var(--accent-100) l c var(--hue) / var(--high-opacity));
-		--middleground-color: oklch(from var(--accent-200) l c var(--hue) / var(--high-opacity));
-		--foreground-color: oklch(from var(--accent-300) l c var(--hue) / var(--high-opacity));
+		--background-color: oklch(from var(--accent-100) l c var(--hue) / var(--medium-opacity));
+		--middleground-color: oklch(from var(--accent-200) l c var(--hue) / var(--medium-opacity));
+		--foreground-color: oklch(from var(--accent-300) l c var(--hue) / var(--medium-opacity));
 		--high-contrast-color: oklch(from var(--accent-800) l c var(--hue));
 		--medium-contrast-color: oklch(from var(--accent-700) l c var(--hue));
 		--low-contrast-color: oklch(from var(--accent-600) l c var(--hue));
 		@media (prefers-color-scheme: dark) {
-			--background-color: oklch(from var(--accent-900) l c var(--hue) / var(--high-opacity));
-			--middleground-color: oklch(from var(--accent-800) l c var(--hue) / var(--high-opacity));
-			--foreground-color: oklch(from var(--accent-700) l c var(--hue) / var(--high-opacity));
+			--background-color: oklch(from var(--accent-800) l c var(--hue) / var(--medium-opacity));
+			--middleground-color: oklch(from var(--accent-700) l c var(--hue) / var(--medium-opacity));
+			--foreground-color: oklch(from var(--accent-600) l c var(--hue) / var(--medium-opacity));
 			--high-contrast-color: oklch(from var(--accent-100) l c var(--hue));
 			--medium-contrast-color: oklch(from var(--accent-200) l c var(--hue));
 			--low-contrast-color: oklch(from var(--accent-300) l c var(--hue));
@@ -40,6 +40,7 @@
 		inset: 0;
 		border: inherit;
 		border-radius: inherit;
+		backdrop-filter: var(--heaviest-blur);
 		background: border-box linear-gradient(45deg,
 			transparent,
 			var(--foreground-color),
