@@ -1,6 +1,9 @@
+.container, .wrapper, .content {
+	display: inline-block;
+}
+
 .container {
 	position: relative;
-	display: block;
 	border-radius: var(--large-radius);
 	backdrop-filter: var(--lightest-blur);
 	box-shadow: var(--lighter-box-shadow);
@@ -26,13 +29,11 @@
 }
 
 .wrapper {
-	display: block;
 	background-color: var(--background-color);
 	background-clip: border-box;
 	color: var(--high-contrast-color);
 	border: var(--4x-small) solid transparent;
 	border-radius: inherit;
-	padding: var(--margin-size);
 	&::before {
 		content: "";
 		position: absolute;
@@ -52,6 +53,5 @@
 }
 
 .content {
-	display: block;
 	pointer-events: auto;
 }
