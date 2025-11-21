@@ -15,15 +15,15 @@
 		--middleground-color: oklch(from var(--accent-200) l c var(--hue) / var(--high-opacity));
 		--foreground-color: oklch(from var(--accent-300) l c var(--hue) / var(--high-opacity));
 		--high-contrast-color: oklch(from var(--accent-800) l c var(--hue));
-		--medium-contast-color: oklch(from var(--accent-700) l c var(--hue));
-		--low-contast-color: oklch(from var(--accent-600) l c var(--hue));
+		--medium-contrast-color: oklch(from var(--accent-700) l c var(--hue));
+		--low-contrast-color: oklch(from var(--accent-600) l c var(--hue));
 		@media (prefers-color-scheme: dark) {
 			--background-color: oklch(from var(--accent-900) l c var(--hue) / var(--high-opacity));
 			--middleground-color: oklch(from var(--accent-800) l c var(--hue) / var(--high-opacity));
 			--foreground-color: oklch(from var(--accent-700) l c var(--hue) / var(--high-opacity));
 			--high-contrast-color: oklch(from var(--accent-100) l c var(--hue));
-			--medium-contast-color: oklch(from var(--accent-200) l c var(--hue));
-			--low-contast-color: oklch(from var(--accent-300) l c var(--hue));
+			--medium-contrast-color: oklch(from var(--accent-200) l c var(--hue));
+			--low-contrast-color: oklch(from var(--accent-300) l c var(--hue));
 		}
 	}
 }
