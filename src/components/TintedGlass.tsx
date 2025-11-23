@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import styles from "./TintedGlass.module.css";
 
 /** Tinted Glass component props. */
@@ -12,14 +11,11 @@ type props = {
 };
 
 /** Translucent colored container for components. */
-export default function TintedGlass({ className = "", children, hue }: props) {
-	/** Degrees value of (randomly) selected Tinted Glass hue. */
-	const hueValue: number = useMemo(() => hue ?? Math.floor(Math.random() * 360), []);
-
+export default function TintedGlass({ className = "", children, hue = 200 }: props) {
 	return (
 		<article
 			className={`${styles.container} ${className}`}
-			style={{ "--tinted-glass-hue": hueValue } as React.CSSProperties}>
+			style={{ "--tinted-glass-hue": hue } as React.CSSProperties}>
 			<div className={styles.wrapper}>
 				<div className={styles.content}>
 					{children}
