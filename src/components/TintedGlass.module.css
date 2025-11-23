@@ -36,7 +36,7 @@
 	background-color: var(--background-color);
 	background-clip: border-box;
 	color: var(--high-contrast-color);
-	border: var(--4x-small) solid transparent;
+	border: var(--3x-small) solid transparent;
 	&::before {
 		content: "";
 		position: absolute;
@@ -59,5 +59,5 @@
 
 .content {
 	pointer-events: auto;
-	margin: calc(-1 * var(--4x-small));
+	margin: calc(-1 * var(--3x-small));
 }
