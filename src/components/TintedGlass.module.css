@@ -1,6 +1,6 @@
 /* Styles for Tinted Glass component. */
 
-.container, .wrapper, .content {
+:where(.container, .wrapper, .content) {
 	display: inline-block;
 	border-radius: inherit;
 	transition-property: backdrop-filter, background, color;
@@ -8,7 +8,7 @@
 	transition-timing-function: var(--ease-out);
 }
 
-.container {
+:where(.container) {
 	position: relative;
 	z-index: 0;
 	backdrop-filter: var(--lightest-blur) var(--high-brightness);
@@ -32,7 +32,7 @@
 	}
 }
 
-.wrapper {
+:where(.wrapper) {
 	background-color: var(--background-color);
 	background-clip: border-box;
 	color: var(--high-contrast-color);
@@ -57,7 +57,7 @@
 	}
 }
 
-.content {
+:where(.content) {
 	pointer-events: auto;
 	margin: calc(-1 * var(--3x-small));
 }
