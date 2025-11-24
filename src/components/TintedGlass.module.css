@@ -17,18 +17,18 @@
 	backdrop-filter: var(--lightest-blur) var(--high-brightness);
 	box-shadow: var(--lightest-box-shadow);
 	pointer-events: none;
-	overflow: visible;
-	--background-color: oklch(0.9 0.05 var(--tinted-glass-hue) / var(--medium-opacity));
-	--middleground-color: oklch(0.8 0.05 var(--tinted-glass-hue) / var(--medium-opacity));
-	--foreground-color: oklch(0.7 0.05 var(--tinted-glass-hue) / var(--medium-opacity));
+	overflow: hidden;
+	--background-color: oklch(0.9 0.05 var(--tinted-glass-hue) / var(--high-opacity));
+	--middleground-color: oklch(0.8 0.05 var(--tinted-glass-hue) / var(--high-opacity));
+	--foreground-color: oklch(0.7 0.05 var(--tinted-glass-hue) / var(--high-opacity));
 	--high-contrast-color: oklch(0.25 0.05 var(--tinted-glass-hue) / var(--highest-opacity));
 	--medium-contrast-color: oklch(0.3 0.05 var(--tinted-glass-hue) / var(--highest-opacity));
 	--low-contrast-color: oklch(0.35 0.05 var(--tinted-glass-hue) / var(--highest-opacity));
 	@media (prefers-color-scheme: dark) {
 		backdrop-filter: var(--lightest-blur) var(--low-brightness);
-		--background-color: oklch(0.3 0.05 var(--tinted-glass-hue) / var(--medium-opacity));
-		--middleground-color: oklch(0.4 0.05 var(--tinted-glass-hue) / var(--medium-opacity));
-		--foreground-color: oklch(0.5 0.05 var(--tinted-glass-hue) / var(--medium-opacity));
+		--background-color: oklch(0.3 0.05 var(--tinted-glass-hue) / var(--high-opacity));
+		--middleground-color: oklch(0.4 0.05 var(--tinted-glass-hue) / var(--high-opacity));
+		--foreground-color: oklch(0.5 0.05 var(--tinted-glass-hue) / var(--high-opacity));
 		--high-contrast-color: oklch(0.95 0.05 var(--tinted-glass-hue) / var(--highest-opacity));
 		--medium-contrast-color: oklch(0.9 0.05 var(--tinted-glass-hue) / var(--highest-opacity));
 		--low-contrast-color: oklch(0.85 0.05 var(--tinted-glass-hue) / var(--highest-opacity));
@@ -40,7 +40,7 @@
 	inline-size: 100%;
 	block-size: 100%;
 	background-color: var(--background-color);
-	background-clip: border-box;
+	background-clip: padding-box;
 	color: var(--high-contrast-color);
 	border: var(--3x-small) solid transparent;
 	&::before {
