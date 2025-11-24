@@ -1,5 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Gantari:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 @import "semantic-props";
 @import "sanitize.css";
+
+@custom-media --watch (max-width: 20rem);
+@custom-media --phone (min-width: 20rem);
+@custom-media --tablet (min-width: 40rem);
+@custom-media --laptop (min-width: 64rem);
+@custom-media --desktop (min-width: 80rem);
+
+@custom-media --light (prefers-color-scheme: light);
+@custom-media --dark (prefers-color-scheme: dark);
+
+:root {
+	--body-family: "Gantari", sans-serif;
+	--display-family: "Merriweather", serif;
+	--mono-family: "Ubuntu Sans Mono", monospace;
+	--accent-family: "Cookie", cursive;
+}
 
 #root {
 	position: relative;
