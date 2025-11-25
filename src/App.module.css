@@ -12,17 +12,17 @@
 	letter-spacing: var(--normal-letter);
 	background-color: var(--background-color);
 	background-image: repeating-linear-gradient(3deg,
-		var(--pink-50) 0 var(--4x-small),
-		var(--background-color)  var(--4x-small) var(--2x-small)
+		var(--background-color) 0 var(--4x-small),
+		var(--white) var(--4x-small) var(--x-small)
 	);
 	background-size: 100% 100%;
-	@media (prefers-color-scheme: dark) {
+	color: var(--high-contrast-color);
+	@media (--dark) {
 		background-image: repeating-linear-gradient(3deg,
-			var(--blue-900) 0 var(--4x-small),
-			var(--background-color)  var(--4x-small) var(--2x-small)
+			var(--background-color) 0 var(--4x-small),
+			var(--black) var(--4x-small) var(--x-small)
 		);
 	}
-	color: var(--high-contrast-color);
 }
 
 .content {

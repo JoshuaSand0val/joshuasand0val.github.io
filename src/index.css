@@ -13,9 +13,9 @@
 @custom-media --dark (prefers-color-scheme: dark);
 
 :root {
-	--background-color: var(--white);
+	--background-color: var(--pink-50);
 	--middleground-color: var(--pink-100);
-	--foreground-color: var(--pink-200);
+	--foreground-color: var(--pink-150);
 
 	--body-family: "Gantari", sans-serif;
 	--display-family: "Merriweather", serif;
@@ -24,12 +24,14 @@
 
 	scroll-behavior: smooth;
 	color-scheme: light dark;
-	background-color: var(--background-color);
+	background-color: var(--white);
 
 	@media (--dark) {
-		--background-color: var(--gray-800);
-		--middleground-color: var(--blue-750);
-		--foreground-color: var(--blue-700);
+		--background-color: var(--pink-800);
+		--middleground-color: var(--pink-750);
+		--foreground-color: var(--pink-700);
+
+		background-color: var(--black);
 	}
 }
 
