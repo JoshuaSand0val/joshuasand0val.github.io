@@ -11,12 +11,12 @@ type props = {
 /** Translucent colored container for components. */
 export default function TintedGlass({ children, hue = 200 }: props) {
 	return (
-		<article
+		<div
 			className={styles.container}
 			style={{ "--tinted-glass-hue": hue } as React.CSSProperties}>
 			<div className={styles.content}>
 				{children}
 			</div>
-		</article>
+		</div>
 	);
 }
