@@ -8,7 +8,7 @@
 	color: var(--high-contrast-color);
 	border: var(--4x-small) solid transparent;
 	border-radius: var(--large-radius);
-	overflow: hidden;
+	overflow: visible;
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
@@ -24,13 +24,14 @@
 		background-color: var(--background-color);
 		box-shadow: var(--lightest-box-shadow);
 		opacity: var(--medium-opacity);
+		filter: var(--lightest-blur);
 	}
 	&::after {
 		border: inherit;
 		background: border-box linear-gradient(45deg,
-			transparent 0% 25%,
-			var(--foreground-color) 50%,
-			transparent 75% 100%
+			transparent,
+			var(--foreground-color),
+			transparent
 		);
 		mask:
 			linear-gradient(#000 0 0) padding-box,
