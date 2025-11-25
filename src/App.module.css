@@ -27,7 +27,7 @@
 .content {
 	display: block;
 	flex: 1 0 auto;
-	backdrop-filter: var(--high-brightness);
+	backdrop-filter: var(--higher-brightness);
 	background-color: oklch(0.3 0 0 / var(--low-opacity));
 	@media (--dark) {
 		background-color: oklch(0 0 0 / var(--high-opacity));
