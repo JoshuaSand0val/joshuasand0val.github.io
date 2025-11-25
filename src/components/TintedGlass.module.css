@@ -1,18 +1,16 @@
 /* Styles for Tinted Glass component. */
 
 .container {
+	--tinted-glass-hue: 240;
 	--background-color: oklch(0.9 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	--middleground-color: oklch(0.8 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	--foreground-color: oklch(0.7 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	--high-contrast-color: oklch(0.1 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	--medium-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	--low-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
+	position: relative;
 	display: block;
-	background-color: var(--background-color);
-	background-clip: padding-box;
-	box-shadow:
-		inset var(--4x-small) var(--4x-small) 1px oklch(1 0 0 / var(--low-opacity)),
-		var(--lightest-box-shadow);
+	background-color: transparent;
 	color: var(--high-contrast-color);
 	border: var(--4x-small) solid transparent;
 	border-radius: var(--large-radius);
@@ -21,10 +19,19 @@
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	&::before {
+	&::before, &::after {
 		content: "";
 		position: absolute;
 		z-index: -1;
+	}
+	&::before {
+		inset: 0;
+		background-color: var(--background-color);
+		box-shadow:
+			inset var(--4x-small) var(--4x-small) 1px oklch(1 0 0 / var(--low-opacity)),
+			var(--lightest-box-shadow);
+	}
+	&::after {
 		inset: calc(-1 * var(--4x-small));
 		border: inherit;
 		border-radius: inherit;
@@ -38,5 +45,9 @@
 			linear-gradient(#000 0 0) padding-box,
 			linear-gradient(#000 0 0) border-box;
 		mask-composite: exclude;
+	}
+	& ~ &::before,
+	& &::before {
+		filter: hue-rotate(90deg);
 	}
 }
