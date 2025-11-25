@@ -18,13 +18,12 @@
 	box-shadow: var(--lightest-box-shadow);
 	pointer-events: none;
 	overflow: hidden;
-	--background-color: oklch(0.3 0 0 / var(--lowest-opacity));
-	--middleground-color: oklch(0.25 0 0 / var(--lowest-opacity));
-	--foreground-color: oklch(0.2 0 0 / var(--lowest-opacity));
-	--high-contrast-color: oklch(1 0 0 / var(--highest-opacity));
-	--medium-contrast-color: oklch(0.95 0 0 / var(--highest-opacity));
-	--low-contrast-color: oklch(0.9 0 0 / var(--highest-opacity));
-	--tinted-glass-color: oklch(0.7 0.15 var(--tinted-glass-hue) / var(--high-opacity));
+	--background-color: oklch(1 0.2 var(--tinted-glass-hue) / var(--low-opacity));
+	--middleground-color: oklch(0.9 0.2 var(--tinted-glass-hue) / var(--medium-opacity));
+	--foreground-color: oklch(0.8 0.2 var(--tinted-glass-hue) / var(--high-opacity));
+	--high-contrast-color: oklch(0 0.1 var(--tinted-glass-hue) / var(--high-opacity));
+	--medium-contrast-color: oklch(0 0.1 var(--tinted-glass-hue) / var(--medium-opacity));
+	--low-contrast-color: oklch(0 0.1 var(--tinted-glass-hue) / var(--low-opacity));
 }
 
 :where(.wrapper) {
@@ -46,7 +45,7 @@
 		backdrop-filter: var(--heaviest-blur);
 		background: border-box linear-gradient(45deg,
 			transparent,
-			var(--low-contrast-color),
+			var(--foreground-color),
 			transparent
 		);
 		mask:
@@ -58,7 +57,6 @@
 
 :where(.content) {
 	display: block;
-	text-shadow: 0 0 1px oklch(0.3 0 0);
 	pointer-events: auto;
 	margin: calc(-1 * var(--4x-small));
 }
