@@ -16,20 +16,24 @@
 	line-height: var(--normal-line);
 	word-spacing: var(--normal-word);
 	letter-spacing: var(--normal-letter);
-	background-color: var(--background-color);
-	background-size: cover, 100% 100%;
-	background-position: center;
-	background-image: url("background-art.jpg");
-	background-size: cover;
 	color: var(--high-contrast-color);
+	&::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-bottom);
+		background-color: var(--background-color);
+		background-image: url("background-art.jpg");
+		background-size: cover;
+		background-position: center;
+		filter: var(--low-brightness);
+		@media (--dark) {
+			filter: var(--lowest-brightness);
+		}
+	}
 }
 
 .content {
 	display: block;
 	flex: 1 0 auto;
-	backdrop-filter: var(--higher-brightness);
-	background-color: oklch(0.3 0 0 / var(--low-opacity));
-	@media (--dark) {
-		background-color: oklch(0 0 0 / var(--high-opacity));
-	}
 }
