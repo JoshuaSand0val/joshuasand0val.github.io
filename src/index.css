@@ -17,19 +17,17 @@
 	--display-family: "Merriweather", serif;
 	--mono-family: "Ubuntu Sans Mono", monospace;
 	--accent-family: "Cookie", cursive;
+
+	scroll-behavior: smooth;
+	color-scheme: light dark;
+	background-color: var(--background-color);
 }
 
 #root {
 	position: relative;
 	display: block;
-	scroll-behavior: smooth;
-	color-scheme: light dark;
-	background-color: var(--background-color);
-	overflow-x: hidden;
-	overflow-y: auto;
-}
-
-#root {
 	min-block-size: 100vh;
 	min-block-size: 100dvb;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
