@@ -9,7 +9,6 @@
 	--low-contrast-color: oklch(0.4 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	position: relative;
 	pointer-events: none;
-	backdrop-filter: var(--lightest-blur);
 	background-color: var(--background-color);
 	background-clip: padding-box;
 	box-shadow:
@@ -26,10 +25,10 @@
 		content: "";
 		position: absolute;
 		z-index: -1;
-		inset: 0;
+		inset: calc(-1 * var(--4x-small));
 		border: inherit;
 		border-radius: inherit;
-		backdrop-filter: var(--heaviest-blur);
+		backdrop-filter: var(--lightest-blur);
 		background: border-box linear-gradient(45deg,
 			transparent,
 			var(--foreground-color),
@@ -45,5 +44,4 @@
 .content {
 	display: block;
 	pointer-events: auto;
-	margin: calc(-1 * var(--4x-small));
 }
