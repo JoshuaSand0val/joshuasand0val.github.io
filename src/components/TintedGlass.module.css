@@ -46,8 +46,8 @@
 			linear-gradient(#000 0 0) border-box;
 		mask-composite: exclude;
 	}
-	& ~ &::before,
 	& &::before {
-		filter: hue-rotate(90deg);
+		background: none;
+		backdrop-filter: hue-rotate(90deg);
 	}
 }
