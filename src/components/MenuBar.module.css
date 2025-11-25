@@ -6,7 +6,7 @@
 	flex-flow: row nowrap;
 	justify-content: start;
 	padding-inline: var(--margin-size);
-	padding-block-start: var(--small);
+	padding-block-start: var(--3x-small);
 	padding-block-end: max(var(--small), var(--safe-bottom));
 	scroll-snap-type: inline mandatory;
 	overflow: auto;
