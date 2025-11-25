@@ -1,7 +1,7 @@
 .container {
-	--background-color: var(--violet-600);
-	--middleground-color: var(--violet-650);
-	--foreground-color: var(--violet-700);
+	--background-color: var(--pink-800);
+	--middleground-color: var(--pink-750);
+	--foreground-color: var(--pink-700);
 	--high-contrast-color: var(--white);
 	--medium-contrast-color: var(--gray-100);
 	--low-contrast-color: var(--gray-200);
@@ -27,6 +27,7 @@
 .content {
 	display: block;
 	flex: 1 0 auto;
+	backdrop-filter: var(--high-brightness);
 	background-color: oklch(0.3 0 0 / var(--low-opacity));
 	@media (--dark) {
 		background-color: oklch(0 0 0 / var(--high-opacity));
