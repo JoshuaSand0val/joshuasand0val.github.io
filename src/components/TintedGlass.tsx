@@ -14,12 +14,10 @@ type props = {
 export default function TintedGlass({ className = "", children, hue = 200 }: props) {
 	return (
 		<article
-			className={`${styles.container} ${className}`}
+			className={styles.container}
 			style={{ "--tinted-glass-hue": hue } as React.CSSProperties}>
-			<div className={styles.wrapper}>
-				<div className={styles.content}>
-					{children}
-				</div>
+			<div className={styles.content}>
+				{children}
 			</div>
 		</article>
 	);
