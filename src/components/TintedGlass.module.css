@@ -8,7 +8,7 @@
 	--medium-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	--low-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	position: relative;
-	display: inline-block;
+	display: block;
 	vertical-align: middle;
 	pointer-events: none;
 	background-color: var(--background-color);
@@ -20,6 +20,7 @@
 	border: var(--4x-small) solid transparent;
 	border-radius: var(--large-radius);
 	overflow: hidden;
+	float: left;
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
