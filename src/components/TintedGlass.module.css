@@ -26,7 +26,7 @@
 		background-color: var(--background-color);
 		backdrop-filter: var(--lightest-blur);
 		box-shadow: var(--lightest-box-shadow);
-		opacity: var(--high-opacity);
+		opacity: var(--medium-opacity);
 	}
 	&::after {
 		border: inherit;
@@ -42,8 +42,5 @@
 	}
 	& & {
 		backdrop-filter: var(--lightest-blur) hue-rotate(90deg);
-		&::before {
-			background: none;
-		}
 	}
 }
