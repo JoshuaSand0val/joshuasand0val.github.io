@@ -24,6 +24,7 @@
 		content: "";
 		position: absolute;
 		z-index: -1;
+		border-radius: inherit;
 	}
 	&::before {
 		inset: 0;
@@ -35,7 +36,6 @@
 	&::after {
 		inset: calc(-1 * var(--4x-small));
 		border: inherit;
-		border-radius: inherit;
 		backdrop-filter: var(--lightest-blur);
 		background: border-box linear-gradient(45deg,
 			transparent,
