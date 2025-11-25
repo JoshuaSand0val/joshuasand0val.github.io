@@ -7,10 +7,7 @@
 	--high-contrast-color: oklch(0.1 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	--medium-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	--low-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
-	position: relative;
 	display: block;
-	vertical-align: middle;
-	pointer-events: none;
 	background-color: var(--background-color);
 	background-clip: padding-box;
 	box-shadow:
@@ -42,9 +39,4 @@
 			linear-gradient(#000 0 0) border-box;
 		mask-composite: exclude;
 	}
-}
-
-.content {
-	display: block;
-	pointer-events: auto;
 }
