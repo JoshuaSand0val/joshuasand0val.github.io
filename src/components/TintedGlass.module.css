@@ -12,7 +12,6 @@
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	backdrop-filter: var(--lightest-blur);
 	filter: var(--light-shadow);
 	&::before, &::after {
 		content: "";

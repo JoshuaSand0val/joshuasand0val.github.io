@@ -13,10 +13,6 @@
 @custom-media --dark (prefers-color-scheme: dark);
 
 :root {
-	--background-color: var(--pink-50);
-	--middleground-color: var(--pink-100);
-	--foreground-color: var(--pink-150);
-
 	--body-family: "Gantari", sans-serif;
 	--display-family: "Merriweather", serif;
 	--mono-family: "Ubuntu Sans Mono", monospace;
@@ -24,15 +20,7 @@
 
 	scroll-behavior: smooth;
 	color-scheme: light dark;
-	background-color: var(--white);
-
-	@media (--dark) {
-		--background-color: var(--pink-800);
-		--middleground-color: var(--pink-750);
-		--foreground-color: var(--pink-700);
-
-		background-color: var(--black);
-	}
+	background-color: var(--background-color);
 }
 
 #root {

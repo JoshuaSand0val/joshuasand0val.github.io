@@ -1,4 +1,10 @@
 .container {
+	--background-color: var(--pink-600);
+	--middleground-color: var(--pink-650);
+	--foreground-color: var(--pink-700);
+	--high-contrast-color: var(--white);
+	--medium-contrast-color: var(--gray-100);
+	--low-contrast-color: var(--gray-200);
 	position: absolute;
 	inset: 0;
 	display: flex;
@@ -11,23 +17,17 @@
 	word-spacing: var(--normal-word);
 	letter-spacing: var(--normal-letter);
 	background-color: var(--background-color);
-	background-image: repeating-linear-gradient(3deg,
-		var(--background-color) 0 var(--4x-small),
-		var(--white) var(--4x-small) var(--x-small)
-	);
-	background-size: 100% 100%;
+	background-size: cover, 100% 100%;
+	background-position: center;
+	background-image: url("background-art.jpg");
+	background-size: cover;
 	color: var(--high-contrast-color);
-	@media (--dark) {
-		background-image: repeating-linear-gradient(3deg,
-			var(--background-color) 0 var(--4x-small),
-			var(--black) var(--4x-small) var(--x-small)
-		);
-	}
 }
 
 .content {
 	display: block;
 	flex: 1 0 auto;
+	background-color: oklch(0.25 0 0 / var(--low-opacity));
 	@media (--dark) {
 		background-color: oklch(0 0 0 / var(--low-opacity));
 	}
