@@ -9,6 +9,7 @@
 	border: var(--4x-small) solid transparent;
 	border-radius: var(--large-radius);
 	overflow: visible;
+	float: left;
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
