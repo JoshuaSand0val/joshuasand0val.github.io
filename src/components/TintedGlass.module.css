@@ -14,16 +14,16 @@
 	position: relative;
 	z-index: 0;
 	display: inline-block;
-	backdrop-filter: var(--lightest-blur) var(--highest-brightness);
+	backdrop-filter: var(--lightest-blur);
 	box-shadow: var(--lightest-box-shadow);
 	pointer-events: none;
 	overflow: hidden;
-	--background-color: oklch(1 0.2 var(--tinted-glass-hue) / var(--low-opacity));
-	--middleground-color: oklch(1 0.2 var(--tinted-glass-hue) / var(--medium-opacity));
-	--foreground-color: oklch(1 0.2 var(--tinted-glass-hue) / var(--high-opacity));
+	--background-color: oklch(0.9 0.1 var(--tinted-glass-hue) / var(--high-opacity));
+	--middleground-color: oklch(0.8 0.1 var(--tinted-glass-hue) / var(--high-opacity));
+	--foreground-color: oklch(0.7 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	--high-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--high-opacity));
-	--medium-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--medium-opacity));
-	--low-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--low-opacity));
+	--medium-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--high-opacity));
+	--low-contrast-color: oklch(0.4 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 }
 
 :where(.wrapper) {
@@ -31,13 +31,8 @@
 	inline-size: 100%;
 	block-size: 100%;
 	background-color: var(--background-color);
-	background-image: linear-gradient(45deg,
-		var(--background-color),
-		var(--middleground-color),
-		var(--foreground-color)
-	);
 	background-clip: padding-box;
-	box-shadow: var(--lightest-inset-shadow);
+	box-shadow: inset var(--4x-small) var(--4x-small) 1px oklch(1 0 0 / var(--low-opacity));
 	color: var(--high-contrast-color);
 	border: var(--4x-small) solid transparent;
 	&::before {
