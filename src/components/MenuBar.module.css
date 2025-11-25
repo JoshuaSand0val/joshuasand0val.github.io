@@ -6,7 +6,8 @@
 	flex-flow: row nowrap;
 	justify-content: center;
 	padding-inline: var(--margin-size);
-	padding-block: var(--small);
+	padding-block-start: var(--small);
+	padding-block-end: max(var(--small), var(--safe-bottom));
 	overflow: hidden;
 	--background-color: var(--pink-50);
 	--middleground-color: var(--pink-100);
