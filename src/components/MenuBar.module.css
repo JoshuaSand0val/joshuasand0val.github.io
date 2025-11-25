@@ -4,17 +4,17 @@
 	inset: auto 0 0;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: center;
+	justify-content: start;
 	padding-inline: var(--margin-size);
 	padding-block-start: var(--small);
 	padding-block-end: max(var(--small), var(--safe-bottom));
-	overflow: hidden;
+	scroll-snap-type: inline mandatory;
+	overflow: auto;
 }
 
 .wrapper {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
+	display: block;
+	margin-inline: auto;
 }
 
 .nav {
@@ -26,8 +26,6 @@
 	padding-inline: var(--large);
 	padding-block: var(--x-small);
 	order: -1;
-	scroll-snap-type: inline mandatory;
-	overflow: auto;
 }
 
 .link {
