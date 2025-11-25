@@ -4,9 +4,9 @@
 	--background-color: oklch(0.9 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	--middleground-color: oklch(0.8 0.1 var(--tinted-glass-hue) / var(--high-opacity));
 	--foreground-color: oklch(0.7 0.1 var(--tinted-glass-hue) / var(--high-opacity));
-	--high-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--high-opacity));
-	--medium-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--high-opacity));
-	--low-contrast-color: oklch(0.4 0.1 var(--tinted-glass-hue) / var(--high-opacity));
+	--high-contrast-color: oklch(0.1 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
+	--medium-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
+	--low-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	position: relative;
 	pointer-events: none;
 	background-color: var(--background-color);
