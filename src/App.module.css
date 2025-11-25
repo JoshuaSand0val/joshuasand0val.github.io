@@ -11,9 +11,17 @@
 	word-spacing: var(--normal-word);
 	letter-spacing: var(--normal-letter);
 	background-color: var(--background-color);
-	background-size: cover;
-	background-image: url("background-art.jpg");
-	background-position: center;
+	background-image: repeating-linear-gradient(3deg,
+		var(--pink-50) 0 var(--4x-small),
+		var(--background-color)  var(--4x-small) var(--2x-small)
+	);
+	background-size: 100% 100%;
+	@media (prefers-color-scheme: dark) {
+		background-image: repeating-linear-gradient(3deg,
+			var(--blue-900) 0 var(--4x-small),
+			var(--background-color)  var(--4x-small) var(--2x-small)
+		);
+	}
 	color: var(--high-contrast-color);
 }
 

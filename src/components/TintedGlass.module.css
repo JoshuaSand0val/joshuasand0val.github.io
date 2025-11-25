@@ -9,7 +9,6 @@
 	border: var(--4x-small) solid transparent;
 	border-radius: var(--large-radius);
 	overflow: hidden;
-	float: left;
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
@@ -24,7 +23,6 @@
 	}
 	&::before {
 		background-color: var(--background-color);
-		backdrop-filter: var(--lightest-blur);
 		box-shadow: var(--lightest-box-shadow);
 		opacity: var(--medium-opacity);
 	}
@@ -39,8 +37,5 @@
 			linear-gradient(#000 0 0) padding-box,
 			linear-gradient(#000 0 0) border-box;
 		mask-composite: exclude;
-	}
-	& & {
-		backdrop-filter: var(--lightest-blur) hue-rotate(90deg);
 	}
 }

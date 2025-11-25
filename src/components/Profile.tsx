@@ -1,0 +1,49 @@
+import { styled } from "@linaria/react";
+import TintedGlass from "./TintedGlass";
+
+/** Types for Profile component props. */
+type props = {
+	/** Profile image file path. */
+	src: string,
+	/** Profile image descriptive text. */
+	description: string
+};
+
+/** Container for a "profile picture" image. */
+export default function Profile({ src, description }: props) {
+	const Container = styled.div`
+		display: block;
+		inline-size: var(--smaller-container);
+		max-inline-size: 100%;
+		transform: rotate(-1deg);
+		margin-inline-start: var(--margin-size);
+		margin-block-end: var(--margin-size);
+		float: right;
+		transition: inline-size var(--fast-time) var(--ease-out);
+		@media (--watch) {
+			inline-size: 100%;
+		}
+		@media (--tablet) {
+			inline-size: var(--small-container);
+		}
+		@media (--laptop) {
+			inline-size: var(--medium-container);
+		}
+	`;
+
+	const Image = styled.img`
+		display: block;
+		inline-size: 100%;
+		block-size: 100%;
+		object-fit: cover;
+		object-position: top center;
+	`;
+
+	return (
+		<Container>
+			<TintedGlass>
+				<Image src={src} alt={description} />
+			</TintedGlass>
+		</Container>
+	);
+}
