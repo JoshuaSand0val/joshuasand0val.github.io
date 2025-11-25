@@ -5,22 +5,27 @@
 	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: stretch;
-	background-image: linear-gradient(45deg,
-		#5bcefa,
-		#f5a9b8,
-		#fff,
-		#f5a9b8,
-		#5bcefa
-	);
-	background-size: 100% 100%;
-}
-
-.content {
-	display: block;
 	font-family: var(--body-family);
 	font-weight: var(--regular-weight);
 	line-height: var(--normal-line);
 	word-spacing: var(--normal-word);
 	letter-spacing: var(--normal-letter);
+	background-color: var(--background-color);
+	color: var(--high-contrast-color);
+	background-image: repeating-linear-gradient(3deg,
+		var(--pink-50) 0 var(--4x-small),
+		var(--background-color)  var(--4x-small) var(--2x-small)
+	);
+	background-size: 100% 100%;
+	@media (prefers-color-scheme: dark) {
+		background-image: repeating-linear-gradient(3deg,
+			var(--blue-900) 0 var(--4x-small),
+			var(--background-color)  var(--4x-small) var(--2x-small)
+		);
+	}
+}
+
+.content {
+	display: block;
 	flex: 1 0 auto;
 }
