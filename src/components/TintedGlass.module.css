@@ -9,6 +9,7 @@
 	--medium-contrast-color: oklch(0.2 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	--low-contrast-color: oklch(0.3 0.1 var(--tinted-glass-hue) / var(--highest-opacity));
 	position: relative;
+	z-index: 0;
 	display: block;
 	background-color: transparent;
 	color: var(--high-contrast-color);
