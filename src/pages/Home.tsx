@@ -4,7 +4,9 @@ import Profile from "../components/Profile";
 export default function Home() {
 	const Container = styled.article`
 		display: block;
-		padding: var(--margin-size);
+		padding-block: var(--margin-size);
+		padding-inline-start: max(var(--safe-left), var(--margin-size));
+		padding-inline-end: max(var(--safe-right), var(--margin-size));
 	`;
 
 	const Wrapper = styled.div`
