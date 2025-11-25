@@ -9,9 +9,9 @@
 	padding-block-start: var(--small);
 	padding-block-end: max(var(--small), var(--safe-bottom));
 	overflow: hidden;
-	--background-color: var(--pink-50);
-	--middleground-color: var(--pink-100);
-	--foreground-color: var(--pink-150);
+	--background-color: var(--pink-100);
+	--middleground-color: var(--pink-150);
+	--foreground-color: var(--pink-200);
 	@media (--dark) {
 		--background-color: var(--blue-700);
 		--middleground-color: var(--blue-750);
