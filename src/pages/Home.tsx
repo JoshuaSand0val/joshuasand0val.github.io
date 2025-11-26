@@ -30,7 +30,7 @@ export default function Home() {
 		@media (--phone) {
 			font-size: var(--4x-large);
 		}
-		@media (--laptop) {
+		@media (--tablet) {
 			font-size: var(--5x-large);
 		}
 		@media (--desktop) {
