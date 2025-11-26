@@ -28,9 +28,6 @@ export default function Home() {
 		margin-block: var(--large) var(--3x-small);
 		transition: font-size var(--fast-time) var(--ease-out);
 		@media (--phone) {
-			font-size: var(--3x-large);
-		}
-		@media (--tablet) {
 			font-size: var(--4x-large);
 		}
 		@media (--laptop) {
@@ -74,7 +71,7 @@ export default function Home() {
 			<Wrapper>
 				<Header>
 					<Profile src="/profile.png" description="Myself, Jess!" />
-					<Title>Hey, I'm Jess Sandoval.</Title>
+					<Title>Hey, Jess Sandoval.</Title>
 					<Subtitle>User-Interface Designer &amp; Developer.</Subtitle>
 				</Header>
 				<Summary>Hi there! My name is Jess. I'm a web developer that designs webpages in a fashionable and accessible package.</Summary>
