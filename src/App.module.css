@@ -26,7 +26,7 @@
 		background-image: url("background-art.jpg");
 		background-size: cover;
 		background-position: center;
-		filter: var(--low-brightness);
+		filter: var(--lower-brightness);
 		@media (--dark) {
 			filter: var(--lowest-brightness);
 		}
