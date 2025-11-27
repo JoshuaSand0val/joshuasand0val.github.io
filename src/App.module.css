@@ -18,15 +18,16 @@
 	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: stretch;
+	inline-size: 100%;
 	min-block-size: 100%;
 	font-family: var(--body-family);
 	font-weight: var(--regular-weight);
 	line-height: var(--normal-line);
 	word-spacing: var(--normal-word);
 	letter-spacing: var(--normal-letter);
-	background-image: repeating-linear-gradient(3deg,
-		var(--middleground-color) 0 var(--4x-small),
-		var(--background-color)  var(--4x-small) var(--2x-small)
+	background-image: repeating-linear-gradient(7deg,
+		var(--middleground-color),
+		var(--background-color) var(--2x-small)
 	);
 	color: var(--high-contrast-color);
 	& > * {
