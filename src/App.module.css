@@ -14,11 +14,11 @@
 		--low-contrast-color: var(--gray-200);
 	}
 	position: absolute;
-	inset: 0;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: stretch;
+	min-block-size: 100%;
 	font-family: var(--body-family);
 	font-weight: var(--regular-weight);
 	line-height: var(--normal-line);
