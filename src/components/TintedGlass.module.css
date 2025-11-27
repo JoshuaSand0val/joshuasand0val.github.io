@@ -7,14 +7,14 @@
 	background-color: transparent;
 	color: var(--high-contrast-color);
 	border: var(--4x-small) solid transparent;
-	border-radius: var(--large-radius);
-	overflow: visible;
+	border-radius: var(--medium-radius);
+	overflow: hidden;
 	float: left;
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
 	backdrop-filter: var(--lightest-blur);
-	filter: var(--light-shadow);
+	filter: var(--heavy-shadow);
 	&::before, &::after {
 		content: "";
 		position: absolute;
@@ -23,7 +23,7 @@
 		border-radius: inherit;
 	}
 	&::before {
-		background-color: var(--background-color);
+		background-color: var(--middleground-color);
 		box-shadow: var(--lightest-box-shadow);
 		opacity: var(--medium-opacity);
 	}

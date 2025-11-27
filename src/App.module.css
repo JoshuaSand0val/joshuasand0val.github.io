@@ -1,10 +1,18 @@
 .container {
-	--background-color: var(--pink-700);
-	--middleground-color: var(--pink-750);
-	--foreground-color: var(--pink-800);
-	--high-contrast-color: var(--white);
-	--medium-contrast-color: var(--gray-100);
-	--low-contrast-color: var(--gray-200);
+	--background-color: var(--white);
+	--middleground-color: var(--pink-50);
+	--foreground-color: var(--pink-100);
+	--high-contrast-color: var(--black);
+	--medium-contrast-color: var(--gray-900);
+	--low-contrast-color: var(--gray-800);
+	@media (--dark) {
+		--background-color: var(--black);
+		--middleground-color: var(--blue-950);
+		--foreground-color: var(--blue-900);
+		--high-contrast-color: var(--white);
+		--medium-contrast-color: var(--gray-100);
+		--low-contrast-color: var(--gray-200);
+	}
 	position: absolute;
 	inset: 0;
 	display: flex;
@@ -16,21 +24,11 @@
 	line-height: var(--normal-line);
 	word-spacing: var(--normal-word);
 	letter-spacing: var(--normal-letter);
+	background-image: repeating-linear-gradient(3deg,
+		var(--middleground-color) 0 var(--4x-small),
+		var(--background-color)  var(--4x-small) var(--2x-small)
+	);
 	color: var(--high-contrast-color);
-	&::before {
-		content: "";
-		position: fixed;
-		inset: 0;
-		z-index: var(--z-bottom);
-		background-color: var(--background-color);
-		background-image: url("background-art.jpg");
-		background-size: cover;
-		background-position: center;
-		filter: var(--lower-brightness);
-		@media (--dark) {
-			filter: var(--lowest-brightness);
-		}
-	}
 	& > * {
 		flex: 0 0 auto;
 	}
