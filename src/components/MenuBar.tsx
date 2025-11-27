@@ -7,29 +7,26 @@ export default function MenuBar() {
 			<div className={styles.wrapper}>
 				<TintedGlass>
 					<nav className={styles.nav}>
-						<a href="/" className={`${styles.link} ${styles.active}`}>
-							<span className={styles.icon}>
-								<i className="bi bi-house-door"></i>
-							</span>
+						<a href="/" className={styles.link}>
 							<span className={styles.label}>Hey, Jess!</span>	
-						</a>
-						<a href="/about" className={styles.link}>
-							<span className={styles.icon}>
-								<i className="bi bi-book"></i>
-							</span>
-							<span className={styles.label}>About</span>
 						</a>
 						<a href="#projects" className={styles.link}>
 							<span className={styles.icon}>
-								<i className="bi bi-code-slash"></i>
+								<i className="bi bi-journal-code"></i>
 							</span>
 							<span className={styles.label}>Projects</span>	
 						</a>
-						<a href="/contact" className={styles.link}>
+						<a href="https://github.com/joshuasand0val" className={styles.link}>
 							<span className={styles.icon}>
-								<i className="bi bi-person"></i>
+								<i className="bi bi-github"></i>
 							</span>
-							<span className={styles.label}>Contact</span>
+							<span className={styles.label}>Github</span>
+						</a>
+						<a href="https://linkedin.com/in/heyjes/" className={styles.link}>
+							<span className={styles.icon}>
+								<i className="bi bi-linkedin"></i>
+							</span>
+							<span className={styles.label}>LinkedIn</span>
 						</a>
 					</nav>
 				</TintedGlass>
