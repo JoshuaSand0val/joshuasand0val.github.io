@@ -9,7 +9,7 @@ const projects: {
 }[] = [
 	{
 		"title": "Semantic Props",
-		"description": "A collection of semantic CSS custom properties.",
+		"description": "Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.",
 		"url": "https://semantic-props.style/",
 		"image": "/projects/semantic-props.png"
 	},
