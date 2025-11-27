@@ -19,11 +19,11 @@ export default function MenuBar() {
 							</span>
 							<span className={styles.label}>About</span>
 						</a>
-						<a href="/software" className={styles.link}>
+						<a href="#projects" className={styles.link}>
 							<span className={styles.icon}>
 								<i className="bi bi-code-slash"></i>
 							</span>
-							<span className={styles.label}>Code</span>	
+							<span className={styles.label}>Projects</span>	
 						</a>
 						<a href="/contact" className={styles.link}>
 							<span className={styles.icon}>

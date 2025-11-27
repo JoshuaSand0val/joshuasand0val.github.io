@@ -1,5 +1,6 @@
 import { styled } from "@linaria/react";
 import Profile from "../components/Profile";
+import Projects from "../components/Projects";
 
 export default function Home() {
 	const Container = styled.article`
@@ -78,6 +79,7 @@ export default function Home() {
 					<Subtitle>User-Interface Designer &amp; Developer.</Subtitle>
 				</Header>
 				<Summary>Hi there! My name is Jess. I'm a web developer that designs webpages in a fashionable and accessible package.</Summary>
+				<Projects />
 			</Wrapper>
 		</Container>
 	);
