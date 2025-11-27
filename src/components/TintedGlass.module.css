@@ -25,7 +25,7 @@
 	&::before {
 		background-color: var(--middleground-color);
 		box-shadow: var(--lightest-box-shadow);
-		opacity: var(--medium-opacity);
+		opacity: var(--high-opacity);
 	}
 	&::after {
 		border: inherit;
