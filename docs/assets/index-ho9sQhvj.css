@@ -302,14 +302,14 @@
 	scroll-behavior: smooth;
 	color-scheme: light dark;
 	background-color: var(--background-color);
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 #root {
 	position: relative;
 	display: block;
 	min-block-size: 100vh;
 	min-block-size: 100dvb;
-	overflow-x: hidden;
-	overflow-y: auto;
 }._container_1smqx_1 {
 	--background-color: var(--white);
 	--middleground-color: var(--pink-50);
