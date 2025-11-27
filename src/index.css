@@ -21,6 +21,8 @@
 	scroll-behavior: smooth;
 	color-scheme: light dark;
 	background-color: var(--background-color);
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 #root {
@@ -28,6 +30,4 @@
 	display: block;
 	min-block-size: 100vh;
 	min-block-size: 100dvb;
-	overflow-x: hidden;
-	overflow-y: auto;
 }
