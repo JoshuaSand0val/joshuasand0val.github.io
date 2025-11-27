@@ -23,7 +23,7 @@ export default function Home() {
 	`;
 
 	const Title = styled.h1`
-		font-size: var(--2x-large);
+		font-size: var(--3x-large);
 		color: var(--high-contrast-color);
 		margin-block: var(--large) var(--3x-small);
 		transition: font-size var(--fast-time) var(--ease-out);
@@ -33,8 +33,11 @@ export default function Home() {
 		@media (--tablet) {
 			font-size: var(--5x-large);
 		}
-		@media (--desktop) {
+		@media (--laptop) {
 			font-size: var(--6x-large);
+		}
+		@media (--desktop) {
+			font-size: var(--7x-large);
 		}
 	`;
 
@@ -61,7 +64,7 @@ export default function Home() {
 		line-height: var(--normal-line);
 		margin-block: var(--large);
 		transition: font-size var(--fastest-time) var(--ease-out);
-		@media (--desktop) {
+		@media (--tablet) {
 			font-size: var(--x-large);
 		}
 	`;
