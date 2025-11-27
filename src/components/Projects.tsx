@@ -100,7 +100,7 @@ export default function Projects() {
 		align-items: start;
 		font-size: var(--3x-large);
 		line-height: 1;
-		color: var(--whitr);
+		color: inherit;
 		cursor: pointer;
 		text-decoration: none;
 		flex: 0 0 auto;
