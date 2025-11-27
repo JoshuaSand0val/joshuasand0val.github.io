@@ -78,7 +78,11 @@ export default function Home() {
 					<Title>Hey, Jess Sandoval.</Title>
 					<Subtitle>User-Interface Designer &amp; Developer.</Subtitle>
 				</Header>
-				<Summary>Hi there! My name is Jess. I'm a web developer that designs webpages in a fashionable and accessible package.</Summary>
+				<Summary>
+					Hi there! My name is Jess.
+					I'm a web developer with a curious eye for detail.
+					I design web technologies in a fashionable and accessible package.
+				</Summary>
 				<Projects />
 			</Wrapper>
 		</Container>
