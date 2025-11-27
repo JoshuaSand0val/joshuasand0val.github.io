@@ -28,7 +28,7 @@ export default function Profile({ src, description }: props) {
 		display: block;
 		inline-size: 100%;
 		block-size: 100%;
-		background-image: url("profile-art.jpg");
+		background-image: url("art.jpg");
 		background-size: cover;
 		background-position: center;
 		object-fit: cover;
