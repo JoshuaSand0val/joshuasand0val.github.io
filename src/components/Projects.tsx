@@ -42,6 +42,7 @@ export default function Projects() {
 		z-index: 0;
 		display: block;
 		inline-size: min(100%, var(--medium-container));
+		min-block-size: var(--small-container);
 		border-radius: var(--small-radius);
 		background-color: var(--gray-900);
 		background-image: linear-gradient(to bottom right, var(--gray-850), var(--gray-900));
@@ -72,7 +73,7 @@ export default function Projects() {
 		z-index: calc(var(--z-absolute) + 1);
 		bottom: 0;
 		display: block;
-		font-size: var(--large);
+		font-size: var(--medium);
 		font-style: italic;
 		font-weight: var(--light-weight);
 		line-height: var(--short-line);
@@ -85,7 +86,7 @@ export default function Projects() {
 		display: block;
 		font-style: normal;
 		font-family: var(--display-family);
-		font-size: var(--x-large);
+		font-size: var(--large);
 		font-weight: var(--bold-weight);
 		margin-block-end: var(--4x-small);
 	`;
@@ -105,6 +106,7 @@ export default function Projects() {
 		text-decoration: none;
 		flex: 0 0 auto;
 		padding: var(--medium);
+		outline-offset: calc(-1 * var(--3x-small));
 		transition: opacity var(--fast-time) var(--ease-in);
 		&:hover, &:focus {
 			opacity: var(--highest-opacity);
