@@ -43,7 +43,7 @@ export default function Projects() {
 		z-index: 0;
 		display: block;
 		inline-size: min(100%, var(--medium-container));
-		min-block-size: var(--small-container);
+		min-block-size: var(--smaller-container);
 		border-radius: var(--small-radius);
 		background-color: var(--gray-900);
 		background-image: linear-gradient(to bottom right, var(--gray-850), var(--gray-900));
