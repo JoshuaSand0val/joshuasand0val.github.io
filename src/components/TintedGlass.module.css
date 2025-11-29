@@ -13,8 +13,8 @@
 	transition-property: backdrop-filter, background, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	backdrop-filter: var(--lightest-blur);
-	filter: var(--heavy-shadow);
+	backdrop-filter: var(--lighter-blur);
+	filter: var(--lightest-shadow);
 	&::before, &::after {
 		content: "";
 		position: absolute;
@@ -25,7 +25,7 @@
 	&::before {
 		background-color: var(--middleground-color);
 		box-shadow: var(--lightest-box-shadow);
-		opacity: var(--high-opacity);
+		opacity: var(--higher-opacity);
 	}
 	&::after {
 		border: inherit;
