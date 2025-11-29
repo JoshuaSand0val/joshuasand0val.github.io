@@ -4,16 +4,22 @@ import { styled } from "@linaria/react";
 export default function Footer() {
 	const Footer = styled.footer`
 		display: block;
-		inline-size: min(100%, var(--largest-container));
-		font-size: var(--small);
-		padding-block-start: var(--small);
-		padding-block-end: max(var(--medium), var(--safe-bottom));
+		font-size: var(--x-small);
+		background-color: var(--middleground-color);
+		border-block-start: 1px var(--border-style) var(--foreground-color);
 		padding-inline-start: max(var(--margin-size), var(--safe-left));
 		padding-inline-end: max(var(--margin-size), var(--safe-right));
-		margin-inline: auto;
+		padding-block-start: var(--x-small);
+		padding-block-end: max(var(--small), var(--safe-bottom));
 		color: var(--low-contrast-color);
 	`;
 
+	const Wrapper = styled.div`
+		display: block;
+		inline-size: min(100%, var(--largest-container));
+		margin-inline: auto;
+	`;
+	
 	const Copyright = styled.span`
 		display: block;
 		text-align: end;
@@ -21,7 +27,9 @@ export default function Footer() {
 
 	return (
 		<Footer>
-			<Copyright>&copy; {new Date().getFullYear()} Joshua Elijah Sandoval.</Copyright>
+			<Wrapper>
+				<Copyright>&copy; {new Date().getFullYear()} Joshua Elijah Sandoval. All rights reserved.</Copyright>
+			</Wrapper>
 		</Footer>
 	);
 }
