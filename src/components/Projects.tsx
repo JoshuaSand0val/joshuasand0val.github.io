@@ -42,7 +42,7 @@ export default function Projects() {
 		position: relative;
 		z-index: 0;
 		display: block;
-		inline-size: min(100%, var(--medium-container));
+		inline-size: min(85%, var(--medium-container));
 		min-block-size: var(--smaller-container);
 		border-radius: var(--small-radius);
 		background-color: var(--gray-900);
