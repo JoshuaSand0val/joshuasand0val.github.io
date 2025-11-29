@@ -74,12 +74,14 @@ export default function Projects() {
 		z-index: calc(var(--z-absolute) + 1);
 		bottom: 0;
 		display: block;
+		max-block-size: 100%;
 		font-size: var(--medium);
 		font-style: italic;
 		font-weight: var(--light-weight);
 		line-height: var(--short-line);
 		padding: var(--medium);
 		padding-inline-end: var(--large);
+		overflow: auto;
 		margin: 0;
 	`;
 
