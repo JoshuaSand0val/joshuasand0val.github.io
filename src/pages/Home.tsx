@@ -26,7 +26,7 @@ export default function Home() {
 	const Title = styled.h1`
 		font-size: var(--3x-large);
 		color: var(--high-contrast-color);
-		margin-block: var(--large) var(--3x-small);
+		margin-block: var(--3x-large) var(--3x-small);
 		transition: font-size var(--fast-time) var(--ease-out);
 		@media (--phone) {
 			font-size: var(--4x-large);
