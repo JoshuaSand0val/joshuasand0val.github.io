@@ -24,7 +24,7 @@ const projects: {
 /** Listing of all affiliated projects. */
 // Images must be of a viewport of 1200/800 CSS pixels.
 export default function Projects() {
-	const Grid = styled.div`
+	const Row = styled.div`
 		display: flex;
 		flex-flow: row nowrap;
 		border-radius: var(--small);
@@ -121,7 +121,7 @@ export default function Projects() {
 	`;
 
 	return (
-		<Grid id="projects">
+		<Row id="projects">
 			{projects.map(({ title, image, description, url }, index) => (
 				<Project key={index}>
 					{typeof image === "string" && (
@@ -136,6 +136,6 @@ export default function Projects() {
 					</Link>
 				</Project>
 			))}
-		</Grid>
+		</Row>
 	);
 }
