@@ -5,9 +5,9 @@ import Projects from "../components/Projects";
 export default function Home() {
 	const Container = styled.article`
 		display: block;
-		padding-block: var(--margin-size);
 		padding-inline-start: max(var(--safe-left), var(--margin-size));
 		padding-inline-end: max(var(--safe-right), var(--margin-size));
+		margin-block: var(--margin-size);
 	`;
 
 	const Wrapper = styled.div`
