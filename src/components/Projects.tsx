@@ -131,7 +131,7 @@ export default function Projects() {
 						<Title>{title}</Title>
 						{description}
 					</Description>
-					<Link href={url}>
+					<Link href={url} target="_blank">
 						<i className="bi bi-box-arrow-up-right" aria-label="Learn More"></i>
 					</Link>
 				</Project>
