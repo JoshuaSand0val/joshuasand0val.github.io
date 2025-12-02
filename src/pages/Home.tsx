@@ -74,7 +74,7 @@ export default function Home() {
 		<Container>
 			<Wrapper>
 				<Header>
-					<Profile src="/profile.png" description="Myself, Jess!" />
+					<Profile src="/profile.png" description="Myself, Jess!" pronouns="She/Her/They" />
 					<Title>Hey, Jess Sandoval.</Title>
 					<Subtitle>User-Interface Designer &amp; Developer.</Subtitle>
 				</Header>
