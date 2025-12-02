@@ -46,6 +46,7 @@ export default function App() {
 	const Content = styled.main`
 		display: block;
 		flex: 1 0 auto;
+		padding-block-start: var(--safe-top);
 		order: -1;
 	`;
 
