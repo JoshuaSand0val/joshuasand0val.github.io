@@ -27,8 +27,8 @@ export default function App() {
 			--middleground-color: var(--pink-50);
 			--foreground-color: var(--pink-100);
 			--high-contrast-color: var(--black);
-			--medium-contrast-color: var(--gray-900);
-			--low-contrast-color: var(--gray-800);
+			--medium-contrast-color: var(--gray-850);
+			--low-contrast-color: var(--gray-700);
 		}
 		@media (--dark) {
 			--background-color: var(--black);
