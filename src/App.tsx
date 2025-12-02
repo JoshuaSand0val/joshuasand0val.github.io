@@ -18,7 +18,7 @@ export default function App() {
 		word-spacing: var(--normal-word);
 		letter-spacing: var(--normal-letter);
 		background-color: var(--background-color);
-		background-image: linear-gradient(to bottom, transparent 50%, var(--middleground-color) 50%);
+		background-image: linear-gradient(to bottom, transparent 80%, var(--middleground-color) 80%);
 		background-size: 100% var(--3x-small);
 		background-repeat: repeat-y;
 		color: var(--high-contrast-color);
