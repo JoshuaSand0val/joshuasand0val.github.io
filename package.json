@@ -10,9 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/cookie": "^5.2.7",
+    "@fontsource/gantari": "^5.2.8",
+    "@fontsource/merriweather": "^5.2.11",
+    "@fontsource/ubuntu-sans-mono": "^5.2.10",
     "@linaria/core": "^6.3.0",
     "@linaria/react": "^6.3.0",
     "@wyw-in-js/babel-preset": "^0.8.0",
+    "bootstrap-icons": "^1.13.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "sanitize.css": "^13.0.0",
