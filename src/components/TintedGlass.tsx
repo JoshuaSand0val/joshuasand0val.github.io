@@ -22,6 +22,7 @@ export default function TintedGlass({ children }: props) {
 			position: absolute;
 			z-index: var(--z-bottom);
 			inset: 0;
+			border-radius: inherit;
 		}
 		&::before {
 			background-color: var(--middleground-color);
