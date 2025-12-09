@@ -7,7 +7,7 @@ export default function Home() {
 		display: block;
 		padding-inline-start: max(var(--safe-left), var(--margin-size));
 		padding-inline-end: max(var(--safe-right), var(--margin-size));
-		margin-block: var(--margin-size);
+		margin-block: min(var(--margin-size), var(--8x-large));
 	`;
 
 	const Wrapper = styled.div`
