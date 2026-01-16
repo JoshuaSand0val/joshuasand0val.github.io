@@ -26,6 +26,22 @@
 	background-color: var(--background-color);
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	--background-color: var(--pink-100);
+	--middleground-color: var(--pink-150);
+	--foreground-color: var(--pink-200);
+	--low-contrast-color: var(--pink-600);
+	--medium-contrast-color: var(--pink-700);
+	--high-contrast-color: var(--pink-800);
+
+	@media (--dark) {
+		--background-color: var(--pink-900);
+		--middleground-color: var(--pink-850);
+		--foreground-color: var(--pink-800);
+		--low-contrast-color: var(--pink-300);
+		--medium-contrast-color: var(--pink-200);
+		--high-contrast-color: var(--pink-100);
+	}
 }
 
 #root {

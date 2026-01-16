@@ -12,7 +12,7 @@ export default function TintedGlass({ children }: props) {
 		position: relative;
 		z-index: 0;
 		display: block;
-		backdrop-filter: var(--lighter-blur);
+		backdrop-filter: var(--lightest-blur);
 		border-radius: var(--small-radius);
 		box-shadow: var(--lightest-box-shadow);
 		color: var(--high-contrast-color);
@@ -25,14 +25,14 @@ export default function TintedGlass({ children }: props) {
 			border-radius: inherit;
 		}
 		&::before {
-			background-color: var(--middleground-color);
+			background-color: var(--background-color);
 			opacity: var(--higher-opacity);
 		}
 		&::after {
 			background-image: linear-gradient(45deg,
-				transparent,
+				var(--middleground-color),
 				var(--foreground-color),
-				transparent
+				var(--middleground-color)
 			);
 			mask:
 				linear-gradient(#000 0 0) content-box,

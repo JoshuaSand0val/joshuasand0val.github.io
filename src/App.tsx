@@ -18,26 +18,12 @@ export default function App() {
 		word-spacing: var(--normal-word);
 		letter-spacing: var(--normal-letter);
 		background-color: var(--background-color);
-		background-image: linear-gradient(to bottom, transparent 80%, var(--middleground-color) 80%);
-		background-size: 100% var(--3x-small);
-		background-repeat: repeat-y;
+		background-image:
+			linear-gradient(var(--background-color), var(--foreground-color)),
+			url("./art.jpg");
+		background-size: cover;
+		background-blend-mode: overlay;
 		color: var(--high-contrast-color);
-		@media (--light) {
-			--background-color: var(--white);
-			--middleground-color: var(--pink-50);
-			--foreground-color: var(--pink-100);
-			--high-contrast-color: var(--black);
-			--medium-contrast-color: var(--gray-850);
-			--low-contrast-color: var(--gray-700);
-		}
-		@media (--dark) {
-			--background-color: var(--black);
-			--middleground-color: var(--blue-900);
-			--foreground-color: var(--blue-800);
-			--high-contrast-color: var(--white);
-			--medium-contrast-color: var(--gray-100);
-			--low-contrast-color: var(--gray-200);
-		}
 		& > * {
 			flex: 0 0 auto;
 		}

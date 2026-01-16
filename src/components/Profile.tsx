@@ -18,9 +18,9 @@ export default function Profile({ src, description, pronouns }: props) {
 		display: block;
 		inline-size: min(40%, var(--medium-container));
 		transform: rotate(-1deg);
-		margin-inline-start: var(--margin-size);
+		margin-inline-end: var(--margin-size);
 		margin-block-end: max(var(--medium), var(--margin-size));
-		float: right;
+		float: left;
 		transition: inline-size var(--fast-time) var(--ease-out);
 		@media (--watch) {
 			inline-size: 100%;
@@ -31,14 +31,8 @@ export default function Profile({ src, description, pronouns }: props) {
 		display: block;
 		inline-size: 100%;
 		block-size: 100%;
-		background-image: url("/art.jpg");
-		background-size: cover;
-		background-position: center;
 		object-fit: cover;
 		object-position: top center;
-		@media (--dark) {
-			filter: var(--lower-brightness);
-		}
 	`;
 
 	const Pronouns = styled.span`
@@ -46,7 +40,7 @@ export default function Profile({ src, description, pronouns }: props) {
 		z-index: var(--z-absolute);
 		inset: auto var(--x-small) var(--2x-small);
 		display: block;
-		font-size: var(--large);
+		font-size: var(--x-large);
 		font-family: var(--accent-family);
 		text-shadow: 0 0 1px var(--black), var(--light-text-shadow);
 		color: var(--white);

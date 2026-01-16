@@ -26,12 +26,11 @@ const projects: {
 export default function Projects() {
 	const Row = styled.div`
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 		border-radius: var(--small);
 		gap: var(--small);
 		margin-block: var(--2x-large);
-		scroll-snap-type: inline mandatory;
-		overflow: auto;
+		overflow: hidden;
 		&:target {
 			outline: var(--3x-small) solid var(--low-contrast-color);
 			outline-offset: var(--3x-small);
@@ -42,16 +41,15 @@ export default function Projects() {
 		position: relative;
 		z-index: 0;
 		display: block;
-		inline-size: min(85%, var(--medium-container));
+		inline-size: min(100%, var(--smaller-container));
 		min-block-size: var(--smaller-container);
 		border-radius: var(--small-radius);
 		background-color: var(--gray-900);
 		background-image: linear-gradient(to bottom right, var(--gray-850), var(--gray-900));
 		color: var(--gray-50);
 		text-shadow: var(--lightest-text-shadow);
-		scroll-snap-align: center;
 		overflow: hidden;
-		flex: 0 0 auto;
+		flex: 1 0 auto;
 		&:not(:has(img)) {
 			background-color: var(--middleground-color);
 			background-image: linear-gradient(var(--middleground-color), var(--foreground-color));
