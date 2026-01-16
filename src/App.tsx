@@ -20,7 +20,7 @@ export default function App() {
 		background-color: var(--background-color);
 		background-image:
 			linear-gradient(var(--background-color), var(--foreground-color)),
-			url("./art.jpg");
+			url("/art.jpg");
 		background-size: cover;
 		background-blend-mode: overlay;
 		color: var(--high-contrast-color);
