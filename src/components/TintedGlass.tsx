@@ -16,29 +16,42 @@ export default function TintedGlass({ children }: props) {
 		border-radius: var(--medium-radius);
 		box-shadow: var(--lightest-box-shadow);
 		color: var(--high-contrast-color);
+		padding: var(--4x-small);
 		overflow: hidden;
 		&::before, &::after {
 			content: "";
 			position: absolute;
-			z-index: var(--z-bottom);
-			inset: 1px;
+			inset: 0;
 			border-radius: inherit;
 		}
 		&::before {
+			z-index: var(--z-bottom);
 			background-color: var(--background-color);
 			opacity: var(--higher-opacity);
 		}
 		&::after {
-			background-image: linear-gradient(45deg,
-				var(--middleground-color),
-				var(--foreground-color),
-				var(--middleground-color)
-			);
+			z-index: var(--z-top);
 			mask:
 				linear-gradient(#000 0 0) content-box,
 				linear-gradient(#000 0 0) padding-box;
 			mask-composite: exclude;
-			padding: var(--4x-small);
+			padding: inherit;
+			background-image: linear-gradient(45deg,
+				var(--blue-300),
+				var(--pink-300),
+				var(--gray-150),
+				var(--pink-300),
+				var(--blue-300)
+			);
+			@media (--dark) {
+				background-image: linear-gradient(45deg,
+					var(--blue-500),
+					var(--pink-500),
+					var(--gray-250),
+					var(--pink-500),
+					var(--blue-500)
+				);
+			}
 		}
 	`;
 
