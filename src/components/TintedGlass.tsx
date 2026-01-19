@@ -12,8 +12,8 @@ export default function TintedGlass({ children }: props) {
 		position: relative;
 		z-index: 0;
 		display: block;
-		backdrop-filter: var(--lightest-blur);
-		border-radius: var(--small-radius);
+		backdrop-filter: var(--lighter-blur);
+		border-radius: var(--medium-radius);
 		box-shadow: var(--lightest-box-shadow);
 		color: var(--high-contrast-color);
 		overflow: hidden;

@@ -63,7 +63,7 @@ export default function Home() {
 		font-family: var(--body-family);
 		font-size: var(--large);
 		line-height: var(--normal-line);
-		margin-block: var(--large);
+		margin-block: var(--x-small) var(--x-large);
 		transition: font-size var(--fastest-time) var(--ease-out);
 		@media (--tablet) {
 			font-size: var(--x-large);
@@ -75,7 +75,7 @@ export default function Home() {
 			<Wrapper>
 				<Header>
 					<Profile src="/profile.jpg" description="Myself, Jess!" pronouns="She/Her/They" />
-					<Title>Hey, Jess Sandoval.</Title>
+					<Title>Hey, Jess!</Title>
 					<Subtitle>User-Interface Designer &amp; Developer.</Subtitle>
 				</Header>
 				<Summary>
