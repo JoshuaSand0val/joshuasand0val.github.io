@@ -2540,16 +2540,16 @@ url("/assets/bootstrap-icons-BeopsB42.woff?e34853135f9e39acf64315236852cd5a") fo
 }.f1a1me05{display:block;font-size:var(--x-small);padding-inline-start:max(var(--margin-size), var(--safe-left));padding-inline-end:max(var(--margin-size), var(--safe-right));padding-block-start:var(--x-small);padding-block-end:max(var(--small), var(--safe-bottom));color:var(--low-contrast-color);}
 .w1aekpxx{display:block;inline-size:min(100%, var(--largest-container));margin-inline:auto;}
 .cibpx3b{display:block;text-align:end;}
-.cetjehu{position:relative;z-index:0;display:block;backdrop-filter:var(--lighter-blur);border-radius:var(--medium-radius);box-shadow:var(--lightest-box-shadow);color:var(--high-contrast-color);overflow:hidden;}.cetjehu::before,.cetjehu::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;}.cetjehu::before{z-index:var(--z-bottom);background-color:var(--background-color);-webkit-background-clip:content-box;background-clip:content-box;opacity:var(--higher-opacity);padding:var(--3x-small);}.cetjehu::after{z-index:var(--z-top);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0) padding-box;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0) padding-box;-webkit-mask-composite:xor;mask-composite:exclude;padding:var(--4x-small);background-image:linear-gradient(45deg,
+.cetjehu{position:relative;z-index:0;display:block;background-color:var(--background-color);border-radius:var(--large-radius);box-shadow:0 0 0 1px var(--background-color),var(--lightest-box-shadow);color:var(--high-contrast-color);padding:var(--3x-small);overflow:hidden;}.cetjehu::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:var(--z-top);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0) padding-box;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0) padding-box;-webkit-mask-composite:xor;mask-composite:exclude;padding:inherit;background-image:linear-gradient(45deg,
 				var(--blue-300),
 				var(--pink-300),
-				var(--gray-150),
+				var(--gray-100),
 				var(--pink-300),
 				var(--blue-300)
-			);}@media (prefers-color-scheme: dark){.cetjehu::after{background-image:linear-gradient(45deg,
+			);}@media (prefers-color-scheme: dark){.cetjehu::before{background-image:linear-gradient(45deg,
 					var(--blue-500),
 					var(--pink-500),
-					var(--gray-250),
+					var(--gray-300),
 					var(--pink-500),
 					var(--blue-500)
 				);}}
