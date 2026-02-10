@@ -18,9 +18,9 @@ export default function Profile({ src, description, pronouns }: props) {
 		display: block;
 		inline-size: min(40%, var(--medium-container));
 		transform: rotate(-1deg);
-		margin-inline-start: var(--margin-size);
+		margin-inline-end: var(--margin-size);
 		margin-block-end: max(var(--medium), var(--margin-size));
-		float: right;
+		float: left;
 		transition: inline-size var(--fast-time) var(--ease-out);
 		@media (--watch) {
 			inline-size: 100%;
