@@ -26,7 +26,7 @@ export default function Footer() {
 	return (
 		<Footer>
 			<Wrapper>
-				<Copyright>&copy; {new Date().getFullYear()} Joshua Elijah Sandoval. All rights reserved.</Copyright>
+				<Copyright>&copy; {new Date().getFullYear()} Jess Sandoval. All rights reserved.</Copyright>
 			</Wrapper>
 		</Footer>
 	);

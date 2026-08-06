@@ -76,7 +76,7 @@ export default function MenuBar() {
 							<Icon><i className="bi bi-journal-code" /></Icon>
 							<Label>Projects</Label>	
 						</Link>
-						<Link href="https://github.com/joshuasand0val">
+						<Link href="https://github.com/heyjesdev">
 							<Icon><i className="bi bi-github" /></Icon>
 							<Label>Github</Label>
 						</Link>

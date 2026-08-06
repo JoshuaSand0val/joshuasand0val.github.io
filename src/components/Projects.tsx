@@ -16,7 +16,7 @@ const projects: {
 	{
 		"title": "Precolor",
 		"description": "A collection of color manipulation tools written in Sass (SCSS).",
-		"url": "https://github.com/JoshuaSand0val/Precolor",
+		"url": "https://github.com/heyjesdev/Precolor",
 		"image": "/projects/precolor.png"
 	}
 ];
